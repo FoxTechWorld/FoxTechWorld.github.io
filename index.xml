@@ -6,23 +6,33 @@
     <description>Recent content on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 30 Apr 2023 01:06:17 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 14:58:21 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pilha</title>
+      <link>http://FoxTechWorld.github.io/posts/data_structures/pilha/</link>
+      <pubDate>Sun, 30 Apr 2023 14:58:21 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/posts/data_structures/pilha/</guid>
+      <description>Seguindo o artigo anterior sobre listas ligadas, hoje vou falar sobre pilhas. Uma pilha é uma estrutura de dados onde controlamos o topo da pilha e temos duas importantes funções:
+Empilhar Desempilhar Isso significa que podemos adicionar um novo item ao topo da pilha e remover um item do topo da pilha. Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a fila, a pilha também chega a ser uma das mais importantes estruturas de dados.</description>
+    </item>
+    
     <item>
       <title>Usei bash para deployar este site</title>
-      <link>http://FoxTechWorld.github.io/usei_bash_para_deployar_este_site/</link>
+      <link>http://FoxTechWorld.github.io/posts/story/usei_bash_para_deployar_este_site/</link>
       <pubDate>Sun, 30 Apr 2023 01:06:17 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/usei_bash_para_deployar_este_site/</guid>
+      <guid>http://FoxTechWorld.github.io/posts/story/usei_bash_para_deployar_este_site/</guid>
       <description>Isso mesmo galera, fiz um script bash para gerar o conteúdo que aparece em vossas telas. Antes de tudo, esse script bash serve apenas para deployar, e todo trabalho duro de converter minhas digitações em html pertence ao Hugo
 Enfim, na versão do meu script deploy.sh, ele faz tarefas bem simplistas para gerar o html e mandar para o github, que por sua vez manda para o github pages. Simples por enquanto, até a hora da minha maldade começar.</description>
     </item>
     
     <item>
       <title>Lista Ligada</title>
-      <link>http://FoxTechWorld.github.io/lista_ligada/</link>
+      <link>http://FoxTechWorld.github.io/posts/data_structures/lista_ligada/</link>
       <pubDate>Sun, 30 Apr 2023 00:17:12 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/lista_ligada/</guid>
+      <guid>http://FoxTechWorld.github.io/posts/data_structures/lista_ligada/</guid>
       <description>A lista ligada é uma das estruturas mais simples na matéria de estruturas de dados. E ouso dizer que também chega a ser uma das mais importantes. Pois com ela podemos criar estruturas muito mais complexas. Um exemplo simples que podemos dar a lista ligada em C++ é:
 Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value = new_value; next = NULL; } }; Onde para aqueles que possuem um olho atento.</description>
     </item>

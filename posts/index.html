@@ -8,7 +8,15 @@
 	<title>Posts | FoxTechWorld</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
+		<meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://FoxTechWorld.github.io/posts/" />
+
+		<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
 	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/themes/dark-green.css">
 	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
 	<link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="FoxTechWorld">
@@ -42,17 +50,34 @@ if (!doNotTrack) {
 			
 				<div class="card card--2col">
 					<article class="entry card__box block">
-	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/usei_bash_para_deployar_este_site/">Usei bash para deployar este site</a></h1>
-	<div class="entry__content">Isso mesmo galera, fiz um script bash para gerar o conteúdo que aparece em vossas telas. Antes de tudo, esse script bash serve apenas para deployar, e todo trabalho duro de converter minhas digitações em html pertence ao Hugo
-Enfim, na versão do meu script deploy.sh, ele faz tarefas bem simplistas para gerar o html e mandar para o github, que por sua vez manda para o github pages. Simples por enquanto, até a hora da minha maldade começar.</div>
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/posts/data_structures/pilha/">Pilha</a></h1>
+	<div class="entry__content">Seguindo o artigo anterior sobre listas ligadas, hoje vou falar sobre pilhas. Uma pilha é uma estrutura de dados onde controlamos o topo da pilha e temos duas importantes funções:
+Empilhar Desempilhar Isso significa que podemos adicionar um novo item ao topo da pilha e remover um item do topo da pilha. Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a fila, a pilha também chega a ser uma das mais importantes estruturas de dados.</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2023-04-30T14:58:21-03:00">April 30, 2023</time>
+	</div>
 </article>
 				</div>
 			
 				<div class="card card--2col">
 					<article class="entry card__box block">
-	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/lista_ligada/">Lista Ligada</a></h1>
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/posts/story/usei_bash_para_deployar_este_site/">Usei bash para deployar este site</a></h1>
+	<div class="entry__content">Isso mesmo galera, fiz um script bash para gerar o conteúdo que aparece em vossas telas. Antes de tudo, esse script bash serve apenas para deployar, e todo trabalho duro de converter minhas digitações em html pertence ao Hugo
+Enfim, na versão do meu script deploy.sh, ele faz tarefas bem simplistas para gerar o html e mandar para o github, que por sua vez manda para o github pages. Simples por enquanto, até a hora da minha maldade começar.</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2023-04-30T01:06:17-03:00">April 30, 2023</time>
+	</div>
+</article>
+				</div>
+			
+				<div class="card card--2col">
+					<article class="entry card__box block">
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/posts/data_structures/lista_ligada/">Lista Ligada</a></h1>
 	<div class="entry__content">A lista ligada é uma das estruturas mais simples na matéria de estruturas de dados. E ouso dizer que também chega a ser uma das mais importantes. Pois com ela podemos criar estruturas muito mais complexas. Um exemplo simples que podemos dar a lista ligada em C++ é:
 Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value = new_value; next = NULL; } }; Onde para aqueles que possuem um olho atento.</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2023-04-30T00:17:12-03:00">April 30, 2023</time>
+	</div>
 </article>
 				</div>
 			
@@ -62,6 +87,11 @@ Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value =
 
 	</div>
 	<footer class="footer">
+<div class="footer__social social">
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/KitsuneSemCalda">
+			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+		</a>
+</div>
 	<div class="footer__copyright">© 2023 FoxTechWorld. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
 </footer>
 </body>
