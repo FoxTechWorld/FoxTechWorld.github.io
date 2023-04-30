@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FoxTechWorld</title>
+    <link>http://FoxTechWorld.github.io/</link>
+    <description>Recent content on FoxTechWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 30 Apr 2023 00:17:12 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lista Ligada</title>
+      <link>http://FoxTechWorld.github.io/data_structures/lista_ligada/</link>
+      <pubDate>Sun, 30 Apr 2023 00:17:12 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/data_structures/lista_ligada/</guid>
+      <description>A lista ligada é uma das estruturas mais simples na matéria de estruturas de dados.
+E ouso dizer que também chega a ser uma das mais importantes.
+Pois com ela podemos criar estruturas muito mais complexas.</description>
+    </item>
+    
+  </channel>
+</rss>
