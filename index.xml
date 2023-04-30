@@ -6,7 +6,17 @@
     <description>Recent content on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 30 Apr 2023 00:17:12 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 01:06:17 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usei bash para deployar este site</title>
+      <link>http://FoxTechWorld.github.io/usei_bash_para_deployar_este_site/</link>
+      <pubDate>Sun, 30 Apr 2023 01:06:17 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/usei_bash_para_deployar_este_site/</guid>
+      <description>Isso mesmo galera, fiz um script bash para gerar o conteúdo que aparece em vossas telas. Antes de tudo, esse script bash serve apenas para deployar, e todo trabalho duro de converter minhas digitações em html pertence ao Hugo
+Enfim, na versão do meu script deploy.sh, ele faz tarefas bem simplistas para gerar o html e mandar para o github, que por sua vez manda para o github pages. Simples por enquanto, até a hora da minha maldade começar.</description>
+    </item>
+    
     <item>
       <title>Lista Ligada</title>
       <link>http://FoxTechWorld.github.io/lista_ligada/</link>
