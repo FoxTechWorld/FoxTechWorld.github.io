@@ -20,7 +20,7 @@ Empilhar Desempilhar Isso significa que podemos adicionar um novo item ao topo d
 <meta itemprop="description" content="Seguindo o artigo anterior sobre listas ligadas, hoje vou falar sobre pilhas. Uma pilha é uma estrutura de dados onde controlamos o topo da pilha e temos duas importantes funções:
 Empilhar Desempilhar Isso significa que podemos adicionar um novo item ao topo da pilha e remover um item do topo da pilha. Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a fila, a pilha também chega a ser uma das mais importantes estruturas de dados."><meta itemprop="datePublished" content="2023-04-30T14:58:21-03:00" />
 <meta itemprop="dateModified" content="2023-04-30T14:58:21-03:00" />
-<meta itemprop="wordCount" content="298">
+<meta itemprop="wordCount" content="361">
 <meta itemprop="keywords" content="" />
 	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="stylesheet" href="/css/themes/dark-green.css">
@@ -69,6 +69,7 @@ Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a 
 <p>Veja, quando precisamos fazer processamento concorrente, normalmente utilizamos ela para puxarmos um elemento, fazermos um processamento e puxarmos outro elemento.</p>
 <p>Existem duas formas de implementarmos a pilha, usando <a href="https://foxtechworld.github.io/lista_ligada/">lista ligada</a> e usando vetores.</p>
 <p>Vou mostrar hoje como se escreve um pilha usando lista ligada em C++:</p>
+<p>Repare que as funções básicas de uma pilha está apenas em empilhar e desempilhar mas podemos adicionar funções extras que verificam e a pilha, que realizem algum processo ao desempilhar e etc.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
@@ -116,6 +117,27 @@ Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a 
 A ideia é expandir infinitamente a pilha o que em ambiente de um pc mais potente como um desktop ou servidor.</p>
 <p>Em caso de de necessitarmos de usarmos essa estrutura em um ambiente mais limitado como embarcados, devemos usar uma implementação com vetores ao invês de lista ligada.</p>
 <p>Mas nesse caso devemos lidar com o problema de inserir em uma pilha cheia.</p>
+<table>
+<thead>
+<tr>
+<th>Lista de Aplicações Que Usam Pilha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calculadora para expressões matemáticas</td>
+</tr>
+<tr>
+<td>Conversão de número decimal para binário</td>
+</tr>
+<tr>
+<td>Retirada de mercadorias de um caminhão de entregas</td>
+</tr>
+<tr>
+<td>Recurso de desfazer e refazer em aplicações</td>
+</tr>
+</tbody>
+</table>
 </div>
 				
 			</article>
