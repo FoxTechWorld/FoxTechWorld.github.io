@@ -6,7 +6,17 @@
     <description>Recent content in Posts on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 01 May 2023 22:32:12 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 May 2023 16:51:33 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heap</title>
+      <link>http://FoxTechWorld.github.io/2023/05/heap/</link>
+      <pubDate>Wed, 03 May 2023 16:51:33 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/heap/</guid>
+      <description>A heap será a ultima estrutura de dados que será apresentada por enquanto neste blog. Podemos com ela encerrar a primeira temporada de estrutura de dados. E com isso irei iniciar novos assuntos.
+A heap é uma estrutura de dados que pode ser implementada com arranjos e como lista ligada, mas podemos reconhece-la como fila de prioridades. E apesar de ser uma lista linear tratamos a heap como uma arvoré de busca binária</description>
+    </item>
+    
     <item>
       <title>Fila</title>
       <link>http://FoxTechWorld.github.io/2023/05/fila/</link>
