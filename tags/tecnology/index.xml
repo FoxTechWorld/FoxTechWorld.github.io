@@ -14,7 +14,7 @@
       
       <guid>http://FoxTechWorld.github.io/2023/05/heap/</guid>
       <description>A heap será a ultima estrutura de dados que será apresentada por enquanto neste blog. Podemos com ela encerrar a primeira temporada de estrutura de dados. E com isso irei iniciar novos assuntos.
-A heap é uma estrutura de dados que pode ser implementada com arranjos e como lista ligada, mas podemos reconhece-la como fila de prioridades. E apesar de ser uma lista linear tratamos a heap como uma arvoré de busca binária</description>
+A heap é uma estrutura de dados que pode ser implementada com arranjos e como lista ligada, mas podemos reconhece-la como fila de prioridades. E apesar de ser uma lista linear tratamos a heap como uma árvore de busca binária</description>
     </item>
     
   </channel>
