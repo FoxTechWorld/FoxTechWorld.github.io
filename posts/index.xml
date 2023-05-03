@@ -6,7 +6,18 @@
     <description>Recent content in Posts on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 30 Apr 2023 14:58:21 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 May 2023 22:32:12 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fila</title>
+      <link>http://FoxTechWorld.github.io/2023/05/fila/</link>
+      <pubDate>Mon, 01 May 2023 22:32:12 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/fila/</guid>
+      <description>A fila é outra das estruturas de dados mais simples e mais importantes que temos atualmente. Podemos implementa-la de duas formas, usando vetores ou listas ligadas que eu já havia citado neste post.
+A fila também tem duas operações principais:
+Empilhar Desempilhar E tem como maior diferença com a fila o metódo de inserção e remoção que é um Fifo (First In First Out). Dentro de uma fila, a inserção deve ser feita sempre após o ultimo elemento inserido e sua remoção deve ser feita sempre daquele que foi inserido primeiro, novamente (FIFO).</description>
+    </item>
+    
     <item>
       <title>Pilha</title>
       <link>http://FoxTechWorld.github.io/2023/04/pilha/</link>
