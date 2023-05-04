@@ -6,7 +6,17 @@
     <description>Recent content on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 03 May 2023 16:51:33 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 May 2023 08:39:04 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pseudo random number</title>
+      <link>http://FoxTechWorld.github.io/2023/05/pseudo-random-number/</link>
+      <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/pseudo-random-number/</guid>
+      <description>Um número verdadeiramente aleátorio é impossivel com a computação porque a computação é deterministica. Ou seja, eu posso saber e conferir o resultado antes mesmo dele executar ou testar para o resultado.
+Com isso operamos algoritmos matématicos repetiveis. Para trabalharmos com números continuos e variantes uma (seed). Essa seed pode ser o tempo, a quantidade de memória, o ping da rede, ou tudo isso com diversas operações para aumentar a entropia.</description>
+    </item>
+    
     <item>
       <title>Heap</title>
       <link>http://FoxTechWorld.github.io/2023/05/heap/</link>
