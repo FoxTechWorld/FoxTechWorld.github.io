@@ -6,7 +6,17 @@
     <description>Recent content in Programming on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 04 May 2023 11:03:04 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 08:54:31 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O primeiro passo para o brain VA</title>
+      <link>http://FoxTechWorld.github.io/2023/05/o-primeiro-passo-para-o-brain-va/</link>
+      <pubDate>Fri, 05 May 2023 08:54:31 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/o-primeiro-passo-para-o-brain-va/</guid>
+      <description>Neste momento, estou interessado em usar o design pattern de factory. E como primeiro passo eu decidi montar a linha de comando (sem argparse) para o projeto. Como eu estou criando o projeto do zero, eu prefiro criar uma função get_arg para capturar os argumentos.
+import sys def get_arg(): argument = &amp;#34;&amp;#34; try: if (len(sys.argv) == 1): argument = sys.argv[1] if (len(sys.argv) &amp;gt; 1): for i in sys.argv: if (i !</description>
+    </item>
+    
     <item>
       <title>Meu novo projeto VA</title>
       <link>http://FoxTechWorld.github.io/2023/05/meu-novo-projeto-va/</link>
