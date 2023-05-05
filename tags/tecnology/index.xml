@@ -27,11 +27,11 @@ Depois disso basta eu definir uma Factory que inicie tudo automaticamente, algun
     </item>
     
     <item>
-      <title>Meu novo projeto VA</title>
-      <link>http://FoxTechWorld.github.io/2023/05/meu-novo-projeto-va/</link>
+      <title>Meu novo projeto Brain VA</title>
+      <link>http://FoxTechWorld.github.io/2023/05/meu-novo-projeto-brain-va/</link>
       <pubDate>Thu, 04 May 2023 11:03:04 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/2023/05/meu-novo-projeto-va/</guid>
+      <guid>http://FoxTechWorld.github.io/2023/05/meu-novo-projeto-brain-va/</guid>
       <description>Essa tarde tive uma ideia sobre como tornar um Virtual Assistente um pouco mais esperto sem necessariamente precisar de uma IA treinada. Vamos criar um projeto que gerar uma fonte de conhecimento para IA, seria necessario ter um chatbot implementado de forma unica para esse ferramenta, mas por enquanto do jeito que vamos fazer parece bom.
 Primeiramente eu dividi a primeira parte da ideia em etapas:
 - Raspar Dados do Wikipedia .</description>
