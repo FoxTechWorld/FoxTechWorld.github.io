@@ -14,7 +14,7 @@
       
       <guid>http://FoxTechWorld.github.io/2023/05/o-primeiro-passo-para-o-brain-va/</guid>
       <description>Neste momento, estou interessado em usar o design pattern de factory. E como primeiro passo eu decidi montar a linha de comando (sem argparse) para o projeto. Como eu estou criando o projeto do zero, eu prefiro criar uma função get_arg para capturar os argumentos.
-import sys def get_arg(): argument = &amp;#34;&amp;#34; try: if (len(sys.argv) == 1): argument = sys.argv[1] if (len(sys.argv) &amp;gt; 1): for i in sys.argv: if (i !</description>
+Depois disso basta eu definir uma Factory que inicie tudo automaticamente, alguns testes com injeção de dependencia e pronto teremos um projeto feito para rodar perfeitamente.</description>
     </item>
     
     <item>
