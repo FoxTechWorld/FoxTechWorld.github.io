@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://FoxTechWorld.github.io/tags/brain-va/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
     <loc>http://FoxTechWorld.github.io/categories/</loc>
-    <lastmod>2023-05-06T19:08:44-03:00</lastmod>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/</loc>
-    <lastmod>2023-05-06T19:08:44-03:00</lastmod>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/geek/</loc>
-    <lastmod>2023-05-06T19:08:44-03:00</lastmod>
+    <loc>http://FoxTechWorld.github.io/2023/05/implementando-e-finalizando-o-brain-va/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/posts/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/programming/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/projetos/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/tecnology/</loc>
+    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/geek/</loc>
     <lastmod>2023-05-06T19:08:44-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/tags/recomenda%C3%A7%C3%B5es/</loc>
@@ -26,25 +47,7 @@
     <loc>http://FoxTechWorld.github.io/2023/05/series-recomendadas/</loc>
     <lastmod>2023-05-06T19:08:44-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/</loc>
-    <lastmod>2023-05-06T19:08:44-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/brain-va/</loc>
-    <lastmod>2023-05-05T10:25:56-03:00</lastmod>
-  </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/o-segundo-passo-para-o-brain-va/</loc>
-    <lastmod>2023-05-05T10:25:56-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
-    <lastmod>2023-05-05T10:25:56-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/programming/</loc>
-    <lastmod>2023-05-05T10:25:56-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/projetos/</loc>
-    <lastmod>2023-05-05T10:25:56-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/tecnology/</loc>
     <lastmod>2023-05-05T10:25:56-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/o-primeiro-passo-para-o-brain-va/</loc>

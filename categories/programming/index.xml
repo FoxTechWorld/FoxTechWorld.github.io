@@ -6,7 +6,16 @@
     <description>Recent content in Programming on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 05 May 2023 10:25:56 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 09:07:28 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementando e finalizando o brain va</title>
+      <link>http://FoxTechWorld.github.io/2023/05/implementando-e-finalizando-o-brain-va/</link>
+      <pubDate>Sun, 07 May 2023 09:07:28 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/implementando-e-finalizando-o-brain-va/</guid>
+      <description>Chegamos ao ponto final do projetos onde falta terminar de implementar as classes do factory e torna-lo funcional. Nesse caso vamos começar trabalhando com o contéudo da classe WikipediaSearch, essa classe vai fazer apenas uma coisa, pesquisar o contéudo da wikipedia e retornar o mesmo. No caso eu defini um init para receber o termo que será pesquisado, e como implementação do search, a classe Wikipedia gera uma pequena select list para não haver desambiguação ou falha na pesquisa.</description>
+    </item>
+    
     <item>
       <title>O segundo passo para o brain va</title>
       <link>http://FoxTechWorld.github.io/2023/05/o-segundo-passo-para-o-brain-va/</link>
