@@ -8,20 +8,20 @@
     <language>pt-br</language>
     <lastBuildDate>Sun, 07 May 2023 14:54:46 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Linux</title>
+      <link>http://FoxTechWorld.github.io/tags/linux/</link>
+      <pubDate>Sun, 07 May 2023 14:54:46 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>OpenSource</title>
       <link>http://FoxTechWorld.github.io/tags/opensource/</link>
       <pubDate>Sun, 07 May 2023 14:54:46 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/tags/opensource/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tecnology</title>
-      <link>http://FoxTechWorld.github.io/tags/tecnology/</link>
-      <pubDate>Sun, 07 May 2023 14:54:46 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/tecnology/</guid>
       <description></description>
     </item>
     
@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>Series</title>
-      <link>http://FoxTechWorld.github.io/tags/series/</link>
-      <pubDate>Sat, 06 May 2023 19:08:44 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Mathematical</title>
       <link>http://FoxTechWorld.github.io/tags/mathematical/</link>
       <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
@@ -71,11 +62,11 @@
     </item>
     
     <item>
-      <title>Pseudo Random</title>
-      <link>http://FoxTechWorld.github.io/tags/pseudo-random/</link>
+      <title>Studying</title>
+      <link>http://FoxTechWorld.github.io/tags/studying/</link>
       <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/tags/pseudo-random/</guid>
+      <guid>http://FoxTechWorld.github.io/tags/studying/</guid>
       <description></description>
     </item>
     

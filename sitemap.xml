@@ -11,6 +11,9 @@
     <loc>http://FoxTechWorld.github.io/categories/geek/</loc>
     <lastmod>2023-05-07T14:54:46-03:00</lastmod>
   </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/linux/</loc>
+    <lastmod>2023-05-07T14:54:46-03:00</lastmod>
+  </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/n%C3%A3o-seja-normie-otimize-seu-linux/</loc>
     <lastmod>2023-05-07T14:54:46-03:00</lastmod>
   </url><url>
@@ -21,9 +24,6 @@
     <lastmod>2023-05-07T14:54:46-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/tags/</loc>
-    <lastmod>2023-05-07T14:54:46-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/tecnology/</loc>
     <lastmod>2023-05-07T14:54:46-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/categories/tecnology/</loc>
@@ -38,19 +38,7 @@
     <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
     <lastmod>2023-05-07T09:07:28-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/programming/</loc>
-    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/projetos/</loc>
-    <lastmod>2023-05-07T09:07:28-03:00</lastmod>
-  </url><url>
     <loc>http://FoxTechWorld.github.io/tags/recomenda%C3%A7%C3%B5es/</loc>
-    <lastmod>2023-05-06T19:08:44-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/series/</loc>
-    <lastmod>2023-05-06T19:08:44-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/series/</loc>
     <lastmod>2023-05-06T19:08:44-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/series-recomendadas/</loc>
@@ -71,10 +59,10 @@
     <loc>http://FoxTechWorld.github.io/categories/mathematical/</loc>
     <lastmod>2023-05-04T08:39:04-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/pseudo-random/</loc>
+    <loc>http://FoxTechWorld.github.io/2023/05/pseudo-random-number/</loc>
     <lastmod>2023-05-04T08:39:04-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/2023/05/pseudo-random-number/</loc>
+    <loc>http://FoxTechWorld.github.io/tags/studying/</loc>
     <lastmod>2023-05-04T08:39:04-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/categories/data-structure/</loc>
