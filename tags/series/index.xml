@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on FoxTechWorld</title>
+    <link>http://FoxTechWorld.github.io/tags/series/</link>
+    <description>Recent content in Series on FoxTechWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 06 May 2023 19:08:44 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Series_recomendadas</title>
+      <link>http://FoxTechWorld.github.io/2023/05/series_recomendadas/</link>
+      <pubDate>Sat, 06 May 2023 19:08:44 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/series_recomendadas/</guid>
+      <description>Dando um tempo de posts técnicos, hoje vim mostrar um pouco do meu gosto pessoal para Séries. Claro que gosto é gosto, e possívelmente o que você goste provavelmente eu não goste ou vice versa. Mas eu sugiro que você de uma chance as séries que serão mostradas aqui
+** Séries que vão mudar o seu ponto de vista**
+Entrelinhas Pontilhadas Essa é uma animação italiana que acompanha um cartunista de meia idade enfrentando uma crise de meia identidade começando a questionar o caminho que sua vida tomou.</description>
+    </item>
+    
+  </channel>
+</rss>
