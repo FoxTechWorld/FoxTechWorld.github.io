@@ -8,7 +8,7 @@
     <language>pt-br</language>
     <lastBuildDate>Sun, 07 May 2023 14:54:46 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Não seja normie otimize seu linux</title>
+      <title>Não seja normie, otimize seu linux</title>
       <link>http://FoxTechWorld.github.io/2023/05/n%C3%A3o-seja-normie-otimize-seu-linux/</link>
       <pubDate>Sun, 07 May 2023 14:54:46 -0300</pubDate>
       
@@ -27,13 +27,13 @@ Ou seja, tudo o que eu codar no linux só preciso recompilar no MacOSX para roda
     </item>
     
     <item>
-      <title>Series recomendadas</title>
-      <link>http://FoxTechWorld.github.io/2023/05/series-recomendadas/</link>
+      <title>Series cartoon que eu recomendado</title>
+      <link>http://FoxTechWorld.github.io/2023/05/series-cartoon-que-eu-recomendado/</link>
       <pubDate>Sat, 06 May 2023 19:08:44 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/2023/05/series-recomendadas/</guid>
+      <guid>http://FoxTechWorld.github.io/2023/05/series-cartoon-que-eu-recomendado/</guid>
       <description>Dando um tempo de posts técnicos, hoje vim mostrar um pouco do meu gosto pessoal para Séries. Claro que gosto é gosto, e possívelmente o que você goste provavelmente eu não goste ou vice versa. Mas eu sugiro que você de uma chance as séries que serão mostradas aqui
-** Séries que vão mudar o seu ponto de vista**
+Séries que vão mudar o seu ponto de vista
 Entrelinhas Pontilhadas Essa é uma animação italiana que acompanha um cartunista de meia idade enfrentando uma crise de meia identidade começando a questionar o caminho que sua vida tomou.</description>
     </item>
     
@@ -67,11 +67,11 @@ Primeiramente eu dividi a primeira parte da ideia em etapas:</description>
     </item>
     
     <item>
-      <title>Pseudo random number</title>
-      <link>http://FoxTechWorld.github.io/2023/05/pseudo-random-number/</link>
+      <title>Números pseudo aleatórios</title>
+      <link>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</link>
       <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/2023/05/pseudo-random-number/</guid>
+      <guid>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</guid>
       <description>Um número verdadeiramente aleátorio é impossivel com a computação porque a computação é deterministica. Ou seja, eu posso saber e conferir o resultado antes mesmo dele executar ou testar para o resultado.
 Com isso operamos algoritmos matématicos repetiveis. Para trabalharmos com números continuos e variantes uma (seed). Essa seed pode ser o tempo, a quantidade de memória, o ping da rede, ou tudo isso com diversas operações para aumentar a entropia.</description>
     </item>
