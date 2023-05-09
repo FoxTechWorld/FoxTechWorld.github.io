@@ -6,16 +6,7 @@
     <description>Recent content in Programming on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 08 May 2023 21:06:52 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Me inscrevi para testar a linguagem mojo</title>
-      <link>http://FoxTechWorld.github.io/2023/05/me-inscrevi-para-testar-a-linguagem-mojo/</link>
-      <pubDate>Mon, 08 May 2023 21:06:52 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/me-inscrevi-para-testar-a-linguagem-mojo/</guid>
-      <description>Galera, me inscrevi na lista para testar a nova linguagem de progmamação Mojo, que segundo eles é a combinação perfeita entre a usabilidade do python com a performance do C. Eu particularmente gosto do C por ser uma metaprogramação em baixo nível misturado com performance, não que eu tenha algo contra python ou outras linguagens. Inclusive python é uma das minhas linguagens favoritas talvez eu faça um post sobre cada linguagem e porque eu goste delas.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 07 May 2023 09:07:28 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementando e finalizando o brain va</title>
       <link>http://FoxTechWorld.github.io/2023/05/implementando-e-finalizando-o-brain-va/</link>

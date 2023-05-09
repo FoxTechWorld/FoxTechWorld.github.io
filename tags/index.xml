@@ -6,16 +6,7 @@
     <description>Recent content in Tags on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 08 May 2023 21:06:52 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Programming</title>
-      <link>http://FoxTechWorld.github.io/tags/programming/</link>
-      <pubDate>Mon, 08 May 2023 21:06:52 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 07 May 2023 14:54:46 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenSource</title>
       <link>http://FoxTechWorld.github.io/tags/opensource/</link>
@@ -31,6 +22,15 @@
       <pubDate>Sun, 07 May 2023 09:07:28 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/tags/brain-va/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://FoxTechWorld.github.io/tags/programming/</link>
+      <pubDate>Sun, 07 May 2023 09:07:28 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
