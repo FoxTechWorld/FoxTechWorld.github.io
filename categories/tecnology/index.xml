@@ -6,7 +6,17 @@
     <description>Recent content in Tecnology on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 08 May 2023 21:06:52 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/tecnology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 May 2023 09:11:26 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/tecnology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>As novas funcionalidades do mojo</title>
+      <link>http://FoxTechWorld.github.io/2023/05/as-novas-funcionalidades-do-mojo/</link>
+      <pubDate>Fri, 12 May 2023 09:11:26 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/as-novas-funcionalidades-do-mojo/</guid>
+      <description>No post anterior sobre o Mojo, eu contei um pouquinho sobre a linguagem criada pela empresa do Chris Lattner a Modular, e alguns aspectos interessantes da mesma. Hoje vou mostrar pontos interessantes que descobri em seu livro interativo sobre a linguagem mojo. &amp;ldquo;Não consegui logar no PlayGround ainda mas meu nome tá na fila&amp;rdquo; Começamos com a ferramenta básica do python para mostrar allgum dado no console.
+print(&amp;#34;Hello World!) Sim, quando eu disse que Mojo era um superset de python foi justamente sobre isso que eu tava falando.</description>
+    </item>
+    
     <item>
       <title>Me inscrevi para testar a linguagem mojo</title>
       <link>http://FoxTechWorld.github.io/2023/05/me-inscrevi-para-testar-a-linguagem-mojo/</link>
