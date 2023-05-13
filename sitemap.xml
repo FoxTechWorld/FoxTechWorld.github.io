@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://FoxTechWorld.github.io/categories/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/geek/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/opensource/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/posts/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/tecnology/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/2023/05/usando-controle-de-xbox-no-linux/</loc>
+    <lastmod>2023-05-13T14:16:00-03:00</lastmod>
+  </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/canais-youtube-sobre-tecnologia-que-eu-recomendo/</loc>
     <lastmod>2023-05-13T11:36:08-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/</loc>
-    <lastmod>2023-05-13T11:36:08-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/</loc>
-    <lastmod>2023-05-13T11:36:08-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/geek/</loc>
-    <lastmod>2023-05-13T11:36:08-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/posts/</loc>
-    <lastmod>2023-05-13T11:36:08-03:00</lastmod>
-  </url><url>
     <loc>http://FoxTechWorld.github.io/tags/recomenda%C3%A7%C3%B5es/</loc>
-    <lastmod>2023-05-13T11:36:08-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/</loc>
-    <lastmod>2023-05-13T11:36:08-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/tecnology/</loc>
     <lastmod>2023-05-13T11:36:08-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/as-novas-funcionalidades-do-mojo/</loc>
@@ -36,9 +42,6 @@
     <lastmod>2023-05-08T21:06:52-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/n%C3%A3o-seja-normie-otimize-seu-linux/</loc>
-    <lastmod>2023-05-07T14:54:46-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/opensource/</loc>
     <lastmod>2023-05-07T14:54:46-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/tags/brain-va/</loc>

@@ -6,7 +6,18 @@
     <description>Recent content in Posts on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 13 May 2023 11:36:08 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 May 2023 14:16:00 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usando controle de xbox no linux</title>
+      <link>http://FoxTechWorld.github.io/2023/05/usando-controle-de-xbox-no-linux/</link>
+      <pubDate>Sat, 13 May 2023 14:16:00 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/usando-controle-de-xbox-no-linux/</guid>
+      <description>Poiszé, dessa vez eu configurei bastante. Hoje configurei meu linux para reconhecer o controle do meu xbox one e passar para a steam. No geral, configurei bastante.
+Apesar de ser algo simples, comecei instalando o xpad-dkms. Que para quem não sabe é o driver para controllers do xbox.
+Após isso, verifiquei se o usb ligado ao meu controller estava sendo visto pelo linux, para isso usei o comando lsusb e incrivelmente ele estava.</description>
+    </item>
+    
     <item>
       <title>Canais Youtube sobre tecnologia que eu recomendo</title>
       <link>http://FoxTechWorld.github.io/2023/05/canais-youtube-sobre-tecnologia-que-eu-recomendo/</link>
