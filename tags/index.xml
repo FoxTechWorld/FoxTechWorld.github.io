@@ -6,7 +6,25 @@
     <description>Recent content in Tags on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 13 May 2023 14:16:00 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 May 2023 14:05:40 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>http://FoxTechWorld.github.io/tags/programming/</link>
+      <pubDate>Thu, 18 May 2023 14:05:40 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Studying</title>
+      <link>http://FoxTechWorld.github.io/tags/studying/</link>
+      <pubDate>Thu, 18 May 2023 14:05:40 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/tags/studying/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>OpenSource</title>
       <link>http://FoxTechWorld.github.io/tags/opensource/</link>
@@ -26,29 +44,11 @@
     </item>
     
     <item>
-      <title>Programming</title>
-      <link>http://FoxTechWorld.github.io/tags/programming/</link>
-      <pubDate>Fri, 12 May 2023 09:11:26 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Brain VA</title>
       <link>http://FoxTechWorld.github.io/tags/brain-va/</link>
       <pubDate>Sun, 07 May 2023 09:07:28 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/tags/brain-va/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Studying</title>
-      <link>http://FoxTechWorld.github.io/tags/studying/</link>
-      <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/studying/</guid>
       <description></description>
     </item>
     

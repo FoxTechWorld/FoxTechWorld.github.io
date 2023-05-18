@@ -6,7 +6,19 @@
     <description>Recent content in Programming on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 12 May 2023 09:11:26 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 May 2023 14:05:40 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Busca em largura</title>
+      <link>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</link>
+      <pubDate>Thu, 18 May 2023 14:05:40 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</guid>
+      <description>Para começar vamos contextualizar o que é um grafo. Um grafo é uma estrutura matemática usada para representar relacionamentos entre objetos.
+Ele consiste em um conjunto de pontos, chamados de vértices (ou nós), que são conectados por linhas, chamadas de arestas.
+Grafos são amplamente utilizados em diferentes áreas, como ciência da computação, matemática, redes sociais, teoria dos jogos, entre outros, para modelar e analisar diversas situações.
+Onde grafos são utilizados em computadores?</description>
+    </item>
+    
     <item>
       <title>As novas funcionalidades do mojo</title>
       <link>http://FoxTechWorld.github.io/2023/05/as-novas-funcionalidades-do-mojo/</link>

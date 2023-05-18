@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on FoxTechWorld</title>
+    <link>http://FoxTechWorld.github.io/categories/algorithm/</link>
+    <description>Recent content in Algorithm on FoxTechWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 18 May 2023 14:05:40 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Busca em largura</title>
+      <link>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</link>
+      <pubDate>Thu, 18 May 2023 14:05:40 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</guid>
+      <description>Para começar vamos contextualizar o que é um grafo. Um grafo é uma estrutura matemática usada para representar relacionamentos entre objetos.
+Ele consiste em um conjunto de pontos, chamados de vértices (ou nós), que são conectados por linhas, chamadas de arestas.
+Grafos são amplamente utilizados em diferentes áreas, como ciência da computação, matemática, redes sociais, teoria dos jogos, entre outros, para modelar e analisar diversas situações.
+Onde grafos são utilizados em computadores?</description>
+    </item>
+    
+  </channel>
+</rss>
