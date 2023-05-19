@@ -6,7 +6,18 @@
     <description>Recent content in Algorithm on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 18 May 2023 14:05:40 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 May 2023 09:09:15 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Busca em profundidade</title>
+      <link>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</link>
+      <pubDate>Fri, 19 May 2023 09:09:15 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</guid>
+      <description>Algoritmo de Busca em Profundidade O algoritmo de busca em profundidade, conhecido como DFS (do inglês Depth-First Search), é um método utilizado para percorrer ou explorar grafos de maneira sistemática e eficiente.
+Ao contrário do algoritmo de busca em largura (BFS), o DFS segue uma abordagem de &amp;ldquo;expansão em profundidade&amp;rdquo;, explorando um caminho o mais longe possível antes de retroceder.
+Visitação dos vértices Ao realizar uma busca em profundidade, o algoritmo DFS visita os vértices do grafo de forma recursiva.</description>
+    </item>
+    
     <item>
       <title>Busca em largura</title>
       <link>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</link>

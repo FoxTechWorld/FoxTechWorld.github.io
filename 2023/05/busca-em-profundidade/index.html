@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b1b1b">
+	<title>Busca em profundidade | FoxTechWorld</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Busca em largura é a única forma? Claro que não">
+		<meta property="og:title" content="Busca em profundidade" />
+<meta property="og:description" content="Busca em largura é a única forma? Claro que não" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-19T09:09:15-03:00" />
+<meta property="article:modified_time" content="2023-05-19T09:09:15-03:00" />
+
+		<meta itemprop="name" content="Busca em profundidade">
+<meta itemprop="description" content="Busca em largura é a única forma? Claro que não"><meta itemprop="datePublished" content="2023-05-19T09:09:15-03:00" />
+<meta itemprop="dateModified" content="2023-05-19T09:09:15-03:00" />
+<meta itemprop="wordCount" content="699">
+<meta itemprop="keywords" content="Programming,Studying," />
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/themes/dark-red.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PSN4T418"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-T8PSN4T418', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">FoxTechWorld</a>
+	
+<nav class="main-nav" role="navigation">
+	<button id="toggle" class="main-nav__btn" aria-label="Menu toggle" aria-expanded="false" tabindex="0">
+		<div class="main-nav__btn-box" tabindex="-1">
+			<svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18">
+				<path class="icon-menu__burger" d="M18 0v3.6H0V0h18zM0 10.8h18V7.2H0v3.6zM0 18h18v-3.6H0V18z"/>
+				<path class="icon-menu__x" d="M11.55 9L18 15.45 15.45 18 9 11.55 2.55 18 0 15.45 6.45 9 0 2.55 2.55 0 9 6.45 15.45 0 18 2.55 11.55 9z"/>
+			</svg>
+		</div>
+	</button>
+	<ul id="menu" class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/">
+					
+					<span class="main-nav__text">Home</span>
+					
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/categories/">
+					
+					<span class="main-nav__text">Categories</span>
+					
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/tags/">
+					
+					<span class="main-nav__text">Tags</span>
+					
+				</a>
+			</li>
+	</ul>
+</nav>
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">FoxTechWorld</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/posts/">Posts</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">Busca em profundidade</li>
+	</ol>
+</nav>
+		<div class="single block">
+			<article class="entry">
+	<div class="entry__meta meta mb">
+	<time class="entry__meta-published meta-published" datetime="2023-05-19T09:09:15-03:00">May 19, 2023</time>
+<div class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>, 
+		<a class="meta-categories__link" href="/categories/algorithm/" rel="category">Algorithm</a>
+	</span>
+</div>
+<div class="entry__meta-tags meta-tags">
+	<span class="meta-tags__list">Tags:
+		<a class="meta-tags__link" href="/tags/programming/" rel="tag">Programming</a>, 
+		<a class="meta-tags__link" href="/tags/studying/" rel="tag">Studying</a>
+	</span>
+</div>
+	</div>
+				<h1 class="entry__title">Busca em profundidade</h1>
+<details class="entry__toc toc" open>
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+				<div class="entry__content"><h6 id="algoritmo-de-busca-em-profundidade">Algoritmo de Busca em Profundidade</h6>
+<p>O algoritmo de busca em profundidade, conhecido como DFS (do inglês Depth-First Search), é um método utilizado para percorrer ou explorar grafos de maneira sistemática e eficiente.</p>
+<p>Ao contrário do algoritmo de busca em largura (BFS), o DFS segue uma abordagem de &ldquo;expansão em profundidade&rdquo;, explorando um caminho o mais longe possível antes de retroceder.</p>
+<h6 id="visitação-dos-vértices">Visitação dos vértices</h6>
+<p>Ao realizar uma busca em profundidade, o algoritmo DFS visita os vértices do grafo de forma recursiva.</p>
+<p>Ele começa em um vértice inicial e visita um de seus vizinhos não visitados.</p>
+<p>Em seguida, repete o mesmo processo a partir desse vizinho até que não haja mais vizinhos não visitados.</p>
+<p>Quando isso acontece, o algoritmo retrocede para o vértice anterior e continua a exploração a partir de outro vizinho não visitado, caso exista.</p>
+<p>Essa abordagem leva a uma exploração mais profunda do grafo antes de voltar aos vértices anteriores.</p>
+<p>Em essência, o DFS explora um ramo específico até atingir um vértice de folha antes de retroceder.</p>
+<h6 id="estrutura-de-dados-utilizada">Estrutura de dados utilizada</h6>
+<p>Para implementar o algoritmo DFS, é comum utilizar uma <a href="https://foxtechworld.github.io/2023/04/pilha/">pilha (stack)</a> para rastrear os vértices a serem visitados.</p>
+<p>A pilha segue o princípio LIFO (Last In, First Out), o que significa que o último vértice adicionado à pilha é o primeiro a ser visitado.</p>
+<p>Alternativamente, é possível utilizar uma abordagem recursiva para implementar o DFS, onde a recursão assume o papel de uma pilha.</p>
+<p>A cada chamada recursiva, um novo vértice é visitado, e a função recursiva é chamada novamente para explorar os vizinhos desse vértice.</p>
+<h6 id="exemplo-de-implementação-em-c">Exemplo de implementação em c++:</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span>(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> graph, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;&amp;</span> visited, <span style="color:#66d9ef">int</span> vertex) {
+</span></span><span style="display:flex;"><span>    visited[vertex] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Visitando vértice: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> vertex <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> neighbor : graph[vertex]) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>visited[neighbor]) {
+</span></span><span style="display:flex;"><span>            dfs(graph, visited, neighbor);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>vamos fazer um microbenchmark agora comparando a velocidade de se usar força bruta, busca em largura e busca em profundidade</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Time</th>
+<th>Consumo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python3 brute_force.py</td>
+<td>0,09s user 0,06s system</td>
+<td>126% cpu 0,120 total</td>
+</tr>
+<tr>
+<td>python3 bfs_search.py</td>
+<td>0,06s user 0,04s system</td>
+<td>120% cpu 0,085 total</td>
+</tr>
+<tr>
+<td>python3 dfs_search.py</td>
+<td>0,06s user 0,04s system</td>
+<td>130% cpu 0,077 total</td>
+</tr>
+</tbody>
+</table>
+<p>Para cada teste eu usei o seguinte código</p>
+<h6 id="brute_forcepy">brute_force.py</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">brute_force</span>(graph):
+</span></span><span style="display:flex;"><span>    vertices <span style="color:#f92672">=</span> list(graph<span style="color:#f92672">.</span>keys())
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(vertices)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, len(vertices)):
+</span></span><span style="display:flex;"><span>            vertex1 <span style="color:#f92672">=</span> vertices[i]
+</span></span><span style="display:flex;"><span>            vertex2 <span style="color:#f92672">=</span> vertices[j]
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> vertex2 <span style="color:#f92672">in</span> graph[vertex1]:
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Existe uma aresta entre os vértices: </span><span style="color:#e6db74">{</span>vertex1<span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">{</span>vertex2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Não existe uma aresta entre os vértices: </span><span style="color:#e6db74">{</span>vertex1<span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">{</span>vertex2<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exemplo de grafo com 14 vértices</span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>brute_force(graph)
+</span></span></code></pre></div><h6 id="bfs_searchpy">bfs_search.py</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Definição do grafo</span>
+</span></span><span style="display:flex;"><span>grafo <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfs</span>(grafo, inicio):
+</span></span><span style="display:flex;"><span>    visitados <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>    fila <span style="color:#f92672">=</span> deque()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    visitados<span style="color:#f92672">.</span>add(inicio)
+</span></span><span style="display:flex;"><span>    fila<span style="color:#f92672">.</span>append(inicio)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> fila:
+</span></span><span style="display:flex;"><span>        vertice <span style="color:#f92672">=</span> fila<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>        print(vertice)  <span style="color:#75715e"># Realize qualquer ação desejada com o vértice visitado</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> vizinho <span style="color:#f92672">in</span> grafo<span style="color:#f92672">.</span>get(vertice, []):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> vizinho <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visitados:
+</span></span><span style="display:flex;"><span>                visitados<span style="color:#f92672">.</span>add(vizinho)
+</span></span><span style="display:flex;"><span>                fila<span style="color:#f92672">.</span>append(vizinho)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Chamada da função BFS com vértice de origem 1</span>
+</span></span><span style="display:flex;"><span>bfs(grafo, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><h6 id="dfs_searchpy">dfs_search.py</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(graph, visited, vertex):
+</span></span><span style="display:flex;"><span>    visited<span style="color:#f92672">.</span>add(vertex)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Visitando vértice:&#34;</span>, vertex)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> neighbor <span style="color:#f92672">in</span> graph[vertex]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> neighbor <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                dfs(graph, visited, neighbor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Busca em Profundidade (DFS):&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> vertex <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>        dfs(graph, visited, vertex)
+</span></span></code></pre></div><p>A computação em base matemática, usando algoritmos, é mais elegante e eficiente do que a computação ingênua por diversos motivos.</p>
+<p>Em primeiro lugar, os algoritmos são desenvolvidos com base em princípios matemáticos e estruturas lógicas, o que permite uma abordagem sistemática e organizada na resolução de problemas. Eles são projetados para aproveitar propriedades matemáticas, como simetria, recursividade, otimização e complexidade, de forma a garantir soluções eficientes e elegantes.</p>
+<p>Além disso, a utilização de algoritmos permite a criação de soluções escaláveis, que podem lidar com problemas de tamanhos variados de maneira eficiente. Os algoritmos são projetados para minimizar o tempo de execução e o consumo de recursos, tornando possível resolver problemas complexos em um tempo razoável.</p>
+</div>
+				
+				<footer class="entry__footer">
+					
+<div class="entry__tags">
+			<a class="entry__tag btn" href="/tags/programming/">Programming</a>
+			<a class="entry__tag btn" href="/tags/studying/">Studying</a>
+</div>
+					
+				</footer>
+				
+			</article>
+		</div>
+	</main>
+	
+<div class="authorbox block">
+	<div class="author">
+		<div class="author__body">
+			<div class="author__name">
+				KitsuneSemCalda
+			</div>
+			<div class="author__bio">KitsuneSemCalda é a identidade secreta de um estudante de ciencias de computação (ou talvez não)</div>
+		</div>
+	</div>
+</div>
+	
+
+
+
+	
+<section class="comments block">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "foxtechworld" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+	</div>
+	<footer class="footer">
+<div class="footer__social social">
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/arthur-augusto-magalh%c3%a3es-55761b220">
+			<svg class="social__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+		</a>
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/KitsuneSemCalda">
+			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+		</a>
+</div>
+	<div class="footer__copyright">© 2023 FoxTechWorld. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+</footer>
+<script src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+</body>
+</html>
