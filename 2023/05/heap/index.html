@@ -18,7 +18,7 @@
 		<meta itemprop="name" content="Heap">
 <meta itemprop="description" content="Estrutura de Dados Heap"><meta itemprop="datePublished" content="2023-05-03T16:51:33-03:00" />
 <meta itemprop="dateModified" content="2023-05-03T16:51:33-03:00" />
-<meta itemprop="wordCount" content="487">
+<meta itemprop="wordCount" content="502">
 <meta itemprop="keywords" content="Studying,Programming," />
 	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="stylesheet" href="/css/themes/dark-red.css">
@@ -111,13 +111,25 @@ if (!doNotTrack) {
 				<h1 class="entry__title">Heap</h1>
 <details class="entry__toc toc" open>
 	<summary class="toc__title">Table of Contents</summary>
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </details>
-				<div class="entry__content"><p>A heap será a ultima estrutura de dados que será apresentada por enquanto neste blog. Podemos com ela encerrar a primeira temporada de estrutura de dados.
-E com isso irei iniciar novos assuntos.</p>
+				<div class="entry__content"><h6 id="o-que-é-uma-heap">O que é uma Heap?</h6>
+<p>A heap será a ultima estrutura de dados que será apresentada por enquanto neste blog.</p>
+<p>Podemos com ela encerrar a primeira temporada de estrutura de dados.</p>
+<p>E com isso irei iniciar novos assuntos.</p>
 <p>A heap é uma estrutura de dados que pode ser implementada com arranjos e como <a href="https://foxtechworld.github.io/lista_ligada/">lista ligada</a>, mas podemos reconhece-la
-como fila de prioridades. E apesar de ser uma lista linear tratamos a heap como uma <a href="https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca">árvore de busca binária</a></p>
+como fila de prioridades.</p>
+<p>E apesar de ser uma lista linear tratamos a heap como uma <a href="https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca">árvore de busca binária</a></p>
 <p>Não vou aprofundar em árvores neste momento, mas deixo o link livre a quem estiver interessado.</p>
+<h6 id="casos-de-uso-de-heaps">Casos de uso de heaps</h6>
 <p>Assim sendo, a heap tem as funções de inserir, remover, corrige Subindo, corrige descendo essas sendo suas principais funções. E normalmente as heaps são utilizadas em:</p>
 <table>
 <thead>
@@ -155,6 +167,7 @@ como fila de prioridades. E apesar de ser uma lista linear tratamos a heap como 
 </tr>
 </tbody>
 </table>
+<h6 id="exemplo-de-heap-em-c">Exemplo de heap em c++</h6>
 <p>E aqui definimos nossa estrutura de heap em c++ usando lista ligada.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HeapNode</span> {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
@@ -261,8 +274,8 @@ como fila de prioridades. E apesar de ser uma lista linear tratamos a heap como 
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> max_child;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><p>Repare que as funções de corrige subindo e corrige descendo são chamadas de heapifyUp e heapifyDown, eles estão protegidos por protected pois são de extrema importancia para o funcionamento da MaxHeap.
-E realmente não precisamos de ter seu funcionamento exposto, pois sua chamada poderia ser implementada diretamente após a inserção (veja que eu não botei isso no exemplo).</p>
+</span></span></code></pre></div><p>Repare que as funções de corrige subindo e corrige descendo são chamadas de heapifyUp e heapifyDown, eles estão protegidos por protected pois são de extrema importancia para o funcionamento da MaxHeap.</p>
+<p>E realmente não precisamos de ter seu funcionamento exposto, pois sua chamada poderia ser implementada diretamente após a inserção (veja que eu não botei isso no exemplo).</p>
 <p>Além disso, veja que usamos root, mas não dividimos em esquerda e direita, o corrige subindo e descendo que balancea o heap como se fosse um balanceador de arvore binária</p>
 </div>
 				

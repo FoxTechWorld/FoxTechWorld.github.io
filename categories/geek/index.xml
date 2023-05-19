@@ -13,8 +13,11 @@
       <pubDate>Sat, 13 May 2023 14:16:00 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/2023/05/usando-controle-de-xbox-no-linux/</guid>
-      <description>Poiszé, dessa vez eu configurei bastante. Hoje configurei meu linux para reconhecer o controle do meu xbox one e passar para a steam. No geral, configurei bastante.
-Apesar de ser algo simples, comecei instalando o xpad-dkms. Que para quem não sabe é o driver para controllers do xbox.
+      <description>Poiszé, dessa vez eu configurei bastante.
+Hoje configurei meu linux para reconhecer o controle do meu xbox one e passar para a steam.
+No geral, configurei bastante.
+Eu realmente configurei bastante, para no fim descobrir que não era para configurar aquilo tudo ;-; Apesar de ser algo simples, comecei instalando o xpad-dkms.
+Que para quem não sabe é o driver para controllers do xbox.
 Após isso, verifiquei se o usb ligado ao meu controller estava sendo visto pelo linux, para isso usei o comando lsusb e incrivelmente ele estava.</description>
     </item>
     
@@ -34,8 +37,10 @@ PS: Se você tem amor a si mesmo, e aos seus ouvidos, por favor desabilite a mer
       <pubDate>Sun, 07 May 2023 14:54:46 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/2023/05/n%C3%A3o-seja-normie-otimize-seu-linux/</guid>
-      <description>O linux é um dos 3 grandes sistemas operacionais, e assim como MacOSX ele puxa as ideias do Unix. Não confunda (linux não é Unix, e o MacOSX não segue os preceitos do Unix). Tanto que o kernel Xnu da apple significa (X is not Unix), mais ainda sim ambos são suficientemente compativeis para ter compatibilidade em nível de código fonte.
-Ou seja, tudo o que eu codar no linux só preciso recompilar no MacOSX para rodar (não é tão simples assim em alguns casos, mas pode ocorrer em outros).</description>
+      <description>O que é linux? O linux é um dos 3 grandes sistemas operacionais, e assim como MacOSX ele puxa as ideias do Unix.
+Não confunda (linux não é Unix, e o MacOSX não segue os preceitos do Unix).
+Tanto que o kernel Xnu da apple significa (X is not Unix), mais ainda sim ambos são suficientemente compativeis para ter compatibilidade em nível de código fonte.
+Para quem é mais técnico, o linux em si não é um sistema operacional completo, ele é apenas um núcleo como o NT (kernel do Windows) e o XNU (kernel do MacOSX).</description>
     </item>
     
     <item>

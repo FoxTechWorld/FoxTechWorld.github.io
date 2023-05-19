@@ -18,7 +18,7 @@
 		<meta itemprop="name" content="Fila">
 <meta itemprop="description" content="Estrutura de dados fila"><meta itemprop="datePublished" content="2023-05-01T22:32:12-03:00" />
 <meta itemprop="dateModified" content="2023-05-01T22:32:12-03:00" />
-<meta itemprop="wordCount" content="326">
+<meta itemprop="wordCount" content="454">
 <meta itemprop="keywords" content="Studying,Programming," />
 	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="stylesheet" href="/css/themes/dark-red.css">
@@ -111,18 +111,30 @@ if (!doNotTrack) {
 				<h1 class="entry__title">Fila</h1>
 <details class="entry__toc toc" open>
 	<summary class="toc__title">Table of Contents</summary>
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </details>
-				<div class="entry__content"><p>A fila é outra das estruturas de dados mais simples e mais importantes que temos atualmente.
+				<div class="entry__content"><h6 id="o-que-é-uma-fila">O que é uma fila?</h6>
+<p>A fila é outra das estruturas de dados mais simples e mais importantes que temos atualmente.
 Podemos implementa-la de duas formas, usando vetores ou listas ligadas que eu já havia citado neste <a href="https://foxtechworld.github.io/lista_ligada/">post</a>.</p>
+<h6 id="quais-são-as-principais-operações-de-uma-fila">Quais são as principais operações de uma fila?</h6>
 <p>A fila também tem duas operações principais:</p>
 <ul>
 <li>Empilhar</li>
 <li>Desempilhar</li>
 </ul>
-<p>E tem como maior diferença com a fila o metódo de inserção e remoção que é um <em><strong>Fifo</strong></em> (First In First Out).
-Dentro de uma fila, a inserção deve ser feita sempre após o ultimo elemento inserido e sua remoção deve ser feita sempre daquele que foi inserido primeiro, novamente (FIFO).
-Caso desejemos acessar um item do meio da fila, devemos remover todos os primeiros devem ser desenfileirados.</p>
+<h6 id="qual-a-diferença-de-uma-fila-para-a-pilha">Qual a diferença de uma fila para a pilha.</h6>
+<p>E tem como maior diferença com a fila o metódo de inserção e remoção que é um <em><strong>Fifo</strong></em> (First In First Out).</p>
+<p>Dentro de uma fila, a inserção deve ser feita sempre após o ultimo elemento inserido e sua remoção deve ser feita sempre daquele que foi inserido primeiro, novamente (FIFO).</p>
+<p>Caso desejemos acessar um item do meio da fila, devemos remover todos os primeiros devem ser desenfileirados.</p>
+<h5 id="exemplo-de-fila-em-c">Exemplo de fila em c++</h5>
 <p>Aqui temos um exemplo em c++ de uma fila.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
@@ -217,6 +229,13 @@ E caso precisemos enfileirar algo, preciso adicionar ao rear.</p>
 </tr>
 </tbody>
 </table>
+<p>Saiba que ao usar uma fila, você pode aumentar o peso, e quantidade de processamento que sua aplicação ocasiona, em troca de uma estrutura de controle.</p>
+<pre tabindex="0"><code>(Aplicação) -----&gt; (Banco de Dados)
+
+(Aplicação) ---&gt; Fila ---&gt; (Banco de Dados)
+</code></pre><p>Não sei dizer se vocês conseguem intuitivamente reconhecer mas ao usar uma fila, você primeiro escreve na Fila e a fila escreve no banco.</p>
+<p>Ao inves de tentarmos conectar centenas de milhares de operações diretamente no banco, você conecta um pool bem menor de escrita em paralelo.</p>
+<p>Isso é uma otimização simples e barato que melhorar e muito a performance e a confiabilidade.</p>
 </div>
 				
 				<footer class="entry__footer">

@@ -18,7 +18,7 @@
 		<meta itemprop="name" content="Usando controle de xbox no linux">
 <meta itemprop="description" content="Joguei Prototype e Dragon Ball Xenoverse usando o meu controle de xbox one no linux"><meta itemprop="datePublished" content="2023-05-13T14:16:00-03:00" />
 <meta itemprop="dateModified" content="2023-05-13T14:16:00-03:00" />
-<meta itemprop="wordCount" content="198">
+<meta itemprop="wordCount" content="218">
 <meta itemprop="keywords" content="OpenSource," />
 	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="stylesheet" href="/css/themes/dark-red.css">
@@ -112,11 +112,12 @@ if (!doNotTrack) {
 	<summary class="toc__title">Table of Contents</summary>
 	<nav id="TableOfContents"></nav>
 </details>
-				<div class="entry__content"><p>Poiszé, dessa vez eu configurei bastante.
-Hoje configurei meu linux para reconhecer o controle do meu xbox one e passar para a steam.
-No geral, configurei bastante.</p>
-<p>Apesar de ser algo simples, comecei instalando o <a href="https://aur.archlinux.org/packages/xpad-dkms-git">xpad-dkms</a>.
-Que para quem não sabe é o driver para controllers do xbox.</p>
+				<div class="entry__content"><p>Poiszé, dessa vez eu configurei bastante.</p>
+<p>Hoje configurei meu linux para reconhecer o controle do meu xbox one e passar para a steam.</p>
+<p>No geral, configurei bastante.</p>
+<pre tabindex="0"><code>Eu realmente configurei bastante, para no fim descobrir que não era para configurar aquilo tudo ;-; 
+</code></pre><p>Apesar de ser algo simples, comecei instalando o <a href="https://aur.archlinux.org/packages/xpad-dkms-git">xpad-dkms</a>.</p>
+<p>Que para quem não sabe é o driver para controllers do xbox.</p>
 <p>Após isso, verifiquei se o usb ligado ao meu controller estava sendo visto pelo linux, para isso usei o comando <code>lsusb</code> e incrivelmente ele estava.</p>
 <pre tabindex="0"><code>Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 003 Device 002: ID 05c8:023a Cheng Uei Precision Industry Co., Ltd (Foxlink) VGA Camera
@@ -125,8 +126,8 @@ Bus 003 Device 003: ID 8087:0aaa Intel Corp. Bluetooth 9460/9560 Jefferson Peak 
 Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-</code></pre><p>Já que estava sendo reconhecido no Bus 003, só faltava instalar o driver para o controlador que eu precisava. Lembra do xone que citei inicialmente.
-O comando para instalar o driver dkms foi <code>sudo modprobe xpad</code>.</p>
+</code></pre><p>Já que estava sendo reconhecido no Bus 003, só faltava instalar o driver para o controlador que eu precisava. Lembra do xone que citei inicialmente.</p>
+<p>O comando para instalar o driver dkms foi <code>sudo modprobe xpad</code> para abilitar o driver.</p>
 <p>Depois foi só partir pro abraço.</p>
 </div>
 				
