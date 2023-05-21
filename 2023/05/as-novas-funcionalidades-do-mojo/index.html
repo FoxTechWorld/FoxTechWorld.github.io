@@ -125,7 +125,7 @@ Começamos com a ferramenta básica do python para mostrar allgum dado no consol
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello World!)</span>
 </span></span></code></pre></div><p>Sim, quando eu disse que Mojo era um superset de python foi justamente sobre isso que eu tava falando. Segundo a espectativa de seu criador a ideia é conseguir importar e usar livremente libs python existetntes e usa-los da forma convencional.
 A diferença sendo que o Mojo tem uma grande quantidade de recursos que o Python não possui suporte.</p>
-<h4 id="vamos-começar-com-as-váriaveis">Vamos começar com as váriaveis:</h4>
+<h5 id="vamos-começar-com-as-váriaveis">Vamos começar com as váriaveis:</h5>
 <p>Mojo possui suporte a <strong>var</strong> e <strong>let</strong> dentro do sistema.
 Dentro de uma função em python, você pode atribuir valores a um nome e isso cria implicitamente uma váriavel de escopo de função.
 Isso gera um desafio por dois motivos:</p>
@@ -166,7 +166,7 @@ As varíaveis <strong>let</strong> e <strong>var</strong> também suportam espec
 </span></span><span style="display:flex;"><span>	
 </span></span><span style="display:flex;"><span>your_function()
 </span></span></code></pre></div><p>Olha que coisa linda é  esse superset.</p>
-<h4 id="tipo-struct">Tipo Struct:</h4>
+<h5 id="tipo-struct">Tipo Struct:</h5>
 <p>Quando trabalharmos em sistemas modernos precisamos de uma forma segura de construir abstrações e de alto nível sobre o controle do Layout de dados de baixo nível, acesso ao campo livre de indireção e outros truques de nicho. Mojo oferece suporte a isso usando o tipo <code>struct</code> (novamente lembrando de C e Rust).
 Os tipos <a href="https://en.wikipedia.org/wiki/Struct_(C_programming_language)">structs</a> são muito parecidos com classes, no entanto as classes são estremamente dinamicas com <a href="https://pt.wikipedia.org/wiki/Liga%C3%A7%C3%A3o_din%C3%A2mica_(programa%C3%A7%C3%A3o_orientada_a_objetos)">dispatch dinâmico</a>, <a href="https://en.wikipedia.org/wiki/Monkey_patch">monkey-patching</a>.
 Structs são estáticos, vinculados em tempo de compilação e embutidos em seu container, em mojo uma struct seria declarada assim:</p>
@@ -182,7 +182,7 @@ Structs são estáticos, vinculados em tempo de compilação e embutidos em seu 
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>first <span style="color:#f92672">&lt;</span> rhs<span style="color:#f92672">.</span>first <span style="color:#f92672">or</span>
 </span></span><span style="display:flex;"><span>			(self<span style="color:#f92672">.</span>first <span style="color:#f92672">==</span> rhs<span style="color:#f92672">.</span>first <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>second <span style="color:#f92672">&lt;</span> rhs<span style="color:#f92672">.</span>second)
 </span></span></code></pre></div><p>A maior diferença em comparação com a classe é que todas as propriedades devem ser explicitamente declaradas com <strong>var</strong> ou <strong>let</strong>.</p>
-<h4 id="tipificação-forte">Tipificação forte:</h4>
+<h5 id="tipificação-forte">Tipificação forte:</h5>
 <p>Embora tenhamos tipos dinâmicos no python, o Mojo permite que você use tipificação forte em seus programas.
 Uma das formas de empregar a verificação de tipo forte é com o struct.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pairTest</span>() <span style="color:#f92672">-&gt;</span> Bool:

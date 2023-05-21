@@ -6,7 +6,20 @@
     <description>Recent content in Posts on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 19 May 2023 09:09:15 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 May 2023 13:08:25 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bases Númericas: Binários e Decimais</title>
+      <link>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</link>
+      <pubDate>Sat, 20 May 2023 13:08:25 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</guid>
+      <description>O que são bases númericas? Bases numericas são sistemas que nos permitem representar e manipular números de diferentes formas.
+Muito além de usar apenas simbolos de 0 a 9 antes de adicionar uma casa decimal, existem outras bases.
+Essas outras bases que utilizam símbolos e regras distintas.
+Sistema Decimal O sistema decimal uma representação posicional em que cada digito tem uma posição especifico.
+primeiro elemento segundo elemento terceiro elemento quarto elemento extenso 1 0 0 0 Mil 0 2 0 0 Duzentos 0 0 3 0 Trinta 0 0 0 9 Nove Esse sistema é baseado no conceito de contar que nos permite utilizar operações basicas como adicão, subtração, multiplicação e divisão.</description>
+    </item>
+    
     <item>
       <title>Busca em profundidade</title>
       <link>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</link>
