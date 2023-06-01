@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</loc>
-    <lastmod>2023-05-20T13:08:25-03:00</lastmod>
+    <loc>http://FoxTechWorld.github.io/2023/05/bolha-das-inteligencias-artificiais/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/categories/</loc>
-    <lastmod>2023-05-20T13:08:25-03:00</lastmod>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/opinion/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/posts/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/technology/</loc>
+    <lastmod>2023-05-31T16:57:42-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</loc>
     <lastmod>2023-05-20T13:08:25-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/categories/mathematical/</loc>
     <lastmod>2023-05-20T13:08:25-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/posts/</loc>
-    <lastmod>2023-05-20T13:08:25-03:00</lastmod>
-  </url><url>
     <loc>http://FoxTechWorld.github.io/tags/studying/</loc>
-    <lastmod>2023-05-20T13:08:25-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/</loc>
     <lastmod>2023-05-20T13:08:25-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/categories/tecnology/</loc>
@@ -30,9 +42,6 @@
     <lastmod>2023-05-19T09:09:15-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</loc>
-    <lastmod>2023-05-19T09:09:15-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
     <lastmod>2023-05-19T09:09:15-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</loc>

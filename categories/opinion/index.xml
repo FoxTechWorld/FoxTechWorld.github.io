@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opinion on FoxTechWorld</title>
+    <link>http://FoxTechWorld.github.io/categories/opinion/</link>
+    <description>Recent content in Opinion on FoxTechWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 31 May 2023 16:57:42 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/opinion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bolha das inteligencias artificiais</title>
+      <link>http://FoxTechWorld.github.io/2023/05/bolha-das-inteligencias-artificiais/</link>
+      <pubDate>Wed, 31 May 2023 16:57:42 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/05/bolha-das-inteligencias-artificiais/</guid>
+      <description>Bem vindos passageiros! Estamos preste a entrar em grande turbulencia graças a chegada da nova bolha tech.
+A Bolha das inteligencias artificiais.
+A partir de agora, notícias sobre startups de inteligência artificial se tornarão comuns, juntamente com o temor de milhares de pessoas que receiam ter seus empregos substituídos.
+Primeiramente vamos contextualizar.
+O que é uma inteligencia artificial? É um sistema que usa de grandes conjuntos de dados e estatisticas para conseguir aprender padrões, fazer inferencias, tomar decisões e executar tarefas.</description>
+    </item>
+    
+  </channel>
+</rss>
