@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smart House on FoxTechWorld</title>
+    <link>http://FoxTechWorld.github.io/tags/smart-house/</link>
+    <description>Recent content in Smart House on FoxTechWorld</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 06 Jun 2023 12:19:03 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/smart-house/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Smart Room</title>
+      <link>http://FoxTechWorld.github.io/2023/06/smart-room/</link>
+      <pubDate>Tue, 06 Jun 2023 12:19:03 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/06/smart-room/</guid>
+      <description>Devo começar falando que se você quer montar algo inteligente na sua casa você terá um trade-off, uma troca entre facilidade e privacidade, isso se deve ao fato de que você estará gerando dados sobre tudo o que for automatizado e caso você escolha o caminho fácil você usará uma alexa onde as informações serão enviadas para a Amazon e onde o servidor de aplicação, deles realizará o trabalho. Pense em usar a Alexa como tomar a pílula azul em Matrix onde você ainda estará acomodado.</description>
+    </item>
+    
+  </channel>
+</rss>
