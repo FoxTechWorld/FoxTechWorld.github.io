@@ -6,7 +6,16 @@
     <description>Recent content in Programming on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 31 May 2023 16:57:42 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jun 2023 22:17:53 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estou aprendendo julia</title>
+      <link>http://FoxTechWorld.github.io/2023/06/estou-aprendendo-julia/</link>
+      <pubDate>Thu, 08 Jun 2023 22:17:53 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/06/estou-aprendendo-julia/</guid>
+      <description>Como Uncle Bob diz: &amp;ldquo;Learn at least one new language every year&amp;rdquo; e eu decidi começar a estudar Julia por ela poder ser utilizada a fins de simulação e visualização de dados, inclusive criei um repositorio github para meus aprendizados onde pretendo deixar algumas coisas que aprendi como linguagens conceitos e etc. Para isto funcionar da forma que espero vou utilizar da ajuda do ChatGPT e do gpt4all para me gerar desafios e prompts de aprendizado inclusive o primeiro prompt que eu dei foi: Se imagine sendo o professor mais didatico da internet e crie um tutorial com exercicios em julia.</description>
+    </item>
+    
     <item>
       <title>Bolha das inteligencias artificiais</title>
       <link>http://FoxTechWorld.github.io/2023/05/bolha-das-inteligencias-artificiais/</link>
