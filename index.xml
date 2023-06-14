@@ -6,7 +6,19 @@
     <description>Recent content on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 10 Jun 2023 12:33:00 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jun 2023 16:10:06 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculo inversa de uma matriz de forma eficiente</title>
+      <link>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</link>
+      <pubDate>Sun, 11 Jun 2023 16:10:06 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</guid>
+      <description>Para calcular uma inversa precisamos de 3 coisas.
+Uma matriz quadrada A determinante dessa matriz Algo ou alguém para calcular isso &amp;quot; ¯\_(ツ)_/¯ &amp;quot;
+Na verdade é são poucos passos:
+Pegue uma matriz quadrada e inverta a ordem da diagonal principal | 2 4 | -&amp;gt; | 5 4 | | 1 5 | -&amp;gt; | 1 2 | Inverta o sinal da diagonal secundária | 5 -4 | | -1 2 | Você divide todos os elementos da matriz gerada pelo determinante da matriz original e reduz onde é possível.</description>
+    </item>
+    
     <item>
       <title>Começando um novo projeto: Graphene Simulator</title>
       <link>http://FoxTechWorld.github.io/2023/06/come%C3%A7ando-um-novo-projeto-graphene-simulator/</link>
