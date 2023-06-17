@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b1b1b">
+	<title>Union Finds | FoxTechWorld</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Melhorando a velocidade de pesquisa em grafos com union finds">
+		<meta property="og:title" content="Union Finds" />
+<meta property="og:description" content="Melhorando a velocidade de pesquisa em grafos com union finds" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://FoxTechWorld.github.io/2023/06/union-finds/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-17T14:31:56-03:00" />
+<meta property="article:modified_time" content="2023-06-17T14:31:56-03:00" />
+
+		<meta itemprop="name" content="Union Finds">
+<meta itemprop="description" content="Melhorando a velocidade de pesquisa em grafos com union finds"><meta itemprop="datePublished" content="2023-06-17T14:31:56-03:00" />
+<meta itemprop="dateModified" content="2023-06-17T14:31:56-03:00" />
+<meta itemprop="wordCount" content="1598">
+<meta itemprop="keywords" content="Studying,Programming," />
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="stylesheet" href="/css/themes/dark-red.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PSN4T418"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-T8PSN4T418', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">FoxTechWorld</a>
+	
+<nav class="main-nav" role="navigation">
+	<button id="toggle" class="main-nav__btn" aria-label="Menu toggle" aria-expanded="false" tabindex="0">
+		<div class="main-nav__btn-box" tabindex="-1">
+			<svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18">
+				<path class="icon-menu__burger" d="M18 0v3.6H0V0h18zM0 10.8h18V7.2H0v3.6zM0 18h18v-3.6H0V18z"/>
+				<path class="icon-menu__x" d="M11.55 9L18 15.45 15.45 18 9 11.55 2.55 18 0 15.45 6.45 9 0 2.55 2.55 0 9 6.45 15.45 0 18 2.55 11.55 9z"/>
+			</svg>
+		</div>
+	</button>
+	<ul id="menu" class="main-nav__list">
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/">
+					
+					<span class="main-nav__text">Home</span>
+					
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/categories/">
+					
+					<span class="main-nav__text">Categories</span>
+					
+				</a>
+			</li>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="/tags/">
+					
+					<span class="main-nav__text">Tags</span>
+					
+				</a>
+			</li>
+	</ul>
+</nav>
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">FoxTechWorld</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/posts/">Posts</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">Union Finds</li>
+	</ol>
+</nav>
+		<div class="single block">
+			<article class="entry">
+	<div class="entry__meta meta mb">
+	<time class="entry__meta-published meta-published" datetime="2023-06-17T14:31:56-03:00">June 17, 2023</time>
+<div class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>, 
+		<a class="meta-categories__link" href="/categories/data-structure/" rel="category">Data Structure</a>
+	</span>
+</div>
+<div class="entry__meta-tags meta-tags">
+	<span class="meta-tags__list">Tags:
+		<a class="meta-tags__link" href="/tags/studying/" rel="tag">Studying</a>, 
+		<a class="meta-tags__link" href="/tags/programming/" rel="tag">Programming</a>
+	</span>
+</div>
+	</div>
+				<h1 class="entry__title">Union Finds</h1>
+<details class="entry__toc toc" open>
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#exemplo-de-bfs-sem-union-finds">Exemplo de BFS sem Union Finds</a></li>
+        <li><a href="#exemplo-de-dfs-com-union-finds">Exemplo de DFS com Union Finds</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+				<div class="entry__content"><p>Se você leu sobre <a href="https://foxtechworld.github.io/2023/05/busca-em-largura/">BFS</a> e <a href="https://foxtechworld.github.io/2023/05/busca-em-profundidade/">DFS</a> deve ter percebido que a maioria das pesquisas são relativamente mais rápidas que a força bruta (busca linear). Mas e quando os grafos se tornam gigantescos?</p>
+<p>Bom, neste caso você utiliza outros algoritmos para reduzir o tamanho dos grafos a subgrafos menores e conseguir realizar o BFS / DFS. Mas mesmo assim você pode precisar de algum auxilio e daí surge a ideia de um Union Find, uma estrutura de dados que ajuda a aumentar a velocidade de busca em grafos. E essa estrutura é chamada Union Find, mas também pode ser chamada de <a href="https://pt.wikipedia.org/wiki/Uni%C3%A3o-busca">Disjoint-Set</a>.</p>
+<p>A implementação básica do Union-Find utiliza uma matriz ou vetor para representar os conjuntos e cada elemento possui uma referencia a seu &ldquo;pai&rdquo; ou a si próprio caso não haja pai. Veja que cada elemento é considerado uma árvore isolada.</p>
+<p>As duas principais operações de um disjoint-set são <code>Find</code> e <code>Union</code> que aprimoram a velocidade de pesquisa pela <code>compressão do caminho</code> onde atualiza - se todos os ponteiros do &ldquo;pai&rdquo; dos elementos visitados durante o Find, de forma que eles apontem diretamente para a raiz do conjunto. Essa compressão do caminho tem um impacto significativo na velocidade de busca pois reduz a altura da árvore que representa o conjunto. Quando o elemento é pesquisado, a árvore é percorrida até encontrar a raiz que é o representante do conjunto. Durante o percurso, os ponteiros do pai são atualizados para apontar diretamente para a raiz, encurtando o caminho percorrido.</p>
+<p>Aqui está um exemplo de implementação do Union Finds em c++:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> parent; <span style="color:#75715e">// vetor que armazena o pai de cada elemento
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> rank;   <span style="color:#75715e">// vetor que armazena a altura da árvore para cada elemento
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    UnionFind(<span style="color:#66d9ef">int</span> size) {
+</span></span><span style="display:flex;"><span>        parent.resize(size);
+</span></span><span style="display:flex;"><span>        rank.resize(size, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Inicializa cada elemento como sua própria raiz
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            parent[i] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Encontra o representante (raiz) do conjunto ao qual o elemento pertence
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find</span>(<span style="color:#66d9ef">int</span> x) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (parent[x] <span style="color:#f92672">!=</span> x) {
+</span></span><span style="display:flex;"><span>            parent[x] <span style="color:#f92672">=</span> find(parent[x]); <span style="color:#75715e">// Aplica a compressão de caminho
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> parent[x];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Une dois conjuntos em um único conjunto maior
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unite</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> rootX <span style="color:#f92672">=</span> find(x);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> rootY <span style="color:#f92672">=</span> find(y);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (rootX <span style="color:#f92672">!=</span> rootY) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Une os conjuntos com base na altura (rank)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (rank[rootX] <span style="color:#f92672">&lt;</span> rank[rootY]) {
+</span></span><span style="display:flex;"><span>                parent[rootX] <span style="color:#f92672">=</span> rootY;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (rank[rootX] <span style="color:#f92672">&gt;</span> rank[rootY]) {
+</span></span><span style="display:flex;"><span>                parent[rootY] <span style="color:#f92672">=</span> rootX;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                parent[rootY] <span style="color:#f92672">=</span> rootX;
+</span></span><span style="display:flex;"><span>                rank[rootX]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Para representar a diferença que um Union Finds faz, eu vou utilizar os exemplos de dfs e bfs com e sem Union Finds</p>
+<h6 id="exemplo-de-dfs-sem-union-finds">Exemplo de DFS sem Union Finds</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(graph, visited, vertex):
+</span></span><span style="display:flex;"><span>    visited<span style="color:#f92672">.</span>add(vertex)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Visitando vértice:&#34;</span>, vertex)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> neighbor <span style="color:#f92672">in</span> graph[vertex]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> neighbor <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                dfs(graph, visited, neighbor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">7</span>: [<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">8</span>: [<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">9</span>: [<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">10</span>: [<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">11</span>: [<span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">12</span>: [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">13</span>: [<span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">14</span>: [<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">15</span>: [<span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">16</span>: [<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">17</span>: [<span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">18</span>: [<span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">19</span>: [<span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">20</span>: [<span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">21</span>: [<span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">22</span>: [<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">23</span>: [<span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">24</span>: [<span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">25</span>: [<span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">26</span>: [<span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">27</span>: [<span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">28</span>: [<span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">29</span>: [<span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">30</span>: [<span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">64</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Busca em Profundidade (DFS):&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> vertex <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>        dfs(graph, visited, vertex)
+</span></span></code></pre></div><h3 id="exemplo-de-bfs-sem-union-finds">Exemplo de BFS sem Union Finds</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Definição do grafo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>grafo <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">7</span>: [<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">8</span>: [<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">9</span>: [<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">10</span>: [<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">11</span>: [<span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">12</span>: [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">13</span>: [<span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">14</span>: [<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">15</span>: [<span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">16</span>: [<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">17</span>: [<span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">18</span>: [<span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">19</span>: [<span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">20</span>: [<span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">21</span>: [<span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">22</span>: [<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">23</span>: [<span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">24</span>: [<span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">25</span>: [<span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">26</span>: [<span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">27</span>: [<span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">28</span>: [<span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">29</span>: [<span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">30</span>: [<span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">64</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfs</span>(grafo, inicio):
+</span></span><span style="display:flex;"><span>    visitados <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>    fila <span style="color:#f92672">=</span> deque()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    visitados<span style="color:#f92672">.</span>add(inicio)
+</span></span><span style="display:flex;"><span>    fila<span style="color:#f92672">.</span>append(inicio)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> fila:
+</span></span><span style="display:flex;"><span>        vertice <span style="color:#f92672">=</span> fila<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>        print(vertice)  <span style="color:#75715e"># Realize qualquer ação desejada com o vértice visitado</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> vizinho <span style="color:#f92672">in</span> grafo<span style="color:#f92672">.</span>get(vertice, []):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> vizinho <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visitados:
+</span></span><span style="display:flex;"><span>                visitados<span style="color:#f92672">.</span>add(vizinho)
+</span></span><span style="display:flex;"><span>                fila<span style="color:#f92672">.</span>append(vizinho)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Chamada da função BFS com vértice de origem 1</span>
+</span></span><span style="display:flex;"><span>bfs(grafo, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><h3 id="exemplo-de-dfs-com-union-finds">Exemplo de DFS com Union Finds</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, size):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>parent <span style="color:#f92672">=</span> list(range(size))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rank <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(self, x):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>parent[x] <span style="color:#f92672">!=</span> x:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>parent[x] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(self<span style="color:#f92672">.</span>parent[x])  <span style="color:#75715e"># Aplica a compressão de caminho</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>parent[x]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">unite</span>(self, x, y):
+</span></span><span style="display:flex;"><span>        root_x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(x)
+</span></span><span style="display:flex;"><span>        root_y <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> root_x <span style="color:#f92672">!=</span> root_y:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Une os conjuntos com base na altura (rank)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>rank[root_x] <span style="color:#f92672">&lt;</span> self<span style="color:#f92672">.</span>rank[root_y]:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent[root_x] <span style="color:#f92672">=</span> root_y
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> self<span style="color:#f92672">.</span>rank[root_x] <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>rank[root_y]:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent[root_y] <span style="color:#f92672">=</span> root_x
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent[root_y] <span style="color:#f92672">=</span> root_x
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>rank[root_x] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(graph, visited, union_find, vertex):
+</span></span><span style="display:flex;"><span>    visited<span style="color:#f92672">.</span>add(vertex)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Visitando vértice:&#34;</span>, vertex)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> neighbor <span style="color:#f92672">in</span> graph[vertex]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> neighbor <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                union_find<span style="color:#f92672">.</span>unite(vertex, neighbor)
+</span></span><span style="display:flex;"><span>                dfs(graph, visited, union_find, neighbor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">7</span>: [<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">8</span>: [<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">9</span>: [<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">10</span>: [<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">11</span>: [<span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">12</span>: [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">13</span>: [<span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">14</span>: [<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">15</span>: [<span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">16</span>: [<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">17</span>: [<span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">18</span>: [<span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">19</span>: [<span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">20</span>: [<span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">21</span>: [<span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">22</span>: [<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">23</span>: [<span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">24</span>: [<span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">25</span>: [<span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">26</span>: [<span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">27</span>: [<span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">28</span>: [<span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">29</span>: [<span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">30</span>: [<span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">64</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>size <span style="color:#f92672">=</span> max(max(graph<span style="color:#f92672">.</span>keys()), max(neighbor <span style="color:#66d9ef">for</span> neighbors <span style="color:#f92672">in</span> graph<span style="color:#f92672">.</span>values() <span style="color:#66d9ef">for</span> neighbor <span style="color:#f92672">in</span> neighbors)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>union_find <span style="color:#f92672">=</span> UnionFind(size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Busca em Profundidade (DFS):&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> vertex <span style="color:#f92672">in</span> graph:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>        dfs(graph, visited, union_find, vertex)
+</span></span></code></pre></div><h6 id="exemplo-de-bfs-com-union-finds">Exemplo de BFS com Union Finds</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, size):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>parent <span style="color:#f92672">=</span> list(range(size))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>rank <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(self, x):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>parent[x] <span style="color:#f92672">!=</span> x:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>parent[x] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(self<span style="color:#f92672">.</span>parent[x])  <span style="color:#75715e"># Aplica a compressão de caminho</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>parent[x]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">unite</span>(self, x, y):
+</span></span><span style="display:flex;"><span>        root_x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(x)
+</span></span><span style="display:flex;"><span>        root_y <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> root_x <span style="color:#f92672">!=</span> root_y:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Une os conjuntos com base na altura (rank)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>rank[root_x] <span style="color:#f92672">&lt;</span> self<span style="color:#f92672">.</span>rank[root_y]:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent[root_x] <span style="color:#f92672">=</span> root_y
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> self<span style="color:#f92672">.</span>rank[root_x] <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>rank[root_y]:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent[root_y] <span style="color:#f92672">=</span> root_x
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent[root_y] <span style="color:#f92672">=</span> root_x
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>rank[root_x] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfs</span>(grafo, inicio):
+</span></span><span style="display:flex;"><span>    visitados <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>    fila <span style="color:#f92672">=</span> deque()
+</span></span><span style="display:flex;"><span>    union_find <span style="color:#f92672">=</span> UnionFind(max(grafo<span style="color:#f92672">.</span>keys()) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># Cria a estrutura Union-Find</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    visitados<span style="color:#f92672">.</span>add(inicio)
+</span></span><span style="display:flex;"><span>    fila<span style="color:#f92672">.</span>append(inicio)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> fila:
+</span></span><span style="display:flex;"><span>        vertice <span style="color:#f92672">=</span> fila<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>        print(vertice)  <span style="color:#75715e"># Realize qualquer ação desejada com o vértice visitado</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> vizinho <span style="color:#f92672">in</span> grafo<span style="color:#f92672">.</span>get(vertice, []):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> vizinho <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visitados:
+</span></span><span style="display:flex;"><span>                visitados<span style="color:#f92672">.</span>add(vizinho)
+</span></span><span style="display:flex;"><span>                union_find<span style="color:#f92672">.</span>unite(vertice, vizinho)  <span style="color:#75715e"># Une os vértices visitados na estrutura Union-Find</span>
+</span></span><span style="display:flex;"><span>                fila<span style="color:#f92672">.</span>append(vizinho)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> union_find
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>grafo <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>: [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>: [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">5</span>: [<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>: [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">7</span>: [<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">8</span>: [<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">9</span>: [<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">10</span>: [<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">11</span>: [<span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">12</span>: [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">13</span>: [<span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">14</span>: [<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">15</span>: [<span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">16</span>: [<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">17</span>: [<span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">18</span>: [<span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">19</span>: [<span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">20</span>: [<span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">21</span>: [<span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">22</span>: [<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">23</span>: [<span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">24</span>: [<span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">25</span>: [<span style="color:#ae81ff">51</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">26</span>: [<span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">27</span>: [<span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">28</span>: [<span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">29</span>: [<span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">30</span>: [<span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">64</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Busca em Largura (BFS):&#34;</span>)
+</span></span><span style="display:flex;"><span>union_find <span style="color:#f92672">=</span> bfs(grafo, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exemplo de uso da estrutura Union-Find após a BFS</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Representantes dos conjuntos:&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(union_find<span style="color:#f92672">.</span>parent)):
+</span></span><span style="display:flex;"><span>    print(i, <span style="color:#e6db74">&#34;-&gt;&#34;</span>, union_find<span style="color:#f92672">.</span>find(i))
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Time</th>
+<th>Consumo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python3 bfs_search.py</td>
+<td>0,07s user 0,05s system</td>
+<td>130% cpu 0,096 total</td>
+</tr>
+<tr>
+<td>python3 dfs_search.py</td>
+<td>0,06s user 0,04s system</td>
+<td>130% cpu 0,076 total</td>
+</tr>
+<tr>
+<td>python3 dfs_union_search.py</td>
+<td>0,09s user 0,04s system</td>
+<td>139% cpu 0,091 total</td>
+</tr>
+<tr>
+<td>python3 bfs_union_search.py</td>
+<td>0,08s user 0,05s system</td>
+<td>133% cpu 0,095 total</td>
+</tr>
+</tbody>
+</table>
+<p>Perceba que com union finds a performance cai um pouco mas tem determinadas situações a velocidade do union finds pode superar a da busca direta:</p>
+<ol>
+<li>Grafos Densos.</li>
+<li>Operações frequentes de união e busca.</li>
+<li>Componentes conectados.</li>
+<li>Otimização de caminhos.</li>
+</ol>
+<p>Aqui está algumas situações onde está data structure foi implementada:</p>
+<ul>
+<li>Detecção de ciclos em grafos</li>
+<li>Algoritmo de Kruskal</li>
+<li>Segmentação de imagens.</li>
+<li>Sistema de gerenciamento de arquivos.</li>
+<li>Detecção de componentes conectados em redes sociais.</li>
+</ul>
+</div>
+				
+				<footer class="entry__footer">
+					
+<div class="entry__tags">
+			<a class="entry__tag btn" href="/tags/studying/">Studying</a>
+			<a class="entry__tag btn" href="/tags/programming/">Programming</a>
+</div>
+					
+				</footer>
+				
+			</article>
+		</div>
+	</main>
+	
+<div class="authorbox block">
+	<div class="author">
+		<div class="author__body">
+			<div class="author__name">
+				KitsuneSemCalda
+			</div>
+			<div class="author__bio">KitsuneSemCalda é a identidade secreta de um estudante de ciencias de computação (ou talvez não)</div>
+		</div>
+	</div>
+</div>
+	
+
+
+
+	
+<section class="comments block">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "foxtechworld" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+	</div>
+	<footer class="footer">
+<div class="footer__social social">
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/arthur-augusto-magalh%c3%a3es-55761b220">
+			<svg class="social__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+		</a>
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/KitsuneSemCalda">
+			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+		</a>
+</div>
+	<div class="footer__copyright">© 2023 FoxTechWorld. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+</footer>
+<script src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+</body>
+</html>

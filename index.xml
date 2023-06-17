@@ -6,7 +6,17 @@
     <description>Recent content on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 11 Jun 2023 16:10:06 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jun 2023 14:31:56 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Union Finds</title>
+      <link>http://FoxTechWorld.github.io/2023/06/union-finds/</link>
+      <pubDate>Sat, 17 Jun 2023 14:31:56 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/06/union-finds/</guid>
+      <description>Se você leu sobre BFS e DFS deve ter percebido que a maioria das pesquisas são relativamente mais rápidas que a força bruta (busca linear). Mas e quando os grafos se tornam gigantescos?
+Bom, neste caso você utiliza outros algoritmos para reduzir o tamanho dos grafos a subgrafos menores e conseguir realizar o BFS / DFS. Mas mesmo assim você pode precisar de algum auxilio e daí surge a ideia de um Union Find, uma estrutura de dados que ajuda a aumentar a velocidade de busca em grafos.</description>
+    </item>
+    
     <item>
       <title>Calculo inversa de uma matriz de forma eficiente</title>
       <link>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</link>

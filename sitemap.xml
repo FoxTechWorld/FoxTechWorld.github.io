@@ -2,37 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://FoxTechWorld.github.io/categories/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/data-structure/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/posts/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/studying/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/tags/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/categories/tecnology/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
+    <loc>http://FoxTechWorld.github.io/2023/06/union-finds/</loc>
+    <lastmod>2023-06-17T14:31:56-03:00</lastmod>
+  </url><url>
     <loc>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</loc>
     <lastmod>2023-06-11T16:10:06-03:00</lastmod>
   </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/</loc>
-    <lastmod>2023-06-11T16:10:06-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/</loc>
-    <lastmod>2023-06-11T16:10:06-03:00</lastmod>
-  </url><url>
     <loc>http://FoxTechWorld.github.io/categories/mathematical/</loc>
-    <lastmod>2023-06-11T16:10:06-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/posts/</loc>
-    <lastmod>2023-06-11T16:10:06-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/studying/</loc>
-    <lastmod>2023-06-11T16:10:06-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/</loc>
-    <lastmod>2023-06-11T16:10:06-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/tecnology/</loc>
     <lastmod>2023-06-11T16:10:06-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/06/come%C3%A7ando-um-novo-projeto-graphene-simulator/</loc>
     <lastmod>2023-06-10T12:33:00-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/tags/graphene-simulator/</loc>
-    <lastmod>2023-06-10T12:33:00-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/tags/programming/</loc>
     <lastmod>2023-06-10T12:33:00-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/categories/technology/</loc>
@@ -115,9 +121,6 @@
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</loc>
     <lastmod>2023-05-04T08:39:04-03:00</lastmod>
-  </url><url>
-    <loc>http://FoxTechWorld.github.io/categories/data-structure/</loc>
-    <lastmod>2023-05-03T16:51:33-03:00</lastmod>
   </url><url>
     <loc>http://FoxTechWorld.github.io/2023/05/heap/</loc>
     <lastmod>2023-05-03T16:51:33-03:00</lastmod>
