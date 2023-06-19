@@ -95,6 +95,30 @@ if (!doNotTrack) {
 			
 				<div class="card card--2col">
 					<article class="entry card__box block">
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/2023/06/binary-search-tree/">Binary Search Tree</a></h1>
+	<div class="entry__content">Para retomar-mos a ideia de estrutura de dados fora da série de grafos, eu decidi dar uma pulada rápida em árvores e depois eu volto em estruturas baseadas em listas. Para quem quiser seguir a ideia linearmente temos este conjunto de recomendações.
+Para trabalharmos com a árvore de busca binaria precisamos atualizar o conceito de Nó ou Node que estavamos usando.
+Modelo Antigo: class Node{ private: int data; Node* next; public: Node(int data){ this-&gt;data = data; this-&gt;next = NULL; } }; Modelo Novo: class Node{ private: int data; Node* left; Node* right; public: Node(int new_data){ this-&gt;data = new_data; this-&gt;left = NULL; this-&gt;right = NULL; } }; Perceberam a mudança?</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2023-06-19T15:57:38-03:00">June 19, 2023</time>
+<div class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>, 
+		<a class="meta-categories__link" href="/categories/data-structure/" rel="category">Data Structure</a>
+	</span>
+</div>
+<div class="entry__meta-tags meta-tags">
+	<span class="meta-tags__list">Tags:
+		<a class="meta-tags__link" href="/tags/studying/" rel="tag">Studying</a>, 
+		<a class="meta-tags__link" href="/tags/programming/" rel="tag">Programming</a>
+	</span>
+</div>
+	</div>
+</article>
+				</div>
+			
+				<div class="card card--2col">
+					<article class="entry card__box block">
 	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/2023/06/union-finds/">Union Finds</a></h1>
 	<div class="entry__content">Se você leu sobre BFS e DFS deve ter percebido que a maioria das pesquisas são relativamente mais rápidas que a força bruta (busca linear). Mas e quando os grafos se tornam gigantescos?
 Bom, neste caso você utiliza outros algoritmos para reduzir o tamanho dos grafos a subgrafos menores e conseguir realizar o BFS / DFS. Mas mesmo assim você pode precisar de algum auxilio e daí surge a ideia de um Union Find, uma estrutura de dados que ajuda a aumentar a velocidade de busca em grafos.</div>
@@ -280,27 +304,6 @@ print(&#34;Hello World!) Sim, quando eu disse que Mojo era um superset de python
 	<div class="entry__content">Chegamos ao ponto final do projetos onde falta terminar de implementar as classes do factory e torna-lo funcional. Nesse caso vamos começar trabalhando com o contéudo da classe WikipediaSearch, essa classe vai fazer apenas uma coisa, pesquisar o contéudo da wikipedia e retornar o mesmo. No caso eu defini um init para receber o termo que será pesquisado, e como implementação do search, a classe Wikipedia gera uma pequena select list para não haver desambiguação ou falha na pesquisa.</div>
 	<div class="entry__meta meta mt tar">
 	<time class="entry__meta-published meta-published" datetime="2023-05-07T09:07:28-03:00">May 07, 2023</time>
-<div class="entry__meta-categories meta-categories">
-	<span class="meta-categories__list">Categories:
-		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>
-	</span>
-</div>
-<div class="entry__meta-tags meta-tags">
-	<span class="meta-tags__list">Tags:
-		<a class="meta-tags__link" href="/tags/brain-va/" rel="tag">Brain VA</a>, 
-		<a class="meta-tags__link" href="/tags/programming/" rel="tag">Programming</a>
-	</span>
-</div>
-	</div>
-</article>
-				</div>
-			
-				<div class="card card--2col">
-					<article class="entry card__box block">
-	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/2023/05/o-segundo-passo-para-o-brain-va/">O segundo passo para o brain va</a></h1>
-	<div class="entry__content">Com o primeiro passo completo estamos indo para o segundo passo, definir as estruturas da Factory Isso nos garante que nenhuma classe invada a abstração de outra classe e podemos definir corretamente os escopos de cada classe. A implementação em si de cada classe não é importante no momento, mas sua capacidade de facilitar a vida para quem usa é inegável se atender suas condições de uso. Como tudo que se é utilizado no dia a dia.</div>
-	<div class="entry__meta meta mt tar">
-	<time class="entry__meta-published meta-published" datetime="2023-05-05T10:25:56-03:00">May 05, 2023</time>
 <div class="entry__meta-categories meta-categories">
 	<span class="meta-categories__list">Categories:
 		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>

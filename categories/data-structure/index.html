@@ -95,6 +95,30 @@ if (!doNotTrack) {
 			
 				<div class="card card--2col">
 					<article class="entry card__box block">
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/2023/06/binary-search-tree/">Binary Search Tree</a></h1>
+	<div class="entry__content">Para retomar-mos a ideia de estrutura de dados fora da série de grafos, eu decidi dar uma pulada rápida em árvores e depois eu volto em estruturas baseadas em listas. Para quem quiser seguir a ideia linearmente temos este conjunto de recomendações.
+Para trabalharmos com a árvore de busca binaria precisamos atualizar o conceito de Nó ou Node que estavamos usando.
+Modelo Antigo: class Node{ private: int data; Node* next; public: Node(int data){ this-&gt;data = data; this-&gt;next = NULL; } }; Modelo Novo: class Node{ private: int data; Node* left; Node* right; public: Node(int new_data){ this-&gt;data = new_data; this-&gt;left = NULL; this-&gt;right = NULL; } }; Perceberam a mudança?</div>
+	<div class="entry__meta meta mt tar">
+	<time class="entry__meta-published meta-published" datetime="2023-06-19T15:57:38-03:00">June 19, 2023</time>
+<div class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>, 
+		<a class="meta-categories__link" href="/categories/data-structure/" rel="category">Data Structure</a>
+	</span>
+</div>
+<div class="entry__meta-tags meta-tags">
+	<span class="meta-tags__list">Tags:
+		<a class="meta-tags__link" href="/tags/studying/" rel="tag">Studying</a>, 
+		<a class="meta-tags__link" href="/tags/programming/" rel="tag">Programming</a>
+	</span>
+</div>
+	</div>
+</article>
+				</div>
+			
+				<div class="card card--2col">
+					<article class="entry card__box block">
 	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/2023/06/union-finds/">Union Finds</a></h1>
 	<div class="entry__content">Se você leu sobre BFS e DFS deve ter percebido que a maioria das pesquisas são relativamente mais rápidas que a força bruta (busca linear). Mas e quando os grafos se tornam gigantescos?
 Bom, neste caso você utiliza outros algoritmos para reduzir o tamanho dos grafos a subgrafos menores e conseguir realizar o BFS / DFS. Mas mesmo assim você pode precisar de algum auxilio e daí surge a ideia de um Union Find, uma estrutura de dados que ajuda a aumentar a velocidade de busca em grafos.</div>

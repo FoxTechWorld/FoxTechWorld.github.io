@@ -6,7 +6,18 @@
     <description>Recent content in Posts on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 17 Jun 2023 14:31:56 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 15:57:38 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Search Tree</title>
+      <link>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</link>
+      <pubDate>Mon, 19 Jun 2023 15:57:38 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</guid>
+      <description>Para retomar-mos a ideia de estrutura de dados fora da série de grafos, eu decidi dar uma pulada rápida em árvores e depois eu volto em estruturas baseadas em listas. Para quem quiser seguir a ideia linearmente temos este conjunto de recomendações.
+Para trabalharmos com a árvore de busca binaria precisamos atualizar o conceito de Nó ou Node que estavamos usando.
+Modelo Antigo: class Node{ private: int data; Node* next; public: Node(int data){ this-&amp;gt;data = data; this-&amp;gt;next = NULL; } }; Modelo Novo: class Node{ private: int data; Node* left; Node* right; public: Node(int new_data){ this-&amp;gt;data = new_data; this-&amp;gt;left = NULL; this-&amp;gt;right = NULL; } }; Perceberam a mudança?</description>
+    </item>
+    
     <item>
       <title>Union Finds</title>
       <link>http://FoxTechWorld.github.io/2023/06/union-finds/</link>
