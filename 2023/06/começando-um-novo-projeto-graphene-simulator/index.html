@@ -129,11 +129,11 @@ if (!doNotTrack) {
   </ul>
 </nav>
 </details>
-				<div class="entry__content"><p>Pois é, mais um projetinho para passar bem o feriadão, com isso vamos começar a trabalhar com a simulação de eletronicos utilizando <a href="https://pt.wikipedia.org/wiki/Grafeno">grafeno</a>. No caso, eu quero simular algumas objetos que provavelmente queira trabalhar mais tarde:</p>
+				<div class="entry__content"><p>Pois é, mais um projetinho para passar bem o feriadão, com isso vamos começar a trabalhar com a simulação de eletronicos utilizando <a href="https://pt.wikipedia.org/wiki/Grafeno" target="_blank" rel="nofollow noopener noreferrer">grafeno</a>. No caso, eu quero simular algumas objetos que provavelmente queira trabalhar mais tarde:</p>
 <ul>
-<li><a href="https://pt.wikipedia.org/wiki/Unidade_central_de_processamento">CPU</a></li>
-<li><a href="https://pt.wikipedia.org/wiki/Unidade_de_processamento_gr%C3%A1fico">GPU</a></li>
-<li><a href="https://pt.wikipedia.org/wiki/Bateria_(eletricidade)">Bateria</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Unidade_central_de_processamento" target="_blank" rel="nofollow noopener noreferrer">CPU</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Unidade_de_processamento_gr%C3%A1fico" target="_blank" rel="nofollow noopener noreferrer">GPU</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Bateria_%28eletricidade%29" target="_blank" rel="nofollow noopener noreferrer">Bateria</a></li>
 </ul>
 <p>Para isso vou descontruir um objeto eletronico a seu mínimo e ir gradativamente aumentando, tenha ciencia que para um cpu precisamos seguir o caminho &ldquo;silicio &gt; transistor &gt; cpu&rdquo; no caso eu encadearei as structs &ldquo;grafeno &gt; transistor &gt; cpu&rdquo; e irei realizar as simulações a base disso. Tome como exemplo essas struct&rsquo;s simplistas</p>
 <h6 id="struct-para-grafeno">Struct para Grafeno</h6>
@@ -156,11 +156,11 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    propriedade2<span style="color:#f92672">::</span><span style="color:#66d9ef">Int</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;...&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><p>Claro que algumas informações foram omitidas para que eu pudesse refletir melhor sobre o que colocar, como simular &hellip; etc. A verdade é que nem nesse exemplo besta eu deveria estar usando float mas provavelmente vou consertar a cagada e trabalhar com int. Caso você não saiba o porque não se deve trabalhar com float assista esse <a href="https://youtube.com/channel/UCQgxZQvhH-ybiQmwLMi9Yew">vídeo</a>. Com isso definido eu tenho que pensar numa forma de encadear as informações para que os dados sejam gerados dinamicamente, provavelemente uma função create_cpu que realize os calculos e gere os dados finais.
+</span></span></code></pre></div><p>Claro que algumas informações foram omitidas para que eu pudesse refletir melhor sobre o que colocar, como simular &hellip; etc. A verdade é que nem nesse exemplo besta eu deveria estar usando float mas provavelmente vou consertar a cagada e trabalhar com int. Caso você não saiba o porque não se deve trabalhar com float assista esse <a href="https://youtube.com/channel/UCQgxZQvhH-ybiQmwLMi9Yew" target="_blank" rel="nofollow noopener noreferrer">vídeo</a>. Com isso definido eu tenho que pensar numa forma de encadear as informações para que os dados sejam gerados dinamicamente, provavelemente uma função create_cpu que realize os calculos e gere os dados finais.
 Mas as ideia é encadear a criação de novos componentes complexos? Exatamente a ideia principar é ter funções auxiliares que calculam a partir da base o <code>grafeno</code> as configurações do <code>transistor</code> que levam ao <code>cpu</code> de forma encadeada com formulas alterando dinamicamente os valores de cada struct.</p>
-<p>E por fim usar um <a href="https://pt.wikipedia.org/wiki/Mapa_de_calor">heatmap</a> para mostrar o valores.</p>
+<p>E por fim usar um <a href="https://pt.wikipedia.org/wiki/Mapa_de_calor" target="_blank" rel="nofollow noopener noreferrer">heatmap</a> para mostrar o valores.</p>
 <p><img src="https://www.displayr.com/wp-content/uploads/2018/09/rat-burrough-heatmap-1.png" alt="heatmap"></p>
-<p>Ou um gráfico plot simples no formato de <a href="https://pt.wikipedia.org/wiki/Gr%C3%A1fico_de_linha">gráfico de linha</a>.</p>
+<p>Ou um gráfico plot simples no formato de <a href="https://pt.wikipedia.org/wiki/Gr%C3%A1fico_de_linha" target="_blank" rel="nofollow noopener noreferrer">gráfico de linha</a>.</p>
 <p><img src="https://exceleasy.com.br/wp-content/uploads/2023/01/Grafico-de-linhas-no-Excel.png" alt="Plot">.</p>
 <p>Em ordem, o plano é começar definindo as propriedades do grafeno e gerar uma struct transistor que utilize as propriedades do grafeno com base para gerar dinamicamente os valores. Em seguida utilizar os dados do transistor como base para matematica gerar valores para a struct CPU / GPU / Bateria, e usar calculos que estressam a &ldquo;CPU&rdquo; / &ldquo;GPU&rdquo; e &ldquo;Bateria&rdquo; para gerar a plot final com os dados. Felizmente alguns dados podem ser assincronamente gerados utilizando <code>Task</code> então não deve ficar muito lento.</p>
 <p>Com isso eu devo consigo tirar dados suficiente para verificar se o grafeno vale a pena ser esplorado</p>
