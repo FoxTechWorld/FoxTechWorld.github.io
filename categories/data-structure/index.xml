@@ -74,7 +74,7 @@ Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a 
 E ouso dizer que também chega a ser uma das mais importantes.
 Pois com ela podemos criar estruturas muito mais complexas.
 Um exemplo simples que podemos dar a lista ligada em C++ é:
-Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value = new_value; next = NULL; } }; Onde para aqueles que possuem um olho atento.</description>
+Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value = new_value; next = NULL; } }; Class LinkedList{ private: Node* Head; public: LinkedList(){ Head = NULL; } }; Onde para aqueles que possuem um olho atento.</description>
     </item>
     
   </channel>
