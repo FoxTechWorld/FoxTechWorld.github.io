@@ -6,7 +6,18 @@
     <description>Recent content on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 19 Jun 2023 15:57:38 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jun 2023 09:40:29 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como vou customizar meu proxímo linux</title>
+      <link>http://FoxTechWorld.github.io/2023/06/como-vou-customizar-meu-prox%C3%ADmo-linux/</link>
+      <pubDate>Thu, 29 Jun 2023 09:40:29 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/2023/06/como-vou-customizar-meu-prox%C3%ADmo-linux/</guid>
+      <description>Olá de novo, Kitsune aqui. Hoje vim explanar uns pensamentos que estou tendo sobre customização do linux.
+Para quem não sabe estou usando este setup:
+- CPU: Intel i5 11ªgen - Memória Ram: 8GB Ram DDR4 - Placa de Vídeo: Intel Iris Xe - Armazenamento: SSD NVME 256GB e sim, pretendo fazer um upgrade com um pente de 32GB Ram e um HD de 1Tb ou 2Tb (meio overkill não é?</description>
+    </item>
+    
     <item>
       <title>Binary Search Tree</title>
       <link>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</link>
