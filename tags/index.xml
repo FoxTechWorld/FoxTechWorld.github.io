@@ -6,7 +6,25 @@
     <description>Recent content in Tags on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 29 Jun 2023 09:40:29 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jul 2023 16:56:39 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do It Yourself</title>
+      <link>http://FoxTechWorld.github.io/tags/do-it-yourself/</link>
+      <pubDate>Sat, 01 Jul 2023 16:56:39 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/tags/do-it-yourself/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smart House</title>
+      <link>http://FoxTechWorld.github.io/tags/smart-house/</link>
+      <pubDate>Sat, 01 Jul 2023 16:56:39 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/tags/smart-house/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>OpenSource</title>
       <link>http://FoxTechWorld.github.io/tags/opensource/</link>
@@ -40,24 +58,6 @@
       <pubDate>Sat, 10 Jun 2023 12:33:00 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/tags/graphene-simulator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Do It Yourself</title>
-      <link>http://FoxTechWorld.github.io/tags/do-it-yourself/</link>
-      <pubDate>Tue, 06 Jun 2023 12:19:03 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/do-it-yourself/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Smart House</title>
-      <link>http://FoxTechWorld.github.io/tags/smart-house/</link>
-      <pubDate>Tue, 06 Jun 2023 12:19:03 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/tags/smart-house/</guid>
       <description></description>
     </item>
     

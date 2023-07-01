@@ -6,22 +6,31 @@
     <description>Recent content in Categories on FoxTechWorld</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 29 Jun 2023 09:40:29 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jul 2023 16:56:39 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Geek</title>
-      <link>http://FoxTechWorld.github.io/categories/geek/</link>
-      <pubDate>Thu, 29 Jun 2023 09:40:29 -0300</pubDate>
+      <title>Plaining</title>
+      <link>http://FoxTechWorld.github.io/categories/plaining/</link>
+      <pubDate>Sat, 01 Jul 2023 16:56:39 -0300</pubDate>
       
-      <guid>http://FoxTechWorld.github.io/categories/geek/</guid>
+      <guid>http://FoxTechWorld.github.io/categories/plaining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tecnology</title>
       <link>http://FoxTechWorld.github.io/categories/tecnology/</link>
-      <pubDate>Thu, 29 Jun 2023 09:40:29 -0300</pubDate>
+      <pubDate>Sat, 01 Jul 2023 16:56:39 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/categories/tecnology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geek</title>
+      <link>http://FoxTechWorld.github.io/categories/geek/</link>
+      <pubDate>Thu, 29 Jun 2023 09:40:29 -0300</pubDate>
+      
+      <guid>http://FoxTechWorld.github.io/categories/geek/</guid>
       <description></description>
     </item>
     
@@ -49,15 +58,6 @@
       <pubDate>Sat, 10 Jun 2023 12:33:00 -0300</pubDate>
       
       <guid>http://FoxTechWorld.github.io/categories/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plaining</title>
-      <link>http://FoxTechWorld.github.io/categories/plaining/</link>
-      <pubDate>Tue, 06 Jun 2023 12:19:03 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/categories/plaining/</guid>
       <description></description>
     </item>
     
