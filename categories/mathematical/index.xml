@@ -1,46 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mathematical on FoxTechWorld</title>
-    <link>http://FoxTechWorld.github.io/categories/mathematical/</link>
-    <description>Recent content in Mathematical on FoxTechWorld</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sun, 11 Jun 2023 16:10:06 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/mathematical/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Calculo inversa de uma matriz de forma eficiente</title>
-      <link>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</link>
-      <pubDate>Sun, 11 Jun 2023 16:10:06 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</guid>
-      <description>Para calcular uma inversa precisamos de 3 coisas.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mathematical on FoxTechWorld</title><link>http://FoxTechWorld.github.io/categories/mathematical/</link><description>Recent content in Mathematical on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sun, 11 Jun 2023 16:10:06 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/categories/mathematical/index.xml" rel="self" type="application/rss+xml"/><item><title>Calculo inversa de uma matriz de forma eficiente</title><link>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</link><pubDate>Sun, 11 Jun 2023 16:10:06 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</guid><description>Para calcular uma inversa precisamos de 3 coisas.
 Uma matriz quadrada A determinante dessa matriz Algo ou alguém para calcular isso &amp;quot; ¯\_(ツ)_/¯ &amp;quot;
 Na verdade é são poucos passos:
-Pegue uma matriz quadrada e inverta a ordem da diagonal principal | 2 4 | -&amp;gt; | 5 4 | | 1 5 | -&amp;gt; | 1 2 | Inverta o sinal da diagonal secundária | 5 -4 | | -1 2 | Você divide todos os elementos da matriz gerada pelo determinante da matriz original e reduz onde é possível.</description>
-    </item>
-    
-    <item>
-      <title>Bases Númericas: Binários e Decimais</title>
-      <link>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</link>
-      <pubDate>Sat, 20 May 2023 13:08:25 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</guid>
-      <description>O que são bases númericas? Bases numericas são sistemas que nos permitem representar e manipular números de diferentes formas.
+Pegue uma matriz quadrada e inverta a ordem da diagonal principal | 2 4 | -&amp;gt; | 5 4 | | 1 5 | -&amp;gt; | 1 2 | Inverta o sinal da diagonal secundária | 5 -4 | | -1 2 | Você divide todos os elementos da matriz gerada pelo determinante da matriz original e reduz onde é possível.</description></item><item><title>Bases Númericas: Binários e Decimais</title><link>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</link><pubDate>Sat, 20 May 2023 13:08:25 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</guid><description>O que são bases númericas? Bases numericas são sistemas que nos permitem representar e manipular números de diferentes formas.
 Muito além de usar apenas simbolos de 0 a 9 antes de adicionar uma casa decimal, existem outras bases.
 Essas outras bases que utilizam símbolos e regras distintas.
 Sistema Decimal O sistema decimal uma representação posicional em que cada digito tem uma posição especifico.
-primeiro elemento segundo elemento terceiro elemento quarto elemento extenso 1 0 0 0 Mil 0 2 0 0 Duzentos 0 0 3 0 Trinta 0 0 0 9 Nove Esse sistema é baseado no conceito de contar que nos permite utilizar operações basicas como adicão, subtração, multiplicação e divisão.</description>
-    </item>
-    
-    <item>
-      <title>Números pseudo aleatórios</title>
-      <link>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</link>
-      <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</guid>
-      <description>Um número verdadeiramente aleátorio é impossivel com a computação porque a computação é deterministica. Ou seja, eu posso saber e conferir o resultado antes mesmo dele executar ou testar para o resultado.
-Com isso operamos algoritmos matématicos repetiveis. Para trabalharmos com números continuos e variantes uma (seed). Essa seed pode ser o tempo, a quantidade de memória, o ping da rede, ou tudo isso com diversas operações para aumentar a entropia.</description>
-    </item>
-    
-  </channel>
-</rss>
+primeiro elemento segundo elemento terceiro elemento quarto elemento extenso 1 0 0 0 Mil 0 2 0 0 Duzentos 0 0 3 0 Trinta 0 0 0 9 Nove Esse sistema é baseado no conceito de contar que nos permite utilizar operações basicas como adicão, subtração, multiplicação e divisão.</description></item><item><title>Números pseudo aleatórios</title><link>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</link><pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</guid><description>Um número verdadeiramente aleátorio é impossivel com a computação porque a computação é deterministica. Ou seja, eu posso saber e conferir o resultado antes mesmo dele executar ou testar para o resultado.
+Com isso operamos algoritmos matématicos repetiveis. Para trabalharmos com números continuos e variantes uma (seed). Essa seed pode ser o tempo, a quantidade de memória, o ping da rede, ou tudo isso com diversas operações para aumentar a entropia.</description></item></channel></rss>

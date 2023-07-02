@@ -1,148 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Studying on FoxTechWorld</title>
-    <link>http://FoxTechWorld.github.io/tags/studying/</link>
-    <description>Recent content in Studying on FoxTechWorld</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Mon, 19 Jun 2023 15:57:38 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/studying/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Binary Search Tree</title>
-      <link>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</link>
-      <pubDate>Mon, 19 Jun 2023 15:57:38 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</guid>
-      <description>Para retomar-mos a ideia de estrutura de dados fora da série de grafos, eu decidi dar uma pulada rápida em árvores e depois eu volto em estruturas baseadas em listas. Para quem quiser seguir a ideia linearmente temos este conjunto de recomendações.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Studying on FoxTechWorld</title><link>http://FoxTechWorld.github.io/tags/studying/</link><description>Recent content in Studying on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 19 Jun 2023 15:57:38 -0300</lastBuildDate><atom:link href="http://FoxTechWorld.github.io/tags/studying/index.xml" rel="self" type="application/rss+xml"/><item><title>Binary Search Tree</title><link>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</link><pubDate>Mon, 19 Jun 2023 15:57:38 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/06/binary-search-tree/</guid><description>Para retomar-mos a ideia de estrutura de dados fora da série de grafos, eu decidi dar uma pulada rápida em árvores e depois eu volto em estruturas baseadas em listas. Para quem quiser seguir a ideia linearmente temos este conjunto de recomendações.
 Para trabalharmos com a árvore de busca binaria precisamos atualizar o conceito de Nó ou Node que estavamos usando.
-Modelo Antigo: class Node{ private: int data; Node* next; public: Node(int data){ this-&amp;gt;data = data; this-&amp;gt;next = NULL; } }; Modelo Novo: class Node{ private: int data; Node* left; Node* right; public: Node(int new_data){ this-&amp;gt;data = new_data; this-&amp;gt;left = NULL; this-&amp;gt;right = NULL; } }; Perceberam a mudança?</description>
-    </item>
-    
-    <item>
-      <title>Union Finds</title>
-      <link>http://FoxTechWorld.github.io/2023/06/union-finds/</link>
-      <pubDate>Sat, 17 Jun 2023 14:31:56 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/06/union-finds/</guid>
-      <description>Se você leu sobre BFS e DFS deve ter percebido que a maioria das pesquisas são relativamente mais rápidas que a força bruta (busca linear). Mas e quando os grafos se tornam gigantescos?
-Bom, neste caso você utiliza outros algoritmos para reduzir o tamanho dos grafos a subgrafos menores e conseguir realizar o BFS / DFS. Mas mesmo assim você pode precisar de algum auxilio e daí surge a ideia de um Union Find, uma estrutura de dados que ajuda a aumentar a velocidade de busca em grafos.</description>
-    </item>
-    
-    <item>
-      <title>Calculo inversa de uma matriz de forma eficiente</title>
-      <link>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</link>
-      <pubDate>Sun, 11 Jun 2023 16:10:06 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</guid>
-      <description>Para calcular uma inversa precisamos de 3 coisas.
+Modelo Antigo: class Node{ private: int data; Node* next; public: Node(int data){ this-&amp;gt;data = data; this-&amp;gt;next = NULL; } }; Modelo Novo: class Node{ private: int data; Node* left; Node* right; public: Node(int new_data){ this-&amp;gt;data = new_data; this-&amp;gt;left = NULL; this-&amp;gt;right = NULL; } }; Perceberam a mudança?</description></item><item><title>Union Finds</title><link>http://FoxTechWorld.github.io/2023/06/union-finds/</link><pubDate>Sat, 17 Jun 2023 14:31:56 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/06/union-finds/</guid><description>Se você leu sobre BFS e DFS deve ter percebido que a maioria das pesquisas são relativamente mais rápidas que a força bruta (busca linear). Mas e quando os grafos se tornam gigantescos?
+Bom, neste caso você utiliza outros algoritmos para reduzir o tamanho dos grafos a subgrafos menores e conseguir realizar o BFS / DFS. Mas mesmo assim você pode precisar de algum auxilio e daí surge a ideia de um Union Find, uma estrutura de dados que ajuda a aumentar a velocidade de busca em grafos.</description></item><item><title>Calculo inversa de uma matriz de forma eficiente</title><link>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</link><pubDate>Sun, 11 Jun 2023 16:10:06 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/06/calculo-inversa-de-uma-matriz-de-forma-eficiente/</guid><description>Para calcular uma inversa precisamos de 3 coisas.
 Uma matriz quadrada A determinante dessa matriz Algo ou alguém para calcular isso &amp;quot; ¯\_(ツ)_/¯ &amp;quot;
 Na verdade é são poucos passos:
-Pegue uma matriz quadrada e inverta a ordem da diagonal principal | 2 4 | -&amp;gt; | 5 4 | | 1 5 | -&amp;gt; | 1 2 | Inverta o sinal da diagonal secundária | 5 -4 | | -1 2 | Você divide todos os elementos da matriz gerada pelo determinante da matriz original e reduz onde é possível.</description>
-    </item>
-    
-    <item>
-      <title>Estou aprendendo julia</title>
-      <link>http://FoxTechWorld.github.io/2023/06/estou-aprendendo-julia/</link>
-      <pubDate>Thu, 08 Jun 2023 22:17:53 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/06/estou-aprendendo-julia/</guid>
-      <description>Como Uncle Bob diz: &amp;ldquo;Learn at least one new language every year&amp;rdquo; e eu decidi começar a estudar Julia por ela poder ser utilizada a fins de simulação e visualização de dados, inclusive criei um repositorio github para meus aprendizados onde pretendo deixar algumas coisas que aprendi como linguagens conceitos e etc. Para isto funcionar da forma que espero vou utilizar da ajuda do ChatGPT e do gpt4all para me gerar desafios e prompts de aprendizado inclusive o primeiro prompt que eu dei foi: Se imagine sendo o professor mais didatico da internet e crie um tutorial com exercicios em julia.</description>
-    </item>
-    
-    <item>
-      <title>Bases Númericas: Binários e Decimais</title>
-      <link>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</link>
-      <pubDate>Sat, 20 May 2023 13:08:25 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</guid>
-      <description>O que são bases númericas? Bases numericas são sistemas que nos permitem representar e manipular números de diferentes formas.
+Pegue uma matriz quadrada e inverta a ordem da diagonal principal | 2 4 | -&amp;gt; | 5 4 | | 1 5 | -&amp;gt; | 1 2 | Inverta o sinal da diagonal secundária | 5 -4 | | -1 2 | Você divide todos os elementos da matriz gerada pelo determinante da matriz original e reduz onde é possível.</description></item><item><title>Estou aprendendo julia</title><link>http://FoxTechWorld.github.io/2023/06/estou-aprendendo-julia/</link><pubDate>Thu, 08 Jun 2023 22:17:53 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/06/estou-aprendendo-julia/</guid><description>Como Uncle Bob diz: &amp;ldquo;Learn at least one new language every year&amp;rdquo; e eu decidi começar a estudar Julia por ela poder ser utilizada a fins de simulação e visualização de dados, inclusive criei um repositorio github para meus aprendizados onde pretendo deixar algumas coisas que aprendi como linguagens conceitos e etc. Para isto funcionar da forma que espero vou utilizar da ajuda do ChatGPT e do gpt4all para me gerar desafios e prompts de aprendizado inclusive o primeiro prompt que eu dei foi: Se imagine sendo o professor mais didatico da internet e crie um tutorial com exercicios em julia.</description></item><item><title>Bases Númericas: Binários e Decimais</title><link>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</link><pubDate>Sat, 20 May 2023 13:08:25 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/bases-n%C3%BAmericas-bin%C3%A1rios-e-decimais/</guid><description>O que são bases númericas? Bases numericas são sistemas que nos permitem representar e manipular números de diferentes formas.
 Muito além de usar apenas simbolos de 0 a 9 antes de adicionar uma casa decimal, existem outras bases.
 Essas outras bases que utilizam símbolos e regras distintas.
 Sistema Decimal O sistema decimal uma representação posicional em que cada digito tem uma posição especifico.
-primeiro elemento segundo elemento terceiro elemento quarto elemento extenso 1 0 0 0 Mil 0 2 0 0 Duzentos 0 0 3 0 Trinta 0 0 0 9 Nove Esse sistema é baseado no conceito de contar que nos permite utilizar operações basicas como adicão, subtração, multiplicação e divisão.</description>
-    </item>
-    
-    <item>
-      <title>Busca em profundidade</title>
-      <link>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</link>
-      <pubDate>Fri, 19 May 2023 09:09:15 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</guid>
-      <description>Algoritmo de Busca em Profundidade O algoritmo de busca em profundidade, conhecido como DFS (do inglês Depth-First Search), é um método utilizado para percorrer ou explorar grafos de maneira sistemática e eficiente.
+primeiro elemento segundo elemento terceiro elemento quarto elemento extenso 1 0 0 0 Mil 0 2 0 0 Duzentos 0 0 3 0 Trinta 0 0 0 9 Nove Esse sistema é baseado no conceito de contar que nos permite utilizar operações basicas como adicão, subtração, multiplicação e divisão.</description></item><item><title>Busca em profundidade</title><link>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</link><pubDate>Fri, 19 May 2023 09:09:15 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/busca-em-profundidade/</guid><description>Algoritmo de Busca em Profundidade O algoritmo de busca em profundidade, conhecido como DFS (do inglês Depth-First Search), é um método utilizado para percorrer ou explorar grafos de maneira sistemática e eficiente.
 Ao contrário do algoritmo de busca em largura (BFS), o DFS segue uma abordagem de &amp;ldquo;expansão em profundidade&amp;rdquo;, explorando um caminho o mais longe possível antes de retroceder.
-Visitação dos vértices Ao realizar uma busca em profundidade, o algoritmo DFS visita os vértices do grafo de forma recursiva.</description>
-    </item>
-    
-    <item>
-      <title>Busca em largura</title>
-      <link>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</link>
-      <pubDate>Thu, 18 May 2023 14:05:40 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</guid>
-      <description>Para começar vamos contextualizar o que é um grafo. Um grafo é uma estrutura matemática usada para representar relacionamentos entre objetos.
+Visitação dos vértices Ao realizar uma busca em profundidade, o algoritmo DFS visita os vértices do grafo de forma recursiva.</description></item><item><title>Busca em largura</title><link>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</link><pubDate>Thu, 18 May 2023 14:05:40 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/busca-em-largura/</guid><description>Para começar vamos contextualizar o que é um grafo. Um grafo é uma estrutura matemática usada para representar relacionamentos entre objetos.
 Ele consiste em um conjunto de pontos, chamados de vértices (ou nós), que são conectados por linhas, chamadas de arestas.
 Grafos são amplamente utilizados em diferentes áreas, como ciência da computação, matemática, redes sociais, teoria dos jogos, entre outros, para modelar e analisar diversas situações.
-Onde grafos são utilizados em computadores?</description>
-    </item>
-    
-    <item>
-      <title>Números pseudo aleatórios</title>
-      <link>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</link>
-      <pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</guid>
-      <description>Um número verdadeiramente aleátorio é impossivel com a computação porque a computação é deterministica. Ou seja, eu posso saber e conferir o resultado antes mesmo dele executar ou testar para o resultado.
-Com isso operamos algoritmos matématicos repetiveis. Para trabalharmos com números continuos e variantes uma (seed). Essa seed pode ser o tempo, a quantidade de memória, o ping da rede, ou tudo isso com diversas operações para aumentar a entropia.</description>
-    </item>
-    
-    <item>
-      <title>Heap</title>
-      <link>http://FoxTechWorld.github.io/2023/05/heap/</link>
-      <pubDate>Wed, 03 May 2023 16:51:33 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/heap/</guid>
-      <description>O que é uma Heap? A heap será a ultima estrutura de dados que será apresentada por enquanto neste blog.
+Onde grafos são utilizados em computadores?</description></item><item><title>Números pseudo aleatórios</title><link>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</link><pubDate>Thu, 04 May 2023 08:39:04 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/n%C3%BAmeros-pseudo-aleat%C3%B3rios/</guid><description>Um número verdadeiramente aleátorio é impossivel com a computação porque a computação é deterministica. Ou seja, eu posso saber e conferir o resultado antes mesmo dele executar ou testar para o resultado.
+Com isso operamos algoritmos matématicos repetiveis. Para trabalharmos com números continuos e variantes uma (seed). Essa seed pode ser o tempo, a quantidade de memória, o ping da rede, ou tudo isso com diversas operações para aumentar a entropia.</description></item><item><title>Heap</title><link>http://FoxTechWorld.github.io/2023/05/heap/</link><pubDate>Wed, 03 May 2023 16:51:33 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/heap/</guid><description>O que é uma Heap? A heap será a ultima estrutura de dados que será apresentada por enquanto neste blog.
 Podemos com ela encerrar a primeira temporada de estrutura de dados.
 E com isso irei iniciar novos assuntos.
 A heap é uma estrutura de dados que pode ser implementada com arranjos e como lista ligada, mas podemos reconhece-la como fila de prioridades.
-E apesar de ser uma lista linear tratamos a heap como uma árvore de busca binária</description>
-    </item>
-    
-    <item>
-      <title>Fila</title>
-      <link>http://FoxTechWorld.github.io/2023/05/fila/</link>
-      <pubDate>Mon, 01 May 2023 22:32:12 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/05/fila/</guid>
-      <description>O que é uma fila? A fila é outra das estruturas de dados mais simples e mais importantes que temos atualmente. Podemos implementa-la de duas formas, usando vetores ou listas ligadas que eu já havia citado neste post.
+E apesar de ser uma lista linear tratamos a heap como uma árvore de busca binária</description></item><item><title>Fila</title><link>http://FoxTechWorld.github.io/2023/05/fila/</link><pubDate>Mon, 01 May 2023 22:32:12 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/05/fila/</guid><description>O que é uma fila? A fila é outra das estruturas de dados mais simples e mais importantes que temos atualmente. Podemos implementa-la de duas formas, usando vetores ou listas ligadas que eu já havia citado neste post.
 Quais são as principais operações de uma fila? A fila também tem duas operações principais:
-Empilhar Desempilhar Qual a diferença de uma fila para a pilha. E tem como maior diferença com a fila o metódo de inserção e remoção que é um Fifo (First In First Out).</description>
-    </item>
-    
-    <item>
-      <title>Pilha</title>
-      <link>http://FoxTechWorld.github.io/2023/04/pilha/</link>
-      <pubDate>Sun, 30 Apr 2023 14:58:21 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/04/pilha/</guid>
-      <description>O que são pilhas? Seguindo o artigo anterior sobre listas ligadas, hoje vou falar sobre pilhas.
+Empilhar Desempilhar Qual a diferença de uma fila para a pilha. E tem como maior diferença com a fila o metódo de inserção e remoção que é um Fifo (First In First Out).</description></item><item><title>Pilha</title><link>http://FoxTechWorld.github.io/2023/04/pilha/</link><pubDate>Sun, 30 Apr 2023 14:58:21 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/04/pilha/</guid><description>O que são pilhas? Seguindo o artigo anterior sobre listas ligadas, hoje vou falar sobre pilhas.
 Uma pilha é uma estrutura de dados onde controlamos o topo da pilha e temos duas importantes funções.
 Principais operações de uma fila Empilhar Desempilhar Isso significa que podemos adicionar um novo item ao topo da pilha e remover um item do topo da pilha.
-Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a fila, a pilha também chega a ser uma das mais importantes estruturas de dados.</description>
-    </item>
-    
-    <item>
-      <title>Lista Ligada</title>
-      <link>http://FoxTechWorld.github.io/2023/04/lista-ligada/</link>
-      <pubDate>Sun, 30 Apr 2023 00:17:12 -0300</pubDate>
-      
-      <guid>http://FoxTechWorld.github.io/2023/04/lista-ligada/</guid>
-      <description>A lista ligada é uma das estruturas mais simples na matéria de estruturas de dados.
+Apesar de ser uma das mais simples estruturas de dados que utilizamos adjunto a fila, a pilha também chega a ser uma das mais importantes estruturas de dados.</description></item><item><title>Lista Ligada</title><link>http://FoxTechWorld.github.io/2023/04/lista-ligada/</link><pubDate>Sun, 30 Apr 2023 00:17:12 -0300</pubDate><guid>http://FoxTechWorld.github.io/2023/04/lista-ligada/</guid><description>A lista ligada é uma das estruturas mais simples na matéria de estruturas de dados.
 E ouso dizer que também chega a ser uma das mais importantes.
 Pois com ela podemos criar estruturas muito mais complexas.
 Um exemplo simples que podemos dar a lista ligada em C++ é:
-Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value = new_value; next = NULL; } }; Class LinkedList{ private: Node* Head; public: LinkedList(){ Head = NULL; } }; Onde para aqueles que possuem um olho atento.</description>
-    </item>
-    
-  </channel>
-</rss>
+Class Node{ private: int Value; Node* next; public: Node(int new_value){ Value = new_value; next = NULL; } }; Class LinkedList{ private: Node* Head; public: LinkedList(){ Head = NULL; } }; Onde para aqueles que possuem um olho atento.</description></item></channel></rss>

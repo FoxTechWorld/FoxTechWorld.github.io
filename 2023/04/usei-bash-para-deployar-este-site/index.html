@@ -1,214 +1,35 @@
-<!DOCTYPE html>
-<html class="no-js" lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#1b1b1b">
-	<title>Usei bash para deployar este site | FoxTechWorld</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Criei um script para deployar este site na web">
-	
-  
-    
-    <meta name="keywords" content="Programming" />
-    
-    <link rel="canonical" href="http://FoxTechWorld.github.io/2023/04/usei-bash-para-deployar-este-site/" />
-    <meta name="lightning" content="lnurlp:preciouschicken@getalby.com">
-    <meta property="alby:image" content="http://FoxTechWorld.github.io/images/avatar.png">
-	<link rel="stylesheet" href="/css/bundle.css">
-	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
-	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
-	<link rel="manifest" href="/manifest.json">
-		
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PSN4T418"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-T8PSN4T418', { 'anonymize_ip': false });
-}
-</script>
-
-</head>
-<body class="body kind-page">
-	<header class="header">
-	<a class="logo" href="/">FoxTechWorld</a>
-	
-<nav class="main-nav" role="navigation">
-	<button id="toggle" class="main-nav__btn" aria-label="Menu toggle" aria-expanded="false" tabindex="0">
-		<div class="main-nav__btn-box" tabindex="-1">
-			<svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18">
-				<path class="icon-menu__burger" d="M18 0v3.6H0V0h18zM0 10.8h18V7.2H0v3.6zM0 18h18v-3.6H0V18z"/>
-				<path class="icon-menu__x" d="M11.55 9L18 15.45 15.45 18 9 11.55 2.55 18 0 15.45 6.45 9 0 2.55 2.55 0 9 6.45 15.45 0 18 2.55 11.55 9z"/>
-			</svg>
-		</div>
-	</button>
-	<ul id="menu" class="main-nav__list">
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/">
-					
-					<span class="main-nav__text">Home</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/categories/">
-					
-					<span class="main-nav__text">Categories</span>
-					
-				</a>
-			</li>
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="/tags/">
-					
-					<span class="main-nav__text">Tags</span>
-					
-				</a>
-			</li>
-	</ul>
-</nav>
-</header>
-	<div class="primary">
-	
-	<main class="main">
-		
-		<div class="single block">
-			<article class="entry">
-	<div class="entry__meta meta mb">
-	<time class="entry__meta-published meta-published" datetime="2023-04-30T01:06:17-03:00">April 30, 2023</time>
-<div class="entry__meta-categories meta-categories">
-	<span class="meta-categories__list">Categories:
-		<a class="meta-categories__link" href="/categories/tecnology/" rel="category">Tecnology</a>
-	</span>
-</div>
-<div class="entry__meta-tags meta-tags">
-	<span class="meta-tags__list">Tags:
-		<a class="meta-tags__link" href="/tags/programming/" rel="tag">Programming</a>
-	</span>
-</div>
-	</div>
-				<h1 class="entry__title">Usei bash para deployar este site</h1>
-<details class="entry__toc toc" open>
-	<summary class="toc__title">Table of Contents</summary>
-	<nav id="TableOfContents"></nav>
-</details>
-				<div class="entry__content"><p>Isso mesmo galera, fiz um script bash para gerar o conteúdo que aparece em vossas telas.
-Antes de tudo, esse script bash serve apenas para deployar, e todo trabalho duro de converter minhas digitações em html pertence ao <a href="https://gohugo.io/" target="_blank" rel="nofollow noopener noreferrer">Hugo</a></p>
-<p>Enfim, na versão do meu script <code>deploy.sh</code>, ele faz tarefas bem simplistas para gerar o html e mandar para o github, que por sua vez manda para o github pages.
-Simples por enquanto, até a hora da minha maldade começar.</p>
-<p>na verdade, o trabalho é bem simples para o script</p>
-<p>ele é dividido em 3 funções</p>
-<ul>
-<li>Gerar o html</li>
-<li>Postar o html em github pages</li>
-<li>Postar as modificações no repo</li>
-</ul>
-<p>Para a primeira etapa eu fiz o seguinte:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>commit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no message for this commit&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> commit<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span>
-</span></span><span style="display:flex;"><span>hugo
+<!doctype html><html class=no-js lang=pt-br><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#1b1b1b"><title>Usei bash para deployar este site | FoxTechWorld</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content="Criei um script para deployar este site na web"><meta property="og:title" content="Usei bash para deployar este site"><meta property="og:description" content="Criei um script para deployar este site na web"><meta property="og:type" content="article"><meta property="og:url" content="http://FoxTechWorld.github.io/2023/04/usei-bash-para-deployar-este-site/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-04-30T01:06:17-03:00"><meta property="article:modified_time" content="2023-04-30T01:06:17-03:00"><meta itemprop=name content="Usei bash para deployar este site"><meta itemprop=description content="Criei um script para deployar este site na web"><meta itemprop=datePublished content="2023-04-30T01:06:17-03:00"><meta itemprop=dateModified content="2023-04-30T01:06:17-03:00"><meta itemprop=wordCount content="325"><meta itemprop=keywords content="Programming,"><meta name=keywords content="Programming"><link rel=canonical href=http://FoxTechWorld.github.io/2023/04/usei-bash-para-deployar-este-site/><meta name=lightning content="lnurlp:preciouschicken@getalby.com"><meta property="alby:image" content="http://FoxTechWorld.github.io/images/avatar.png"><link rel=stylesheet href=/css/bundle.css><link rel=stylesheet href=/css/themes/dark-red.css><link rel=icon href=/icons/16.png sizes=16x16 type=image/png><link rel=icon href=/icons/32.png sizes=32x32 type=image/png><link rel=manifest href=/manifest.json><script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PSN4T418"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-T8PSN4T418",{anonymize_ip:!1})}</script></head><body class="body kind-page"><header class=header><a class=logo href=/>FoxTechWorld</a><nav class=main-nav role=navigation><button id=toggle class=main-nav__btn aria-label="Menu toggle" aria-expanded=false tabindex=0><div class=main-nav__btn-box tabindex=-1><svg class="main-nav__icon icon-menu" width="18" height="18" viewBox="0 0 18 18"><path class="icon-menu__burger" d="M18 0v3.6H0V0h18zM0 10.8h18V7.2H0v3.6zM0 18h18v-3.6H0V18z"/><path class="icon-menu__x" d="M11.55 9 18 15.45 15.45 18 9 11.55 2.55 18 0 15.45 6.45 9 0 2.55 2.55.0 9 6.45 15.45.0 18 2.55 11.55 9z"/></svg></div></button><ul id=menu class=main-nav__list><li class=main-nav__item><a class=main-nav__link href=/><span class=main-nav__text>Home</span></a></li><li class=main-nav__item><a class=main-nav__link href=/categories/><span class=main-nav__text>Categories</span></a></li><li class=main-nav__item><a class=main-nav__link href=/tags/><span class=main-nav__text>Tags</span></a></li></ul></nav></header><div class=primary><main class=main><nav class="breadcrumb block" aria-label=breadcrumb><ol class=breadcrumb__list><li class=breadcrumb__item><a class=breadcrumbs__link href=/>FoxTechWorld</a></li><li class=breadcrumb__item><a class=breadcrumbs__link href=/posts/>Posts</a></li><li class="breadcrumbs__item breadcrumb__item--active" aria-current=page>Usei bash para deployar este site</li></ol></nav><div class="single block"><article class=entry><div class="entry__meta meta mb"><time class="entry__meta-published meta-published" datetime=2023-04-30T01:06:17-03:00>April 30, 2023</time><div class="entry__meta-categories meta-categories"><span class=meta-categories__list>Categories:
+<a class=meta-categories__link href=/categories/tecnology/ rel=category>Tecnology</a></span></div><div class="entry__meta-tags meta-tags"><span class=meta-tags__list>Tags:
+<a class=meta-tags__link href=/tags/programming/ rel=tag>Programming</a></span></div></div><h1 class=entry__title>Usei bash para deployar este site</h1><details class="entry__toc toc" open><summary class=toc__title>Table of Contents</summary><nav id=TableOfContents></nav></details><div class=entry__content><p>Isso mesmo galera, fiz um script bash para gerar o conteúdo que aparece em vossas telas.
+Antes de tudo, esse script bash serve apenas para deployar, e todo trabalho duro de converter minhas digitações em html pertence ao <a href=https://gohugo.io/ target=_blank rel="nofollow noopener noreferrer">Hugo</a></p><p>Enfim, na versão do meu script <code>deploy.sh</code>, ele faz tarefas bem simplistas para gerar o html e mandar para o github, que por sua vez manda para o github pages.
+Simples por enquanto, até a hora da minha maldade começar.</p><p>na verdade, o trabalho é bem simples para o script</p><p>ele é dividido em 3 funções</p><ul><li>Gerar o html</li><li>Postar o html em github pages</li><li>Postar as modificações no repo</li></ul><p>Para a primeira etapa eu fiz o seguinte:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>commit<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;no message for this commit&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[[</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>1<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]]</span> <span style=color:#f92672>&amp;&amp;</span> commit<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>1<span style=color:#e6db74>}</span>
+</span></span><span style=display:flex><span>hugo
 </span></span></code></pre></div><p>Isso verifica se há uma messagem de commit, caso não haja cria uma mensagem generica após isso gera o html
-Bem simples e prático, e o melhor sem grandes dores de cabeça.</p>
-<p>Para a segunda etapa começamos com a primeira função:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> public_deploy<span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>  cd public
-</span></span><span style="display:flex;"><span>  git add .
-</span></span><span style="display:flex;"><span>  git commit -m <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>commit<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>  git push origin main
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+Bem simples e prático, e o melhor sem grandes dores de cabeça.</p><p>Para a segunda etapa começamos com a primeira função:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#66d9ef>function</span> public_deploy<span style=color:#f92672>(){</span>
+</span></span><span style=display:flex><span>  cd public
+</span></span><span style=display:flex><span>  git add .
+</span></span><span style=display:flex><span>  git commit -m <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>commit<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>  git push origin main
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
 </span></span></code></pre></div><p>Uma função simples que vai deployar dentro do submodule do site, ela apenas entra em <code>public</code> que é o submódulo do blog.
-adiciona tudo e faz o commit com a mensagem da primeira etapa. Após isso empurra pro submódulo.</p>
-<p>Para a terceira etapa fazemos o mesmo para o repo em que estou trabalhando neste momento.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> repo_deploy<span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>  cd ..
-</span></span><span style="display:flex;"><span>  git add .
-</span></span><span style="display:flex;"><span>  git commit -m <span style="color:#e6db74">&#34;</span>$commit<span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>  git push origin main
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Nem vou perder tempo explicando este, é apenas a segunda etapa feita no repo anterior</p>
-<p>Para a quarta etapa, integramos tudo e usamos uma sequencia de funções.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> deploy<span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>  public_deploy;
-</span></span><span style="display:flex;"><span>  repo_deploy
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> start<span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>  deploy
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>start
+adiciona tudo e faz o commit com a mensagem da primeira etapa. Após isso empurra pro submódulo.</p><p>Para a terceira etapa fazemos o mesmo para o repo em que estou trabalhando neste momento.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#66d9ef>function</span> repo_deploy<span style=color:#f92672>(){</span>
+</span></span><span style=display:flex><span>  cd ..
+</span></span><span style=display:flex><span>  git add .
+</span></span><span style=display:flex><span>  git commit -m <span style=color:#e6db74>&#34;</span>$commit<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>  git push origin main
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><p>Nem vou perder tempo explicando este, é apenas a segunda etapa feita no repo anterior</p><p>Para a quarta etapa, integramos tudo e usamos uma sequencia de funções.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#66d9ef>function</span> deploy<span style=color:#f92672>(){</span>
+</span></span><span style=display:flex><span>  public_deploy;
+</span></span><span style=display:flex><span>  repo_deploy
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> start<span style=color:#f92672>(){</span>
+</span></span><span style=display:flex><span>  deploy
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>start
 </span></span></code></pre></div><p>Isso parece comprido e nem um pouco pratico agora pois eu to rebolando demais em volta do deploy no momento.
-Mas futuramente o script será ampliado para otimização de imagens e outros.</p>
-</div>
-				
-				<footer class="entry__footer">
-					
-<div class="entry__tags">
-			<a class="entry__tag btn" href="/tags/programming/">Programming</a>
-</div>
-					
-				</footer>
-				
-			</article>
-		</div>
-	</main>
-	
-<div class="authorbox block">
-	<div class="author">
-		<div class="author__body">
-			<div class="author__name">
-				KitsuneSemCalda
-			</div>
-			<div class="author__bio">KitsuneSemCalda é a identidade secreta de um estudante de ciencias de computação (ou talvez não)</div>
-		</div>
-	</div>
-</div>
-	
-
-
-
-	
-<section class="comments block">
-	<div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "foxtechworld" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
-	</div>
-	<footer class="footer">
-<div class="footer__social social">
-		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/arthur-augusto-magalh%c3%a3es-55761b220">
-			<svg class="social__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
-		</a>
-		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/KitsuneSemCalda">
-			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
-		</a>
-</div>
-	<div class="footer__copyright">© 2023 FoxTechWorld. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
-</footer>
-<script src="/js/menu.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
-
-</body>
-</html>
+Mas futuramente o script será ampliado para otimização de imagens e outros.</p></div><footer class=entry__footer><div class=entry__tags><a class="entry__tag btn" href=/tags/programming/>Programming</a></div></footer></article></div></main><div class="authorbox block"><div class=author><div class=author__body><div class=author__name>KitsuneSemCalda</div><div class=author__bio>KitsuneSemCalda é a identidade secreta de um estudante de ciencias de computação (ou talvez não)</div></div></div></div><section class="comments block"><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//foxtechworld.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></section></div><footer class=footer><div class="footer__social social"><a class=social__link target=_blank rel="noopener noreferrer" href=https://linkedin.com/in/arthur-augusto-magalh%c3%a3es-55761b220><svg class="social__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg></a><a class=social__link target=_blank rel="noopener noreferrer" href=https://github.com/KitsuneSemCalda><svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg></a></div><div class=footer__copyright>© 2023 FoxTechWorld. <span class=footer__copyright-credits>Powered by <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/vimux/binario rel="nofollow noopener" target=_blank>Binario</a> theme.</span></div></footer><script src=/js/menu.js></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>
