@@ -28,21 +28,26 @@ defaults:
 
 jobs:
   # Build job
-  build:
-    runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.123.8
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-        with:
-          path: ./public
+  # Build job
+build:
+  runs-on: ubuntu-latest
+  env:
+    HUGO_VERSION: 0.123.8
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: Build Hugo site
+      run: |
+        # Add commands to build your Hugo site
+    - name: Archive generated pages
+      uses: actions/upload-artifact@v4
+      with:
+        name: github-pages
+        path: ./public
 
+  
   # Deployment job
   deploy:
     environment:
