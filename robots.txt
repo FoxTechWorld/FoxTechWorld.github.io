@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://foxtechworld.github.io/sitemap.xml?redirect=true&start-index=1&max-results=500
