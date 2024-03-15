@@ -1,0 +1,251 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/categories/nerd/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Como uma AI funciona</title><link>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</link><pubDate>Tue, 20 Feb 2024 09:17:59 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</guid><description>Este post oferece uma visão detalhada da Inteligência Artificial (IA), abordando desde os fundamentos de seu funcionamento até os equívocos comuns sobre a IA. O autor discute tópicos como a abstração na computação, a matemática por trás da IA, a geração de imagens e textos por IA, e a questão de se a arte gerada por IA pode ser considerada arte. O post também inclui uma série de recursos em vídeo para aqueles que desejam aprender mais.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Bem-vindo a mais um post! Hoje, vamos mergulhar no fascinante mundo da Inteligência Artificial (IA), desvendando mitos e explorando seu potencial, especialmente no contexto da criação de arte. Antes de entrarmos no âmago da questão das artes geradas por IA, é crucial desmistificar alguns conceitos errôneos que têm circulado, muitas vezes devido à falta de pesquisa aprofundada sobre o assunto.&lt;/p>
+&lt;p>Entre esses equívocos, destacam-se:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>A IA não é uma &amp;ldquo;caixa preta&amp;rdquo; misteriosa:&lt;/strong> Embora possa parecer complexa, a IA é compreensível, e podemos desvendar seu funcionamento.&lt;/li>
+&lt;li>&lt;strong>Não há necessidade de temer uma revolução da IA:&lt;/strong> Embora a regulamentação ética seja essencial, é altamente improvável que a IA alcance a consciência como nos filmes de ficção científica.&lt;/li>
+&lt;li>&lt;strong>Arte gerada por IA pode ser considerada arte?&lt;/strong> A resposta a essa pergunta varia conforme a definição individual de arte&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="como-uma-inteligência-artificial-funciona">Como uma Inteligência Artificial funciona&lt;/h3>
+&lt;p>Gostaria de poder mergulhar em todos os detalhes sobre o funcionamento da IA, mas há tantos algoritmos e técnicas envolvidas que é melhor delinear seu processo geral.&lt;/p>
+&lt;p>O que muitas pessoas não compreendem é que a IA é um algoritmo, ou seja, um conjunto de instruções definidas e limitadas tanto em sua implementação quanto nos recursos de hardware necessários para sua execução. Chegamos a um ponto em que estamos alcançando os limites tanto em termos de implementação de software quanto de hardware.&lt;/p>
+&lt;p>Para fins comparativos, o funcionamento diário do ChatGPT pode custar em média US$ 3,5 milhões, o que pode ser mais uma despesa do que um ganho real para a OpenAI, embora possa ser considerado um excelente marketing para promover as APIs da OpenAI.&lt;/p>
+&lt;p>Perceba como desmistificar a inteligência artificial pode dissipar muitos medos infundados sobre ela.&lt;/p>
+&lt;h4 id="tudo-começa-com-a-abstração">Tudo Começa com a Abstração&lt;/h4>
+&lt;p>Você já se perguntou como um computador processa informações? Isso ocorre por meio de um processo chamado &amp;ldquo;abstração&amp;rdquo;, no qual tudo o que existe no mundo real é reduzido a números simples, sejam eles letras, imagens ou vídeos. Isso significa que, no mundo dos computadores, tudo é uma abstração, transformando o mundo físico em uma realidade matemática.&lt;/p>
+&lt;h4 id="matemática">Matemática&lt;/h4>
+&lt;p>A base da IA reside na matemática, computação e estatística (especialmente no campo da probabilidade). Enquanto os computadores entendem principalmente números binários, nós humanos preferimos trabalhar com sistemas numéricos mais familiares, como o sistema decimal ou o sistema hexadecimal.&lt;/p>
+&lt;p>Agora que explicamos esses conceitos, vamos simplificar o funcionamento de uma inteligência artificial.&lt;/p>
+&lt;hr>
+&lt;h3 id="explicando-a-inteligência-artificial-generativa-de-imagem">Explicando a inteligência artificial generativa de Imagem&lt;/h3>
+&lt;p>Imagine que queremos ensinar uma IA a reconhecer e gerar imagens de gatos.&lt;/p>
+&lt;h4 id="recolhimento-e-classificação-de-dados">Recolhimento e Classificação de Dados&lt;/h4>
+&lt;p>Começamos reunindo inúmeras imagens de gatos e fornecemos esses dados ao modelo de treinamento (ainda não é uma IA). Esse modelo deve extrair informações dos gatos, como cores e suas distribuições, que serão as características definidoras de um gato.&lt;/p>
+&lt;h4 id="treinamento-do-modelo">Treinamento do Modelo&lt;/h4>
+&lt;p>O treinamento da IA envolve, essencialmente, fornecer a ela essas informações e permitir que ela as relacione para identificar padrões que definem o que é um gato.&lt;/p>
+&lt;h4 id="geração-da-imagem">Geração da Imagem&lt;/h4>
+&lt;p>Quando solicitamos à IA que gere uma imagem de um gato, ela usa o conhecimento adquirido durante o treinamento para combinar todas essas diferentes características de gatos para criar uma nova imagem.&lt;/p>
+&lt;h4 id="utilizando-probabilidade-e-aleatoriedade">Utilizando Probabilidade e Aleatoriedade&lt;/h4>
+&lt;p>Para garantir que as imagens geradas sejam variadas e não meras reproduções do conjunto de dados, introduzimos aleatoriedade usando técnicas estatísticas, como a probabilidade. Isso permite que a IA crie imagens únicas e, às vezes, até mesmo gere efeitos que se assemelham a alucinações. No entanto, é importante notar que isso é simplesmente uma expressão para descrever uma resposta confiante que pode não corresponder à realidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="então-como-funciona-uma-inteligência-artificial-generativa-de-texto">Então como funciona uma inteligência artificial generativa de texto&lt;/h3>
+&lt;p>A mesma lógica se aplica quando falamos sobre a geração de texto por inteligência artificial. A IA analisa palavras extraídas de diversos textos e utiliza essas relações, juntamente com a aleatoriedade, para gerar novos textos a partir de uma entrada específica.&lt;/p>
+&lt;hr>
+&lt;h3 id="pontos-mal-entendidos">Pontos Mal Entendidos&lt;/h3>
+&lt;h4 id="existe-uma-caixa-preta-que-os-cientistas-não-entendem">Existe uma &amp;ldquo;Caixa Preta&amp;rdquo; que os Cientistas não Entendem?&lt;/h4>
+&lt;p>Não é bem assim. Embora uma representação visual de uma IA, como uma rede neural, possa parecer uma série de caixas empilhadas umas sobre as outras, com bilhões de relações ocorrendo em cada camada, os cientistas entendem o que está acontecendo em um nível conceitual.&lt;/p>
+&lt;p>&lt;img src="https://proxy.olhardigital.com.br/wp-content/uploads/2023/05/redes-neurais-artificiais-como-funcionam-1024x577.jpg" alt="Rede Neural">&lt;/p>
+&lt;hr>
+&lt;h4 id="uma-revolução-de-ia">Uma revolução de IA?&lt;/h4>
+&lt;p>Embora haja muitas questões éticas e morais em torno da regulação da IA, o medo de que ela se torne consciente como nos filmes de ficção científica não é uma preocupação válida. É altamente improvável que a IA alcance a consciência, dado que ainda não compreendemos completamente a natureza da inteligência humana e se ela pode ser representada por números computáveis.&lt;/p>
+&lt;hr>
+&lt;h4 id="uma-arte-gerada-por-ia-é-uma-arte">Uma arte gerada por IA é uma arte&lt;/h4>
+&lt;p>Depende. Essa palavra demonstra toda minha senioridade do assunto. Sendo um grande &lt;a href="https://www.significados.com.br/advogado-do-diabo/#:~:text=Significado%20de%20Advogado%20do%20diabo,-Equipe%20da%20Enciclop%C3%A9dia&amp;amp;text=Popularmente%2C%20a%20express%C3%A3o%20passou%20a,testar%20a%20qualidade%20do%20argumento.">advogado do diabo&lt;/a>, uma &lt;a href="https://pt.wikipedia.org/wiki/Arte">arte&lt;/a> tem diversos sentidos e formas de significados. As mais comuns são:&lt;/p>
+&lt;ul>
+&lt;li>A manifestação de alguma habilidade especial;&lt;/li>
+&lt;li>A criação artificial de algo pelo ser humano;&lt;/li>
+&lt;li>O desencadeamento de algum tipo de resposta no ser humano, como o senso de &lt;a href="https://pt.wikipedia.org/wiki/Prazer" title="Prazer">prazer&lt;/a> ou &lt;a href="https://pt.wikipedia.org/wiki/Beleza" title="Beleza">beleza&lt;/a>;&lt;/li>
+&lt;li>A apresentação de algum tipo de ordem, padrão ou harmonia;&lt;/li>
+&lt;li>A transmissão de um senso de novidade e ineditismo;&lt;/li>
+&lt;li>A expressão da realidade interior do criador;&lt;/li>
+&lt;li>A comunicação de algo sob a forma de uma linguagem especial;&lt;/li>
+&lt;li>A noção de valor e importância;&lt;/li>
+&lt;li>A excitação da &lt;a href="https://pt.wikipedia.org/wiki/Imagina%C3%A7%C3%A3o" title="Imaginação">imaginação&lt;/a> e a &lt;a href="https://pt.wikipedia.org/wiki/Fantasia_(psicologia)" title="Fantasia (psicologia)">fantasia&lt;/a>;&lt;/li>
+&lt;li>A indução ou comunicação de uma experiência-pico;&lt;/li>
+&lt;li>Coisas que possuam reconhecidamente um sentido;&lt;/li>
+&lt;li>Coisas que deem uma resposta a um dado problema.&lt;/li>
+&lt;/ul>
+&lt;p>Se olharmos deste ponto de vista podemos dizer que uma arte gerada por uma IA não é uma arte.&lt;/p>
+&lt;p>Mas existe outro ponto de vista, se olharmos para IA como se fosse uma ferramenta que pode gerar diversas imagens diferentes com determinadas entradas podemos aproveitar como uma ferramenta para criar um background para uma arte-maior como o &lt;a href="https://bjoernkarmann.dk/project/paragraphica">caso que ocorreu com a paragráfica&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://proxy.olhardigital.com.br/wp-content/uploads/2023/06/paragraphica.webp" alt="Paragráfica">&lt;/p>
+&lt;hr>
+&lt;h3 id="como-a-ia-pode-nos-ajudar">Como a IA Pode nos Ajudar?&lt;/h3>
+&lt;p>A IA tem impactado positivamente diversas áreas da vida cotidiana, oferecendo benefícios significativos:&lt;/p>
+&lt;h4 id="em-casa">Em Casa&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Assistentes Virtuais:&lt;/strong> Siri, Alexa e Google Assistente ajudam nas pesquisas, lembretes e controle de dispositivos domésticos.&lt;/li>
+&lt;/ul>
+&lt;h4 id="no-trabalho">No Trabalho&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Análise de Dados:&lt;/strong> Empresas usam IA para obter insights valiosos a partir de grandes conjuntos de dados.&lt;/li>
+&lt;/ul>
+&lt;h4 id="na-saúde">Na Saúde&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Diagnóstico Médico:&lt;/strong> A IA auxilia os médicos na identificação precisa de doenças, analisando exame e dados clínicos.&lt;/li>
+&lt;/ul>
+&lt;h4 id="na-educação">Na Educação&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Personalização do Ensino:&lt;/strong> Plataformas de aprendizado online utilizam IA para adaptar o conteúdo às necessidades individuais dos alunos.&lt;/li>
+&lt;/ul>
+&lt;h4 id="no-entretenimento">No Entretenimento&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Recomendações Personalizadas:&lt;/strong> Serviços de streaming como Netflix e Spotify usam IA para sugerir conteúdo com base nos interesses dos usuários.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Espero que este texto tenha ajudado a desmistificar a IA e a arte gerada por ela. A IA, longe de ser uma entidade misteriosa, é um conjunto de algoritmos limitados, porém poderosos, que podem ser utilizados para uma variedade de propósitos. Embora ainda haja muito a aprender e explorar nesse campo, é importante abordá-lo com uma compreensão sólida de seus fundamentos e potencialidades.&lt;/p>
+&lt;p>Se quiser saber mais, sugiro conferir os vídeos recomendados. E lembre-se, a IA é uma ferramenta poderosa que pode nos ajudar de muitas maneiras, mas cabe a nós utilizá-la de forma ética e responsável para maximizar seus benefícios para a sociedade.&lt;/p>
+&lt;h4 id="vídeos-gringos">&lt;strong>Vídeos gringos&lt;/strong>&lt;/h4>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=p7nGcY73epw">The Art of Abstraction&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://youtu.be/aircAruvnKk?si=PKveUBbtM8vuQndc">What is Neural Network&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://youtu.be/IHZwWFHWa-w?si=XaUu1uYr6hncJ2Hn">How Neural Network works&lt;/a>&lt;/p>
+&lt;h4 id="vídeos-brasileiros">&lt;strong>Vídeos brasileiros&lt;/strong>&lt;/h4>
+&lt;p>&lt;a href="https://youtu.be/O68y0yRZL1Y?si=GTFSHcnHnfk-DgYg">Entendendo como ChatGPT funciona&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/live/TYK940QeBKI?si=wcr-jTrFNJmnTgGo">IA&amp;rsquo;s são perigosas&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://youtu.be/zRes7LoHlWo?si=hNqI8ihI1Br2NwYf">É muito fácil quebrar uma inteligência artificial&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="glossário">Glossário&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Inteligência Artificial (IA):&lt;/strong> Tecnologia que permite que máquinas aprendam e ajam como seres humanos.&lt;/li>
+&lt;li>&lt;strong>Algoritmo:&lt;/strong> Conjunto de instruções que dizem à máquina o que fazer.&lt;/li>
+&lt;li>&lt;strong>Abstração:&lt;/strong> Processo de simplificar algo complexo reduzindo-o a conceitos básicos.&lt;/li>
+&lt;li>&lt;strong>Sistema binário:&lt;/strong> Sistema de numeração com base 2, composto apenas pelos dígitos 0 e 1.&lt;/li>
+&lt;li>&lt;strong>Rede Neural:&lt;/strong> Modelo computacional inspirado no funcionamento do cérebro humano, utilizado em IA.&lt;/li>
+&lt;li>&lt;strong>Generativa:&lt;/strong> Capacidade de criar novos dados a partir de dados existentes.&lt;/li>
+&lt;/ul>
+&lt;hr></content:encoded></item><item><title>Meu Vscode Minimalista</title><link>https://FoxTechWorld.github.io/posts/meu-vscode-minimalista/</link><pubDate>Thu, 15 Feb 2024 22:36:34 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/meu-vscode-minimalista/</guid><description>Neste guia abrangente, exploramos as configurações recomendadas para personalizar o Visual Studio Code e otimizar a experiência de desenvolvimento. Começando com a escolha do tema &amp;ldquo;Mr. Robot&amp;rdquo; e dos ícones do &amp;ldquo;Material Icon Theme&amp;rdquo;, destacamos como esses elementos visuais podem melhorar a legibilidade e a estética da interface do usuário.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Visual_Studio_Code">Visual Studio Code&lt;/a> é um editor de texto desenvolvido pela Microsoft para Windows, Linux, MacOSX. Possuindo suporte para depuração, versionamento via &lt;a href="https://pt.wikipedia.org/wiki/Git">Git&lt;/a> incorporado, realce de sintaxe, complementação inteligente de código, snippets, ferramentas para refatoração.&lt;/p>
+&lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
+&lt;hr>
+&lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
+&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
+&lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
+&lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
+&lt;hr>
+&lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
+&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">
+Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
+&lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="configurações-em-json">Configurações em Json&lt;/h3>
+&lt;p>O VSCode pode ser configurado graficamente mas eu considero uma perda de tempo, então me acostumei a configura - lo em seu json para deixar pelo menos pré pronto para ser utilizado.&lt;/p>
+&lt;p>Vou mostrar o exemplo completo da configuração e ir explicando aos poucos&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h3 id="configurações-do-window">Configurações do window&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Está configuração define o nível de zoom da janela para &lt;code>200%&lt;/code> isso garante uma tela grande e visível para quem tem uma visão desavantajada como a minha. Mas você pode deixar em &lt;code>1.25 equivalente a 125%&lt;/code> ou &lt;code>1.5 equivalente a 150%&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h3 id="configurações-de-workbench">Configurações de workbench&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do ambiente de trabalho.&lt;/p>
+&lt;ul>
+&lt;li>A primeira define o tema de ícone para &lt;code>material-icon-theme&lt;/code>.&lt;/li>
+&lt;li>A segunda define o tema de cores para &lt;code>Mr Robot&lt;/code>.&lt;/li>
+&lt;li>A terceira linha define que o editor será aberto diretamente em um novo arquivo sem título.&lt;/li>
+&lt;li>A quarta define que o formato do rótulo será curto.&lt;/li>
+&lt;li>A quinta linha define que a barra de atividades será oculta, mas isso só funciona quando estamos em contato com uma &lt;code>configuração especial em shortcuts&lt;/code>.&lt;/li>
+&lt;li>A sexta linha define não veremos a barra de status.&lt;/li>
+&lt;li>A sétima e ultima linha define que o controle de layout do workbench será desabilitado.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-do-editor">Configuração do editor&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontSize&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#ae81ff">18&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#ae81ff">1.3&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.rulers&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>]&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do editor:&lt;/p>
+&lt;ul>
+&lt;li>A primeira linha define a família de fonte do editor.&lt;/li>
+&lt;li>A segunda linha define o tamanho da fonte do editor para &lt;code>18px&lt;/code>.&lt;/li>
+&lt;li>A terceira linha define a altura de linha do editor para &lt;code>1.3&lt;/code> ou &lt;code>130%&lt;/code>&lt;/li>
+&lt;li>A quarta linha define as linhas verticais do editor normalmente as linhas guia estão em &lt;code>80 e 200&lt;/code>.&lt;/li>
+&lt;li>A quinta linha define como a linha destacada é renderizada, no nosso caso usamos o gutter que é a margem esquerda do editor.&lt;/li>
+&lt;li>A sexta linha define que as ligatures da fonte estão habilitadas.&lt;/li>
+&lt;li>A sétima linha define que o realce semântico está desabilitado.&lt;/li>
+&lt;li>A oitava linha define que o minimapa está desabilitado.&lt;/li>
+&lt;li>A nona e decima linha desabilitam a scrollbar verticalmente e horizontalmente&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-do-breadcrumb">Configuração do breadcrumb&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que as breadcrumbs estão desabilitadas&lt;/p>
+&lt;hr>
+&lt;h3 id="configuração-do-explorer">Configuração do explorer&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>A primeira linha define que as pastas compactadas estão desabilitada&lt;/li>
+&lt;li>A segunda linha define que o aninhamento de pastas está habilitada&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-de-files">Configuração de files&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que os arquivos serão salvos automaticamente após determinado delay&lt;/p>
+&lt;hr>
+&lt;h3 id="configuração-do-terminal-integrado">Configuração do terminal integrado&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>A primeira linha define o tamanho da fonte do terminal integrado para &lt;code>18px&lt;/code>&lt;/li>
+&lt;li>A segunda linha define a família de fontes para o terminal integrado&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="shortcut-especial">Shortcut especial&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Em Keybinds.json
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;key&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ctrl-q&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;command&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;workbench.action.quickOpenView&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Com esse shortcut, você não precisará de acessar a action bar se quiser instalar uma nova extensão ou coisa parecida. E como resultado:&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Essa é minha configuração minimalista para o VSCode no meu caso em especial, ele é bastante útil para desenvolvimento em geral.&lt;/p>
+&lt;p>Não chega a ser um &lt;a href="https://pt.wikipedia.org/wiki/Vim">vim&lt;/a>/&lt;a href="https://wiki.archlinux.org/title/Neovim_(Portugu%C3%AAs)">neovim&lt;/a> mas está bem customizado pra longas horas de digitação com o minimo de recursos atrapalhando na tela. Tornando assim o nosso editor, distraction free&lt;/p></content:encoded></item></channel></rss>

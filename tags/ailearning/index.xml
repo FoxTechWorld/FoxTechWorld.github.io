@@ -1,0 +1,107 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/ailearning/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Como uma AI funciona</title><link>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</link><pubDate>Tue, 20 Feb 2024 09:17:59 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</guid><description>Este post oferece uma visão detalhada da Inteligência Artificial (IA), abordando desde os fundamentos de seu funcionamento até os equívocos comuns sobre a IA. O autor discute tópicos como a abstração na computação, a matemática por trás da IA, a geração de imagens e textos por IA, e a questão de se a arte gerada por IA pode ser considerada arte. O post também inclui uma série de recursos em vídeo para aqueles que desejam aprender mais.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Bem-vindo a mais um post! Hoje, vamos mergulhar no fascinante mundo da Inteligência Artificial (IA), desvendando mitos e explorando seu potencial, especialmente no contexto da criação de arte. Antes de entrarmos no âmago da questão das artes geradas por IA, é crucial desmistificar alguns conceitos errôneos que têm circulado, muitas vezes devido à falta de pesquisa aprofundada sobre o assunto.&lt;/p>
+&lt;p>Entre esses equívocos, destacam-se:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>A IA não é uma &amp;ldquo;caixa preta&amp;rdquo; misteriosa:&lt;/strong> Embora possa parecer complexa, a IA é compreensível, e podemos desvendar seu funcionamento.&lt;/li>
+&lt;li>&lt;strong>Não há necessidade de temer uma revolução da IA:&lt;/strong> Embora a regulamentação ética seja essencial, é altamente improvável que a IA alcance a consciência como nos filmes de ficção científica.&lt;/li>
+&lt;li>&lt;strong>Arte gerada por IA pode ser considerada arte?&lt;/strong> A resposta a essa pergunta varia conforme a definição individual de arte&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="como-uma-inteligência-artificial-funciona">Como uma Inteligência Artificial funciona&lt;/h3>
+&lt;p>Gostaria de poder mergulhar em todos os detalhes sobre o funcionamento da IA, mas há tantos algoritmos e técnicas envolvidas que é melhor delinear seu processo geral.&lt;/p>
+&lt;p>O que muitas pessoas não compreendem é que a IA é um algoritmo, ou seja, um conjunto de instruções definidas e limitadas tanto em sua implementação quanto nos recursos de hardware necessários para sua execução. Chegamos a um ponto em que estamos alcançando os limites tanto em termos de implementação de software quanto de hardware.&lt;/p>
+&lt;p>Para fins comparativos, o funcionamento diário do ChatGPT pode custar em média US$ 3,5 milhões, o que pode ser mais uma despesa do que um ganho real para a OpenAI, embora possa ser considerado um excelente marketing para promover as APIs da OpenAI.&lt;/p>
+&lt;p>Perceba como desmistificar a inteligência artificial pode dissipar muitos medos infundados sobre ela.&lt;/p>
+&lt;h4 id="tudo-começa-com-a-abstração">Tudo Começa com a Abstração&lt;/h4>
+&lt;p>Você já se perguntou como um computador processa informações? Isso ocorre por meio de um processo chamado &amp;ldquo;abstração&amp;rdquo;, no qual tudo o que existe no mundo real é reduzido a números simples, sejam eles letras, imagens ou vídeos. Isso significa que, no mundo dos computadores, tudo é uma abstração, transformando o mundo físico em uma realidade matemática.&lt;/p>
+&lt;h4 id="matemática">Matemática&lt;/h4>
+&lt;p>A base da IA reside na matemática, computação e estatística (especialmente no campo da probabilidade). Enquanto os computadores entendem principalmente números binários, nós humanos preferimos trabalhar com sistemas numéricos mais familiares, como o sistema decimal ou o sistema hexadecimal.&lt;/p>
+&lt;p>Agora que explicamos esses conceitos, vamos simplificar o funcionamento de uma inteligência artificial.&lt;/p>
+&lt;hr>
+&lt;h3 id="explicando-a-inteligência-artificial-generativa-de-imagem">Explicando a inteligência artificial generativa de Imagem&lt;/h3>
+&lt;p>Imagine que queremos ensinar uma IA a reconhecer e gerar imagens de gatos.&lt;/p>
+&lt;h4 id="recolhimento-e-classificação-de-dados">Recolhimento e Classificação de Dados&lt;/h4>
+&lt;p>Começamos reunindo inúmeras imagens de gatos e fornecemos esses dados ao modelo de treinamento (ainda não é uma IA). Esse modelo deve extrair informações dos gatos, como cores e suas distribuições, que serão as características definidoras de um gato.&lt;/p>
+&lt;h4 id="treinamento-do-modelo">Treinamento do Modelo&lt;/h4>
+&lt;p>O treinamento da IA envolve, essencialmente, fornecer a ela essas informações e permitir que ela as relacione para identificar padrões que definem o que é um gato.&lt;/p>
+&lt;h4 id="geração-da-imagem">Geração da Imagem&lt;/h4>
+&lt;p>Quando solicitamos à IA que gere uma imagem de um gato, ela usa o conhecimento adquirido durante o treinamento para combinar todas essas diferentes características de gatos para criar uma nova imagem.&lt;/p>
+&lt;h4 id="utilizando-probabilidade-e-aleatoriedade">Utilizando Probabilidade e Aleatoriedade&lt;/h4>
+&lt;p>Para garantir que as imagens geradas sejam variadas e não meras reproduções do conjunto de dados, introduzimos aleatoriedade usando técnicas estatísticas, como a probabilidade. Isso permite que a IA crie imagens únicas e, às vezes, até mesmo gere efeitos que se assemelham a alucinações. No entanto, é importante notar que isso é simplesmente uma expressão para descrever uma resposta confiante que pode não corresponder à realidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="então-como-funciona-uma-inteligência-artificial-generativa-de-texto">Então como funciona uma inteligência artificial generativa de texto&lt;/h3>
+&lt;p>A mesma lógica se aplica quando falamos sobre a geração de texto por inteligência artificial. A IA analisa palavras extraídas de diversos textos e utiliza essas relações, juntamente com a aleatoriedade, para gerar novos textos a partir de uma entrada específica.&lt;/p>
+&lt;hr>
+&lt;h3 id="pontos-mal-entendidos">Pontos Mal Entendidos&lt;/h3>
+&lt;h4 id="existe-uma-caixa-preta-que-os-cientistas-não-entendem">Existe uma &amp;ldquo;Caixa Preta&amp;rdquo; que os Cientistas não Entendem?&lt;/h4>
+&lt;p>Não é bem assim. Embora uma representação visual de uma IA, como uma rede neural, possa parecer uma série de caixas empilhadas umas sobre as outras, com bilhões de relações ocorrendo em cada camada, os cientistas entendem o que está acontecendo em um nível conceitual.&lt;/p>
+&lt;p>&lt;img src="https://proxy.olhardigital.com.br/wp-content/uploads/2023/05/redes-neurais-artificiais-como-funcionam-1024x577.jpg" alt="Rede Neural">&lt;/p>
+&lt;hr>
+&lt;h4 id="uma-revolução-de-ia">Uma revolução de IA?&lt;/h4>
+&lt;p>Embora haja muitas questões éticas e morais em torno da regulação da IA, o medo de que ela se torne consciente como nos filmes de ficção científica não é uma preocupação válida. É altamente improvável que a IA alcance a consciência, dado que ainda não compreendemos completamente a natureza da inteligência humana e se ela pode ser representada por números computáveis.&lt;/p>
+&lt;hr>
+&lt;h4 id="uma-arte-gerada-por-ia-é-uma-arte">Uma arte gerada por IA é uma arte&lt;/h4>
+&lt;p>Depende. Essa palavra demonstra toda minha senioridade do assunto. Sendo um grande &lt;a href="https://www.significados.com.br/advogado-do-diabo/#:~:text=Significado%20de%20Advogado%20do%20diabo,-Equipe%20da%20Enciclop%C3%A9dia&amp;amp;text=Popularmente%2C%20a%20express%C3%A3o%20passou%20a,testar%20a%20qualidade%20do%20argumento.">advogado do diabo&lt;/a>, uma &lt;a href="https://pt.wikipedia.org/wiki/Arte">arte&lt;/a> tem diversos sentidos e formas de significados. As mais comuns são:&lt;/p>
+&lt;ul>
+&lt;li>A manifestação de alguma habilidade especial;&lt;/li>
+&lt;li>A criação artificial de algo pelo ser humano;&lt;/li>
+&lt;li>O desencadeamento de algum tipo de resposta no ser humano, como o senso de &lt;a href="https://pt.wikipedia.org/wiki/Prazer" title="Prazer">prazer&lt;/a> ou &lt;a href="https://pt.wikipedia.org/wiki/Beleza" title="Beleza">beleza&lt;/a>;&lt;/li>
+&lt;li>A apresentação de algum tipo de ordem, padrão ou harmonia;&lt;/li>
+&lt;li>A transmissão de um senso de novidade e ineditismo;&lt;/li>
+&lt;li>A expressão da realidade interior do criador;&lt;/li>
+&lt;li>A comunicação de algo sob a forma de uma linguagem especial;&lt;/li>
+&lt;li>A noção de valor e importância;&lt;/li>
+&lt;li>A excitação da &lt;a href="https://pt.wikipedia.org/wiki/Imagina%C3%A7%C3%A3o" title="Imaginação">imaginação&lt;/a> e a &lt;a href="https://pt.wikipedia.org/wiki/Fantasia_(psicologia)" title="Fantasia (psicologia)">fantasia&lt;/a>;&lt;/li>
+&lt;li>A indução ou comunicação de uma experiência-pico;&lt;/li>
+&lt;li>Coisas que possuam reconhecidamente um sentido;&lt;/li>
+&lt;li>Coisas que deem uma resposta a um dado problema.&lt;/li>
+&lt;/ul>
+&lt;p>Se olharmos deste ponto de vista podemos dizer que uma arte gerada por uma IA não é uma arte.&lt;/p>
+&lt;p>Mas existe outro ponto de vista, se olharmos para IA como se fosse uma ferramenta que pode gerar diversas imagens diferentes com determinadas entradas podemos aproveitar como uma ferramenta para criar um background para uma arte-maior como o &lt;a href="https://bjoernkarmann.dk/project/paragraphica">caso que ocorreu com a paragráfica&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://proxy.olhardigital.com.br/wp-content/uploads/2023/06/paragraphica.webp" alt="Paragráfica">&lt;/p>
+&lt;hr>
+&lt;h3 id="como-a-ia-pode-nos-ajudar">Como a IA Pode nos Ajudar?&lt;/h3>
+&lt;p>A IA tem impactado positivamente diversas áreas da vida cotidiana, oferecendo benefícios significativos:&lt;/p>
+&lt;h4 id="em-casa">Em Casa&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Assistentes Virtuais:&lt;/strong> Siri, Alexa e Google Assistente ajudam nas pesquisas, lembretes e controle de dispositivos domésticos.&lt;/li>
+&lt;/ul>
+&lt;h4 id="no-trabalho">No Trabalho&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Análise de Dados:&lt;/strong> Empresas usam IA para obter insights valiosos a partir de grandes conjuntos de dados.&lt;/li>
+&lt;/ul>
+&lt;h4 id="na-saúde">Na Saúde&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Diagnóstico Médico:&lt;/strong> A IA auxilia os médicos na identificação precisa de doenças, analisando exame e dados clínicos.&lt;/li>
+&lt;/ul>
+&lt;h4 id="na-educação">Na Educação&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Personalização do Ensino:&lt;/strong> Plataformas de aprendizado online utilizam IA para adaptar o conteúdo às necessidades individuais dos alunos.&lt;/li>
+&lt;/ul>
+&lt;h4 id="no-entretenimento">No Entretenimento&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Recomendações Personalizadas:&lt;/strong> Serviços de streaming como Netflix e Spotify usam IA para sugerir conteúdo com base nos interesses dos usuários.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Espero que este texto tenha ajudado a desmistificar a IA e a arte gerada por ela. A IA, longe de ser uma entidade misteriosa, é um conjunto de algoritmos limitados, porém poderosos, que podem ser utilizados para uma variedade de propósitos. Embora ainda haja muito a aprender e explorar nesse campo, é importante abordá-lo com uma compreensão sólida de seus fundamentos e potencialidades.&lt;/p>
+&lt;p>Se quiser saber mais, sugiro conferir os vídeos recomendados. E lembre-se, a IA é uma ferramenta poderosa que pode nos ajudar de muitas maneiras, mas cabe a nós utilizá-la de forma ética e responsável para maximizar seus benefícios para a sociedade.&lt;/p>
+&lt;h4 id="vídeos-gringos">&lt;strong>Vídeos gringos&lt;/strong>&lt;/h4>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=p7nGcY73epw">The Art of Abstraction&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://youtu.be/aircAruvnKk?si=PKveUBbtM8vuQndc">What is Neural Network&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://youtu.be/IHZwWFHWa-w?si=XaUu1uYr6hncJ2Hn">How Neural Network works&lt;/a>&lt;/p>
+&lt;h4 id="vídeos-brasileiros">&lt;strong>Vídeos brasileiros&lt;/strong>&lt;/h4>
+&lt;p>&lt;a href="https://youtu.be/O68y0yRZL1Y?si=GTFSHcnHnfk-DgYg">Entendendo como ChatGPT funciona&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/live/TYK940QeBKI?si=wcr-jTrFNJmnTgGo">IA&amp;rsquo;s são perigosas&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://youtu.be/zRes7LoHlWo?si=hNqI8ihI1Br2NwYf">É muito fácil quebrar uma inteligência artificial&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="glossário">Glossário&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Inteligência Artificial (IA):&lt;/strong> Tecnologia que permite que máquinas aprendam e ajam como seres humanos.&lt;/li>
+&lt;li>&lt;strong>Algoritmo:&lt;/strong> Conjunto de instruções que dizem à máquina o que fazer.&lt;/li>
+&lt;li>&lt;strong>Abstração:&lt;/strong> Processo de simplificar algo complexo reduzindo-o a conceitos básicos.&lt;/li>
+&lt;li>&lt;strong>Sistema binário:&lt;/strong> Sistema de numeração com base 2, composto apenas pelos dígitos 0 e 1.&lt;/li>
+&lt;li>&lt;strong>Rede Neural:&lt;/strong> Modelo computacional inspirado no funcionamento do cérebro humano, utilizado em IA.&lt;/li>
+&lt;li>&lt;strong>Generativa:&lt;/strong> Capacidade de criar novos dados a partir de dados existentes.&lt;/li>
+&lt;/ul>
+&lt;hr></content:encoded></item></channel></rss>

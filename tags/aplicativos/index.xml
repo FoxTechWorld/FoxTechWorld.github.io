@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/aplicativos/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Usando Deepin Linux no notebook primeiras impressões</title><link>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</link><pubDate>Thu, 15 Feb 2024 11:02:06 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</guid><description>O post oferece uma análise detalhada da experiência pessoal do autor com a distribuição Deepin Linux. Ele explora os pontos positivos, como a interface elegante e as opções de configuração conveniente para notebooks, contrastando com os desafios encontrados, como a versão desatualizada do Flatpak e dificuldades na configuração de jogos. O autor destaca a conveniência do Pop!_OS para usuários menos experientes, enquanto sugere o Deepin como uma opção atrativa para aqueles familiarizados com a resolução de problemas no Linux. Em suma, o post oferece uma visão equilibrada e pessoal sobre o Deepin Linux, fornecendo insights valiosos para quem considera adotar essa distribuição.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Desde 2021 eu venho usando distribuições GNU/Linux no meu computador e já passei por diversas distribuições como: &lt;a href="https://pt.wikipedia.org/wiki/Pop!_OS">Pop!OS&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Manjaro_Linux">Manjaro Linux&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Fedora_Linux">Fedora&lt;/a>.&lt;/p>
+&lt;p>E hoje estou usando a famosa distribuição chinesa &lt;a href="https://pt.wikipedia.org/wiki/Deepin">Deepin Linux&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h3 id="o-que-é-o-deepin">O que é o Deepin&lt;/h3>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Deepin_15.4_with_Wikimedia_wallpaper.png/1200px-Deepin_15.4_with_Wikimedia_wallpaper.png?20170723030618" alt="Imagem do Deepin">&lt;/p>
+&lt;p>A distribuição Deepin é baseada no &lt;a href="https://pt.wikipedia.org/wiki/Debian">Debian&lt;/a> e apresenta uma interface própria chamada &lt;em>D.D.E&lt;/em> ou &lt;em>Deepin Desktop Enviroment&lt;/em> além de um acervo completo de aplicações próprias sendo desenvolvida pela empresa &lt;em>Wuhan Deepin Technology Company Limited&lt;/em> localizada em Wuhan na China.&lt;/p>
+&lt;p>Deepin também é famoso por ser um dos ambientes linux mais bonitos estando par a par com Gnome&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/OpenSUSE_Leap_15.4_GNOME_Applications_en.png/1200px-OpenSUSE_Leap_15.4_GNOME_Applications_en.png?20221118094319" alt="GNOME"> e KDE.&lt;!-- raw HTML omitted -->
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/KDE-Desktop-5.jpg" alt="KDE">&lt;/p>
+&lt;p>Essa distribuição linux apesar de alguns reveses que encontrei pode ser considerada perfeita em muitos níveis para uso em notebooks.&lt;/p>
+&lt;p>Primeiramente, se você quer um sistema atualizado e mais instável, esse sistema pode não servir para você, neste caso especifico, o Manjaro pode servir bem como sua escolha padrão.&lt;/p>
+&lt;p>Em segundo lugar, se você é muito iniciante no mundo Linux, este também não serve muito bem como um &lt;em>Sistema Inicial&lt;/em>, você ainda vai precisar aprender um pouco a sentar a bunda na cadeira e usar o &lt;em>Google&lt;/em> para solucionar problemas que você vai encontrar, e acredite com toda certeza você vai precisar.&lt;/p>
+&lt;p>Em terceiro lugar, está é uma distribuição baseada em Debian e não em Ubuntu, então esqueça os &lt;a href="https://pt.wikipedia.org/wiki/Personal_Package_Archive">PPA&amp;rsquo;s&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="como-se-originou-o-deepin">Como se originou o Deepin&lt;/h3>
+&lt;p>O Deepin se originou sob o nome Hiwix em 28 de fevereiro de 2004 está versão inicial foi baseado em &lt;a href="https://archiveos.org/morphix/">Morphix&lt;/a>.&lt;/p>
+&lt;p>E também já teve o &lt;a href="https://pt.wikipedia.org/wiki/IceWM">IceWM&lt;/a> sendo usado como sua interface padrão.&lt;/p>
+&lt;p>Desde então sua interface padrão e sua base vem sendo trocado diversas vezes.&lt;/p>
+&lt;p>Em dezembro de 2009 o nome foi trocado para &lt;em>Linux Deepin&lt;/em> e a interface padrão para uma versão modificada do &lt;em>Gnome&lt;/em>. Eventualmente foi decidido fazer uma troca do &lt;em>Gnome&lt;/em> para o &lt;em>D.D.E&lt;/em>.&lt;/p>
+&lt;p>Linux também foi retirado do nome e desde a versão 15.1 o projeto mudou a base do sistema para Debian.&lt;/p>
+&lt;hr>
+&lt;h3 id="o-que-eu-gosto-no-deepin">O que eu gosto no Deepin&lt;/h3>
+&lt;p>O Deepin vem com muitas opções por padrão que eu gosto, talvez pelo meu saudosismo e talvez pela facilidade de utilizar as ferramentas padrão.&lt;/p>
+&lt;p>Por exemplo, a função &lt;a href="https://pt.wikipedia.org/wiki/Hiberna%C3%A7%C3%A3o_(computa%C3%A7%C3%A3o)">Hibernar&lt;/a> que é a função mais útil para um notebook não foi omitida no Deepin Linux como foi no Manjaro Linux, Pop!OS, Fedora, &lt;a href="https://pt.wikipedia.org/wiki/Windows_10">Windows 10&lt;/a>/&lt;a href="https://pt.wikipedia.org/wiki/Windows_11">11&lt;/a> em prol da função &lt;a href="https://help.gnome.org/users/gnome-help/stable/power-suspend.html.pt_BR">Suspender&lt;/a>.&lt;/p>
+&lt;p>&lt;code>&amp;quot;não quero fazer meu hardware parecer pior então vou desativar essa função útil aqui 👍 - Empresas&amp;quot;&lt;/code>&lt;/p>
+&lt;p>E acredite essa síndrome de que o melhor hardware é sempre o mais rápido ataca muitas empresas ao mesmo tempo, mesmo quando sabemos que o melhor é a conveniência.&lt;/p>
+&lt;p>Bom, pelo menos eu acredito fundamentalmente que a conveniência é melhor que a velocidade em determinados casos.&lt;/p>
+&lt;p>Além disso, o Deepin trouxe de volta uma coisa que eu sentia muita saudade e não lembrava mais &lt;code>Barulhinho de inicialização e desligamento do sistema&lt;/code>.&lt;/p>
+&lt;p>Sim, eu sei que tem como reativar no Windows ou ativar no Linux, mas sinceramente eu gosto quando vem por padrão.&lt;/p>
+&lt;p>A loja de aplicativos é bem simples de se usar então é um ponto a mais, junto com a capacidade de configurar o armazenamento de energia para hibernar automaticamente o sistema operacional se bater determinado nível de energia. &lt;code>se tu tá numa faculdade sem carregador por exemplo e não quer perder tudo que realizou no dia por falta de energia&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h3 id="o-que-não-gostei-no-deepin">O que não gostei no Deepin&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Flatpak">Flatpak&lt;/a> antigo no repositório.
+A versão disponível no repositório é a versão &lt;strong>1.10.7&lt;/strong> enquanto a versão mais recente do flatpak é a &lt;strong>1.14.5&lt;/strong> o que impede de rodar coisas mais recentes como a Steam.&lt;/li>
+&lt;li>Dificuldade na configuração de jogos.
+Pode ser pela versão antiga do flatpak mas a instalação da &lt;a href="https://pt.wikipedia.org/wiki/Steam">Steam&lt;/a> com &lt;a href="https://pt.wikipedia.org/wiki/Proton_(software)">Proton&lt;/a> e sinceramente, baixar o &lt;a href="https://pt.wikipedia.org/wiki/.deb">.deb&lt;/a> mais recente não ajudou.&lt;/li>
+&lt;/ul>
+&lt;p>Tirando esses pequenos empecilhos, a experiência com o Deepin, está sendo bem interessante principalmente com o desenvolvimento do &lt;a href="https://foxtechworld.github.io/2023/12/fkernel/">FKernel&lt;/a> está tudo ocorrendo muito bem e obrigado por perguntar.&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Deepin é uma opção muito interessante a se tentar apesar de determinados empecilhos que se apresentaram enquanto estava trabalhando neste post, fiquei tentado a compilar o &lt;a href="https://pt.wikipedia.org/wiki/Flatpak">flatpak&lt;/a> mais recente para voltar a usar Steam.&lt;/p>
+&lt;p>Enfim, isso é um dos motivos que eu prefiro sugerir o Pop!OS a alguma outra distribuição que me perguntam. É um sistema tão monótono que quase nunca um problema precisa ser resolvido. Ele fica vegetando, não precisa de muita configuração interna para funcionar bem, ele já funciona bem e só precisa de &lt;a href="https://pt.wikipedia.org/wiki/Personaliza%C3%A7%C3%A3o">personalização&lt;/a> para o seu gosto de sistema.&lt;/p>
+&lt;p>Caso você já tenha algum tempo na estrada resolvendo e entendendo problemas linux. O Deepin pode vir a ser a solução que você procurava como sistema operacional de Notebook.&lt;/p></content:encoded></item></channel></rss>

@@ -1,0 +1,47 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/licensing/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Quais problemas o BSD tem</title><link>https://FoxTechWorld.github.io/posts/quais-problemas-o-bsd-tem/</link><pubDate>Mon, 14 Aug 2023 00:58:31 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/quais-problemas-o-bsd-tem/</guid><description>Este post explora a questão pouco discutida sobre a falta de popularidade dos BSDs como sistemas operacionais de desktop em comparação com o Linux. Destacando as diferenças de licenciamento, os desenvolvedores BSD priorizando aprimoramentos em vez de promoção e alguns desafios legais no passado, o autor identifica os principais motivos para a menor adoção dos BSDs.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Como um entusiasta dos Unixes, Linuxes e dos BSD&amp;rsquo;s, em geral. Sempre me questionei sobre porque os BSD&amp;rsquo;s são tão pouco usados hoje em dia como desktop principal.&lt;/p>
+&lt;p>Primeiramente, uso como desktop principal não vai contar nem MacOSX e nem IOS. Uma coisa é usar a base do BSD para construir seu kernel, mas só contar com ela desconsidera totalmente o trabalho da Apple e da combinação com o OpenMach.&lt;/p>
+&lt;p>Como diria &lt;strong>Kirk McKusick:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>The other common approach is the Berkeley license. Sometimes referred to as a ‘‘Copycenter’’ license, as in take it down to the copy center and make as many copies as you want Source and patent rights may or may not be provided, i.e., you can give back your changes, or not, as you choose.
+FreeBSD uses a Berkeley license, which has played a big role in its success, particularly with companies that have their proprietary code in the kernel. In practice, the FreeBSD Project gets back about as much code as do GPLs open-source projects. But it takes longer as there is a learning curve
+&lt;/code>&lt;/pre>&lt;p>Isso significa que o código do BSD foi feito para ser modificado, recriado, adaptado e sua licença permissiva garante que você é responsável por qualquer decisão que tomar inclusive fechar o código se assim desejar.&lt;/p>
+&lt;p>Também cria uma faca de dois gumes, pois segundo o &lt;a href="https://docs.freebsd.org/en/books/handbook/">Handbook do FreeBSD&lt;/a> e o &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/">Docs do FreeBSD&lt;/a> equivalente a &lt;a href="https://wiki.archlinux.org">ArchWiki&lt;/a> no mundo Linux e uma leitura muito recomendada, existem alguns motivos para o FreeBSD não ser adotado por uma imersa comunidade.&lt;/p>
+&lt;p>Hoje quero apresentar esses problemas e algumas resoluções.&lt;/p>
+&lt;p>&lt;img src="https://img.youtube.com/vi/NM0oou1KYY8/maxresdefault.jpg" alt="Example of BSD">&lt;/p>
+&lt;hr>
+&lt;h3 id="motivos-para-os-bsd-não-serem-tão-usados-ou-tão-populares-quanto-o-linux">Motivos para os BSD não serem tão usados ou tão populares quanto o linux&lt;/h3>
+&lt;p>Existe uma série de resoluções, mas os principais que este &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/#why-is-bsd-not-better-known">post&lt;/a> cita são:&lt;/p>
+&lt;ul>
+&lt;li>Os desenvolvedores do BSD estão mais interessados em aprimorar o código do que em divulgá-lo.&lt;/li>
+&lt;li>Grande parte da popularidade do Linux se deve a fatores externos ao projeto Linux, como a mídia e empresas que foram criadas para prover serviço Linux. Até pouco tempo atrás os BSD de código aberto não tinham este tipo de proposta.&lt;/li>
+&lt;li>Em 1992 a AT&amp;amp;T processou a BSDI, que comercializava o BSD/386, alegando que o produto continha código protegido por direitos autorais da AT&amp;amp;T. O caso foi encerrado fora dos tribunais em 1994, mas o fantasma do litígio continua assombrando. Em março de 2000, um artigo publicado na web afirma que o caso foi &amp;ldquo;recentemente encerrado&amp;rdquo;.&lt;/li>
+&lt;/ul>
+&lt;p>Existe alguma outra série de razões, estas vindas de mim sobre os BSD que podem não estar totalmente corretos, mas ainda devem fornecer alguma ideia:&lt;/p>
+&lt;ul>
+&lt;li>Temos um sistema operacional BSD seguro (OpenBSD), um sistema operacional BSD de alto desempenho (DragonFlyBSD), um sistema operacional BSD de uso geral (FreeBSD), e um sistema operacional de porta de entrada (GhostBSD). Mas esses sistemas são incompletos, somente o OpenBSD e o DragonFlyBSD são realmente sistemas próprios, mas ainda, sim, compartilham algum código com FreeBSD.&lt;/li>
+&lt;li>Os sistemas operacionais não são totalmente focados no usuário final e exigem uma curva maior de aprendizado que o Linux. (O gerenciador de pacotes gráficos do GhostBSD está mais próximo do &lt;a href="https://pt.wikipedia.org/wiki/Synaptic">synaptic&lt;/a> do que de uma loja de aplicativos como o &lt;a href="https://en.wikipedia.org/wiki/GNOME_Software">gnome software&lt;/a>). Ainda usamos bootloaders que sobem uma série de informações ao invés de um Plymouth&amp;hellip;, etc.&lt;/li>
+&lt;li>Softwares são muito antigos e pretendem trabalhar com tudo&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="como-trabalhar-esses-problemas-e-determinar-soluções">Como trabalhar esses problemas e determinar soluções&lt;/h3>
+&lt;p>Primeiramente essas dicas se referem apenas ao ambiente de desktop e servidores em x86-64.&lt;/p>
+&lt;ul>
+&lt;li>Limpar pacotes gordurosos (Os BSD não precisam de pacotes que não vão usar e acredite existem 30k de pacotes que você nem sabe como usa com mais de décadas de idade sem atualização).&lt;/li>
+&lt;li>Reescrever alguns softwares (Não existe nenhum problema real nos existentes, mas se são velhos provavelmente vai ter um code smell por aí. Salvo o OpenBSD que está sempre revisando o código).&lt;/li>
+&lt;li>Reescrever o kernel com recursos a mais (Novamente não existe nenhum problema nos kerneis existentes, quero dizer até existem, mas não é incorrigível, a reescrita só serve para facilitar).&lt;/li>
+&lt;/ul>
+&lt;p>E os novos recursos que eu cito seria a adoção de recursos como:&lt;/p>
+&lt;ul>
+&lt;li>Sistemas similares ao Driver Kit e ao IOKit que a Apple usa para facilitar desenvolvimento de drivers&lt;/li>
+&lt;li>Sistemas como o devfs que o Linux usa para reconhecimento de dispositivos&lt;/li>
+&lt;li>Sistemas de auditoria como os que o OpenBSD adicionam&lt;/li>
+&lt;li>Sistemas de alto desempenho como os que o DragonFlyBSD adicionam&lt;/li>
+&lt;li>Sistema de rodar aplicações Linux como o WSL e o FreeBSD adicionam&lt;/li>
+&lt;li>Subsistemas que o OpenMach usa para fazer sei-lá o que (to precisando reestudar isso).&lt;/li>
+&lt;/ul>
+&lt;p>Enfim, recursos modernos para termos um sistema coeso. Claro que é um processo lento e trabalhoso para se trabalhar em um kernel.&lt;/p>
+&lt;p>E sendo este o primeiro passo para se fazer os BSD mais populares. Ainda temos que criar alguma distribuição focada no usuário final usando esse kernel e convencer pessoas e empresas a criarem software para o mesmo.&lt;/p>
+&lt;p>Isso é além de portar muitos dos softwares open-source ou convencer devs que aceitarem usar o sistema a fazer o mesmo.&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Esse seria um projeto interessante para se fazer durantes as férias, espero que tenham gostado do post, qualquer dúvida, ideia, crítica ou sugestão deixe nos comentários.&lt;/p></content:encoded></item></channel></rss>

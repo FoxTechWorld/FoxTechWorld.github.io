@@ -1,0 +1,202 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/dry/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Improve Your Code</title><link>https://FoxTechWorld.github.io/posts/improve-your-code/</link><pubDate>Sat, 30 Dec 2023 11:41:51 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/improve-your-code/</guid><description>Este guia explora práticas essenciais de programação, destacando a importância do D.R.Y, Early Return, Guard Clauses e Tratamento de Erros para aprimorar a qualidade do código, proporcionando maior legibilidade, eficiência e robustez.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Sempre que reescrevemos nosso código enxergamos o código antigo como ruim e refatoramos. Isso é ótimo afinal significa que estamos avançando na qualidade do mesmo.&lt;/p>
+&lt;p>Porem, entretanto, todavia existem formas de melhor escrever seu código sendo estas as chamadas boas práticas. Que aprimoram tanto o nome quanto a capacidade do código de se autorresolver mais rápido e de forma mais eficiente.&lt;/p>
+&lt;p>Formas mais comuns:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>D.R.Y&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Early Return&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Guard Clauses&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Tratamento de erros&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://i.ytimg.com/vi/qgStum-3Y7Q/maxresdefault.jpg" alt="Code Example with Guard Clause">&lt;/p>
+&lt;hr>
+&lt;h3 id="dry">D.R.Y&lt;/h3>
+&lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">&lt;strong>D.r.y ou Dont Repeat Yourself&lt;/strong>&lt;/a> é um conceito da programação que consiste em dizer que cada porção do conhecimento em um sistema deve possuir uma representação única de autoridade e livre de ambiguidade de forma mais geral.&lt;/p>
+&lt;h5 id="código-sem-dry">Código sem D.R.Y&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without DRY&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_rectangle_area&lt;/span>(width, height)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> area &lt;span style="color:#f92672">=&lt;/span> width &lt;span style="color:#f92672">*&lt;/span> height
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The area of the rectangle is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>area&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_square_area&lt;/span>(side)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> area &lt;span style="color:#f92672">=&lt;/span> side &lt;span style="color:#f92672">*&lt;/span> side
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The area of the square is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>area&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_rectangle_area(&lt;span style="color:#ae81ff">5&lt;/span>, &lt;span style="color:#ae81ff">8&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_square_area(&lt;span style="color:#ae81ff">4&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="código-com-dry">Código com D.R.Y&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with DRY&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_area&lt;/span>(shape, &lt;span style="color:#f92672">*&lt;/span>dimensions)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> area &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">case&lt;/span> shape
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">when&lt;/span> &lt;span style="color:#e6db74">:rectangle&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">*&lt;/span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">when&lt;/span> &lt;span style="color:#e6db74">:square&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">*&lt;/span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The area of the &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>shape&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>area&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_area(&lt;span style="color:#e6db74">:rectangle&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>, &lt;span style="color:#ae81ff">8&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_area(&lt;span style="color:#e6db74">:square&lt;/span>, &lt;span style="color:#ae81ff">4&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Isso também significa &amp;ldquo;Não crie funções e funções iguais um idiota&amp;rdquo;.&lt;/p>
+&lt;p>O uso do Dry é considerado uma boa prática na programação por vários motivos:&lt;/p>
+&lt;ul>
+&lt;li>1 - &lt;strong>Manutenção simplificado&lt;/strong>&lt;/li>
+&lt;li>2 - &lt;strong>Legibilidade aprimorada&lt;/strong>&lt;/li>
+&lt;li>3 - &lt;strong>Reusabilidade de Código&lt;/strong>&lt;/li>
+&lt;li>4 - &lt;strong>Consistência no código&lt;/strong>&lt;/li>
+&lt;li>5 - &lt;strong>Facilitação de atualização&lt;/strong>&lt;/li>
+&lt;li>6 - &lt;strong>Redução de código inútil&lt;/strong>&lt;/li>
+&lt;li>7 - &lt;strong>Melhoria na escalabilidade&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Alguns exemplos são:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Exemplo 1: Se você tem uma função que realiza uma operação específica em diferentes partes do código, é mais eficiente criar uma função e reutiliza - la sempre que necessário. Isso evita a duplicação de código e a facilita a manutenção.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 2: Se você está lidando com configurações e parâmetros utilizados em várias partes do sistema, seria de bom-tom centraliza - las já que isso evita a necessidade de atualizações repetidas.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 3: Se a lógica de tratamento de erros é a mesma em várias partes do código, consolidar essa lógica em um bloco centralizado melhorando consistência.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 4: Em vez de criar funções especificas para cada caso é possível criar funções mais genéricas e parametrizadas.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="early-return">Early Return&lt;/h3>
+&lt;p>Outra forma de melhorar seu código é usando o &lt;strong>&lt;a href="https://medium.com/swlh/return-early-pattern-3d18a41bba8">Early Return&lt;/a>&lt;/strong> ou retorno antecipado que da mesma forma serve para evitar execução desnecessária de um código caso ele não esteja no caso ideal de execução.&lt;/p>
+&lt;p>Essa prática melhora o desempenho e a legibilidade do código.&lt;/p>
+&lt;h5 id="código-sem-early-return">Código sem Early Return&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Early Return&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_factorial&lt;/span>(n)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> n &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Negative numbers do not have a factorial.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> n &lt;span style="color:#f92672">&amp;gt;&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">*=&lt;/span> n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> n &lt;span style="color:#f92672">-=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The factorial is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="código-com-early-return">Código com Early Return&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with Early Return&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_factorial&lt;/span>(n)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Negative numbers do not have a factorial.&amp;#34;&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> n &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> n &lt;span style="color:#f92672">&amp;gt;&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">*=&lt;/span> n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> n &lt;span style="color:#f92672">-=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The factorial is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Alguns benefícios que está pratica traz ao código:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Legibilidade&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Redução da complexidade&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Desempenho&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Manutenibilidade&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Alguns exemplos de benefícios:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Ao verificar as condições e retornar imediatamente, o fluxo do código se torna mais claro para se entender.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Evitar a necessidade de aninhar blocos de código em estruturas condicionalmente complexas, simplificando a estrutura.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Ao evitar a execução desnecessária do código, especialmente em casos de erros ou condições especiais, o desempenho pode ser aprimorado.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Códigos com early return são mais fáceis de manter, pois reduzem a quantidade de código que os desenvolvedores precisam revisar para entender a lógica&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="guard-clauses">Guard Clauses&lt;/h3>
+&lt;p>Outra forma de aprimorar o seu código é usando &lt;a href="https://en.wikipedia.org/wiki/Guard_(computer_science)">&lt;strong>Guard Clauses&lt;/strong>&lt;/a> que consiste na ideia de negar o &lt;em>if&lt;/em> é melhor que usar o &lt;em>else&lt;/em> lidando com isso no começo do método interrompendo o código se o mesmo não estiver atuando em sua condição ideal.&lt;/p>
+&lt;p>Pode parecer similar ao **Early Return, mas ambos ocorrem em escopos diferentes, por exemplo:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Guard Clauses&lt;/strong>: Atua como guarda verificando o código inicialmente para proteger o código.&lt;/li>
+&lt;li>&lt;strong>Early Return&lt;/strong>: É uma prática mais ampla que envolve retornar imediatamente assim que uma condição específica for avaliada como verdadeira.&lt;/li>
+&lt;/ul>
+&lt;p>Resumidamente, ambos são uma forma de implementar **Early Return, porém &lt;strong>Guard Clauses&lt;/strong> envolve mais a condição do que o retorno em si. Enquanto &lt;strong>Early Return&lt;/strong> envolve mais o retorno que a condição&lt;/p>
+&lt;h5 id="código-sem-guard-clauses">Código sem Guard Clauses&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Guard Clauses&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_discount&lt;/span>(price, discount_rate)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> price &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Price should be greater than zero.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price &lt;span style="color:#f92672">-&lt;/span> (price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Discounted price: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>discounted_price&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">50&lt;/span>, &lt;span style="color:#ae81ff">10&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#ae81ff">100&lt;/span>, &lt;span style="color:#ae81ff">20&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="código-com-guard-clauses">Código com Guard Clauses&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with Guard Clauses&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_discount&lt;/span>(price, discount_rate)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Price should be greater than zero.&amp;#34;&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> price &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price &lt;span style="color:#f92672">-&lt;/span> (price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Discounted price: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>discounted_price&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">50&lt;/span>, &lt;span style="color:#ae81ff">10&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#ae81ff">100&lt;/span>, &lt;span style="color:#ae81ff">20&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Alguns benefícios do uso de Guard Clauses:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Legibilidade&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Prevenção de Execução desnecessária&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Tratamento antecipado de erros&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Lógica simplificada&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Facilidade na manutenção&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Exemplo:
+- &lt;strong>Ao lidar com situações especiais no início da função, o fluxo principal do código se torna mais claro e fácil de entender&lt;/strong>
+- &lt;strong>Evita a execução desnecessária de blocos de códigos melhorando eficiência&lt;/strong>
+- &lt;strong>Simplifica a lógica do código, pois as condições são tratadas antecipadamente&lt;/strong>
+- &lt;strong>Cria funções concisas e focadas, facilitando a manutenção e reduzindo a complexidade do código&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h3 id="tratamento-de-erros">Tratamento de erros&lt;/h3>
+&lt;p>Além das boas práticas citadas anteriormente, o tratamento de erros é crucial para o desenvolvimento de um código robusto e confiável. Lidando com situações inesperadas e garantindo que o programa possa lidar com elas de maneira adequada, evitando falhas catastróficas.&lt;/p>
+&lt;p>Novamente, isso não significa criar tratamentos de erros, igual um idiota. Você precisa do tratamento de erro certo para o caso certo que pode ocorrer ou de um tratamento global para conseguir depurar quando um erro ocorrer após passar pelo &lt;strong>guard clause&lt;/strong>&lt;/p>
+&lt;h5 id="código-sem-tratamento-de-erros">Código sem tratamento de erros&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Error Handling&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">divide_numbers&lt;/span>(a, b)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> a &lt;span style="color:#f92672">/&lt;/span> b
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The result of the division is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">10&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">20&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h6 id="código-com-tratamento-de-erros">Código com tratamento de erros&lt;/h6>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with Error Handling&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">divide_numbers&lt;/span>(a, b)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">begin&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> a &lt;span style="color:#f92672">/&lt;/span> b
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The result of the division is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">rescue&lt;/span> &lt;span style="color:#66d9ef">ZeroDivisionError&lt;/span> &lt;span style="color:#f92672">=&amp;gt;&lt;/span> e
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>message&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">10&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">20&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Alguns dos benefícios tragos pelo tratamento de erros:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prevenção de falhas inesperadas&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Mensagens de erros significativas&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Manutenção facilitada&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Robustez do sistema&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Log de Erros&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Exemplos:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lidar com exceções impede que o programa seja encerrado abruptamente em caso de erros, garantindo uma execução mais suave&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Fornecer mensagens de erro claras e informativas ajuda na identificação e resolução rápida de problemas&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Tratar erros de forma adequada contribui para a manutenção mais fácil do código, uma vez que problemas podem ser diagnosticados e corrigidos de maneira mais eficiente.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Um código que lida bem com erros é mais robusto e menos propenso a falhas, proporcionando uma experiência mais confiável para os usuários.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Implementar um sistema de log de erros ajuda a rastrear e registrar problemas, facilitando a identificação de padrões e a correção proativa de possíveis problemas.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Como dito inicialmente, se você está achando seu código anterior porco é uma boa notícia. Pois você está melhorando como programador e espero que com essas dicas você possa melhorar seu código a novos níveis.&lt;/p>
+&lt;p>Já que essas práticas elevam seu código a um novo patamar adicionando uma base sólida para o desenvolvimento futuro adjunto a mentalidade de melhoria contínua e a atenção aos detalhes são fundamentais para criar software resiliente e sustentável ao longo do tempo.&lt;/p></content:encoded></item></channel></rss>

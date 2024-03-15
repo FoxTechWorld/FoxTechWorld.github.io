@@ -1,0 +1,145 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/materialicontheme/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Meu Vscode Minimalista</title><link>https://FoxTechWorld.github.io/posts/meu-vscode-minimalista/</link><pubDate>Thu, 15 Feb 2024 22:36:34 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/meu-vscode-minimalista/</guid><description>Neste guia abrangente, exploramos as configurações recomendadas para personalizar o Visual Studio Code e otimizar a experiência de desenvolvimento. Começando com a escolha do tema &amp;ldquo;Mr. Robot&amp;rdquo; e dos ícones do &amp;ldquo;Material Icon Theme&amp;rdquo;, destacamos como esses elementos visuais podem melhorar a legibilidade e a estética da interface do usuário.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Visual_Studio_Code">Visual Studio Code&lt;/a> é um editor de texto desenvolvido pela Microsoft para Windows, Linux, MacOSX. Possuindo suporte para depuração, versionamento via &lt;a href="https://pt.wikipedia.org/wiki/Git">Git&lt;/a> incorporado, realce de sintaxe, complementação inteligente de código, snippets, ferramentas para refatoração.&lt;/p>
+&lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
+&lt;hr>
+&lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
+&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
+&lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
+&lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
+&lt;hr>
+&lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
+&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">
+Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
+&lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="configurações-em-json">Configurações em Json&lt;/h3>
+&lt;p>O VSCode pode ser configurado graficamente mas eu considero uma perda de tempo, então me acostumei a configura - lo em seu json para deixar pelo menos pré pronto para ser utilizado.&lt;/p>
+&lt;p>Vou mostrar o exemplo completo da configuração e ir explicando aos poucos&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h3 id="configurações-do-window">Configurações do window&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Está configuração define o nível de zoom da janela para &lt;code>200%&lt;/code> isso garante uma tela grande e visível para quem tem uma visão desavantajada como a minha. Mas você pode deixar em &lt;code>1.25 equivalente a 125%&lt;/code> ou &lt;code>1.5 equivalente a 150%&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h3 id="configurações-de-workbench">Configurações de workbench&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do ambiente de trabalho.&lt;/p>
+&lt;ul>
+&lt;li>A primeira define o tema de ícone para &lt;code>material-icon-theme&lt;/code>.&lt;/li>
+&lt;li>A segunda define o tema de cores para &lt;code>Mr Robot&lt;/code>.&lt;/li>
+&lt;li>A terceira linha define que o editor será aberto diretamente em um novo arquivo sem título.&lt;/li>
+&lt;li>A quarta define que o formato do rótulo será curto.&lt;/li>
+&lt;li>A quinta linha define que a barra de atividades será oculta, mas isso só funciona quando estamos em contato com uma &lt;code>configuração especial em shortcuts&lt;/code>.&lt;/li>
+&lt;li>A sexta linha define não veremos a barra de status.&lt;/li>
+&lt;li>A sétima e ultima linha define que o controle de layout do workbench será desabilitado.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-do-editor">Configuração do editor&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontSize&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#ae81ff">18&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#ae81ff">1.3&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.rulers&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>]&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do editor:&lt;/p>
+&lt;ul>
+&lt;li>A primeira linha define a família de fonte do editor.&lt;/li>
+&lt;li>A segunda linha define o tamanho da fonte do editor para &lt;code>18px&lt;/code>.&lt;/li>
+&lt;li>A terceira linha define a altura de linha do editor para &lt;code>1.3&lt;/code> ou &lt;code>130%&lt;/code>&lt;/li>
+&lt;li>A quarta linha define as linhas verticais do editor normalmente as linhas guia estão em &lt;code>80 e 200&lt;/code>.&lt;/li>
+&lt;li>A quinta linha define como a linha destacada é renderizada, no nosso caso usamos o gutter que é a margem esquerda do editor.&lt;/li>
+&lt;li>A sexta linha define que as ligatures da fonte estão habilitadas.&lt;/li>
+&lt;li>A sétima linha define que o realce semântico está desabilitado.&lt;/li>
+&lt;li>A oitava linha define que o minimapa está desabilitado.&lt;/li>
+&lt;li>A nona e decima linha desabilitam a scrollbar verticalmente e horizontalmente&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-do-breadcrumb">Configuração do breadcrumb&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que as breadcrumbs estão desabilitadas&lt;/p>
+&lt;hr>
+&lt;h3 id="configuração-do-explorer">Configuração do explorer&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>A primeira linha define que as pastas compactadas estão desabilitada&lt;/li>
+&lt;li>A segunda linha define que o aninhamento de pastas está habilitada&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-de-files">Configuração de files&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que os arquivos serão salvos automaticamente após determinado delay&lt;/p>
+&lt;hr>
+&lt;h3 id="configuração-do-terminal-integrado">Configuração do terminal integrado&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>A primeira linha define o tamanho da fonte do terminal integrado para &lt;code>18px&lt;/code>&lt;/li>
+&lt;li>A segunda linha define a família de fontes para o terminal integrado&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="shortcut-especial">Shortcut especial&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Em Keybinds.json
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;key&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ctrl-q&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;command&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;workbench.action.quickOpenView&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Com esse shortcut, você não precisará de acessar a action bar se quiser instalar uma nova extensão ou coisa parecida. E como resultado:&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Essa é minha configuração minimalista para o VSCode no meu caso em especial, ele é bastante útil para desenvolvimento em geral.&lt;/p>
+&lt;p>Não chega a ser um &lt;a href="https://pt.wikipedia.org/wiki/Vim">vim&lt;/a>/&lt;a href="https://wiki.archlinux.org/title/Neovim_(Portugu%C3%AAs)">neovim&lt;/a> mas está bem customizado pra longas horas de digitação com o minimo de recursos atrapalhando na tela. Tornando assim o nosso editor, distraction free&lt;/p></content:encoded></item></channel></rss>

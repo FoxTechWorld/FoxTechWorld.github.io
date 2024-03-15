@@ -1,0 +1,498 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/categories/programming/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Meu Vscode Minimalista</title><link>https://FoxTechWorld.github.io/posts/meu-vscode-minimalista/</link><pubDate>Thu, 15 Feb 2024 22:36:34 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/meu-vscode-minimalista/</guid><description>Neste guia abrangente, exploramos as configurações recomendadas para personalizar o Visual Studio Code e otimizar a experiência de desenvolvimento. Começando com a escolha do tema &amp;ldquo;Mr. Robot&amp;rdquo; e dos ícones do &amp;ldquo;Material Icon Theme&amp;rdquo;, destacamos como esses elementos visuais podem melhorar a legibilidade e a estética da interface do usuário.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Visual_Studio_Code">Visual Studio Code&lt;/a> é um editor de texto desenvolvido pela Microsoft para Windows, Linux, MacOSX. Possuindo suporte para depuração, versionamento via &lt;a href="https://pt.wikipedia.org/wiki/Git">Git&lt;/a> incorporado, realce de sintaxe, complementação inteligente de código, snippets, ferramentas para refatoração.&lt;/p>
+&lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
+&lt;hr>
+&lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
+&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
+&lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
+&lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
+&lt;hr>
+&lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
+&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">
+Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
+&lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="configurações-em-json">Configurações em Json&lt;/h3>
+&lt;p>O VSCode pode ser configurado graficamente mas eu considero uma perda de tempo, então me acostumei a configura - lo em seu json para deixar pelo menos pré pronto para ser utilizado.&lt;/p>
+&lt;p>Vou mostrar o exemplo completo da configuração e ir explicando aos poucos&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h3 id="configurações-do-window">Configurações do window&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Está configuração define o nível de zoom da janela para &lt;code>200%&lt;/code> isso garante uma tela grande e visível para quem tem uma visão desavantajada como a minha. Mas você pode deixar em &lt;code>1.25 equivalente a 125%&lt;/code> ou &lt;code>1.5 equivalente a 150%&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h3 id="configurações-de-workbench">Configurações de workbench&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do ambiente de trabalho.&lt;/p>
+&lt;ul>
+&lt;li>A primeira define o tema de ícone para &lt;code>material-icon-theme&lt;/code>.&lt;/li>
+&lt;li>A segunda define o tema de cores para &lt;code>Mr Robot&lt;/code>.&lt;/li>
+&lt;li>A terceira linha define que o editor será aberto diretamente em um novo arquivo sem título.&lt;/li>
+&lt;li>A quarta define que o formato do rótulo será curto.&lt;/li>
+&lt;li>A quinta linha define que a barra de atividades será oculta, mas isso só funciona quando estamos em contato com uma &lt;code>configuração especial em shortcuts&lt;/code>.&lt;/li>
+&lt;li>A sexta linha define não veremos a barra de status.&lt;/li>
+&lt;li>A sétima e ultima linha define que o controle de layout do workbench será desabilitado.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-do-editor">Configuração do editor&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontSize&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#ae81ff">18&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#ae81ff">1.3&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.rulers&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>]&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do editor:&lt;/p>
+&lt;ul>
+&lt;li>A primeira linha define a família de fonte do editor.&lt;/li>
+&lt;li>A segunda linha define o tamanho da fonte do editor para &lt;code>18px&lt;/code>.&lt;/li>
+&lt;li>A terceira linha define a altura de linha do editor para &lt;code>1.3&lt;/code> ou &lt;code>130%&lt;/code>&lt;/li>
+&lt;li>A quarta linha define as linhas verticais do editor normalmente as linhas guia estão em &lt;code>80 e 200&lt;/code>.&lt;/li>
+&lt;li>A quinta linha define como a linha destacada é renderizada, no nosso caso usamos o gutter que é a margem esquerda do editor.&lt;/li>
+&lt;li>A sexta linha define que as ligatures da fonte estão habilitadas.&lt;/li>
+&lt;li>A sétima linha define que o realce semântico está desabilitado.&lt;/li>
+&lt;li>A oitava linha define que o minimapa está desabilitado.&lt;/li>
+&lt;li>A nona e decima linha desabilitam a scrollbar verticalmente e horizontalmente&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-do-breadcrumb">Configuração do breadcrumb&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que as breadcrumbs estão desabilitadas&lt;/p>
+&lt;hr>
+&lt;h3 id="configuração-do-explorer">Configuração do explorer&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>A primeira linha define que as pastas compactadas estão desabilitada&lt;/li>
+&lt;li>A segunda linha define que o aninhamento de pastas está habilitada&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="configuração-de-files">Configuração de files&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que os arquivos serão salvos automaticamente após determinado delay&lt;/p>
+&lt;hr>
+&lt;h3 id="configuração-do-terminal-integrado">Configuração do terminal integrado&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>A primeira linha define o tamanho da fonte do terminal integrado para &lt;code>18px&lt;/code>&lt;/li>
+&lt;li>A segunda linha define a família de fontes para o terminal integrado&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="shortcut-especial">Shortcut especial&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Em Keybinds.json
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;key&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ctrl-q&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;command&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;workbench.action.quickOpenView&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Com esse shortcut, você não precisará de acessar a action bar se quiser instalar uma nova extensão ou coisa parecida. E como resultado:&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Essa é minha configuração minimalista para o VSCode no meu caso em especial, ele é bastante útil para desenvolvimento em geral.&lt;/p>
+&lt;p>Não chega a ser um &lt;a href="https://pt.wikipedia.org/wiki/Vim">vim&lt;/a>/&lt;a href="https://wiki.archlinux.org/title/Neovim_(Portugu%C3%AAs)">neovim&lt;/a> mas está bem customizado pra longas horas de digitação com o minimo de recursos atrapalhando na tela. Tornando assim o nosso editor, distraction free&lt;/p></content:encoded></item><item><title>Improve Your Code</title><link>https://FoxTechWorld.github.io/posts/improve-your-code/</link><pubDate>Sat, 30 Dec 2023 11:41:51 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/improve-your-code/</guid><description>Este guia explora práticas essenciais de programação, destacando a importância do D.R.Y, Early Return, Guard Clauses e Tratamento de Erros para aprimorar a qualidade do código, proporcionando maior legibilidade, eficiência e robustez.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Sempre que reescrevemos nosso código enxergamos o código antigo como ruim e refatoramos. Isso é ótimo afinal significa que estamos avançando na qualidade do mesmo.&lt;/p>
+&lt;p>Porem, entretanto, todavia existem formas de melhor escrever seu código sendo estas as chamadas boas práticas. Que aprimoram tanto o nome quanto a capacidade do código de se autorresolver mais rápido e de forma mais eficiente.&lt;/p>
+&lt;p>Formas mais comuns:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>D.R.Y&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Early Return&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Guard Clauses&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Tratamento de erros&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://i.ytimg.com/vi/qgStum-3Y7Q/maxresdefault.jpg" alt="Code Example with Guard Clause">&lt;/p>
+&lt;hr>
+&lt;h3 id="dry">D.R.Y&lt;/h3>
+&lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">&lt;strong>D.r.y ou Dont Repeat Yourself&lt;/strong>&lt;/a> é um conceito da programação que consiste em dizer que cada porção do conhecimento em um sistema deve possuir uma representação única de autoridade e livre de ambiguidade de forma mais geral.&lt;/p>
+&lt;h5 id="código-sem-dry">Código sem D.R.Y&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without DRY&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_rectangle_area&lt;/span>(width, height)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> area &lt;span style="color:#f92672">=&lt;/span> width &lt;span style="color:#f92672">*&lt;/span> height
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The area of the rectangle is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>area&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_square_area&lt;/span>(side)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> area &lt;span style="color:#f92672">=&lt;/span> side &lt;span style="color:#f92672">*&lt;/span> side
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The area of the square is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>area&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_rectangle_area(&lt;span style="color:#ae81ff">5&lt;/span>, &lt;span style="color:#ae81ff">8&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_square_area(&lt;span style="color:#ae81ff">4&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="código-com-dry">Código com D.R.Y&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with DRY&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_area&lt;/span>(shape, &lt;span style="color:#f92672">*&lt;/span>dimensions)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> area &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">case&lt;/span> shape
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">when&lt;/span> &lt;span style="color:#e6db74">:rectangle&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">*&lt;/span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">when&lt;/span> &lt;span style="color:#e6db74">:square&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">*&lt;/span> dimensions&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The area of the &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>shape&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>area&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_area(&lt;span style="color:#e6db74">:rectangle&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>, &lt;span style="color:#ae81ff">8&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_area(&lt;span style="color:#e6db74">:square&lt;/span>, &lt;span style="color:#ae81ff">4&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Isso também significa &amp;ldquo;Não crie funções e funções iguais um idiota&amp;rdquo;.&lt;/p>
+&lt;p>O uso do Dry é considerado uma boa prática na programação por vários motivos:&lt;/p>
+&lt;ul>
+&lt;li>1 - &lt;strong>Manutenção simplificado&lt;/strong>&lt;/li>
+&lt;li>2 - &lt;strong>Legibilidade aprimorada&lt;/strong>&lt;/li>
+&lt;li>3 - &lt;strong>Reusabilidade de Código&lt;/strong>&lt;/li>
+&lt;li>4 - &lt;strong>Consistência no código&lt;/strong>&lt;/li>
+&lt;li>5 - &lt;strong>Facilitação de atualização&lt;/strong>&lt;/li>
+&lt;li>6 - &lt;strong>Redução de código inútil&lt;/strong>&lt;/li>
+&lt;li>7 - &lt;strong>Melhoria na escalabilidade&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Alguns exemplos são:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Exemplo 1: Se você tem uma função que realiza uma operação específica em diferentes partes do código, é mais eficiente criar uma função e reutiliza - la sempre que necessário. Isso evita a duplicação de código e a facilita a manutenção.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 2: Se você está lidando com configurações e parâmetros utilizados em várias partes do sistema, seria de bom-tom centraliza - las já que isso evita a necessidade de atualizações repetidas.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 3: Se a lógica de tratamento de erros é a mesma em várias partes do código, consolidar essa lógica em um bloco centralizado melhorando consistência.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 4: Em vez de criar funções especificas para cada caso é possível criar funções mais genéricas e parametrizadas.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="early-return">Early Return&lt;/h3>
+&lt;p>Outra forma de melhorar seu código é usando o &lt;strong>&lt;a href="https://medium.com/swlh/return-early-pattern-3d18a41bba8">Early Return&lt;/a>&lt;/strong> ou retorno antecipado que da mesma forma serve para evitar execução desnecessária de um código caso ele não esteja no caso ideal de execução.&lt;/p>
+&lt;p>Essa prática melhora o desempenho e a legibilidade do código.&lt;/p>
+&lt;h5 id="código-sem-early-return">Código sem Early Return&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Early Return&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_factorial&lt;/span>(n)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> n &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Negative numbers do not have a factorial.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> n &lt;span style="color:#f92672">&amp;gt;&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">*=&lt;/span> n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> n &lt;span style="color:#f92672">-=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The factorial is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="código-com-early-return">Código com Early Return&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with Early Return&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_factorial&lt;/span>(n)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Negative numbers do not have a factorial.&amp;#34;&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> n &lt;span style="color:#f92672">&amp;lt;&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> n &lt;span style="color:#f92672">&amp;gt;&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">*=&lt;/span> n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> n &lt;span style="color:#f92672">-=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The factorial is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_factorial(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Alguns benefícios que está pratica traz ao código:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Legibilidade&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Redução da complexidade&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Desempenho&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Manutenibilidade&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Alguns exemplos de benefícios:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Ao verificar as condições e retornar imediatamente, o fluxo do código se torna mais claro para se entender.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Evitar a necessidade de aninhar blocos de código em estruturas condicionalmente complexas, simplificando a estrutura.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Ao evitar a execução desnecessária do código, especialmente em casos de erros ou condições especiais, o desempenho pode ser aprimorado.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Códigos com early return são mais fáceis de manter, pois reduzem a quantidade de código que os desenvolvedores precisam revisar para entender a lógica&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="guard-clauses">Guard Clauses&lt;/h3>
+&lt;p>Outra forma de aprimorar o seu código é usando &lt;a href="https://en.wikipedia.org/wiki/Guard_(computer_science)">&lt;strong>Guard Clauses&lt;/strong>&lt;/a> que consiste na ideia de negar o &lt;em>if&lt;/em> é melhor que usar o &lt;em>else&lt;/em> lidando com isso no começo do método interrompendo o código se o mesmo não estiver atuando em sua condição ideal.&lt;/p>
+&lt;p>Pode parecer similar ao **Early Return, mas ambos ocorrem em escopos diferentes, por exemplo:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Guard Clauses&lt;/strong>: Atua como guarda verificando o código inicialmente para proteger o código.&lt;/li>
+&lt;li>&lt;strong>Early Return&lt;/strong>: É uma prática mais ampla que envolve retornar imediatamente assim que uma condição específica for avaliada como verdadeira.&lt;/li>
+&lt;/ul>
+&lt;p>Resumidamente, ambos são uma forma de implementar **Early Return, porém &lt;strong>Guard Clauses&lt;/strong> envolve mais a condição do que o retorno em si. Enquanto &lt;strong>Early Return&lt;/strong> envolve mais o retorno que a condição&lt;/p>
+&lt;h5 id="código-sem-guard-clauses">Código sem Guard Clauses&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Guard Clauses&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_discount&lt;/span>(price, discount_rate)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> price &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Price should be greater than zero.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price &lt;span style="color:#f92672">-&lt;/span> (price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Discounted price: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>discounted_price&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">50&lt;/span>, &lt;span style="color:#ae81ff">10&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#ae81ff">100&lt;/span>, &lt;span style="color:#ae81ff">20&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="código-com-guard-clauses">Código com Guard Clauses&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with Guard Clauses&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_discount&lt;/span>(price, discount_rate)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Price should be greater than zero.&amp;#34;&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> price &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price &lt;span style="color:#f92672">-&lt;/span> (price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Discounted price: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>discounted_price&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">50&lt;/span>, &lt;span style="color:#ae81ff">10&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>calculate_discount(&lt;span style="color:#ae81ff">100&lt;/span>, &lt;span style="color:#ae81ff">20&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Alguns benefícios do uso de Guard Clauses:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Legibilidade&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Prevenção de Execução desnecessária&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Tratamento antecipado de erros&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Lógica simplificada&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Facilidade na manutenção&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Exemplo:
+- &lt;strong>Ao lidar com situações especiais no início da função, o fluxo principal do código se torna mais claro e fácil de entender&lt;/strong>
+- &lt;strong>Evita a execução desnecessária de blocos de códigos melhorando eficiência&lt;/strong>
+- &lt;strong>Simplifica a lógica do código, pois as condições são tratadas antecipadamente&lt;/strong>
+- &lt;strong>Cria funções concisas e focadas, facilitando a manutenção e reduzindo a complexidade do código&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h3 id="tratamento-de-erros">Tratamento de erros&lt;/h3>
+&lt;p>Além das boas práticas citadas anteriormente, o tratamento de erros é crucial para o desenvolvimento de um código robusto e confiável. Lidando com situações inesperadas e garantindo que o programa possa lidar com elas de maneira adequada, evitando falhas catastróficas.&lt;/p>
+&lt;p>Novamente, isso não significa criar tratamentos de erros, igual um idiota. Você precisa do tratamento de erro certo para o caso certo que pode ocorrer ou de um tratamento global para conseguir depurar quando um erro ocorrer após passar pelo &lt;strong>guard clause&lt;/strong>&lt;/p>
+&lt;h5 id="código-sem-tratamento-de-erros">Código sem tratamento de erros&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Error Handling&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">divide_numbers&lt;/span>(a, b)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> a &lt;span style="color:#f92672">/&lt;/span> b
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The result of the division is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">10&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">20&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h6 id="código-com-tratamento-de-erros">Código com tratamento de erros&lt;/h6>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code with Error Handling&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">divide_numbers&lt;/span>(a, b)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">begin&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> a &lt;span style="color:#f92672">/&lt;/span> b
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;The result of the division is: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>result&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">rescue&lt;/span> &lt;span style="color:#66d9ef">ZeroDivisionError&lt;/span> &lt;span style="color:#f92672">=&amp;gt;&lt;/span> e
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>message&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">10&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>divide_numbers(&lt;span style="color:#ae81ff">20&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Alguns dos benefícios tragos pelo tratamento de erros:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Prevenção de falhas inesperadas&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Mensagens de erros significativas&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Manutenção facilitada&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Robustez do sistema&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Log de Erros&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Exemplos:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Lidar com exceções impede que o programa seja encerrado abruptamente em caso de erros, garantindo uma execução mais suave&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Fornecer mensagens de erro claras e informativas ajuda na identificação e resolução rápida de problemas&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Tratar erros de forma adequada contribui para a manutenção mais fácil do código, uma vez que problemas podem ser diagnosticados e corrigidos de maneira mais eficiente.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Um código que lida bem com erros é mais robusto e menos propenso a falhas, proporcionando uma experiência mais confiável para os usuários.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Implementar um sistema de log de erros ajuda a rastrear e registrar problemas, facilitando a identificação de padrões e a correção proativa de possíveis problemas.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Como dito inicialmente, se você está achando seu código anterior porco é uma boa notícia. Pois você está melhorando como programador e espero que com essas dicas você possa melhorar seu código a novos níveis.&lt;/p>
+&lt;p>Já que essas práticas elevam seu código a um novo patamar adicionando uma base sólida para o desenvolvimento futuro adjunto a mentalidade de melhoria contínua e a atenção aos detalhes são fundamentais para criar software resiliente e sustentável ao longo do tempo.&lt;/p></content:encoded></item><item><title>FKernel</title><link>https://FoxTechWorld.github.io/posts/fkernel/</link><pubDate>Sun, 17 Dec 2023 20:38:32 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel/</guid><description>Este post aborda a visão por trás do FKernel, um projeto ambicioso de desenvolvimento de sistema operacional focado em um kernel x86_64 moderno escrito em C++. Os diferenciais incluem uma atenção especial a uma arquitetura específica, um framework de desenvolvimento de drivers e sistemas de arquivos inspirado no DriverKit da Apple, além de um compromisso com a modularidade por meio de sistemas baseados em módulos internos.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel&lt;/a> moderno para a &lt;a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64&lt;/a> em &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>.&lt;/p>
+&lt;p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.&lt;/p>
+&lt;p>Com uma incrível capacidade de adaptação como o &lt;a href="https://pt.wikipedia.org/wiki/MINIX">MINIX&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH&lt;/a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/1280px-Kernel-hybrid.svg.png" alt="Diagrama de um kernel hibrido">&lt;/p>
+&lt;h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Especificidade de Arquitetura&lt;/strong>&lt;/em>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/strong>&lt;/em>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Driver Interface&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Enum para representar o estado do driver
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">enum&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">DriverStatus&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> OK,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Error,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Adicione outros estados conforme necessário
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Interface virtual para o driver
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">DriverInterface&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus initDriver() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">readData&lt;/span>(&lt;span style="color:#66d9ef">uint8_t&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">writeData&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">uint8_t&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">shutdownDriver&lt;/span>() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#f92672">~&lt;/span>DriverInterface() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">default&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Adicione métodos adicionais conforme necessário, por exemplo:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">resetDriver&lt;/span>() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">setConfiguration&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span>&lt;span style="color:#f92672">*&lt;/span> config, size_t configSize) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Adicione métodos getters para informações do driver, por exemplo:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> String &lt;span style="color:#a6e22e">getDriverName&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> String &lt;span style="color:#a6e22e">getDriverVersion&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Filesystem Interface&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">enum&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">FileStatus&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Opened,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Closed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">FileSystemInterface&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#f92672">~&lt;/span>FileSystemInterface() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">default&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Operações comuns do sistema de arquivos
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">open&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>string&lt;span style="color:#f92672">&amp;amp;&lt;/span> filename) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">close&lt;/span>() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> size_t &lt;span style="color:#a6e22e">read&lt;/span>(&lt;span style="color:#66d9ef">void&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> size_t &lt;span style="color:#a6e22e">write&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Métodos de acesso
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> FileStatus &lt;span style="color:#a6e22e">getStatus&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>string getFileName() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Tratamento de erros
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">bool&lt;/span> &lt;span style="color:#a6e22e">isError&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> String &lt;span style="color:#a6e22e">getErrorDescription&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Podemos dizer que esses Kits vão precisar ser rapidamente atualizados e reescritos em breve, para poderem ser parsear structs de C entre outras funções para aumentar compatibilidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="alguns-recursos-monoliticamente-instalados-do-fkernel">Alguns recursos monoliticamente instalados do FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Sistemas de Módulos internos&lt;/strong>&lt;/em>: Os drivers / Filesystem seriam instalados como servidores / módulos do Kernel, podendo expandir sem necessariamente afetar o código-fonte atual do kernel.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>ZRam&lt;/strong>&lt;/em>: Uso de uma RAM comprimida para aumentar a eficiência do gerenciamento de memória.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>ZSwap&lt;/strong>&lt;/em>: Uso de uma Swap comprimida para aumentar a eficiência do gerenciamento de memória, além de habilitar por padrão o suporte ao hibernar do computador.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Preload / Prelink&lt;/strong>&lt;/em>: Suporte a estrutura do &lt;a href="https://en.wikipedia.org/wiki/Preload_(software)">preload&lt;/a> ao nível de kernel junto do &lt;a href="https://en.wikipedia.org/wiki/Prelink">prelink&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>VKerneis&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Vkernel">virtual kerneis (DragonFlyBSD)&lt;/a> para debug, testes no kernel ou mesmo uso de Jails.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>DTrace&lt;/strong>&lt;/em>: Suporte ao &lt;a href="https://en.wikipedia.org/wiki/DTrace">DTrace do Solaris&lt;/a> junto ao uso de &lt;a href="https://computersciencewiki.org/index.php/Policies">politicies / políticas&lt;/a> para melhorar o desempenho / funcionamento do sistema operacional.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>CGroups&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Cgroups">cgroups&lt;/a> para controlar processos granuladamente dentro do kernel, com as políticas sendo utilizadas para que o kernel não precise usar o &lt;a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM&lt;/a> instantaneamente.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Namespace&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Namespace">Namespace&lt;/a> para adicionar suporte ao &lt;a href="https://en.wikipedia.org/wiki/Open_Container_Initiative">OCI&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Jails&lt;/strong>&lt;/em>: Suporte a uma versão customizada do &lt;a href="https://en.wikipedia.org/wiki/FreeBSD_jail">Jails de FreeBSD&lt;/a> usando o &lt;strong>VKernel&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="hypervisors-monoliticamente-instalados-no-fkernel">Hypervisors Monoliticamente instalados no FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Kvm&lt;/strong>&lt;/em>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">para virtualização KVM&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Xen&lt;/strong>&lt;/em>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Xen">para virtualização XEN&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="formatos-de-arquivos-monoliticamente-instalados-no-fkernel">Formatos de Arquivos Monoliticamente instalados no FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Formato de Arquivos Unix: ELF&lt;/strong>&lt;/em>: Planejo adicionar um suporte básico ao &lt;a href="https://pt.wikipedia.org/wiki/Executable_and_Linkable_Format">formato ELF&lt;/a> de forma monolítica no Kernel.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Formato de Arquivos Mach-O&lt;/strong>&lt;/em>: Planejo adicionar suporte básico ao &lt;a href="https://en.wikipedia.org/wiki/Mach-O">formato de arquivos Mach-O&lt;/a> de forma monolítica no Kernel.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="sistema-de-arquivos-monoliticamente-instalados-do-fkernel">Sistema de Arquivos Monoliticamente instalados do FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT&lt;/a>&lt;/strong>&lt;/em>: Como um filesystem simples, e contendo uma especificação aberta, seria uma boa opção deixar o Kernel poder usar este filesystem como uma opção.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/Unix_File_System">UFS&lt;/a>&lt;/strong>&lt;/em>: Como um filesystem padrão em sistema Unix Like, este seria um bom filesystem para ser utilizado como padrão em desktop e afins.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/ExFAT">EXFAT&lt;/a>&lt;/strong>&lt;/em>: Esse é um filesystem que pode ser utilizado para compartilhar arquivos entre sistemas operacionais.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/F2FS">F2FS&lt;/a>&lt;/strong>&lt;/em>. Este é um filesystem interessante para ser utilizado em SSD&amp;rsquo;s / SSD&amp;rsquo;s NVME.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Está é uma categoria que eu chamo de sistemas de arquivos **Reais,ou seja,a está literalmente trabalhando com seus arquivos, mas tem uma subcategoria chamada sistemas de arquivos &lt;strong>Virtuais&lt;/strong> ou &lt;strong>Falsos&lt;/strong>.&lt;/p>
+&lt;p>Aqui é escusado explicar em detalhes, mas deixo uma visão geral. Da mesma forma que alguns sistemas de arquivos trabalham em armazenamento de dados, outros funcionam mostrando seus dados em arquivos virtuais aka &lt;a href="https://pt.wikipedia.org/wiki/Sysfs">&lt;em>SysFS&lt;/em>&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Arquivo_de_dispositivo">&lt;em>DevFS&lt;/em>&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/TMPFS">&lt;em>TmpFS&lt;/em>&lt;/a>. Eles também serão inclusos no FKernel junto de outros sistemas como &lt;em>9p&lt;/em>, &lt;em>SSHFS&lt;/em>, &lt;em>UnionFS&lt;/em>, *OverlayFS&amp;hellip; De forma monolítica&lt;/p>
+&lt;hr>
+&lt;h3 id="atraindo-pessoas-para-o-fkernel">Atraindo pessoas para o FKernel&lt;/h3>
+&lt;p>Claro que não pretendo deixar apenas isso no Kernel, sua expansibilidade permite adicione novos formatos, drivers, dispositivos&amp;hellip; Contanto que a versão default não seja alterado, ou seja, além do que já temos.&lt;/p>
+&lt;p>No momento, o FKernel está em fase de planejamento, mas esses são alguns recursos-base que pretendo adicionar ao FKernel, com algumas optimizações de C++ em suas instruções que seriam sobrecarregadas por versões otimizadas utilizando &lt;a href="https://pt.wikipedia.org/wiki/SIMD">SIMD&lt;/a> em instruções acessíveis ao limite do SIMD que é maior que 8 ou maior que 16.&lt;/p>
+&lt;p>Uma coisa que posso dizer é que o código vai ter um &lt;a href="https://pt.wikipedia.org/wiki/Diretrizes_de_interface_humana">HIG&lt;/a> para melhor desenvolvimento do Kernel seguindo algumas boas práticas da programação:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://balta.io/blog/clean-code">Clean Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kottke.org/23/06/how-nasa-writes-space-proof-code">Space Proof Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://medium.com/swlh/return-early-pattern-3d18a41bba8">Early Return&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://betterprogramming.pub/refactoring-guard-clauses-2ceeaa1a9da">Clause Guards&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Claro que seria bastante chato para convencer novas pessoas a pelo menos testarem o FKernel, então penso que uma boa solução seria criar um montador de distros como o &lt;a href="https://en.wikipedia.org/wiki/SUSE_Studio">SUSE Studio&lt;/a> usando &lt;a href="https://en.wikipedia.org/wiki/Dialog_(software)">Dialog&lt;/a> + &lt;a href="https://en.wikipedia.org/wiki/Shell_script">Shell Script&lt;/a> + &lt;a href="https://xmake.io">Xmake&lt;/a> que possa ser usado tanto para Linux quanto para FKernel, dessa forma atraímos pela utilidade e mantemos pela curiosidade do que seria FKernel.&lt;/p>
+&lt;p>Outra boa forma seria aprofundar o FKernel num OS, próprio mais customizado para ser direto ao ponto com suporte a DRI, HDI, &amp;hellip; Entre outros usando a estrutura aberta e permitindo a fechada de forma facilitada.&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>No fim de toda essa explicação, podemos dizer que o código do FKernel deve ser preparado para ser legível, modular, com diversas capacidades para melhorar seu desenvolvimento e execução em runtime.&lt;/p>
+&lt;p>Valendo-se de recursos como containers, virtualização, para virtualização, módulos de Kernel com VFS, DriverKit, Jails&amp;hellip; Entre outros para garantir o melhor desempenho em comparação com outros Kerneis.&lt;/p></content:encoded></item></channel></rss>

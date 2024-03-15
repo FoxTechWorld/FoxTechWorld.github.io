@@ -1,0 +1,335 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/system/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>FKernel</title><link>https://FoxTechWorld.github.io/posts/fkernel/</link><pubDate>Sun, 17 Dec 2023 20:38:32 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel/</guid><description>Este post aborda a visão por trás do FKernel, um projeto ambicioso de desenvolvimento de sistema operacional focado em um kernel x86_64 moderno escrito em C++. Os diferenciais incluem uma atenção especial a uma arquitetura específica, um framework de desenvolvimento de drivers e sistemas de arquivos inspirado no DriverKit da Apple, além de um compromisso com a modularidade por meio de sistemas baseados em módulos internos.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel&lt;/a> moderno para a &lt;a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64&lt;/a> em &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>.&lt;/p>
+&lt;p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.&lt;/p>
+&lt;p>Com uma incrível capacidade de adaptação como o &lt;a href="https://pt.wikipedia.org/wiki/MINIX">MINIX&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH&lt;/a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/1280px-Kernel-hybrid.svg.png" alt="Diagrama de um kernel hibrido">&lt;/p>
+&lt;h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Especificidade de Arquitetura&lt;/strong>&lt;/em>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/strong>&lt;/em>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Driver Interface&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Enum para representar o estado do driver
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">enum&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">DriverStatus&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> OK,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Error,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Adicione outros estados conforme necessário
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Interface virtual para o driver
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">DriverInterface&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus initDriver() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">readData&lt;/span>(&lt;span style="color:#66d9ef">uint8_t&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">writeData&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">uint8_t&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">shutdownDriver&lt;/span>() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#f92672">~&lt;/span>DriverInterface() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">default&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Adicione métodos adicionais conforme necessário, por exemplo:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">resetDriver&lt;/span>() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> DriverStatus &lt;span style="color:#a6e22e">setConfiguration&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span>&lt;span style="color:#f92672">*&lt;/span> config, size_t configSize) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Adicione métodos getters para informações do driver, por exemplo:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> String &lt;span style="color:#a6e22e">getDriverName&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> String &lt;span style="color:#a6e22e">getDriverVersion&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Filesystem Interface&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">enum&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">FileStatus&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Opened,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Closed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">FileSystemInterface&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#f92672">~&lt;/span>FileSystemInterface() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">default&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Operações comuns do sistema de arquivos
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">open&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>string&lt;span style="color:#f92672">&amp;amp;&lt;/span> filename) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">close&lt;/span>() &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> size_t &lt;span style="color:#a6e22e">read&lt;/span>(&lt;span style="color:#66d9ef">void&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> size_t &lt;span style="color:#a6e22e">write&lt;/span>(&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span>&lt;span style="color:#f92672">*&lt;/span> buffer, size_t size) &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Métodos de acesso
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> FileStatus &lt;span style="color:#a6e22e">getStatus&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>string getFileName() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Tratamento de erros
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">virtual&lt;/span> &lt;span style="color:#66d9ef">bool&lt;/span> &lt;span style="color:#a6e22e">isError&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">virtual&lt;/span> String &lt;span style="color:#a6e22e">getErrorDescription&lt;/span>() &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Podemos dizer que esses Kits vão precisar ser rapidamente atualizados e reescritos em breve, para poderem ser parsear structs de C entre outras funções para aumentar compatibilidade.&lt;/p>
+&lt;hr>
+&lt;h3 id="alguns-recursos-monoliticamente-instalados-do-fkernel">Alguns recursos monoliticamente instalados do FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Sistemas de Módulos internos&lt;/strong>&lt;/em>: Os drivers / Filesystem seriam instalados como servidores / módulos do Kernel, podendo expandir sem necessariamente afetar o código-fonte atual do kernel.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>ZRam&lt;/strong>&lt;/em>: Uso de uma RAM comprimida para aumentar a eficiência do gerenciamento de memória.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>ZSwap&lt;/strong>&lt;/em>: Uso de uma Swap comprimida para aumentar a eficiência do gerenciamento de memória, além de habilitar por padrão o suporte ao hibernar do computador.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Preload / Prelink&lt;/strong>&lt;/em>: Suporte a estrutura do &lt;a href="https://en.wikipedia.org/wiki/Preload_(software)">preload&lt;/a> ao nível de kernel junto do &lt;a href="https://en.wikipedia.org/wiki/Prelink">prelink&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>VKerneis&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Vkernel">virtual kerneis (DragonFlyBSD)&lt;/a> para debug, testes no kernel ou mesmo uso de Jails.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>DTrace&lt;/strong>&lt;/em>: Suporte ao &lt;a href="https://en.wikipedia.org/wiki/DTrace">DTrace do Solaris&lt;/a> junto ao uso de &lt;a href="https://computersciencewiki.org/index.php/Policies">politicies / políticas&lt;/a> para melhorar o desempenho / funcionamento do sistema operacional.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>CGroups&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Cgroups">cgroups&lt;/a> para controlar processos granuladamente dentro do kernel, com as políticas sendo utilizadas para que o kernel não precise usar o &lt;a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM&lt;/a> instantaneamente.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Namespace&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Namespace">Namespace&lt;/a> para adicionar suporte ao &lt;a href="https://en.wikipedia.org/wiki/Open_Container_Initiative">OCI&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Jails&lt;/strong>&lt;/em>: Suporte a uma versão customizada do &lt;a href="https://en.wikipedia.org/wiki/FreeBSD_jail">Jails de FreeBSD&lt;/a> usando o &lt;strong>VKernel&lt;/strong>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="hypervisors-monoliticamente-instalados-no-fkernel">Hypervisors Monoliticamente instalados no FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Kvm&lt;/strong>&lt;/em>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">para virtualização KVM&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Xen&lt;/strong>&lt;/em>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Xen">para virtualização XEN&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="formatos-de-arquivos-monoliticamente-instalados-no-fkernel">Formatos de Arquivos Monoliticamente instalados no FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Formato de Arquivos Unix: ELF&lt;/strong>&lt;/em>: Planejo adicionar um suporte básico ao &lt;a href="https://pt.wikipedia.org/wiki/Executable_and_Linkable_Format">formato ELF&lt;/a> de forma monolítica no Kernel.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Formato de Arquivos Mach-O&lt;/strong>&lt;/em>: Planejo adicionar suporte básico ao &lt;a href="https://en.wikipedia.org/wiki/Mach-O">formato de arquivos Mach-O&lt;/a> de forma monolítica no Kernel.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="sistema-de-arquivos-monoliticamente-instalados-do-fkernel">Sistema de Arquivos Monoliticamente instalados do FKernel&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT&lt;/a>&lt;/strong>&lt;/em>: Como um filesystem simples, e contendo uma especificação aberta, seria uma boa opção deixar o Kernel poder usar este filesystem como uma opção.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/Unix_File_System">UFS&lt;/a>&lt;/strong>&lt;/em>: Como um filesystem padrão em sistema Unix Like, este seria um bom filesystem para ser utilizado como padrão em desktop e afins.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/ExFAT">EXFAT&lt;/a>&lt;/strong>&lt;/em>: Esse é um filesystem que pode ser utilizado para compartilhar arquivos entre sistemas operacionais.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/F2FS">F2FS&lt;/a>&lt;/strong>&lt;/em>. Este é um filesystem interessante para ser utilizado em SSD&amp;rsquo;s / SSD&amp;rsquo;s NVME.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Está é uma categoria que eu chamo de sistemas de arquivos **Reais,ou seja,a está literalmente trabalhando com seus arquivos, mas tem uma subcategoria chamada sistemas de arquivos &lt;strong>Virtuais&lt;/strong> ou &lt;strong>Falsos&lt;/strong>.&lt;/p>
+&lt;p>Aqui é escusado explicar em detalhes, mas deixo uma visão geral. Da mesma forma que alguns sistemas de arquivos trabalham em armazenamento de dados, outros funcionam mostrando seus dados em arquivos virtuais aka &lt;a href="https://pt.wikipedia.org/wiki/Sysfs">&lt;em>SysFS&lt;/em>&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Arquivo_de_dispositivo">&lt;em>DevFS&lt;/em>&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/TMPFS">&lt;em>TmpFS&lt;/em>&lt;/a>. Eles também serão inclusos no FKernel junto de outros sistemas como &lt;em>9p&lt;/em>, &lt;em>SSHFS&lt;/em>, &lt;em>UnionFS&lt;/em>, *OverlayFS&amp;hellip; De forma monolítica&lt;/p>
+&lt;hr>
+&lt;h3 id="atraindo-pessoas-para-o-fkernel">Atraindo pessoas para o FKernel&lt;/h3>
+&lt;p>Claro que não pretendo deixar apenas isso no Kernel, sua expansibilidade permite adicione novos formatos, drivers, dispositivos&amp;hellip; Contanto que a versão default não seja alterado, ou seja, além do que já temos.&lt;/p>
+&lt;p>No momento, o FKernel está em fase de planejamento, mas esses são alguns recursos-base que pretendo adicionar ao FKernel, com algumas optimizações de C++ em suas instruções que seriam sobrecarregadas por versões otimizadas utilizando &lt;a href="https://pt.wikipedia.org/wiki/SIMD">SIMD&lt;/a> em instruções acessíveis ao limite do SIMD que é maior que 8 ou maior que 16.&lt;/p>
+&lt;p>Uma coisa que posso dizer é que o código vai ter um &lt;a href="https://pt.wikipedia.org/wiki/Diretrizes_de_interface_humana">HIG&lt;/a> para melhor desenvolvimento do Kernel seguindo algumas boas práticas da programação:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://balta.io/blog/clean-code">Clean Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kottke.org/23/06/how-nasa-writes-space-proof-code">Space Proof Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://medium.com/swlh/return-early-pattern-3d18a41bba8">Early Return&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://betterprogramming.pub/refactoring-guard-clauses-2ceeaa1a9da">Clause Guards&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Claro que seria bastante chato para convencer novas pessoas a pelo menos testarem o FKernel, então penso que uma boa solução seria criar um montador de distros como o &lt;a href="https://en.wikipedia.org/wiki/SUSE_Studio">SUSE Studio&lt;/a> usando &lt;a href="https://en.wikipedia.org/wiki/Dialog_(software)">Dialog&lt;/a> + &lt;a href="https://en.wikipedia.org/wiki/Shell_script">Shell Script&lt;/a> + &lt;a href="https://xmake.io">Xmake&lt;/a> que possa ser usado tanto para Linux quanto para FKernel, dessa forma atraímos pela utilidade e mantemos pela curiosidade do que seria FKernel.&lt;/p>
+&lt;p>Outra boa forma seria aprofundar o FKernel num OS, próprio mais customizado para ser direto ao ponto com suporte a DRI, HDI, &amp;hellip; Entre outros usando a estrutura aberta e permitindo a fechada de forma facilitada.&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>No fim de toda essa explicação, podemos dizer que o código do FKernel deve ser preparado para ser legível, modular, com diversas capacidades para melhorar seu desenvolvimento e execução em runtime.&lt;/p>
+&lt;p>Valendo-se de recursos como containers, virtualização, para virtualização, módulos de Kernel com VFS, DriverKit, Jails&amp;hellip; Entre outros para garantir o melhor desempenho em comparação com outros Kerneis.&lt;/p></content:encoded></item><item><title>O começo dos sistemas operacionais: DOS</title><link>https://FoxTechWorld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/</link><pubDate>Wed, 16 Aug 2023 19:49:09 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/</guid><description>Este texto abrange a história dos sistemas operacionais, com foco nas décadas de 1960 a 1980, destacando alguns dos sistemas operacionais mais notáveis durante esse período. Inicia-se com o UNIX, desenvolvido pela AT&amp;amp;T Bell Labs em 1969, apresentando suas características pioneiras, como portabilidade, multitarefa e multiusuário. Em seguida, explora o surgimento do BSD em 1977, uma ramificação do UNIX, que se tornou um dos primeiros sistemas operacionais de código aberto.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>&lt;em>A melhor forma de entender seu futuro é buscar pelo passado: Akita, Fabio&lt;/em> &lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>Deixei essa frase para exemplificar o processo atrás do meu pensamento sobre este assunto, saiba em primeiro lugar que eu &lt;strong>AMO&lt;/strong> em negrito, baixo nível. E para que todos saibam, a coisa mais baixo nível que temos atualmente é &amp;ldquo;Sistema Operacional&amp;rdquo;. Não estamos na ladainha dos 8 bits que era tudo tão simples que poderia ser feito diretamente a mão, veja &lt;a href="https://www.youtube.com/@The8BitGuy">8bitguy&lt;/a> para se haver um exemplo.&lt;/p>
+&lt;p>Atualmente precisamos de sistemas operacionais para interfacear todo o hardware ter funcionalidades mais complexas, como segurança , funções como envio de email, abrir navegadores &amp;hellip; etc. Coisa que é virtualmente impossível (pode ser possível mais é mais trabalhosos para quem se dispõe a tentar). Enfim, eu tenho minha propria concepção de tentativa de um osdev que planejo começar no futuro.&lt;/p>
+&lt;p>A única coisa que posso dizer dessa minha concepção é que ela segue mais pro &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">lado híbrido&lt;/a> do que o &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_monol%C3%ADtico">lado monolítico&lt;/a>, e usa mais &lt;a href="https://pt.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD&lt;/a> do que código próprio &lt;a href="https://pt.wikipedia.org/wiki/XNU">XNU&lt;/a>.&lt;/p>
+&lt;p>Para entender isso melhor vamos estudar sobre os sistemas operacionais e essa lista.&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Unix_history-simple.svg/1280px-Unix_history-simple.svg.png" alt="Unix History">&lt;/p>
+&lt;hr>
+&lt;h3 id="começo-da-história">Começo da história&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>1969: UNIX&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Disponivel. Software Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Man-man.png/250px-Man-man.png" alt="Unix Operating System">&lt;/p>
+&lt;p>Na década de 1960, uma equipe de desenvolvedores da &lt;a href="https://pt.wikipedia.org/wiki/Bell_Labs">AT&amp;amp;T Bell Labs&lt;/a> resolveram trabalhar em softwares mais objetivo e simplificado do que os utilizados nos mainframes da época. Após alguns anos mais precisamente em 1969 o resultado foi o sistema operacional proprietário UNIX que significava Serviço de Computação e Informação Uniplexada.&lt;/p>
+&lt;p>O Unix era um sistema portável, &lt;a href="https://pt.wikipedia.org/wiki/Multitarefa">multitarefa&lt;/a> e &lt;a href="https://pt.wikipedia.org/wiki/Multiusu%C3%A1rio">multiusuário&lt;/a> e tinha como principal característica o uso de arquivos para abstrair tudo na máquina.&lt;/p>
+&lt;p>Em realidade, o Unix era para ser Multics, que deveria ser um sistema operacional de tempo compartilhado (uma forma de fazer processamento paralelo) para uma grande comunidade de usuários porém esse era um projeto muito ambicioso para o hardware da época.&lt;/p>
+&lt;p>Então &lt;a href="https://pt.wikipedia.org/wiki/Ken_Thompson">Ken Thompson&lt;/a> pegando um computador ocioso &lt;a href="https://pt.wikipedia.org/wiki/PDP-7">PDP-7&lt;/a> começou a reescrever o multics num conceito muito menos ambicioso começou a reescrever o multics num conceito muito menos ambicioso. Que seria chamado Unics mas foi renomeado para Unix.&lt;/p>
+&lt;p>Outro marco importante foi quando Ken Thompson e Denis Ritchie reescreveram o Unix usando a &lt;a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)">linguagem C&lt;/a> em um computador &lt;a href="https://pt.wikipedia.org/wiki/PDP-11">PDP-11&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1977: BSD&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponível. [Antigamente: Código Fechado | Atualmente: Código Aberto]&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/4.3_BSD_UWisc_VAX_Emulation_Login.png" alt="BSD Operating System">&lt;/p>
+&lt;p>Em 1977, o Unix teve seu primeiro descendente. Com suas próprias características, o BSD surgiu como uma forma da faculdade de Berkeley ainda possuir uso gratuito do Unix. Aliás, o BSD só pode ser considerado uma ramificação do Unix pois eles compartilham a mesma base de código que o Unix original da AT&amp;amp;T.&lt;/p>
+&lt;p>Existem algumas diferenças entre o BSD e o Unix mas elas só vieram aparecendo mais tarde, podemos dizer que por bem ou por mal o BSD foi um dos primeiros sistemas operacionais que se tornaram Open Source. O BSD versão 1 e 2 rodava em PDP-11, mas a partir da versão 3 o BSD foi portado para o VAX e foi graças ao BSD3 com suporte as unidades de memória virtual do Vax que convenceu a &lt;a href="https://pt.wikipedia.org/wiki/Defense_Advanced_Research_Projects_Agency">D.A.R.P.A&lt;/a> a investir no &lt;a href="https://en.wikipedia.org/wiki/Computer_Systems_Research_Group">CSRG&lt;/a>.&lt;/p>
+&lt;p>A partir da versão 4 o BSD passou a oferecer um jobcontrol notável no csh, além do delivermail (antecessor do sendmail) além do uso de sinais mais confiáveis e a biblioteca curses.&lt;/p>
+&lt;h3 id="sistemas-dos">Sistemas DOS&lt;/h3>
+&lt;p>&lt;img src="https://conteudo.imguol.com.br/c/noticias/37/2017/10/28/oito-coisas-que-so-quem-usou-o-sistema-dos-vai-se-identificar---abortar-repetir-falhar-1509205804292_615x300.pngx" alt="Sistemas DOS">&lt;/p>
+&lt;p>Quando começamos a fletar com os &lt;a href="https://pt.wikipedia.org/wiki/Computador_pessoal">computadores pessoais&lt;/a> também precisaríamos de um sistema operacional relativamente simples para uso geral, o único problema era &amp;ldquo;armazenamento caro&amp;rdquo;, então normalmente usávamos &lt;a href="https://pt.wikipedia.org/wiki/Computador_pessoal">sistemas operacionais DOS&lt;/a> que era basicamente um sistema operacional simples que carregava na memória e era volátil. Isso significa que o DOS era um sistema operacional de usuário único e de tarefa única também com suas funções de kernel não &lt;a href="https://pt.wikipedia.org/wiki/Reentr%C3%A2ncia">reentrantes&lt;/a>.&lt;/p>
+&lt;p>Mesmo sendo um sistema operacional de tarefa única o DOS possuia uma forma de multitarefa (aposto que você pensou &amp;ldquo;What The Fuck&amp;rdquo;) mas o que ocorria é que existe uma exceção no DOS chamada &lt;a href="https://pt.wikipedia.org/wiki/Terminate_and_Stay_Resident">TSR&lt;/a>. O DOS também possuia uma linha de comando chamado &lt;a href="https://pt.wikipedia.org/wiki/COMMAND.COM">command.com&lt;/a> esse é uma linha de comando feia com cheiro de velho mofo largado a bel prazer e existe até hoje no Windows 10/11.&lt;/p>
+&lt;hr>
+&lt;h3 id="historia-dos-sistemas-operacionais-dos">Historia dos sistemas Operacionais DOS&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>1978: Apple DOS&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponível. Código Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://archiveos.org/wp-content/uploads/2023/05/apple-dos.webp" alt="Sistema Apple DOS">&lt;/p>
+&lt;p>O primeiro sistema operacional da Apple e existia para os &lt;a href="https://pt.wikipedia.org/wiki/Apple_II">Apple II&lt;/a>.&lt;/p>
+&lt;p>O apple DOS foi desenvolvido por &lt;a href="https://pt.wikipedia.org/wiki/Steve_Wozniak">Steve Wozniak&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Randy_Wigginton">Randy Wigginton&lt;/a> e Paul Laughton e teve 3 versões principais:&lt;/p>
+&lt;ul>
+&lt;li>Apple DOS 3.1&lt;/li>
+&lt;li>Apple DOS 3.2&lt;/li>
+&lt;li>Apple DOS 3.3&lt;/li>
+&lt;/ul>
+&lt;p>e apesar de todos os sistemas DOS terem atualizações de correções de bugs apenas o Apple DOS 3.2 que teve uma versão menor de correção de bugs a versão 3.2.1, porém a versão mais reconhecida e mais usada foi a versão 3.3.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1979: Atari DOS&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/en/c/ca/Ataridos-2.5.PNG" alt="Sistema Atari DOS">&lt;/p>
+&lt;p>Além de produzir jogos ruins no começo da história dos vídeos games e particularmente começar o universo dos jogos, a Atari também possuía um sistema operacional DOS que era utilizado com a família de computadores Atari de 8 bits.&lt;/p>
+&lt;p>E incrivelmente esse sistema operacional trazia muitas novidades em comparação com os outros sistemas, pois ele podia carregar extensões no sistema operacional a partir da memória que permitia o Atari DOS gerenciar os arquivos armazenados em uma unidade de disco. A extensão mais importante é o manipulador de disco. E com essa tecnologia também houve muitos programas DOS criados a partir de terceiros compatíveis com o Atari DOS versão 2.&lt;/p>
+&lt;p>Exemplo o SpartaDOSX que era uma versão do SpartaDOS muito aproximada do MSDOS e era enviado em cartuchos de 64kb..&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/d/da/SpartaDOS_X_prompt.png" alt="Sistema Sparta DOSX">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1980: Apple SOS&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/SOSBootOnMess.png" alt="Sistema operacional Apple SOS">&lt;/p>
+&lt;p>O Sophisticated Operating System ou SoS era o sistema operacional principal criado para o Apple III e veio como sucessor do Apple DOS e em 1985 apesar de criticar muito o &lt;a href="https://en.wikipedia.org/wiki/Apple_III">Apple III&lt;/a> que era realmente bem ruinzinho em construção, elogiou o Apple SOS como o melhor sistema operacional em qualquer microcomputador de todos os tempos &amp;ldquo;obviamente até aquela época&amp;rdquo;.&lt;/p>
+&lt;p>E apesar do SoS ser um sistema operacional monousuário e monotarefa. Ele disponibiliza os recursos do sistema como um programa orientado a menu&amp;rsquo;s bem como contendo uma &lt;a href="https://en.wikipedia.org/wiki/API">Interface de Programação de Aplicativos&lt;/a>.&lt;/p>
+&lt;p>A API dos SOS é dividida em 4 partes:&lt;/p>
+&lt;ul>
+&lt;li>Chamadas de arquivo&lt;/li>
+&lt;li>Chamadas de dispositivo&lt;/li>
+&lt;li>Chamadas de memória&lt;/li>
+&lt;li>Chamadas de utilidade&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://siliconfeatures.com/wp-content/uploads/2023/02/Apple_SOS_1.0-1000x616.jpg" alt="Orientação a menus do Apple SOS">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1980: Xenix&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponível. Código fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://www.retropolis.com.br/wp-content/uploads/2016/10/microsoft-unix-xenix.jpg" alt="Sistema operacional Xenix">&lt;/p>
+&lt;p>Xenix foi um sistema operacional licenciado pela microsoft e pela AT&amp;amp;T na década de 1980 antes da própria microsoft começar a trabalhar no MSDOS. Atualmente o Xenix pertence a SCO Unix que adquiriu os direitos exclusivos do mesmo.&lt;/p>
+&lt;p>O Xenix foi uma versão do Unix que a microsoft pretendia usar em microcomputares a partir do momento em que a mesma não pode licenciar o próprio Unix.&lt;/p>
+&lt;p>Posso não ter certeza 100% do que digo, mas em 2001 foi criado um sistema operacional que rodava o Unix dentro de microcomputadores &amp;ldquo;lançado meio fora do momento&amp;rdquo; mas que cumpriu o objetivo da microsoft. O chamado &lt;a href="https://unix.fandom.com/pt-br/wiki/UZIX">UZIX&lt;/a>. &amp;ldquo;Só para dar um desfecho ao unix nos microcomputadores&amp;rdquo;&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1980: 86DOS (Q-DOS)&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/4/40/86-DOS_running_assembler_and_HEX2BIN_%28screenshot%29.png" alt="Sistema operacional 86DOS">&lt;/p>
+&lt;p>Este foi um sistema operacional produzido para o &lt;a href="https://en.wikipedia.org/wiki/Intel_8086">intel 8086&lt;/a> e logo seria modificado a se tornar o MSDOS.&lt;/p>
+&lt;p>Ele também era conhecido como o Quick and Dirty Operating System (sistema operacional rápido e sujo, se você não conhece a terminologia). O 86-DOS compartilhava alguns comandos com o &lt;a href="https://en.wikipedia.org/wiki/OS/8">OS/8&lt;/a> e o &lt;a href="https://en.wikipedia.org/wiki/CP/M">CP/M&lt;/a>. Que falicilitou a portabilidade de programas do CP/M. Sua API era muito semelhante. O sistema foi comprado pela microsoft e usado para desenvolver o MS DOS e o &lt;a href="https://en.wikipedia.org/wiki/IBM_PC_DOS">PC DOS&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1981: MS-DOS/IBM PC DOS&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Aberto&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ms-dosdir.png/355px-Ms-dosdir.png" alt="Sistema operacional MSDOS">&lt;/p>
+&lt;p>Dentro da história da computação, foi esse sistema operacional que definiu a Microsoft como a gigante que ela é. O MSDOS.&lt;/p>
+&lt;p>Este sistema teve muitas versões e nomes até se firmar com MSDOS e teve muitas modificações em seus internos.&lt;/p>
+&lt;ul>
+&lt;li>PC-DOS 1.0 (1981): Suportava até 256Kb de RAM e dois disquetes 160kb 5.25&amp;quot; de face única.&lt;/li>
+&lt;li>PC-DOS 1.1 (1983): Trouxe suporte a disquetes 320kb dupla-face.&lt;/li>
+&lt;li>PC-DOS 2.0 (1983): Suportavam PC/XT e drives fixos (o começo dos HD&amp;rsquo;s), também permitiram um programa carregar e rodar subprogramas e overlays de programas.&lt;/li>
+&lt;li>MS-DOS 3.0 (1984): Suportavam disquetes de 1.2mb e discos rigidos de até 32MB. Também incluiu códigos de erros mais estendidos.&lt;/li>
+&lt;li>MS-DOS 3.1 (1984): Adicionou suporte a redes, serviços que permitiam travamentos e destravamentos do acesso a todas as partes de um arquivo.&lt;/li>
+&lt;li>MS-DOS 3.2 (1986): Adicionou suporte a disquetes 720kb 3.5&amp;quot;.&lt;/li>
+&lt;li>MS-DOS 3.3 (1987): Introduziu discos lógicos, e foi adicionado suporte a disquetes de 1.44mb 3.5&amp;quot; e suporte a 4 portas seriais paralelas.&lt;/li>
+&lt;li>MS-DOS 4.0 (1988): Suportava até discos de 2GB sem necessidade de partições lógicas e adicionou um novo shell codinome DOSSHELL.&lt;/li>
+&lt;li>MS-DOS 5.0 (1991): Adicionou o interpretador BASIC em tela cheia, também um editor de texto em tela cheia, um utilitário de cache de disco, capacidade de undelete &amp;hellip; entre outros.&lt;/li>
+&lt;li>MS-DOS 6.0 (1993): Adicionou um utilitário de compressão de disco, um desfragmentador, um utilitário de backup, otimizador de memória e um antivírus.&lt;/li>
+&lt;li>MS-DOS 6.21 (1994): Removeu o utilitário DoubleSpace que era usado para compactar o disco por problemas legais.&lt;/li>
+&lt;li>MS-DOS 6.22 (1994): Adicionou o substituto DriveSpace e está foi a ultima versão stand-alone lançada para o mercado.&lt;/li>
+&lt;/ul>
+&lt;p>Após isso também passou a existir as versões 6.23 a 6.25 mas essas eram privadas a bancos e a organizações militares estadunidenses. A partir de então o MS-DOS só existia como um kernel para o Windows 9x (95, 98, Me). Tanto que hoje você pode baixar o app &lt;a href="https://dosbox-x.com/">DOSBOX-X&lt;/a> e rodar as versões 9x em cima deles.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1981: Pilot&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
+&lt;p>O sistema operacional Pilot foi criado pela empresa Xerox Parc e era um sistema operacional monousuário mas multitarefa além de ser o primeiro sistema operacional a usar interface de usuário e o mouse. Além disso, este sistema operacional foi escrito numa linguagem proprietária chamada Mesa e totalizou 24K linhas de código Além disso, este sistema operacional foi escrito numa linguagem proprietária chamada Mesa e totalizou 24K linhas de código.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1982: Suínos&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://www.file-extension.info/images/resource/screenshots/sunos.png" alt="Sistema Operacional SunOS">&lt;/p>
+&lt;p>Esse é o sistema que surgiu anterior ao Solaris, o SunOS foi um sistema Unix desenvolvido pela SunMicrosystems para seus servidores e workstations. O nome SunOS geralmente é usado para se referir as versões da 1.0 a 4.1.4 onde o mesmo foi baseado nos BSD enquanto a partir da versão 5.0 e posterior são baseadas no Unix System V Release 4 e é comercializada sob a marca do &lt;em>Solaris&lt;/em>.&lt;/p>
+&lt;ul>
+&lt;li>O SunOS 1 suportava apenas os sistemas da série Sun-2 (Nome das estações de trabalho), incluindo sistemas Sun-1 atualizados com placas de CPU Sun-2.&lt;/li>
+&lt;li>O SunOS 2 suportava os sistemas da série Sun-2 e Sun-3.&lt;/li>
+&lt;li>O SunOS 4 suportava as arquiteturas Sun-2 até a versão 4.0.3, Sun-3 até a versão 4.1.1, Sun386i (4.0, 4.0.1 e 4.0.2) e Sun4 (Sparc).&lt;/li>
+&lt;/ul>
+&lt;p>Embora o SunOS 4 fosse o primeiro a oferecer suporte total ao novo processador SPARC da Sun, também havia um lançamento do SunOS 3.2 com suporte preliminar para Sistemas Sun-4.&lt;/p>
+&lt;p>O SunOS 4.1.2 introduziu suporte as primeiras máquinas com &lt;a href="https://en.wikipedia.org/wiki/Multiprocessor">multiprocessadores&lt;/a> da arquitetura sun4m da Sun, como tinha um único bloqueio para o kernel, apenas uma cpu por vez poderia ser executada no kernel.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1983: Apple ProDOS&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://prodos8.com/pix/prodos242/homepage_slide2.png" alt="Sistema Operacional Apple ProDOS">&lt;/p>
+&lt;p>O Apple ProDOS foi o último sistema operacional produzido para rodar nos Apple II da série de 8 bits, e seu código fonte surgiu através do Apple SOS e fui uma solução gap para o Apple II GS de 16 bits que logo foi substituído pelo GS/OS.&lt;/p>
+&lt;p>Apple ProDOS foi comercializado pela Apple como Profissional Disk Operating System e se tornou o sistema operacional mais popular em 10 meses.&lt;/p>
+&lt;p>O ProDOS surgiu para corrigir as deficiências que o Apple DOS começou a apresentar por sua idade. Apesar disso, houve muita resistência a adoção do ProDOS, primeiro que sua API não era efetivamente compatível com o Apple DOS e sim com o Apple SOS então muitos aplicativos não poderiam ser portados a menos que reescritos.&lt;/p>
+&lt;p>Outro motivo foi que só a partir do lançamento do &lt;a href="https://en.wikipedia.org/wiki/AppleWorks">AppleWorks&lt;/a> que a Apple chamou a atenção do mercado para seu ProDOS.&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Terminamos aqui a histórias dos sistemas operacionais abrangindo até o fim da era DOS, todos os sistemas operacionais a partir disso, possuíam interface gráfica ou eram linhas de comando Unix em HD&amp;rsquo;s modernos.&lt;/p></content:encoded></item><item><title>Quais problemas o BSD tem</title><link>https://FoxTechWorld.github.io/posts/quais-problemas-o-bsd-tem/</link><pubDate>Mon, 14 Aug 2023 00:58:31 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/quais-problemas-o-bsd-tem/</guid><description>Este post explora a questão pouco discutida sobre a falta de popularidade dos BSDs como sistemas operacionais de desktop em comparação com o Linux. Destacando as diferenças de licenciamento, os desenvolvedores BSD priorizando aprimoramentos em vez de promoção e alguns desafios legais no passado, o autor identifica os principais motivos para a menor adoção dos BSDs.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Como um entusiasta dos Unixes, Linuxes e dos BSD&amp;rsquo;s, em geral. Sempre me questionei sobre porque os BSD&amp;rsquo;s são tão pouco usados hoje em dia como desktop principal.&lt;/p>
+&lt;p>Primeiramente, uso como desktop principal não vai contar nem MacOSX e nem IOS. Uma coisa é usar a base do BSD para construir seu kernel, mas só contar com ela desconsidera totalmente o trabalho da Apple e da combinação com o OpenMach.&lt;/p>
+&lt;p>Como diria &lt;strong>Kirk McKusick:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>The other common approach is the Berkeley license. Sometimes referred to as a ‘‘Copycenter’’ license, as in take it down to the copy center and make as many copies as you want Source and patent rights may or may not be provided, i.e., you can give back your changes, or not, as you choose.
+FreeBSD uses a Berkeley license, which has played a big role in its success, particularly with companies that have their proprietary code in the kernel. In practice, the FreeBSD Project gets back about as much code as do GPLs open-source projects. But it takes longer as there is a learning curve
+&lt;/code>&lt;/pre>&lt;p>Isso significa que o código do BSD foi feito para ser modificado, recriado, adaptado e sua licença permissiva garante que você é responsável por qualquer decisão que tomar inclusive fechar o código se assim desejar.&lt;/p>
+&lt;p>Também cria uma faca de dois gumes, pois segundo o &lt;a href="https://docs.freebsd.org/en/books/handbook/">Handbook do FreeBSD&lt;/a> e o &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/">Docs do FreeBSD&lt;/a> equivalente a &lt;a href="https://wiki.archlinux.org">ArchWiki&lt;/a> no mundo Linux e uma leitura muito recomendada, existem alguns motivos para o FreeBSD não ser adotado por uma imersa comunidade.&lt;/p>
+&lt;p>Hoje quero apresentar esses problemas e algumas resoluções.&lt;/p>
+&lt;p>&lt;img src="https://img.youtube.com/vi/NM0oou1KYY8/maxresdefault.jpg" alt="Example of BSD">&lt;/p>
+&lt;hr>
+&lt;h3 id="motivos-para-os-bsd-não-serem-tão-usados-ou-tão-populares-quanto-o-linux">Motivos para os BSD não serem tão usados ou tão populares quanto o linux&lt;/h3>
+&lt;p>Existe uma série de resoluções, mas os principais que este &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/#why-is-bsd-not-better-known">post&lt;/a> cita são:&lt;/p>
+&lt;ul>
+&lt;li>Os desenvolvedores do BSD estão mais interessados em aprimorar o código do que em divulgá-lo.&lt;/li>
+&lt;li>Grande parte da popularidade do Linux se deve a fatores externos ao projeto Linux, como a mídia e empresas que foram criadas para prover serviço Linux. Até pouco tempo atrás os BSD de código aberto não tinham este tipo de proposta.&lt;/li>
+&lt;li>Em 1992 a AT&amp;amp;T processou a BSDI, que comercializava o BSD/386, alegando que o produto continha código protegido por direitos autorais da AT&amp;amp;T. O caso foi encerrado fora dos tribunais em 1994, mas o fantasma do litígio continua assombrando. Em março de 2000, um artigo publicado na web afirma que o caso foi &amp;ldquo;recentemente encerrado&amp;rdquo;.&lt;/li>
+&lt;/ul>
+&lt;p>Existe alguma outra série de razões, estas vindas de mim sobre os BSD que podem não estar totalmente corretos, mas ainda devem fornecer alguma ideia:&lt;/p>
+&lt;ul>
+&lt;li>Temos um sistema operacional BSD seguro (OpenBSD), um sistema operacional BSD de alto desempenho (DragonFlyBSD), um sistema operacional BSD de uso geral (FreeBSD), e um sistema operacional de porta de entrada (GhostBSD). Mas esses sistemas são incompletos, somente o OpenBSD e o DragonFlyBSD são realmente sistemas próprios, mas ainda, sim, compartilham algum código com FreeBSD.&lt;/li>
+&lt;li>Os sistemas operacionais não são totalmente focados no usuário final e exigem uma curva maior de aprendizado que o Linux. (O gerenciador de pacotes gráficos do GhostBSD está mais próximo do &lt;a href="https://pt.wikipedia.org/wiki/Synaptic">synaptic&lt;/a> do que de uma loja de aplicativos como o &lt;a href="https://en.wikipedia.org/wiki/GNOME_Software">gnome software&lt;/a>). Ainda usamos bootloaders que sobem uma série de informações ao invés de um Plymouth&amp;hellip;, etc.&lt;/li>
+&lt;li>Softwares são muito antigos e pretendem trabalhar com tudo&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="como-trabalhar-esses-problemas-e-determinar-soluções">Como trabalhar esses problemas e determinar soluções&lt;/h3>
+&lt;p>Primeiramente essas dicas se referem apenas ao ambiente de desktop e servidores em x86-64.&lt;/p>
+&lt;ul>
+&lt;li>Limpar pacotes gordurosos (Os BSD não precisam de pacotes que não vão usar e acredite existem 30k de pacotes que você nem sabe como usa com mais de décadas de idade sem atualização).&lt;/li>
+&lt;li>Reescrever alguns softwares (Não existe nenhum problema real nos existentes, mas se são velhos provavelmente vai ter um code smell por aí. Salvo o OpenBSD que está sempre revisando o código).&lt;/li>
+&lt;li>Reescrever o kernel com recursos a mais (Novamente não existe nenhum problema nos kerneis existentes, quero dizer até existem, mas não é incorrigível, a reescrita só serve para facilitar).&lt;/li>
+&lt;/ul>
+&lt;p>E os novos recursos que eu cito seria a adoção de recursos como:&lt;/p>
+&lt;ul>
+&lt;li>Sistemas similares ao Driver Kit e ao IOKit que a Apple usa para facilitar desenvolvimento de drivers&lt;/li>
+&lt;li>Sistemas como o devfs que o Linux usa para reconhecimento de dispositivos&lt;/li>
+&lt;li>Sistemas de auditoria como os que o OpenBSD adicionam&lt;/li>
+&lt;li>Sistemas de alto desempenho como os que o DragonFlyBSD adicionam&lt;/li>
+&lt;li>Sistema de rodar aplicações Linux como o WSL e o FreeBSD adicionam&lt;/li>
+&lt;li>Subsistemas que o OpenMach usa para fazer sei-lá o que (to precisando reestudar isso).&lt;/li>
+&lt;/ul>
+&lt;p>Enfim, recursos modernos para termos um sistema coeso. Claro que é um processo lento e trabalhoso para se trabalhar em um kernel.&lt;/p>
+&lt;p>E sendo este o primeiro passo para se fazer os BSD mais populares. Ainda temos que criar alguma distribuição focada no usuário final usando esse kernel e convencer pessoas e empresas a criarem software para o mesmo.&lt;/p>
+&lt;p>Isso é além de portar muitos dos softwares open-source ou convencer devs que aceitarem usar o sistema a fazer o mesmo.&lt;/p>
+&lt;hr>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Esse seria um projeto interessante para se fazer durantes as férias, espero que tenham gostado do post, qualquer dúvida, ideia, crítica ou sugestão deixe nos comentários.&lt;/p></content:encoded></item></channel></rss>
