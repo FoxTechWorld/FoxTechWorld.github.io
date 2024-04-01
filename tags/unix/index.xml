@@ -3,7 +3,9 @@ Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores 
 Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
 &lt;p>E novamente vamos falar do &lt;a href="https://foxtechworld.github.io/posts/fkernel/">FKernel&lt;/a>, o segundo maior &lt;a href="https://pt.wikipedia.org/wiki/Vaporware">VaporWare&lt;/a> da história depois do Microsoft Xenix. Leia mais sobre este assunto neste &lt;a href="https://foxtechworld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/">Post&lt;/a>.&lt;/p>
 &lt;p>Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.&lt;/p>
-&lt;p>&lt;img src="https://www.youtube.com/watch?v=MSDX_XFZ5_A&amp;amp;t=240s" alt="Vídeo sobre provavelmente a Microsoft abandonando o C/CPP ">&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
 &lt;p>Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.&lt;/p>
 &lt;p>Dito isso vou apresentar a mudança na ideia do FKernel.&lt;/p>
 &lt;ol>
