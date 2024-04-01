@@ -4,7 +4,7 @@ Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha q
 &lt;p>E novamente vamos falar do &lt;a href="https://foxtechworld.github.io/posts/fkernel/">FKernel&lt;/a>, o segundo maior &lt;a href="https://pt.wikipedia.org/wiki/Vaporware">VaporWare&lt;/a> da história depois do Microsoft Xenix. Leia mais sobre este assunto neste &lt;a href="https://foxtechworld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/">Post&lt;/a>.&lt;/p>
 &lt;p>Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;iframe src="https://www.youtube.com/embed/MSDX_XFZ5_A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
 &lt;p>Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.&lt;/p>
 &lt;p>Dito isso vou apresentar a mudança na ideia do FKernel.&lt;/p>
@@ -21,7 +21,7 @@ Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha q
 &lt;p>&lt;img src="https://media.licdn.com/dms/image/C4D22AQE4AfrHR6xFpw/feedshare-shrink_800/0/1668175782934?e=2147483647&amp;amp;v=beta&amp;amp;t=10Wki3NSvy6SB2jfcsPgBFUBTcvKHUqV166avbkqXZY" alt="Algumas linguagens memory safety">&lt;/p>
 &lt;p>Essas linguagens como:&lt;/p>
 &lt;ul>
-&lt;li>[Ruby](&lt;a href="https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)">https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)">Ruby&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Swift_(linguagem_de_programa%C3%A7%C3%A3o)">Swift&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Objective-C">Objective-C&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)">Java&lt;/a> / Outras linguagens &lt;a href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual_Java">JVM&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://pt.wikipedia.org/wiki/C_Sharp">C#&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)">Go&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>&lt;/li>
