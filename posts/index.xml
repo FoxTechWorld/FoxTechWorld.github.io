@@ -1,46 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/posts/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Deepin Me Fez Usar Asdf</title><link>https://FoxTechWorld.github.io/posts/deepin-me-fez-usar-asdf/</link><pubDate>Wed, 13 Mar 2024 15:57:18 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/deepin-me-fez-usar-asdf/</guid><description>Introdução Para quem leu meu artigo mais antigo sobre o deepin gostaria que soubessem que ainda continuo usando ele. Isso também significa que consegui compilar o flatpak então #Steam para gente, claro que aproveitei para instalar o Heroic e fazer uma configuração de desenvolvimento bem básica com o uso do ASDF instalando algumas das linguagens que uso:
-Ruby NodeJS Golang Erlang Java Elixir Mas dessa vez teve algo diferente, eu não apenas tenho essas linguagens instalados como também tenho o Neovim instalado via ASDF.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
-&lt;p>Para quem leu meu &lt;a href="https://foxtechworld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/">artigo mais antigo sobre o deepin&lt;/a> gostaria que soubessem que ainda continuo usando ele. Isso também significa que consegui compilar o flatpak então #Steam para gente, claro que aproveitei para instalar o &lt;a href="https://heroicgameslauncher.com/">Heroic&lt;/a> e fazer uma configuração de desenvolvimento bem básica com o uso do &lt;a href="https://asdf-vm.com/">ASDF&lt;/a> instalando algumas das linguagens que uso:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)">Ruby&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/JavaScript">NodeJS&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)">Golang&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Erlang_(linguagem_de_programa%C3%A7%C3%A3o)">Erlang&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)">Java&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Elixir_(linguagem_de_programa%C3%A7%C3%A3o)">Elixir&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Mas dessa vez teve algo diferente, eu não apenas tenho essas linguagens instalados como também tenho o &lt;a href="https://pt.wikipedia.org/wiki/Vim">Neovim&lt;/a> instalado via ASDF.&lt;/p>
-&lt;hr>
-&lt;h3 id="por-que-instalar-neovim-via-asdf-e-qual-sua-vantagem">Por que instalar Neovim via ASDF e qual sua vantagem?&lt;/h3>
-&lt;p>Além do Neovim, o ASDF conta com um repositório distribuído de dezenas de aplicações, muitas das quais não temos as versões mais recentes nos repositórios &lt;a href="https://pt.wikipedia.org/wiki/Suporte_de_longo_prazo">LTS&lt;/a>. Para isso o ASDF surgiu com um gerenciador de pacote bem competente a se ter em um computador melhor que &lt;a href="https://pt.wikipedia.org/wiki/Homebrew_(gerenciador_de_pacotes)">homebrew&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Portage_(software)">portage&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Cole%C3%A7%C3%A3o_ports">ports&lt;/a>&amp;hellip;, etc.&lt;/p>
-&lt;p>O único problema é que não temos ferramentas do dia a dia no asdf e tudo bem, as que temos no repositório padrão da distro funciona em cooperativismo com asdf.&lt;/p>
-&lt;p>Se você quer um exemplo prático de uso do ASDF, considere que você esteja usando uma distribuição baseada em &lt;a href="https://pt.wikipedia.org/wiki/Debian">Debian&lt;/a>, obviamente, essa distribuição não vai ter suporte aos &lt;a href="https://pt.wikipedia.org/wiki/Personal_Package_Archive">ppa&lt;/a> da canonical, então esqueça de vez o uso de docker, podman&amp;hellip;, etc. Ou não.&lt;/p>
-&lt;p>Você pode assumir que uma opção disponível seja pegar do asdf e compilar automaticamente, contanto que você tenha as libs pre-instaladas, tá tudo ok ele vai pre-executar o &lt;a href="https://pt.wikipedia.org/wiki/Make">make&lt;/a> e compilar manualmente.&lt;/p>
-&lt;p>Por isso essa comparação com gerenciadores pacotes baseados em código-fonte.&lt;/p>
-&lt;hr>
-&lt;h3 id="qual-outra-vantagem-do-asdf">Qual outra vantagem do ASDF&lt;/h3>
-&lt;p>Outra vantagem que temos ao ASDF em comparação com outros gerenciadores de pacotes é que o mesmo é altamente distribuído, ou seja, ele é similar a um &lt;a href="https://wiki.archlinux.org/title/Arch_User_Repository">AUR&lt;/a>&lt;/p>
-&lt;p>Onde o mesmo faz a pesquisa via GitHub buscando termos começados por &lt;code>asdf-software | linguagem&lt;/code> o que pode a longo tempo ser uma forma de compartilhamento de software muito superior ao que temos hoje.&lt;/p>
-&lt;p>Além disso, temos a capacidade de ter múltiplas versões de um mesmo software com base em um hack baseado em &lt;a href="https://diolinux.com.br/video/use-a-variavel-path-a-seu-favor-no-linux.html">PATH&lt;/a> para haver diversas versões de um mesmo aplicativo no path do sistema.&lt;/p>
-&lt;p>Também podemos definir uma versão &lt;code>global&lt;/code> da aplicação e uma &lt;code>local&lt;/code>, por exemplo, a versão do golang que está global no meu sistema é a &lt;code>1.21.5&lt;/code> enquanto eu também possuo instalado a versão &lt;code>1.22.0&lt;/code> e caso queira instalar o ASDF em outro sistema, a única dependência necessária seria basicamente o &lt;a href="https://pt.wikipedia.org/wiki/Bash">&lt;em>Gnu/Bash&lt;/em>&lt;/a>.&lt;/p>
-&lt;hr>
-&lt;h3 id="você-aconselharia-outras-pessoas-a-usarem-o-asdf">Você aconselharia outras pessoas a usarem o ASDF&lt;/h3>
-&lt;p>Sem sombras de dúvida, o ASDF é a ferramenta perfeita para ter a experiência de um AUR estável. E como sua instalação é bem simples em ambientes Unix, vale a pena instalar uma ferramenta tão interessante.&lt;/p>
-&lt;p>E com ela conseguimos resolver diversos problemas, mas antes de instalar essa ferramenta, verifique se o conjunto de ferramentas de desenvolvimento padrão está instalado.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev build-essential
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Isso deve garantir que o ASDF tenha todas as ferramentas necessárias caso deseje compilar algo.&lt;/p>
-&lt;h3 id="conclusão">Conclusão&lt;/h3>
-&lt;p>O ASDF é uma ferramenta incrível e altamente recomendada caso você deseje ter um controle granular sobre as ferramentas instaladas no seu computador e suas versões.&lt;/p>
-&lt;p>Agora se você estiver em um ambiente LTS, o asdf dispõe sendo uma ferramenta incrível no caso de você precisar de ferramentas e linguagens mais recentes de forma automatizada.&lt;/p>
-&lt;p>Se você precisa gerenciar múltiplas versões em um mesmo computador ou situações de efeito similar, ou igual.&lt;/p>
-&lt;p>Mesmo que não seja um substituto 100% para o gerenciador de pacotes padrão da distro, creio que em um longo tempo a maioria dos softwares tenha um asdf-&lt;code>{nome do software | nome da linguagem}&lt;/code> sendo distribuído, ele não precisa de um repositório central.&lt;/p>
-&lt;p>Com isso, instigo a todos que ao menos experimentem o ASDF para gerenciar linguagens como golang, lua, luajit, ruby&amp;hellip;, etc. Ou softwares como yt-dlp, neovim&amp;hellip;, etc.&lt;/p>
-&lt;h3 id="bibliografia">Bibliografia&lt;/h3>
-&lt;p>&lt;a href="https://asdf-vm.com/">ASDF Official Website&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.dio.me/articles/instalando-jdk-com-asdf-no-linux">Instalando o JDK com ASDF no Linux&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://ash12rai-weblearning.medium.com/asdf-manage-all-runtime-versions-with-one-tool-a21e92da7309">Manage all runtime versions with one tool&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.youtube.com/watch?v=epiyExCyb2s&amp;amp;ab_channel=FabioAkita">O Guia DEFINITIVO de UBUNTU para Devs Iniciantes&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.youtube.com/watch?v=sjrW74Hx5Po&amp;amp;ab_channel=FabioAkita">O Melhor Setup Dev com Arch e WSL2&lt;/a>&lt;/p></content:encoded></item><item><title>Como uma AI funciona</title><link>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</link><pubDate>Tue, 20 Feb 2024 09:17:59 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</guid><description>Este post oferece uma visão detalhada da Inteligência Artificial (IA), abordando desde os fundamentos de seu funcionamento até os equívocos comuns sobre a IA. O autor discute tópicos como a abstração na computação, a matemática por trás da IA, a geração de imagens e textos por IA, e a questão de se a arte gerada por IA pode ser considerada arte. O post também inclui uma série de recursos em vídeo para aqueles que desejam aprender mais.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/posts/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Como uma AI funciona</title><link>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</link><pubDate>Tue, 20 Feb 2024 09:17:59 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</guid><description>Este post oferece uma visão detalhada da Inteligência Artificial (IA), abordando desde os fundamentos de seu funcionamento até os equívocos comuns sobre a IA. O autor discute tópicos como a abstração na computação, a matemática por trás da IA, a geração de imagens e textos por IA, e a questão de se a arte gerada por IA pode ser considerada arte. O post também inclui uma série de recursos em vídeo para aqueles que desejam aprender mais.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
 &lt;p>Bem-vindo a mais um post! Hoje, vamos mergulhar no fascinante mundo da Inteligência Artificial (IA), desvendando mitos e explorando seu potencial, especialmente no contexto da criação de arte. Antes de entrarmos no âmago da questão das artes geradas por IA, é crucial desmistificar alguns conceitos errôneos que têm circulado, muitas vezes devido à falta de pesquisa aprofundada sobre o assunto.&lt;/p>
 &lt;p>Entre esses equívocos, destacam-se:&lt;/p>
 &lt;ul>
@@ -1038,4 +996,14 @@ FreeBSD uses a Berkeley license, which has played a big role in its success, par
 &lt;p>Isso é além de portar muitos dos softwares open-source ou convencer devs que aceitarem usar o sistema a fazer o mesmo.&lt;/p>
 &lt;hr>
 &lt;h3 id="conclusão">Conclusão&lt;/h3>
-&lt;p>Esse seria um projeto interessante para se fazer durantes as férias, espero que tenham gostado do post, qualquer dúvida, ideia, crítica ou sugestão deixe nos comentários.&lt;/p></content:encoded></item></channel></rss>
+&lt;p>Esse seria um projeto interessante para se fazer durantes as férias, espero que tenham gostado do post, qualquer dúvida, ideia, crítica ou sugestão deixe nos comentários.&lt;/p></content:encoded></item><item><title/><link>https://FoxTechWorld.github.io/posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/</guid><description>Links para Posts [[/Rant/Rant: do you never be productive]] [[/Tutorial/Como substituir o hamachi no linux para jogar minecraft lan de forma facilitada]] [[/Tips/Meu vscode minimalista]] [[/Tips/Improve your code]] [[/Story/Usando deepin linux no notebook]] [[/Story/Historia dos sistemas operacionais]] [[/Story/Quais problemas o bsd tem]] [[/Plans/Fkernel]] [[/How Works/Como funciona uma ai]] [[/How Works/Como funciona o reator arc]]</description><content:encoded>&lt;h1 id="links-para-posts">Links para Posts&lt;/h1>
+&lt;p>[[/Rant/Rant: do you never be productive]]
+[[/Tutorial/Como substituir o hamachi no linux para jogar minecraft lan de forma facilitada]]
+[[/Tips/Meu vscode minimalista]]
+[[/Tips/Improve your code]]
+[[/Story/Usando deepin linux no notebook]]
+[[/Story/Historia dos sistemas operacionais]]
+[[/Story/Quais problemas o bsd tem]]
+[[/Plans/Fkernel]]
+[[/How Works/Como funciona uma ai]]
+[[/How Works/Como funciona o reator arc]]&lt;/p></content:encoded></item></channel></rss>
