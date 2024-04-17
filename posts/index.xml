@@ -1,40 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/posts/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>FKernel com cpp e rust. Explicando as noias</title><link>https://FoxTechWorld.github.io/posts/fkernel-com-cpp-e-rust.-explicando-as-noias/</link><pubDate>Sun, 31 Mar 2024 23:27:47 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel-com-cpp-e-rust.-explicando-as-noias/</guid><description>Introdução E novamente vamos falar do FKernel, o segundo maior VaporWare da história depois do Microsoft Xenix. Leia mais sobre este assunto neste Post.
-Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.
-Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
-&lt;p>E novamente vamos falar do &lt;a href="https://foxtechworld.github.io/posts/fkernel/">FKernel&lt;/a>, o segundo maior &lt;a href="https://pt.wikipedia.org/wiki/Vaporware">VaporWare&lt;/a> da história depois do Microsoft Xenix. Leia mais sobre este assunto neste &lt;a href="https://foxtechworld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/">Post&lt;/a>.&lt;/p>
-&lt;p>Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/MSDX_XFZ5_A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;p>Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.&lt;/p>
-&lt;p>Dito isso vou apresentar a mudança na ideia do FKernel.&lt;/p>
-&lt;ol>
-&lt;li>Vamos seguir toda a base de um projeto &lt;a href="https://pt.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD&lt;/a> usando obviamente a licença BSD.&lt;/li>
-&lt;li>Vamos substituir &lt;a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)">C&lt;/a> por &lt;a href="https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)">Rust&lt;/a>, mas continuar usando &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a> e &lt;a href="https://pt.wikipedia.org/wiki/NASM">Nasm&lt;/a>.&lt;/li>
-&lt;/ol>
-&lt;p>Sim, parece contraditório como tudo que faço, mas tenho explicações que considero no mínimo convincentes para isso.&lt;/p>
-&lt;h3 id="motivos-de-substituir-c-por-rust">Motivos de substituir C por Rust&lt;/h3>
-&lt;p>Bom, primeiramente vamos entender o motivo da criação do rust. Como muitos já devem ter falado, o rust surgiu como uma forma de substituir o C e dar mais segurança, desempenho e simultaneidade no desenvolvimento de software. E da forma que o compilador Rust foi projetado, também nos dá uma alta proteção a memória.&lt;/p>
-&lt;p>Mas o mesmo não vale para o C++ que possui &lt;a href="https://pt.wikipedia.org/wiki/Ponteiro_inteligente">Smart Pointers&lt;/a> um conceito elegante na programação que torna o C++ que o usa seguro.&lt;/p>
-&lt;h3 id="o-abismo-das-linguagens-seguras">O abismo das linguagens seguras&lt;/h3>
-&lt;p>Existem diversas (e eu generalizo o máximo que posso) diversas linguagens consideradas memory safety:&lt;/p>
-&lt;p>&lt;img src="https://media.licdn.com/dms/image/C4D22AQE4AfrHR6xFpw/feedshare-shrink_800/0/1668175782934?e=2147483647&amp;amp;v=beta&amp;amp;t=10Wki3NSvy6SB2jfcsPgBFUBTcvKHUqV166avbkqXZY" alt="Algumas linguagens memory safety">&lt;/p>
-&lt;p>Essas linguagens como:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)">Ruby&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Swift_(linguagem_de_programa%C3%A7%C3%A3o)">Swift&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Objective-C">Objective-C&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)">Java&lt;/a> / Outras linguagens &lt;a href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual_Java">JVM&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://pt.wikipedia.org/wiki/C_Sharp">C#&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)">Go&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Podem ser consideradas Memory Safety isso pela definição do mesmo:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Segurança da memória (memory safety) é o estado de proteção contra vários bugs de software e vulnerabilidades de segurança ao lidar com o acesso à memória, como estouro de buffer e ponteiros pendentes. Por exemplo, o Java é considerado seguro para a memória porque sua detecção de erro em tempo de execução verifica os limites de array e desreferências de ponteiro. Em contraste, C e C++ permitem aritmética arbitrária de ponteiros com ponteiros implementados como endereços diretos de memória sem provisão para verificação de limites, e, portanto, são potencialmente inseguros para a memória (memory-unsafe).
-&lt;/code>&lt;/pre>&lt;p>Veja que C++ não se enquadrava na definição de memory-safe pela operação arbitraria de ponteiros, coisa que veio mudar com o advento dos Smart pointers.&lt;/p>
-&lt;p>Interessante que os smart pointers são similares ao recurso do &lt;a href="https://en.wikipedia.org/wiki/Automatic_Reference_Counting">ARC&lt;/a> e isso é motivo suficiente para cogitar usar o C++ como linguagem base do FKernel enquanto uso o Rust como uma linguagem secundária (da forma que o &lt;a href="https://en.wikipedia.org/wiki/Linux">Linux&lt;/a> vem fazendo) e isso que Andreas Kling está demostrando ser capaz de fazer em seu projeto &lt;a href="https://en.wikipedia.org/wiki/SerenityOS">SerenityOS&lt;/a>.&lt;/p>
-&lt;p>&lt;a href="https://github.com/SerenityOS/serenity/blob/master/Kernel/Memory/PhysicalRegion.cpp">SerenityOS usando smart pointers no Kernel&lt;/a> além de garantir que a memória não vaze, podemos construir um &amp;ldquo;smart pointer customizado para nosso kernel&amp;rdquo; com centenas de templates que podem agilizar o desenvolvimento.&lt;/p>
-&lt;h3 id="apesar-de-tudo">Apesar de tudo&lt;/h3>
-&lt;p>Apesar de tudo, o kernel se mantém na ideia primária de ser um kernel híbrido pegando um pouco da ideia do &lt;a href="https://pt.wikipedia.org/wiki/XNU">XNU&lt;/a> de misturar BSD/Unix com OpenMach garantindo um sistema mais seguro com mais features que os habituais&lt;/p>
-&lt;h3 id="conclusão">Conclusão&lt;/h3>
-&lt;p>Esse foi um tipo de post que uso para dumpar meu cérebro de ideias e motivos, se este post foi útil para você fico feliz. Ele com certeza foi útil para mim&lt;/p></content:encoded></item><item><title>Como uma AI funciona</title><link>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</link><pubDate>Tue, 20 Feb 2024 09:17:59 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</guid><description>Este post oferece uma visão detalhada da Inteligência Artificial (IA), abordando desde os fundamentos de seu funcionamento até os equívocos comuns sobre a IA. O autor discute tópicos como a abstração na computação, a matemática por trás da IA, a geração de imagens e textos por IA, e a questão de se a arte gerada por IA pode ser considerada arte. O post também inclui uma série de recursos em vídeo para aqueles que desejam aprender mais.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>FoxTechWorld</title><link>https://FoxTechWorld.github.io/posts/</link><description>Posts recentes em FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><item><title>Como uma AI funciona</title><link>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</link><pubDate>Tue, 20 Feb 2024 09:17:59 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-uma-ai-funciona/</guid><description>Este post oferece uma visão detalhada da Inteligência Artificial (IA), abordando desde os fundamentos de seu funcionamento até os equívocos comuns sobre a IA. O autor discute tópicos como a abstração na computação, a matemática por trás da IA, a geração de imagens e textos por IA, e a questão de se a arte gerada por IA pode ser considerada arte. O post também inclui uma série de recursos em vídeo para aqueles que desejam aprender mais.</description><content:encoded>&lt;h3 id="introdução">Introdução&lt;/h3>
 &lt;p>Bem-vindo a mais um post! Hoje, vamos mergulhar no fascinante mundo da Inteligência Artificial (IA), desvendando mitos e explorando seu potencial, especialmente no contexto da criação de arte. Antes de entrarmos no âmago da questão das artes geradas por IA, é crucial desmistificar alguns conceitos errôneos que têm circulado, muitas vezes devido à falta de pesquisa aprofundada sobre o assunto.&lt;/p>
 &lt;p>Entre esses equívocos, destacam-se:&lt;/p>
 &lt;ul>
@@ -1032,4 +996,14 @@ FreeBSD uses a Berkeley license, which has played a big role in its success, par
 &lt;p>Isso é além de portar muitos dos softwares open-source ou convencer devs que aceitarem usar o sistema a fazer o mesmo.&lt;/p>
 &lt;hr>
 &lt;h3 id="conclusão">Conclusão&lt;/h3>
-&lt;p>Esse seria um projeto interessante para se fazer durantes as férias, espero que tenham gostado do post, qualquer dúvida, ideia, crítica ou sugestão deixe nos comentários.&lt;/p></content:encoded></item></channel></rss>
+&lt;p>Esse seria um projeto interessante para se fazer durantes as férias, espero que tenham gostado do post, qualquer dúvida, ideia, crítica ou sugestão deixe nos comentários.&lt;/p></content:encoded></item><item><title/><link>https://FoxTechWorld.github.io/posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/</guid><description>Links para Posts [[/Rant/Rant: do you never be productive]] [[/Tutorial/Como substituir o hamachi no linux para jogar minecraft lan de forma facilitada]] [[/Tips/Meu vscode minimalista]] [[/Tips/Improve your code]] [[/Story/Usando deepin linux no notebook]] [[/Story/Historia dos sistemas operacionais]] [[/Story/Quais problemas o bsd tem]] [[/Plans/Fkernel]] [[/How Works/Como funciona uma ai]] [[/How Works/Como funciona o reator arc]]</description><content:encoded>&lt;h1 id="links-para-posts">Links para Posts&lt;/h1>
+&lt;p>[[/Rant/Rant: do you never be productive]]
+[[/Tutorial/Como substituir o hamachi no linux para jogar minecraft lan de forma facilitada]]
+[[/Tips/Meu vscode minimalista]]
+[[/Tips/Improve your code]]
+[[/Story/Usando deepin linux no notebook]]
+[[/Story/Historia dos sistemas operacionais]]
+[[/Story/Quais problemas o bsd tem]]
+[[/Plans/Fkernel]]
+[[/How Works/Como funciona uma ai]]
+[[/How Works/Como funciona o reator arc]]&lt;/p></content:encoded></item></channel></rss>
