@@ -3,67 +3,68 @@
 &lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
 &lt;hr>
 &lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
-&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
 &lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
 &lt;hr>
 &lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
-&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">
-Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
 &lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
 &lt;hr>
 &lt;h3 id="configurações-em-json">Configurações em Json&lt;/h3>
 &lt;p>O VSCode pode ser configurado graficamente mas eu considero uma perda de tempo, então me acostumei a configura - lo em seu json para deixar pelo menos pré pronto para ser utilizado.&lt;/p>
 &lt;p>Vou mostrar o exemplo completo da configuração e ir explicando aos poucos&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h3 id="configurações-do-window">Configurações do window&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Está configuração define o nível de zoom da janela para &lt;code>200%&lt;/code> isso garante uma tela grande e visível para quem tem uma visão desavantajada como a minha. Mas você pode deixar em &lt;code>1.25 equivalente a 125%&lt;/code> ou &lt;code>1.5 equivalente a 150%&lt;/code>&lt;/p>
 &lt;hr>
 &lt;h3 id="configurações-de-workbench">Configurações de workbench&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do ambiente de trabalho.&lt;/p>
 &lt;ul>
@@ -102,14 +103,14 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;hr>
 &lt;h3 id="configuração-do-breadcrumb">Configuração do breadcrumb&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que as breadcrumbs estão desabilitadas&lt;/p>
 &lt;hr>
 &lt;h3 id="configuração-do-explorer">Configuração do explorer&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>A primeira linha define que as pastas compactadas estão desabilitada&lt;/li>
@@ -118,14 +119,14 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;hr>
 &lt;h3 id="configuração-de-files">Configuração de files&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que os arquivos serão salvos automaticamente após determinado delay&lt;/p>
 &lt;hr>
 &lt;h3 id="configuração-do-terminal-integrado">Configuração do terminal integrado&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>A primeira linha define o tamanho da fonte do terminal integrado para &lt;code>18px&lt;/code>&lt;/li>
@@ -152,7 +153,8 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;li>&lt;strong>Guard Clauses&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Tratamento de erros&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://i.ytimg.com/vi/qgStum-3Y7Q/maxresdefault.jpg" alt="Code Example with Guard Clause">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;hr>
 &lt;h3 id="dry">D.R.Y&lt;/h3>
 &lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">&lt;strong>D.r.y ou Dont Repeat Yourself&lt;/strong>&lt;/a> é um conceito da programação que consiste em dizer que cada porção do conhecimento em um sistema deve possuir uma representação única de autoridade e livre de ambiguidade de forma mais geral.&lt;/p>
@@ -187,18 +189,18 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Isso também significa &amp;ldquo;Não crie funções e funções iguais um idiota&amp;rdquo;.&lt;/p>
 &lt;p>O uso do Dry é considerado uma boa prática na programação por vários motivos:&lt;/p>
 &lt;ul>
-&lt;li>1 - &lt;strong>Manutenção simplificado&lt;/strong>&lt;/li>
-&lt;li>2 - &lt;strong>Legibilidade aprimorada&lt;/strong>&lt;/li>
-&lt;li>3 - &lt;strong>Reusabilidade de Código&lt;/strong>&lt;/li>
-&lt;li>4 - &lt;strong>Consistência no código&lt;/strong>&lt;/li>
-&lt;li>5 - &lt;strong>Facilitação de atualização&lt;/strong>&lt;/li>
-&lt;li>6 - &lt;strong>Redução de código inútil&lt;/strong>&lt;/li>
-&lt;li>7 - &lt;strong>Melhoria na escalabilidade&lt;/strong>&lt;/li>
+&lt;li>1-&lt;strong>Manutenção simplificado&lt;/strong>&lt;/li>
+&lt;li>2-&lt;strong>Legibilidade aprimorada&lt;/strong>&lt;/li>
+&lt;li>3-&lt;strong>Reusabilidade de Código&lt;/strong>&lt;/li>
+&lt;li>4-&lt;strong>Consistência no código&lt;/strong>&lt;/li>
+&lt;li>5-&lt;strong>Facilitação de atualização&lt;/strong>&lt;/li>
+&lt;li>6-&lt;strong>Redução de código inútil&lt;/strong>&lt;/li>
+&lt;li>7-&lt;strong>Melhoria na escalabilidade&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Alguns exemplos são:&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Exemplo 1: Se você tem uma função que realiza uma operação específica em diferentes partes do código, é mais eficiente criar uma função e reutiliza - la sempre que necessário. Isso evita a duplicação de código e a facilita a manutenção.&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Exemplo 2: Se você está lidando com configurações e parâmetros utilizados em várias partes do sistema, seria de bom-tom centraliza - las já que isso evita a necessidade de atualizações repetidas.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 1: Se você tem uma função que realiza uma operação específica em diferentes partes do código, é mais eficiente criar uma função e reutiliza-la sempre que necessário. Isso evita a duplicação de código e a facilita a manutenção.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Exemplo 2: Se você está lidando com configurações e parâmetros utilizados em várias partes do sistema, seria de bom-tom centraliza-las já que isso evita a necessidade de atualizações repetidas.&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Exemplo 3: Se a lógica de tratamento de erros é a mesma em várias partes do código, consolidar essa lógica em um bloco centralizado melhorando consistência.&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Exemplo 4: Em vez de criar funções especificas para cada caso é possível criar funções mais genéricas e parametrizadas.&lt;/strong>&lt;/li>
 &lt;/ul>
@@ -260,14 +262,14 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;li>&lt;strong>Guard Clauses&lt;/strong>: Atua como guarda verificando o código inicialmente para proteger o código.&lt;/li>
 &lt;li>&lt;strong>Early Return&lt;/strong>: É uma prática mais ampla que envolve retornar imediatamente assim que uma condição específica for avaliada como verdadeira.&lt;/li>
 &lt;/ul>
-&lt;p>Resumidamente, ambos são uma forma de implementar **Early Return, porém &lt;strong>Guard Clauses&lt;/strong> envolve mais a condição do que o retorno em si. Enquanto &lt;strong>Early Return&lt;/strong> envolve mais o retorno que a condição&lt;/p>
+&lt;p>Resumidamente, ambos são uma forma de implementar **Early Return, porém &lt;strong>Guard Clauses&lt;/strong> envolve mais a condição do que o retorno em si. Enquanto **Early Return** envolve mais o retorno que a condição&lt;/p>
 &lt;h5 id="código-sem-guard-clauses">Código sem Guard Clauses&lt;/h5>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Code without Guard Clauses&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_discount&lt;/span>(price, discount_rate)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> price &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Price should be greater than zero.&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price &lt;span style="color:#f92672">-&lt;/span> (price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price&lt;span style="color:#f92672">-&lt;/span>(price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Discounted price: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>discounted_price&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">end&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
@@ -279,7 +281,7 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">calculate_discount&lt;/span>(price, discount_rate)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> puts &lt;span style="color:#e6db74">&amp;#34;Error: Price should be greater than zero.&amp;#34;&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> price &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price &lt;span style="color:#f92672">-&lt;/span> (price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> discounted_price &lt;span style="color:#f92672">=&lt;/span> price&lt;span style="color:#f92672">-&lt;/span>(price &lt;span style="color:#f92672">*&lt;/span> discount_rate &lt;span style="color:#f92672">/&lt;/span> &lt;span style="color:#ae81ff">100&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts &lt;span style="color:#e6db74">&amp;#34;Discounted price: &lt;/span>&lt;span style="color:#e6db74">#{&lt;/span>discounted_price&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">end&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -293,11 +295,7 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;li>&lt;strong>Lógica simplificada&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Facilidade na manutenção&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;p>Exemplo:
-- &lt;strong>Ao lidar com situações especiais no início da função, o fluxo principal do código se torna mais claro e fácil de entender&lt;/strong>
-- &lt;strong>Evita a execução desnecessária de blocos de códigos melhorando eficiência&lt;/strong>
-- &lt;strong>Simplifica a lógica do código, pois as condições são tratadas antecipadamente&lt;/strong>
-- &lt;strong>Cria funções concisas e focadas, facilitando a manutenção e reduzindo a complexidade do código&lt;/strong>&lt;/p>
+&lt;p>Exemplo:-&lt;strong>Ao lidar com situações especiais no início da função, o fluxo principal do código se torna mais claro e fácil de entender&lt;/strong>-&lt;strong>Evita a execução desnecessária de blocos de códigos melhorando eficiência&lt;/strong>-&lt;strong>Simplifica a lógica do código, pois as condições são tratadas antecipadamente&lt;/strong>-&lt;strong>Cria funções concisas e focadas, facilitando a manutenção e reduzindo a complexidade do código&lt;/strong>&lt;/p>
 &lt;hr>
 &lt;h3 id="tratamento-de-erros">Tratamento de erros&lt;/h3>
 &lt;p>Além das boas práticas citadas anteriormente, o tratamento de erros é crucial para o desenvolvimento de um código robusto e confiável. Lidando com situações inesperadas e garantindo que o programa possa lidar com elas de maneira adequada, evitando falhas catastróficas.&lt;/p>
@@ -347,15 +345,11 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel&lt;/a> moderno para a &lt;a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64&lt;/a> em &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>.&lt;/p>
 &lt;p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.&lt;/p>
 &lt;p>Com uma incrível capacidade de adaptação como o &lt;a href="https://pt.wikipedia.org/wiki/MINIX">MINIX&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH&lt;/a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/1280px-Kernel-hybrid.svg.png" alt="Diagrama de um kernel hibrido">&lt;/p>
-&lt;h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis&lt;/h3>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;ul>
-&lt;li>
-&lt;p>&lt;em>&lt;strong>Especificidade de Arquitetura&lt;/strong>&lt;/em>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;em>&lt;strong>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/strong>&lt;/em>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/p>
-&lt;/li>
+&lt;li>&lt;strong>&lt;em>Especificidade de Arquitetura&lt;/em>&lt;/strong>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/li>
+&lt;li>&lt;strong>&lt;em>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/em>&lt;/strong>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Driver Interface&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Enum para representar o estado do driver
@@ -414,70 +408,70 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;h3 id="alguns-recursos-monoliticamente-instalados-do-fkernel">Alguns recursos monoliticamente instalados do FKernel&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Sistemas de Módulos internos&lt;/strong>&lt;/em>: Os drivers / Filesystem seriam instalados como servidores / módulos do Kernel, podendo expandir sem necessariamente afetar o código-fonte atual do kernel.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Sistemas de Módulos internos&lt;/em>&lt;/strong>: Os drivers / Filesystem seriam instalados como servidores / módulos do Kernel, podendo expandir sem necessariamente afetar o código-fonte atual do kernel.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>ZRam&lt;/strong>&lt;/em>: Uso de uma RAM comprimida para aumentar a eficiência do gerenciamento de memória.&lt;/p>
+&lt;p>&lt;strong>&lt;em>ZRam&lt;/em>&lt;/strong>: Uso de uma RAM comprimida para aumentar a eficiência do gerenciamento de memória.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>ZSwap&lt;/strong>&lt;/em>: Uso de uma Swap comprimida para aumentar a eficiência do gerenciamento de memória, além de habilitar por padrão o suporte ao hibernar do computador.&lt;/p>
+&lt;p>&lt;strong>&lt;em>ZSwap&lt;/em>&lt;/strong>: Uso de uma Swap comprimida para aumentar a eficiência do gerenciamento de memória, além de habilitar por padrão o suporte ao hibernar do computador.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Preload / Prelink&lt;/strong>&lt;/em>: Suporte a estrutura do &lt;a href="https://en.wikipedia.org/wiki/Preload_(software)">preload&lt;/a> ao nível de kernel junto do &lt;a href="https://en.wikipedia.org/wiki/Prelink">prelink&lt;/a>&lt;/p>
+&lt;p>&lt;strong>&lt;em>Preload / Prelink&lt;/em>&lt;/strong>: Suporte a estrutura do &lt;a href="https://en.wikipedia.org/wiki/Preload_(software)">preload&lt;/a> ao nível de kernel junto do &lt;a href="https://en.wikipedia.org/wiki/Prelink">prelink&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>VKerneis&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Vkernel">virtual kerneis (DragonFlyBSD)&lt;/a> para debug, testes no kernel ou mesmo uso de Jails.&lt;/p>
+&lt;p>&lt;strong>&lt;em>VKerneis&lt;/em>&lt;/strong>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Vkernel">virtual kerneis (DragonFlyBSD)&lt;/a> para debug, testes no kernel ou mesmo uso de Jails.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>DTrace&lt;/strong>&lt;/em>: Suporte ao &lt;a href="https://en.wikipedia.org/wiki/DTrace">DTrace do Solaris&lt;/a> junto ao uso de &lt;a href="https://computersciencewiki.org/index.php/Policies">politicies / políticas&lt;/a> para melhorar o desempenho / funcionamento do sistema operacional.&lt;/p>
+&lt;p>&lt;strong>&lt;em>DTrace&lt;/em>&lt;/strong>: Suporte ao &lt;a href="https://en.wikipedia.org/wiki/DTrace">DTrace do Solaris&lt;/a> junto ao uso de &lt;a href="https://computersciencewiki.org/index.php/Policies">politicies / políticas&lt;/a> para melhorar o desempenho / funcionamento do sistema operacional.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>CGroups&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Cgroups">cgroups&lt;/a> para controlar processos granuladamente dentro do kernel, com as políticas sendo utilizadas para que o kernel não precise usar o &lt;a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM&lt;/a> instantaneamente.&lt;/p>
+&lt;p>&lt;strong>&lt;em>CGroups&lt;/em>&lt;/strong>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Cgroups">cgroups&lt;/a> para controlar processos granuladamente dentro do kernel, com as políticas sendo utilizadas para que o kernel não precise usar o &lt;a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM&lt;/a> instantaneamente.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Namespace&lt;/strong>&lt;/em>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Namespace">Namespace&lt;/a> para adicionar suporte ao &lt;a href="https://en.wikipedia.org/wiki/Open_Container_Initiative">OCI&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Namespace&lt;/em>&lt;/strong>: Uso de &lt;a href="https://en.wikipedia.org/wiki/Namespace">Namespace&lt;/a> para adicionar suporte ao &lt;a href="https://en.wikipedia.org/wiki/Open_Container_Initiative">OCI&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Jails&lt;/strong>&lt;/em>: Suporte a uma versão customizada do &lt;a href="https://en.wikipedia.org/wiki/FreeBSD_jail">Jails de FreeBSD&lt;/a> usando o &lt;strong>VKernel&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Jails&lt;/em>&lt;/strong>: Suporte a uma versão customizada do &lt;a href="https://en.wikipedia.org/wiki/FreeBSD_jail">Jails de FreeBSD&lt;/a> usando o &lt;strong>VKernel&lt;/strong>.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h3 id="hypervisors-monoliticamente-instalados-no-fkernel">Hypervisors Monoliticamente instalados no FKernel&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Kvm&lt;/strong>&lt;/em>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">para virtualização KVM&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Kvm&lt;/em>&lt;/strong>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">para virtualização KVM&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Xen&lt;/strong>&lt;/em>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Xen">para virtualização XEN&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Xen&lt;/em>&lt;/strong>: Suporte ao driver de &lt;a href="https://en.wikipedia.org/wiki/Xen">para virtualização XEN&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h3 id="formatos-de-arquivos-monoliticamente-instalados-no-fkernel">Formatos de Arquivos Monoliticamente instalados no FKernel&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Suporte ao Formato de Arquivos Unix: ELF&lt;/strong>&lt;/em>: Planejo adicionar um suporte básico ao &lt;a href="https://pt.wikipedia.org/wiki/Executable_and_Linkable_Format">formato ELF&lt;/a> de forma monolítica no Kernel.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Suporte ao Formato de Arquivos Unix: ELF&lt;/em>&lt;/strong>: Planejo adicionar um suporte básico ao &lt;a href="https://pt.wikipedia.org/wiki/Executable_and_Linkable_Format">formato ELF&lt;/a> de forma monolítica no Kernel.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Suporte ao Formato de Arquivos Mach-O&lt;/strong>&lt;/em>: Planejo adicionar suporte básico ao &lt;a href="https://en.wikipedia.org/wiki/Mach-O">formato de arquivos Mach-O&lt;/a> de forma monolítica no Kernel.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Suporte ao Formato de Arquivos Mach-O&lt;/em>&lt;/strong>: Planejo adicionar suporte básico ao &lt;a href="https://en.wikipedia.org/wiki/Mach-O">formato de arquivos Mach-O&lt;/a> de forma monolítica no Kernel.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h3 id="sistema-de-arquivos-monoliticamente-instalados-do-fkernel">Sistema de Arquivos Monoliticamente instalados do FKernel&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT&lt;/a>&lt;/strong>&lt;/em>: Como um filesystem simples, e contendo uma especificação aberta, seria uma boa opção deixar o Kernel poder usar este filesystem como uma opção.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT&lt;/a>&lt;/em>&lt;/strong>: Como um filesystem simples, e contendo uma especificação aberta, seria uma boa opção deixar o Kernel poder usar este filesystem como uma opção.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/Unix_File_System">UFS&lt;/a>&lt;/strong>&lt;/em>: Como um filesystem padrão em sistema Unix Like, este seria um bom filesystem para ser utilizado como padrão em desktop e afins.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/Unix_File_System">UFS&lt;/a>&lt;/em>&lt;/strong>: Como um filesystem padrão em sistema Unix Like, este seria um bom filesystem para ser utilizado como padrão em desktop e afins.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/ExFAT">EXFAT&lt;/a>&lt;/strong>&lt;/em>: Esse é um filesystem que pode ser utilizado para compartilhar arquivos entre sistemas operacionais.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/ExFAT">EXFAT&lt;/a>&lt;/em>&lt;/strong>: Esse é um filesystem que pode ser utilizado para compartilhar arquivos entre sistemas operacionais.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;em>&lt;strong>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/F2FS">F2FS&lt;/a>&lt;/strong>&lt;/em>. Este é um filesystem interessante para ser utilizado em SSD&amp;rsquo;s / SSD&amp;rsquo;s NVME.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Suporte ao Sistema de Arquivos: &lt;a href="https://en.wikipedia.org/wiki/F2FS">F2FS&lt;/a>&lt;/em>&lt;/strong>. Este é um filesystem interessante para ser utilizado em SSD&amp;rsquo;s / SSD&amp;rsquo;s NVME.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>Está é uma categoria que eu chamo de sistemas de arquivos **Reais,ou seja,a está literalmente trabalhando com seus arquivos, mas tem uma subcategoria chamada sistemas de arquivos &lt;strong>Virtuais&lt;/strong> ou &lt;strong>Falsos&lt;/strong>.&lt;/p>
+&lt;p>Está é uma categoria que eu chamo de sistemas de arquivos **Reais,ou seja,a está literalmente trabalhando com seus arquivos, mas tem uma subcategoria chamada sistemas de arquivos &lt;strong>Virtuais&lt;/strong> ou **Falsos**.&lt;/p>
 &lt;p>Aqui é escusado explicar em detalhes, mas deixo uma visão geral. Da mesma forma que alguns sistemas de arquivos trabalham em armazenamento de dados, outros funcionam mostrando seus dados em arquivos virtuais aka &lt;a href="https://pt.wikipedia.org/wiki/Sysfs">&lt;em>SysFS&lt;/em>&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Arquivo_de_dispositivo">&lt;em>DevFS&lt;/em>&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/TMPFS">&lt;em>TmpFS&lt;/em>&lt;/a>. Eles também serão inclusos no FKernel junto de outros sistemas como &lt;em>9p&lt;/em>, &lt;em>SSHFS&lt;/em>, &lt;em>UnionFS&lt;/em>, *OverlayFS&amp;hellip; De forma monolítica&lt;/p>
 &lt;hr>
 &lt;h3 id="atraindo-pessoas-para-o-fkernel">Atraindo pessoas para o FKernel&lt;/h3>

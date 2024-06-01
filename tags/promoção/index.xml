@@ -7,7 +7,8 @@ FreeBSD uses a Berkeley license, which has played a big role in its success, par
 &lt;/code>&lt;/pre>&lt;p>Isso significa que o código do BSD foi feito para ser modificado, recriado, adaptado e sua licença permissiva garante que você é responsável por qualquer decisão que tomar inclusive fechar o código se assim desejar.&lt;/p>
 &lt;p>Também cria uma faca de dois gumes, pois segundo o &lt;a href="https://docs.freebsd.org/en/books/handbook/">Handbook do FreeBSD&lt;/a> e o &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/">Docs do FreeBSD&lt;/a> equivalente a &lt;a href="https://wiki.archlinux.org">ArchWiki&lt;/a> no mundo Linux e uma leitura muito recomendada, existem alguns motivos para o FreeBSD não ser adotado por uma imersa comunidade.&lt;/p>
 &lt;p>Hoje quero apresentar esses problemas e algumas resoluções.&lt;/p>
-&lt;p>&lt;img src="https://img.youtube.com/vi/NM0oou1KYY8/maxresdefault.jpg" alt="Example of BSD">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;hr>
 &lt;h3 id="motivos-para-os-bsd-não-serem-tão-usados-ou-tão-populares-quanto-o-linux">Motivos para os BSD não serem tão usados ou tão populares quanto o linux&lt;/h3>
 &lt;p>Existe uma série de resoluções, mas os principais que este &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/#why-is-bsd-not-better-known">post&lt;/a> cita são:&lt;/p>

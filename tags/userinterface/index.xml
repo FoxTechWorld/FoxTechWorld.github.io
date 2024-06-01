@@ -3,67 +3,68 @@
 &lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
 &lt;hr>
 &lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
-&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
 &lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
 &lt;hr>
 &lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
-&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">
-Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
 &lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
 &lt;hr>
 &lt;h3 id="configurações-em-json">Configurações em Json&lt;/h3>
 &lt;p>O VSCode pode ser configurado graficamente mas eu considero uma perda de tempo, então me acostumei a configura - lo em seu json para deixar pelo menos pré pronto para ser utilizado.&lt;/p>
 &lt;p>Vou mostrar o exemplo completo da configuração e ir explicando aos poucos&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.lineHeight&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">1.3&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.rulers&amp;#34;&lt;/span>: [&lt;span style="color:#ae81ff">80&lt;/span>, &lt;span style="color:#ae81ff">200&lt;/span>],
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.renderLineHighlight&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gutter&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.fontLigatures&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.semanticHighlighting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.vertical&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;editor.scrollbar.horizontal&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;h3 id="configurações-do-window">Configurações do window&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;window.zoomLevel&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">2&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Está configuração define o nível de zoom da janela para &lt;code>200%&lt;/code> isso garante uma tela grande e visível para quem tem uma visão desavantajada como a minha. Mas você pode deixar em &lt;code>1.25 equivalente a 125%&lt;/code> ou &lt;code>1.5 equivalente a 150%&lt;/code>&lt;/p>
 &lt;hr>
 &lt;h3 id="configurações-de-workbench">Configurações de workbench&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.iconTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;material-icon-theme&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.colorTheme&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Mr Robot&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.startupEditor&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;newUntitledFile&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.editor.labelFormat&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;short&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.activityBar.location&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;hidden&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.statusBar.visible&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;workbench.layoutControl.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essas são as linhas de configuração do ambiente de trabalho.&lt;/p>
 &lt;ul>
@@ -102,14 +103,14 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;hr>
 &lt;h3 id="configuração-do-breadcrumb">Configuração do breadcrumb&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;breadcrumbs.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que as breadcrumbs estão desabilitadas&lt;/p>
 &lt;hr>
 &lt;h3 id="configuração-do-explorer">Configuração do explorer&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.compactFolders&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;explorer.fileNesting.enabled&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>A primeira linha define que as pastas compactadas estão desabilitada&lt;/li>
@@ -118,14 +119,14 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;hr>
 &lt;h3 id="configuração-de-files">Configuração de files&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;files.autoSave&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;afterDelay&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Define que os arquivos serão salvos automaticamente após determinado delay&lt;/p>
 &lt;hr>
 &lt;h3 id="configuração-do-terminal-integrado">Configuração do terminal integrado&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;terminal.integrated.fontFamily&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;FiraCode Nerd Font Mono, Hack Nerd Font Mono, Monospace&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>A primeira linha define o tamanho da fonte do terminal integrado para &lt;code>18px&lt;/code>&lt;/li>
@@ -147,11 +148,14 @@ Novamente, este não é o icon theme mais minimalista que posso encontrar, e sin
 &lt;p>E hoje estou usando a famosa distribuição chinesa &lt;a href="https://pt.wikipedia.org/wiki/Deepin">Deepin Linux&lt;/a>.&lt;/p>
 &lt;hr>
 &lt;h3 id="o-que-é-o-deepin">O que é o Deepin&lt;/h3>
-&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Deepin_15.4_with_Wikimedia_wallpaper.png/1200px-Deepin_15.4_with_Wikimedia_wallpaper.png?20170723030618" alt="Imagem do Deepin">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;p>A distribuição Deepin é baseada no &lt;a href="https://pt.wikipedia.org/wiki/Debian">Debian&lt;/a> e apresenta uma interface própria chamada &lt;em>D.D.E&lt;/em> ou &lt;em>Deepin Desktop Enviroment&lt;/em> além de um acervo completo de aplicações próprias sendo desenvolvida pela empresa &lt;em>Wuhan Deepin Technology Company Limited&lt;/em> localizada em Wuhan na China.&lt;/p>
 &lt;p>Deepin também é famoso por ser um dos ambientes linux mais bonitos estando par a par com Gnome&lt;/p>
-&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/OpenSUSE_Leap_15.4_GNOME_Applications_en.png/1200px-OpenSUSE_Leap_15.4_GNOME_Applications_en.png?20221118094319" alt="GNOME"> e KDE.&lt;!-- raw HTML omitted -->
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/KDE-Desktop-5.jpg" alt="KDE">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;p>Essa distribuição linux apesar de alguns reveses que encontrei pode ser considerada perfeita em muitos níveis para uso em notebooks.&lt;/p>
 &lt;p>Primeiramente, se você quer um sistema atualizado e mais instável, esse sistema pode não servir para você, neste caso especifico, o Manjaro pode servir bem como sua escolha padrão.&lt;/p>
 &lt;p>Em segundo lugar, se você é muito iniciante no mundo Linux, este também não serve muito bem como um &lt;em>Sistema Inicial&lt;/em>, você ainda vai precisar aprender um pouco a sentar a bunda na cadeira e usar o &lt;em>Google&lt;/em> para solucionar problemas que você vai encontrar, e acredite com toda certeza você vai precisar.&lt;/p>
