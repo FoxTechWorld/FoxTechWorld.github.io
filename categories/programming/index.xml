@@ -3,14 +3,12 @@
 &lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
 &lt;hr>
 &lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
 &lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
 &lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
 &lt;hr>
 &lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">&lt;/p>
 &lt;p>Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
 &lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
 &lt;hr>
@@ -153,8 +151,7 @@
 &lt;li>&lt;strong>Guard Clauses&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Tratamento de erros&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://i.ytimg.com/vi/qgStum-3Y7Q/maxresdefault.jpg" alt="Code Example with Guard Clause">&lt;/p>
 &lt;hr>
 &lt;h3 id="dry">D.R.Y&lt;/h3>
 &lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">&lt;strong>D.r.y ou Dont Repeat Yourself&lt;/strong>&lt;/a> é um conceito da programação que consiste em dizer que cada porção do conhecimento em um sistema deve possuir uma representação única de autoridade e livre de ambiguidade de forma mais geral.&lt;/p>
@@ -345,8 +342,8 @@
 &lt;p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel&lt;/a> moderno para a &lt;a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64&lt;/a> em &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>.&lt;/p>
 &lt;p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.&lt;/p>
 &lt;p>Com uma incrível capacidade de adaptação como o &lt;a href="https://pt.wikipedia.org/wiki/MINIX">MINIX&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH&lt;/a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido&lt;/a>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/1280px-Kernel-hybrid.svg.png" alt="Diagrama de um kernel hibrido">&lt;/p>
+&lt;h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>&lt;em>Especificidade de Arquitetura&lt;/em>&lt;/strong>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/li>
 &lt;li>&lt;strong>&lt;em>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/em>&lt;/strong>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/li>

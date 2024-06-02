@@ -8,8 +8,7 @@
 &lt;li>&lt;strong>Guard Clauses&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Tratamento de erros&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://i.ytimg.com/vi/qgStum-3Y7Q/maxresdefault.jpg" alt="Code Example with Guard Clause">&lt;/p>
 &lt;hr>
 &lt;h3 id="dry">D.R.Y&lt;/h3>
 &lt;p>&lt;a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">&lt;strong>D.r.y ou Dont Repeat Yourself&lt;/strong>&lt;/a> é um conceito da programação que consiste em dizer que cada porção do conhecimento em um sistema deve possuir uma representação única de autoridade e livre de ambiguidade de forma mais geral.&lt;/p>

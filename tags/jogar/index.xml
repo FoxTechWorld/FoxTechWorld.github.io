@@ -3,14 +3,11 @@
 &lt;p>E hoje estou usando a famosa distribuição chinesa &lt;a href="https://pt.wikipedia.org/wiki/Deepin">Deepin Linux&lt;/a>.&lt;/p>
 &lt;hr>
 &lt;h3 id="o-que-é-o-deepin">O que é o Deepin&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Deepin_15.4_with_Wikimedia_wallpaper.png/1200px-Deepin_15.4_with_Wikimedia_wallpaper.png?20170723030618" alt="Imagem do Deepin">&lt;/p>
 &lt;p>A distribuição Deepin é baseada no &lt;a href="https://pt.wikipedia.org/wiki/Debian">Debian&lt;/a> e apresenta uma interface própria chamada &lt;em>D.D.E&lt;/em> ou &lt;em>Deepin Desktop Enviroment&lt;/em> além de um acervo completo de aplicações próprias sendo desenvolvida pela empresa &lt;em>Wuhan Deepin Technology Company Limited&lt;/em> localizada em Wuhan na China.&lt;/p>
 &lt;p>Deepin também é famoso por ser um dos ambientes linux mais bonitos estando par a par com Gnome&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/OpenSUSE_Leap_15.4_GNOME_Applications_en.png/1200px-OpenSUSE_Leap_15.4_GNOME_Applications_en.png?20221118094319" alt="GNOME"> &amp;mdash;&amp;gt; e KDE.&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/KDE-Desktop-5.jpg" alt="KDE">&lt;/p>
 &lt;p>Essa distribuição linux apesar de alguns reveses que encontrei pode ser considerada perfeita em muitos níveis para uso em notebooks.&lt;/p>
 &lt;p>Primeiramente, se você quer um sistema atualizado e mais instável, esse sistema pode não servir para você, neste caso especifico, o Manjaro pode servir bem como sua escolha padrão.&lt;/p>
 &lt;p>Em segundo lugar, se você é muito iniciante no mundo Linux, este também não serve muito bem como um &lt;em>Sistema Inicial&lt;/em>, você ainda vai precisar aprender um pouco a sentar a bunda na cadeira e usar o &lt;em>Google&lt;/em> para solucionar problemas que você vai encontrar, e acredite com toda certeza você vai precisar.&lt;/p>
@@ -48,8 +45,7 @@ Pode ser pela versão antiga do flatpak mas a instalação da &lt;a href="https:
 &lt;p>Caso você já tenha algum tempo na estrada resolvendo e entendendo problemas linux. O Deepin pode vir a ser a solução que você procurava como sistema operacional de Notebook.&lt;/p></content:encoded></item><item><title>Como Substituir O Hamachi No Linux Para Jogar Minecraft Lan De Forma Facilitada</title><link>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</link><pubDate>Sat, 11 Nov 2023 20:09:05 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</guid><description>Este post apresenta alternativas ao Hamachi no Linux para facilitar a jogabilidade de Minecraft em LAN. O Hamachi, um aplicativo para Windows, simula uma rede local para conexões fáceis em jogos. Duas soluções são discutidas: o Ngrok, um proxy reverso global que suporta HTTP/TLS e TCP; e o Localtunnel, uma opção mais aberta com menos configurações. Ambas permitem a conexão entre amigos para jogar Minecraft em LAN, oferecendo opções personalizadas para diferentes preferências.</description><content:encoded>&lt;p>Como substituir o hamachi no linux para jogar minecraft LAN de forma facilitada&lt;/p>
 &lt;hr>
 &lt;h3 id="o-que-é-hamachi">O que é hamachi&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Hamachisoftware.png" alt="App Hamachi sendo executado">&lt;/p>
 &lt;p>Se você já quis jogar num mundo survival com amigos, provavelmente já usou o hamachi que é um aplicativo para Windows que serve principalmente para que simula uma rede local ou &lt;strong>L&lt;/strong>ocal &lt;strong>A&lt;/strong>rea &lt;strong>N&lt;/strong>etwork permitindo que pessoas se conectem de forma facilitada imitando LAN e é normalmente é utilizada para jogos no:&lt;/p>
 &lt;ul>
 &lt;li>FreeBSD&lt;/li>

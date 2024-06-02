@@ -3,14 +3,12 @@
 &lt;p>Ele é customizável e é esse o foco do post de hoje, vou mostrar como costumo fazer minhas modificações no VSCode&lt;/p>
 &lt;hr>
 &lt;h3 id="tema-mr-robot">Tema: Mr Robot&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://vscodethemes.com/e/th3g3ntl3man.mrrobot/mr-robot.svg?language=javascript" alt="Mr Robot">&lt;/p>
 &lt;p>Este é o tema padrão que venho usando no meu VSCode não por ser simples e bonito com poucas cores para confundir. Este tema me atrai visualmente, porque ele não força minha visão.&lt;/p>
 &lt;p>Não existe muito que eu possa dizer sobre esse tema, ele é simples e eu gosto assim&lt;/p>
 &lt;hr>
 &lt;h3 id="icon-theme-material-icon-theme">Icon Theme: Material Icon Theme&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://repository-images.githubusercontent.com/67831372/23a66080-b0ef-11ea-83cc-0ab232ccf83a" alt="Material Icon Theme">&lt;/p>
 &lt;p>Novamente, este não é o icon theme mais minimalista que posso encontrar, e sinceramente o mínimo que eu procuro é algo que entregue rapidamente a informação que busco.&lt;/p>
 &lt;p>Então considero muito válido o uso do mesmo em usa praticidade.&lt;/p>
 &lt;hr>
@@ -146,8 +144,7 @@
 &lt;p>Não chega a ser um &lt;a href="https://pt.wikipedia.org/wiki/Vim">vim&lt;/a>/&lt;a href="https://wiki.archlinux.org/title/Neovim_(Portugu%C3%AAs)">neovim&lt;/a> mas está bem customizado pra longas horas de digitação com o minimo de recursos atrapalhando na tela. Tornando assim o nosso editor, distraction free&lt;/p></content:encoded></item><item><title>Como Substituir O Hamachi No Linux Para Jogar Minecraft Lan De Forma Facilitada</title><link>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</link><pubDate>Sat, 11 Nov 2023 20:09:05 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</guid><description>Este post apresenta alternativas ao Hamachi no Linux para facilitar a jogabilidade de Minecraft em LAN. O Hamachi, um aplicativo para Windows, simula uma rede local para conexões fáceis em jogos. Duas soluções são discutidas: o Ngrok, um proxy reverso global que suporta HTTP/TLS e TCP; e o Localtunnel, uma opção mais aberta com menos configurações. Ambas permitem a conexão entre amigos para jogar Minecraft em LAN, oferecendo opções personalizadas para diferentes preferências.</description><content:encoded>&lt;p>Como substituir o hamachi no linux para jogar minecraft LAN de forma facilitada&lt;/p>
 &lt;hr>
 &lt;h3 id="o-que-é-hamachi">O que é hamachi&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Hamachisoftware.png" alt="App Hamachi sendo executado">&lt;/p>
 &lt;p>Se você já quis jogar num mundo survival com amigos, provavelmente já usou o hamachi que é um aplicativo para Windows que serve principalmente para que simula uma rede local ou &lt;strong>L&lt;/strong>ocal &lt;strong>A&lt;/strong>rea &lt;strong>N&lt;/strong>etwork permitindo que pessoas se conectem de forma facilitada imitando LAN e é normalmente é utilizada para jogos no:&lt;/p>
 &lt;ul>
 &lt;li>FreeBSD&lt;/li>

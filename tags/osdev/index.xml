@@ -122,14 +122,11 @@ Tradução Tl;Dr Ter swap é uma parte razoavelmente importante de um sistema qu
 &lt;p>E hoje estou usando a famosa distribuição chinesa &lt;a href="https://pt.wikipedia.org/wiki/Deepin">Deepin Linux&lt;/a>.&lt;/p>
 &lt;hr>
 &lt;h3 id="o-que-é-o-deepin">O que é o Deepin&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Deepin_15.4_with_Wikimedia_wallpaper.png/1200px-Deepin_15.4_with_Wikimedia_wallpaper.png?20170723030618" alt="Imagem do Deepin">&lt;/p>
 &lt;p>A distribuição Deepin é baseada no &lt;a href="https://pt.wikipedia.org/wiki/Debian">Debian&lt;/a> e apresenta uma interface própria chamada &lt;em>D.D.E&lt;/em> ou &lt;em>Deepin Desktop Enviroment&lt;/em> além de um acervo completo de aplicações próprias sendo desenvolvida pela empresa &lt;em>Wuhan Deepin Technology Company Limited&lt;/em> localizada em Wuhan na China.&lt;/p>
 &lt;p>Deepin também é famoso por ser um dos ambientes linux mais bonitos estando par a par com Gnome&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/OpenSUSE_Leap_15.4_GNOME_Applications_en.png/1200px-OpenSUSE_Leap_15.4_GNOME_Applications_en.png?20221118094319" alt="GNOME"> &amp;mdash;&amp;gt; e KDE.&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/KDE-Desktop-5.jpg" alt="KDE">&lt;/p>
 &lt;p>Essa distribuição linux apesar de alguns reveses que encontrei pode ser considerada perfeita em muitos níveis para uso em notebooks.&lt;/p>
 &lt;p>Primeiramente, se você quer um sistema atualizado e mais instável, esse sistema pode não servir para você, neste caso especifico, o Manjaro pode servir bem como sua escolha padrão.&lt;/p>
 &lt;p>Em segundo lugar, se você é muito iniciante no mundo Linux, este também não serve muito bem como um &lt;em>Sistema Inicial&lt;/em>, você ainda vai precisar aprender um pouco a sentar a bunda na cadeira e usar o &lt;em>Google&lt;/em> para solucionar problemas que você vai encontrar, e acredite com toda certeza você vai precisar.&lt;/p>
@@ -168,8 +165,8 @@ Pode ser pela versão antiga do flatpak mas a instalação da &lt;a href="https:
 &lt;p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel&lt;/a> moderno para a &lt;a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64&lt;/a> em &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>.&lt;/p>
 &lt;p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.&lt;/p>
 &lt;p>Com uma incrível capacidade de adaptação como o &lt;a href="https://pt.wikipedia.org/wiki/MINIX">MINIX&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH&lt;/a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido&lt;/a>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/1280px-Kernel-hybrid.svg.png" alt="Diagrama de um kernel hibrido">&lt;/p>
+&lt;h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>&lt;em>Especificidade de Arquitetura&lt;/em>&lt;/strong>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/li>
 &lt;li>&lt;strong>&lt;em>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/em>&lt;/strong>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/li>
@@ -321,8 +318,7 @@ FreeBSD uses a Berkeley license, which has played a big role in its success, par
 &lt;/code>&lt;/pre>&lt;p>Isso significa que o código do BSD foi feito para ser modificado, recriado, adaptado e sua licença permissiva garante que você é responsável por qualquer decisão que tomar inclusive fechar o código se assim desejar.&lt;/p>
 &lt;p>Também cria uma faca de dois gumes, pois segundo o &lt;a href="https://docs.freebsd.org/en/books/handbook/">Handbook do FreeBSD&lt;/a> e o &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/">Docs do FreeBSD&lt;/a> equivalente a &lt;a href="https://wiki.archlinux.org">ArchWiki&lt;/a> no mundo Linux e uma leitura muito recomendada, existem alguns motivos para o FreeBSD não ser adotado por uma imersa comunidade.&lt;/p>
 &lt;p>Hoje quero apresentar esses problemas e algumas resoluções.&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://img.youtube.com/vi/NM0oou1KYY8/maxresdefault.jpg" alt="Example of BSD">&lt;/p>
 &lt;hr>
 &lt;h3 id="motivos-para-os-bsd-não-serem-tão-usados-ou-tão-populares-quanto-o-linux">Motivos para os BSD não serem tão usados ou tão populares quanto o linux&lt;/h3>
 &lt;p>Existe uma série de resoluções, mas os principais que este &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/#why-is-bsd-not-better-known">post&lt;/a> cita são:&lt;/p>

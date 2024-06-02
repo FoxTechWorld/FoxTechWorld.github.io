@@ -2,8 +2,8 @@
 &lt;p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel&lt;/a> moderno para a &lt;a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64&lt;/a> em &lt;a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++&lt;/a>.&lt;/p>
 &lt;p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.&lt;/p>
 &lt;p>Com uma incrível capacidade de adaptação como o &lt;a href="https://pt.wikipedia.org/wiki/MINIX">MINIX&lt;/a> / &lt;a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH&lt;/a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido&lt;/a>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/1280px-Kernel-hybrid.svg.png" alt="Diagrama de um kernel hibrido">&lt;/p>
+&lt;h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>&lt;em>Especificidade de Arquitetura&lt;/em>&lt;/strong>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.&lt;/li>
 &lt;li>&lt;strong>&lt;em>Facilidade de Desenvolvimento de Drivers / Filesystem&lt;/em>&lt;/strong>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.&lt;/li>
@@ -152,16 +152,14 @@
 &lt;p>Atualmente precisamos de sistemas operacionais para interfacear todo o hardware ter funcionalidades mais complexas, como segurança , funções como envio de email, abrir navegadores &amp;hellip; etc. Coisa que é virtualmente impossível (pode ser possível mais é mais trabalhosos para quem se dispõe a tentar). Enfim, eu tenho minha propria concepção de tentativa de um osdev que planejo começar no futuro.&lt;/p>
 &lt;p>A única coisa que posso dizer dessa minha concepção é que ela segue mais pro &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">lado híbrido&lt;/a> do que o &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_monol%C3%ADtico">lado monolítico&lt;/a>, e usa mais &lt;a href="https://pt.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD&lt;/a> do que código próprio &lt;a href="https://pt.wikipedia.org/wiki/XNU">XNU&lt;/a>.&lt;/p>
 &lt;p>Para entender isso melhor vamos estudar sobre os sistemas operacionais e essa lista.&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Unix_history-simple.svg/1280px-Unix_history-simple.svg.png" alt="Unix History">&lt;/p>
 &lt;hr>
 &lt;h3 id="começo-da-história">Começo da história&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>1969: UNIX&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Disponivel. Software Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Man-man.png/250px-Man-man.png" alt="Unix Operating System">&lt;/p>
 &lt;p>Na década de 1960, uma equipe de desenvolvedores da &lt;a href="https://pt.wikipedia.org/wiki/Bell_Labs">AT&amp;amp;T Bell Labs&lt;/a> resolveram trabalhar em softwares mais objetivo e simplificado do que os utilizados nos mainframes da época. Após alguns anos mais precisamente em 1969 o resultado foi o sistema operacional proprietário UNIX que significava Serviço de Computação e Informação Uniplexada.&lt;/p>
 &lt;p>O Unix era um sistema portável, &lt;a href="https://pt.wikipedia.org/wiki/Multitarefa">multitarefa&lt;/a> e &lt;a href="https://pt.wikipedia.org/wiki/Multiusu%C3%A1rio">multiusuário&lt;/a> e tinha como principal característica o uso de arquivos para abstrair tudo na máquina.&lt;/p>
 &lt;p>Em realidade, o Unix era para ser Multics, que deveria ser um sistema operacional de tempo compartilhado (uma forma de fazer processamento paralelo) para uma grande comunidade de usuários porém esse era um projeto muito ambicioso para o hardware da época.&lt;/p>
@@ -171,14 +169,12 @@
 &lt;li>&lt;strong>1977: BSD&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponível. [Antigamente: Código Fechado | Atualmente: Código Aberto]&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/4.3_BSD_UWisc_VAX_Emulation_Login.png" alt="BSD Operating System">&lt;/p>
 &lt;p>Em 1977, o Unix teve seu primeiro descendente. Com suas próprias características, o BSD surgiu como uma forma da faculdade de Berkeley ainda possuir uso gratuito do Unix. Aliás, o BSD só pode ser considerado uma ramificação do Unix pois eles compartilham a mesma base de código que o Unix original da AT&amp;amp;T.&lt;/p>
 &lt;p>Existem algumas diferenças entre o BSD e o Unix mas elas só vieram aparecendo mais tarde, podemos dizer que por bem ou por mal o BSD foi um dos primeiros sistemas operacionais que se tornaram Open Source. O BSD versão 1 e 2 rodava em PDP-11, mas a partir da versão 3 o BSD foi portado para o VAX e foi graças ao BSD3 com suporte as unidades de memória virtual do Vax que convenceu a &lt;a href="https://pt.wikipedia.org/wiki/Defense_Advanced_Research_Projects_Agency">D.A.R.P.A&lt;/a> a investir no &lt;a href="https://en.wikipedia.org/wiki/Computer_Systems_Research_Group">CSRG&lt;/a>.&lt;/p>
 &lt;p>A partir da versão 4 o BSD passou a oferecer um jobcontrol notável no csh, além do delivermail (antecessor do sendmail) além do uso de sinais mais confiáveis e a biblioteca curses.&lt;/p>
 &lt;h3 id="sistemas-dos">Sistemas DOS&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://conteudo.imguol.com.br/c/noticias/37/2017/10/28/oito-coisas-que-so-quem-usou-o-sistema-dos-vai-se-identificar---abortar-repetir-falhar-1509205804292_615x300.pngx" alt="Sistemas DOS">&lt;/p>
 &lt;p>Quando começamos a fletar com os &lt;a href="https://pt.wikipedia.org/wiki/Computador_pessoal">computadores pessoais&lt;/a> também precisaríamos de um sistema operacional relativamente simples para uso geral, o único problema era &amp;ldquo;armazenamento caro&amp;rdquo;, então normalmente usávamos &lt;a href="https://pt.wikipedia.org/wiki/Computador_pessoal">sistemas operacionais DOS&lt;/a> que era basicamente um sistema operacional simples que carregava na memória e era volátil. Isso significa que o DOS era um sistema operacional de usuário único e de tarefa única também com suas funções de kernel não &lt;a href="https://pt.wikipedia.org/wiki/Reentr%C3%A2ncia">reentrantes&lt;/a>.&lt;/p>
 &lt;p>Mesmo sendo um sistema operacional de tarefa única o DOS possuia uma forma de multitarefa (aposto que você pensou &amp;ldquo;What The Fuck&amp;rdquo;) mas o que ocorria é que existe uma exceção no DOS chamada &lt;a href="https://pt.wikipedia.org/wiki/Terminate_and_Stay_Resident">TSR&lt;/a>. O DOS também possuia uma linha de comando chamado &lt;a href="https://pt.wikipedia.org/wiki/COMMAND.COM">command.com&lt;/a> esse é uma linha de comando feia com cheiro de velho mofo largado a bel prazer e existe até hoje no Windows 10/11.&lt;/p>
 &lt;hr>
@@ -187,8 +183,7 @@
 &lt;li>&lt;strong>1978: Apple DOS&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponível. Código Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://archiveos.org/wp-content/uploads/2023/05/apple-dos.webp" alt="Sistema Apple DOS">&lt;/p>
 &lt;p>O primeiro sistema operacional da Apple e existia para os &lt;a href="https://pt.wikipedia.org/wiki/Apple_II">Apple II&lt;/a>.&lt;/p>
 &lt;p>O apple DOS foi desenvolvido por &lt;a href="https://pt.wikipedia.org/wiki/Steve_Wozniak">Steve Wozniak&lt;/a>, &lt;a href="https://pt.wikipedia.org/wiki/Randy_Wigginton">Randy Wigginton&lt;/a> e Paul Laughton e teve 3 versões principais:&lt;/p>
 &lt;ul>
@@ -201,8 +196,7 @@
 &lt;li>&lt;strong>1979: Atari DOS&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/en/c/ca/Ataridos-2.5.PNG" alt="Sistema Atari DOS">&lt;/p>
 &lt;p>Além de produzir jogos ruins no começo da história dos vídeos games e particularmente começar o universo dos jogos, a Atari também possuía um sistema operacional DOS que era utilizado com a família de computadores Atari de 8 bits.&lt;/p>
 &lt;p>E incrivelmente esse sistema operacional trazia muitas novidades em comparação com os outros sistemas, pois ele podia carregar extensões no sistema operacional a partir da memória que permitia o Atari DOS gerenciar os arquivos armazenados em uma unidade de disco. A extensão mais importante é o manipulador de disco. E com essa tecnologia também houve muitos programas DOS criados a partir de terceiros compatíveis com o Atari DOS versão 2.&lt;/p>
 &lt;p>Exemplo o SpartaDOSX que era uma versão do SpartaDOS muito aproximada do MSDOS e era enviado em cartuchos de 64kb..&lt;/p>
@@ -211,8 +205,7 @@
 &lt;li>&lt;strong>1980: Apple SOS&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/SOSBootOnMess.png" alt="Sistema operacional Apple SOS">&lt;/p>
 &lt;p>O Sophisticated Operating System ou SoS era o sistema operacional principal criado para o Apple III e veio como sucessor do Apple DOS e em 1985 apesar de criticar muito o &lt;a href="https://en.wikipedia.org/wiki/Apple_III">Apple III&lt;/a> que era realmente bem ruinzinho em construção, elogiou o Apple SOS como o melhor sistema operacional em qualquer microcomputador de todos os tempos &amp;ldquo;obviamente até aquela época&amp;rdquo;.&lt;/p>
 &lt;p>E apesar do SoS ser um sistema operacional monousuário e monotarefa. Ele disponibiliza os recursos do sistema como um programa orientado a menu&amp;rsquo;s bem como contendo uma &lt;a href="https://en.wikipedia.org/wiki/API">Interface de Programação de Aplicativos&lt;/a>.&lt;/p>
 &lt;p>A API dos SOS é dividida em 4 partes:&lt;/p>
@@ -227,8 +220,7 @@
 &lt;li>&lt;strong>1980: Xenix&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponível. Código fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://www.retropolis.com.br/wp-content/uploads/2016/10/microsoft-unix-xenix.jpg" alt="Sistema operacional Xenix">&lt;/p>
 &lt;p>Xenix foi um sistema operacional licenciado pela microsoft e pela AT&amp;amp;T na década de 1980 antes da própria microsoft começar a trabalhar no MSDOS. Atualmente o Xenix pertence a SCO Unix que adquiriu os direitos exclusivos do mesmo.&lt;/p>
 &lt;p>O Xenix foi uma versão do Unix que a microsoft pretendia usar em microcomputares a partir do momento em que a mesma não pode licenciar o próprio Unix.&lt;/p>
 &lt;p>Posso não ter certeza 100% do que digo, mas em 2001 foi criado um sistema operacional que rodava o Unix dentro de microcomputadores &amp;ldquo;lançado meio fora do momento&amp;rdquo; mas que cumpriu o objetivo da microsoft. O chamado &lt;a href="https://unix.fandom.com/pt-br/wiki/UZIX">UZIX&lt;/a>. &amp;ldquo;Só para dar um desfecho ao unix nos microcomputadores&amp;rdquo;&lt;/p>
@@ -236,16 +228,14 @@
 &lt;li>&lt;strong>1980: 86DOS (Q-DOS)&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/4/40/86-DOS_running_assembler_and_HEX2BIN_%28screenshot%29.png" alt="Sistema operacional 86DOS">&lt;/p>
 &lt;p>Este foi um sistema operacional produzido para o &lt;a href="https://en.wikipedia.org/wiki/Intel_8086">intel 8086&lt;/a> e logo seria modificado a se tornar o MSDOS.&lt;/p>
 &lt;p>Ele também era conhecido como o Quick and Dirty Operating System (sistema operacional rápido e sujo, se você não conhece a terminologia). O 86-DOS compartilhava alguns comandos com o &lt;a href="https://en.wikipedia.org/wiki/OS/8">OS/8&lt;/a> e o &lt;a href="https://en.wikipedia.org/wiki/CP/M">CP/M&lt;/a>. Que falicilitou a portabilidade de programas do CP/M. Sua API era muito semelhante. O sistema foi comprado pela microsoft e usado para desenvolver o MS DOS e o &lt;a href="https://en.wikipedia.org/wiki/IBM_PC_DOS">PC DOS&lt;/a>.&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>1981: MS-DOS/IBM PC DOS&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponivel. Código Aberto&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ms-dosdir.png/355px-Ms-dosdir.png" alt="Sistema operacional MSDOS">&lt;/p>
 &lt;p>Dentro da história da computação, foi esse sistema operacional que definiu a Microsoft como a gigante que ela é. O MSDOS.&lt;/p>
 &lt;p>Este sistema teve muitas versões e nomes até se firmar com MSDOS e teve muitas modificações em seus internos.&lt;/p>
 &lt;ul>
@@ -272,8 +262,7 @@
 &lt;li>&lt;strong>1982: Suínos&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://www.file-extension.info/images/resource/screenshots/sunos.png" alt="Sistema Operacional SunOS">&lt;/p>
 &lt;p>Esse é o sistema que surgiu anterior ao Solaris, o SunOS foi um sistema Unix desenvolvido pela SunMicrosystems para seus servidores e workstations. O nome SunOS geralmente é usado para se referir as versões da 1.0 a 4.1.4 onde o mesmo foi baseado nos BSD enquanto a partir da versão 5.0 e posterior são baseadas no Unix System V Release 4 e é comercializada sob a marca do &lt;em>Solaris&lt;/em>.&lt;/p>
 &lt;ul>
 &lt;li>O SunOS 1 suportava apenas os sistemas da série Sun-2 (Nome das estações de trabalho), incluindo sistemas Sun-1 atualizados com placas de CPU Sun-2.&lt;/li>
@@ -286,8 +275,7 @@
 &lt;li>&lt;strong>1983: Apple ProDOS&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;em>Indisponivel. Código Fechado&lt;/em>&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://prodos8.com/pix/prodos242/homepage_slide2.png" alt="Sistema Operacional Apple ProDOS">&lt;/p>
 &lt;p>O Apple ProDOS foi o último sistema operacional produzido para rodar nos Apple II da série de 8 bits, e seu código fonte surgiu através do Apple SOS e fui uma solução gap para o Apple II GS de 16 bits que logo foi substituído pelo GS/OS.&lt;/p>
 &lt;p>Apple ProDOS foi comercializado pela Apple como Profissional Disk Operating System e se tornou o sistema operacional mais popular em 10 meses.&lt;/p>
 &lt;p>O ProDOS surgiu para corrigir as deficiências que o Apple DOS começou a apresentar por sua idade. Apesar disso, houve muita resistência a adoção do ProDOS, primeiro que sua API não era efetivamente compatível com o Apple DOS e sim com o Apple SOS então muitos aplicativos não poderiam ser portados a menos que reescritos.&lt;/p>
@@ -303,8 +291,7 @@ FreeBSD uses a Berkeley license, which has played a big role in its success, par
 &lt;/code>&lt;/pre>&lt;p>Isso significa que o código do BSD foi feito para ser modificado, recriado, adaptado e sua licença permissiva garante que você é responsável por qualquer decisão que tomar inclusive fechar o código se assim desejar.&lt;/p>
 &lt;p>Também cria uma faca de dois gumes, pois segundo o &lt;a href="https://docs.freebsd.org/en/books/handbook/">Handbook do FreeBSD&lt;/a> e o &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/">Docs do FreeBSD&lt;/a> equivalente a &lt;a href="https://wiki.archlinux.org">ArchWiki&lt;/a> no mundo Linux e uma leitura muito recomendada, existem alguns motivos para o FreeBSD não ser adotado por uma imersa comunidade.&lt;/p>
 &lt;p>Hoje quero apresentar esses problemas e algumas resoluções.&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://img.youtube.com/vi/NM0oou1KYY8/maxresdefault.jpg" alt="Example of BSD">&lt;/p>
 &lt;hr>
 &lt;h3 id="motivos-para-os-bsd-não-serem-tão-usados-ou-tão-populares-quanto-o-linux">Motivos para os BSD não serem tão usados ou tão populares quanto o linux&lt;/h3>
 &lt;p>Existe uma série de resoluções, mas os principais que este &lt;a href="https://docs.freebsd.org/pt-br/articles/explaining-bsd/#why-is-bsd-not-better-known">post&lt;/a> cita são:&lt;/p>
