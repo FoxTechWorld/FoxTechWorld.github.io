@@ -68,6 +68,11 @@ body {
   }
 }
 
+.homepage {
+  width: 100%;
+  height: 100%;
+}
+
 .homepage > .card > h2 a {
   color: black;
 }
