@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 10px;
 }
 
 .pageHeader {
@@ -168,7 +168,6 @@ time:focus {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-
   line-height: 1.6;
   font-size: 1.2em;
 }
