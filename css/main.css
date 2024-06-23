@@ -41,6 +41,33 @@ body {
   text-decoration: underline; /*Adding a underline from hovered link*/
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .pageHeader > nav > ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .pageHeader > nav > ul > li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .pageHeader > nav > ul.show {
+    display: flex;
+  }
+}
+
 .homepage > .card > h2 a {
   color: black;
 }
