@@ -1,66 +1,83 @@
 body {
-  margin: 10px;
-  padding: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 2%;
+  padding: 2%;
 }
 
 .pageHeader {
-  padding: 10px 20px; /*Padding inside the header*/
-  display: flex; /*Use flexbox for layout */
-  align-items: center; /*Center items vertically */
-  justify-content: space-between; /*Distribute items everly */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  padding: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .pageHeader > h1 {
-  font-size: 24px; /*Larger font size for the title*/
+  font-size: 2rem;
+}
+
+.pageHeader > nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.pageHeader > nav > ul {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
 }
 
 .pageHeader > nav > ul > li {
-  list-style-type: none; /*Remove the dot point*/
-  margin: 0;
+  list-style-type: none;
+  margin: 0 1%;
   padding: 0;
 }
 
-.pageHeader > nav > ul > li {
-  display: inline-block; /* Display list horizontally */
-  margin-right: 20px; /* Spacing between menu items*/
-}
-
-.pageHeader > nav > ul > li:last-child {
-  margin-right: 0; /*Remove margin last menu item*/
-}
-
-.pageHeader > nav > ul li > a {
+.pageHeader > nav > ul > li > a {
   color: black;
-  text-decoration: none; /*Remove underline from links*/
-  font-size: 18px; /*Font size is smaller than menu*/
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 1rem;
 }
 
-.pageHeader > nav > ul li > a:hover {
-  color: lightseagreen; /*Change color to seagreen if hovered*/
-  text-decoration: underline; /*Adding a underline from hovered link*/
+.pageHeader > nav > ul > li > a:hover {
+  color: lightseagreen;
+  text-decoration: underline;
 }
 
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 2.4rem;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pageHeader > nav {
+    text-align: left;
+    width: 100%;
+  }
+
   .pageHeader > nav > ul {
     display: none;
     flex-direction: column;
+    width: 100%;
   }
 
   .pageHeader > nav > ul > li {
-    margin: 10px 0;
+    margin: 2% 0;
   }
 
   .menu-toggle {
     display: block;
+    align-self: flex-end;
   }
 
   .pageHeader > nav > ul.show {
@@ -98,49 +115,49 @@ body {
 }
 
 .toc {
-  margin-top: 10px;
+  margin-top: 2%;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 2%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  z-index: 1000; /* Ensure TOC is above other content */
+  z-index: 1000;
 }
 
 .toc > h3 {
   text-wrap: nowrap;
-  margin-top: 0; /* Remove default margin from top */
-  font-size: 1.4em; /* Font size for the heading */
-  border-bottom: 1px solid #ddd; /* Border below the heading */
-  padding-bottom: 5px; /* Padding below the heading */
-  margin-bottom: 10px; /* Space below the heading */
+  margin-top: 0;
+  font-size: 1.4em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+  margin-bottom: 1%;
 }
 
 .toc > nav ul {
-  list-style-type: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .toc > nav ul ul {
-  margin-left: 10px; /* Indent nested lists */
+  margin-left: 2%;
 }
 
 .toc > nav li {
-  margin-bottom: 5px; /* Space between list items */
+  margin-bottom: 1%;
 }
 
 .toc > nav a {
-  text-decoration: none; /* Remove underline from links */
-  color: black; /* Link color */
-  display: block; /* Make links block-level for easier styling */
-  padding: 5px; /* Padding around link text */
-  border-radius: 3px; /* Rounded corners for links */
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 1%;
+  border-radius: 3px;
 }
 
 .toc > nav a:hover {
-  color: seagreen; /* Link color on hover */
+  color: seagreen;
 }
 
 .blogPost > time {
@@ -148,7 +165,7 @@ body {
   font-size: 1.2em;
   color: #555;
   background-color: #f0f0f0;
-  padding: 5px 10px;
+  padding: 0.5% 1%;
   border-radius: 5px;
   border: 1px solid #ddd;
   display: inline-block;
@@ -223,6 +240,7 @@ time:focus {
   color: seagreen;
   text-decoration: underline;
 }
+
 .blogPost > content > ul > li > p > a {
   color: black;
   font-weight: bold;
@@ -268,22 +286,22 @@ time:focus {
 }
 
 .blogPost > content > blockquote > p {
-  font-family: "Georgia", serif; /* Font style */
-  font-size: 1.2em; /* Font size */
-  font-style: italic; /* Italic text */
-  color: #555; /* Text color */
-  background: #f9f9f9; /* Background color */
-  border-left: 10px solid #ccc; /* Left border */
-  margin: 20px 0; /* Margin around blockquote */
-  padding: 15px 20px; /* Padding inside blockquote */
-  quotes: "“" "”" "‘" "’"; /* Quotes for blockquote */
+  font-family: "Georgia", serif;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #555;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 2% 0;
+  padding: 1.5% 2%;
+  quotes: "“" "”" "‘" "’";
 }
 
 .blogPost > content > p > code {
   font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #f0f0f0;
-  padding: 4px 8px;
+  padding: 0.4% 0.8%;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -305,51 +323,59 @@ time:focus {
 }
 
 .blogPost > content > blockquote footer > p {
-  text-align: right; /* Right align citation */
-  font-size: 0.8em; /* Smaller font size */
-  color: #999; /* Lighter color */
+  text-align: right;
+  font-size: 0.8em;
+  color: #999;
 }
 
 .blogPost > content > p > img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2% auto;
+  border: 2px solid #ddd;
+  padding: 1%;
 }
 
-.blogPost > content > p > img:hover {
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
+.blogPost > content > img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2% auto;
+  border: 2px solid #ddd;
+  padding: 1%;
 }
 
-.aboutPage {
-  max-width: 800px;
-  margin: 20px auto;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.blogPost > content > img:hover {
+  border-color: seagreen;
+  transition: border-color 0.3s ease-in-out;
 }
 
-.aboutPage > content > h3 {
-  font-size: 1.5em;
+.aboutPage > h3 > a {
   color: black;
-  margin-top: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
+  text-decoration: none;
 }
 
-.aboutPage > content > p {
-  margin-bottom: 15px;
+.aboutPage > h3 > a:hover {
+  color: seagreen;
+  text-decoration: underline;
+}
+
+.aboutPage > ul > li > a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.aboutPage > ul > li > a:hover {
+  color: seagreen;
+  text-decoration: underline;
 }
 
 .aboutPage > content > p > a {
   color: black;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .aboutPage > content > p > a:hover {
@@ -368,26 +394,24 @@ time:focus {
   text-decoration: underline;
 }
 
-/* Estilo para a lista de interesses */
 .aboutPage > content > ul {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 2%;
 }
 
 .aboutPage > content > img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
 }
 
-/* Estilo para os links da lista de onde me encontrar */
-.aboutPage > content > ul li > a {
+.aboutPage > ul li > a {
   color: black;
   font-weight: bold;
   text-decoration: none;
 }
 
-.aboutPage > content > ul li > a:hover {
+.aboutPage > ul li > a:hover {
   color: seagreen;
   text-decoration: underline;
 }
@@ -396,7 +420,7 @@ time:focus {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -407,7 +431,7 @@ time:focus {
 }
 
 .pageFooter {
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -415,13 +439,13 @@ time:focus {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 15px;
-  margin: 20px 0;
+  padding: 2%;
+  margin: 2% 0;
 }
 
 .tags > div {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
 }
 
 .tags > ul {
@@ -433,14 +457,14 @@ time:focus {
 }
 
 .tags > ul > li {
-  margin: 10px; /* Increased margin for more space between tags */
+  margin: 1%;
 }
 
 .tags > a {
   text-decoration: none;
   color: #007bff;
   background-color: #e9ecef;
-  padding: 5px 10px;
+  padding: 0.5% 1%;
   border-radius: 3px;
   transition: background-color 0.3s ease;
 }
@@ -452,8 +476,8 @@ time:focus {
 
 .comments {
   max-width: 100%;
-  margin: 20px auto;
-  padding: 0 15px;
+  margin: 2% auto;
+  padding: 0 1.5%;
   box-sizing: border-box;
 }
 
@@ -461,7 +485,7 @@ time:focus {
   color: #ffffff;
   border-style: 0px solid;
   border-color: #cccccc;
-  padding: 5px;
+  padding: 0.5%;
 }
 
 #dsq-content #dsq-comments .dsq-comment-body {
@@ -484,20 +508,20 @@ time:focus {
 
 @media (max-width: 768px) {
   .comments {
-    padding: 0 10px;
+    padding: 0 1%;
   }
 }
 
 @media (max-width: 480px) {
   .comments {
-    padding: 0 5px;
+    padding: 0 0.5%;
   }
 }
 
 .dsq-brlink {
   display: block;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 1%;
   font-size: 0.9em;
   color: #666;
 }
