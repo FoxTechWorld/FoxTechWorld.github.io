@@ -1,4 +1,130 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on FoxTechWorld</title><link>https://FoxTechWorld.github.io/posts/</link><description>Recent content in Posts on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 13 May 2024 00:40:31 -0300</lastBuildDate><atom:link href="https://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>(Tradução): Em defesa do swap, equivocos comuns</title><link>https://FoxTechWorld.github.io/posts/tradu%C3%A7%C3%A3o-em-defesa-do-swap-equivocos-comuns/</link><pubDate>Mon, 13 May 2024 00:40:31 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/tradu%C3%A7%C3%A3o-em-defesa-do-swap-equivocos-comuns/</guid><description>Introdução Salve galera, desculpa a demora para trazer novos posts, ultimamente estive ocupado fazendo any coisas no meu privado que não tive o prazer de compartilhar com vocês.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on FoxTechWorld</title><link>https://FoxTechWorld.github.io/posts/</link><description>Recent content in Posts on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 22 Jul 2024 23:46:10 -0300</lastBuildDate><atom:link href="https://FoxTechWorld.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Porque wallet pc's ainda não chegaram a existir</title><link>https://FoxTechWorld.github.io/posts/porque-wallet-pcs-ainda-n%C3%A3o-chegaram-a-existir/</link><pubDate>Mon, 22 Jul 2024 23:46:10 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/porque-wallet-pcs-ainda-n%C3%A3o-chegaram-a-existir/</guid><description>Introdução Olá novamente e desculpe-me pelo atraso em novos posts. Acabei conseguindo um emprego que é braçal 😁 e não tenho muito conteúdo sobre o que dizer e sinceramente eu queria falar conteúdo de qualidade para vocês.
+Mas felizmente, comprei um fone de ouvido novo, um G7S gamer
+E sério estou amando usar ele ótimo microfone, ótima sonorização e uma belissima duração de batéria porém, isso é uma das coisas que me trouxe de volta a produzir artigos a este blog.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<p>Olá novamente e desculpe-me pelo atraso em novos posts. Acabei conseguindo um emprego que é braçal 😁 e não tenho muito conteúdo sobre o que dizer e sinceramente eu queria falar conteúdo de qualidade para vocês.</p>
+<p>Mas felizmente, comprei um fone de ouvido novo, um G7S gamer</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/1AU-0024-006_zoom1_6290669076091945495_hu853883e1faa16b2f170585689ef41f50_59008_0x0_q75_.jpg"
+    width="1200"
+    height="1200"
+    alt=""
+  />
+</figure>
+
+<p>E sério estou amando usar ele ótimo microfone, ótima sonorização e uma belissima duração de batéria porém, isso é uma das coisas que me trouxe de volta a produzir artigos a este blog. Aproveitei para ouvir via Spotify alguns dos vídeos do Fábio Akita.</p>
+<p>No caso este foi o vídeo que me fez parar para pensar um pouco.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TLuVTO1vuv0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>Inclusive no seguinte momento em que aparece:</p>
+<blockquote>
+<p>O Wallet-PC substituiria vários documentos como a carteira de identidade, documento de motorista, passaporte, exames médicos e muito mais, bastando ao usuário digitar sua senha pessoal e acessar os dados pela rede. Assim, num aeroporto, a passagem seria validade pela transferência de dados do micro computador ao computador do aeroporto, o passaporte seria verificado e a passagem validada sem a necessidade de qualquer outra interação do usuário senão tocar na tela ( touch-screen ).</p>
+</blockquote>
+<blockquote>
+<p>(comentário) Uma das coisas que o Gates acertou foi a noção de smartphones que temos hoje. Ele chamava de Wallet-PC e tecnicamente ele descrevia como um computador do tamanho de uma carteira.</p>
+</blockquote>
+<p>E isso me fez pensar, um smartphone atual realmente é um <strong>Wallet-PC</strong>?</p>
+<h3 id="respondendo-com-a-minha-opinião">Respondendo com a minha opinião</h3>
+<p>Apesar do hardware atual parecer um Wallet-PC, a construção do software e a utilidade estão milhas de distância longe do que poderiamos chamar de Wallet-PC.</p>
+<p>Primeiramente que um &ldquo;PC&rdquo; deve permitir múltiplos usuários isolados. E sim, eu sei que o android tem suporte a <a href="https://source.android.com/docs/devices/admin/multi-user?hl=pt-br">múltiplos usuários</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hube2b8edbeb90274d3bc38c05294b140d_112973_1c950d08bfbdbd6215e149d0f435c1da.jpg"
+    width="1392"
+    height="784"
+    alt=""
+  />
+</figure>
+
+<p>Particularmente eu considero um erro porque o que deveria ser um <strong>Celular</strong> é um aparelho pessoal e incompartilhavel servindo apenas para ligações, mensagens SMS e coisas assim. (Principio de responsabilidade única) como um dumbphone.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/OIP_2310326148314295970_hu1bfe78032a17def81b3ff2c9b3860cdb_10830_0x0_q75_.jpg"
+    width="474"
+    height="266"
+    alt=""
+  />
+</figure>
+
+<p>Já o Wallet-PC deveria seguir a herança de um <a href="https://en.wikipedia.org/wiki/PalmPilot">Palm Pilot</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Palm-IMG_7025_1562380872709763100_hu687676fa9c9a045d54089de9a8f8bc4a_14823_0x0_q75_.jpg"
+    width="220"
+    height="330"
+    alt=""
+  />
+</figure>
+
+<h3 id="porque-dois-aparelhos-diferentes-e-separados">Porque dois aparelhos diferentes e separados</h3>
+<p>Acredito fortemente na separação de conceitos onde um dispositivo de chamadas não deveria ser misturar com um computador pessoal e dito isso, eu semprei achei estranho ter apps gov, carteira e coisas assim, misturado a camera, sms &hellip;</p>
+<p>Nada de errado, é apenas minha interpretação pessoal.</p>
+<p>Mas para mim onde estamos na melhor época da tecnologia. Talvez utilizando o mesmo hardware dos smartphones conseguiriamos um Wallet-PC.</p>
+<p>Veja bem:</p>
+<p>-Se substituimos a camera por um leitor de (QR-CODE / BarCode &hellip;)
+-Removermos os apps de chamada, sms
+-Removermos as lojas de aplicativos tradicionais como (Play Store)
+-E adicionarmos lojas customizadas com PWA&rsquo;s se ligando a núvem para salvar os dados</p>
+<p>Ainda teriamos a mesma coisa que celulares de hoje porém, porém dá para limitar
+ou evoluir de formas diferentes</p>
+<h3 id="e-que-tipos-de-evolução-um-wallet-pc-poderia-ter-que-um-smartphone-não-consegue-suprir">E que tipos de evolução um wallet-PC poderia ter, que um smartphone não consegue suprir?</h3>
+<p>Já repararam que o uso da tecnologia moderna não consegue suprir a educação corretamente? A resposta mais simples que eu posso dar é <a href="https://en.wikipedia.org/wiki/Information_overload"><strong>Information Overload</strong></a>.</p>
+<p>Eu estava conversando com minha amiga no meu <a href="https://discord.gg/WTMr49Nfp5">servidor do discord</a> e eu comecei a discutir que a quantidade de informação é um dos principais problemas que podem surgir com o aumento da banda e do processamento de informações.</p>
+<p>Um Wallet-PC com função única que seja rodar aplicativos de escola (e apenas isso) pode ajudar a mitigar o problema substituindo a quantidade de informação pela qualidade da informação aumentando a dificuldade do consumo e a especialização do mesmo.</p>
+<p>Veja um vídeo do TikTok de 1 minuto tem menos qualidade que um artigo texto em HTML simples feito por alguém esperiente. Tome como exemplo <a href="https://www.paulgraham.com/spam.html">The plan for Spam</a> e a dificuldade de consulta aumenta em muitos níveis o que torna a digestão da informação mais complexa o que consequentemente diminui a sobrecarga de informações.</p>
+<h3 id="isso-poderia-curar-a-educação-brasileira">Isso poderia curar a educação brasileira?</h3>
+<p>Infelizmente, <em><strong>NÃO EXISTE BALA DE PRATA</strong></em>. Somos um povo que precisa de <a href="https://www.fm2s.com.br/blog/motivacao-extrinseca">motivação extrinseca</a> para dar valor ao estudo, e se você acha isso bom como os <a href="https://g1.globo.com/educacao/noticia/2024/01/27/pe-de-meia-quando-comeca-como-se-inscrever-e-como-receber-a-bolsa-do-ensino-medio.ghtml">900 reais do pé de meia</a> pense de novo.</p>
+<p>Você literalmente está dizendo de forma implicita que estudar por si só não tem valor algum e precisa dar uma &ldquo;recompensa&rdquo; por fazer essa maldita tarefa.</p>
+<p>E para combater isso, algumas pessoas que fazem vídeos para internet tentar adicionar uma <a href="https://amenteemaravilhosa.com.br/motivacao-intrinseca/">motivação intriseca</a> para quem está tentando se ajudar a aprender.</p>
+<h3 id="o-que-seria-uma-possível-forma-de-cura-para-educação-brasileira">O que seria uma possível forma de cura para educação brasileira?</h3>
+<ol>
+<li>
+<p>Temos que tirar a ideia de que a educação não tem valor nenhum e reeducar pais, professores, &hellip; sobre o mundo digital. Sim, esse seria o primeiro passo saber como habilitar o modo familia dos sistemas operacionais, ativar firewall (para sites de DNS duvidosos) &hellip;</p>
+</li>
+<li>
+<p>Temos que melhorar a educação das nossas crianças <strong>EM CASA</strong>, professor nasceu para mentorar, ensinar alguns temas e não para cuidar do filho dos outros.</p>
+</li>
+<li>
+<p>Escolas precisam de políticas mais duras para <strong>Bullying</strong>, <strong>Falta de respeito</strong> &hellip;</p>
+</li>
+<li>
+<p>Precisamos recomeçar com a visão de sermos o <strong>POVO</strong> brasileiro e não uma <a href="https://disparada.com.br/brasil-pais-perdeu-seu-povo/">mera plateia</a>.</p>
+</li>
+<li>
+<p>Precisamos de educações básicas além das matérias que temos atualmente (educação financeira, educação domestica).</p>
+</li>
+<li>
+<p>Precisamos ignorar o <em>Jeitinho Brasileiro</em> que visa burlar a lei e dar mais valor a honestidade.</p>
+</li>
+</ol>
+<hr>
+<h4 id="provalvemente-você-pensou-e-como-wallet-pcs-ajudariam-nisso">Provalvemente, você pensou e como wallet-PC&rsquo;s ajudariam nisso?</h4>
+<p>Talvez ajude ilustrando um pouco. Mas o mundo não está realmente se tornando menos conectado. E apesar das <a href="https://g1.globo.com/educacao/noticia/2023/08/07/por-que-a-suecia-desistiu-da-educacao-100percent-digital-e-gastara-milhoes-de-euros-para-voltar-aos-livros-impressos.ghtml">tentativas europeias de tirar as crianças do celular</a>.</p>
+<p>Na ideia original pelo Wallet-PC ser algo de uso especificamente educação com conteúdo mais díficil de digerir, ele pode se tornar um bom caminho para a educação com alguns adendos:</p>
+<ul>
+<li>Se ele gerar diversas atividades randomicas para testar o conhecimento do aluno.</li>
+</ul>
+<p>Pense como um 6º ano tendo atividades que ele está aprendendo no momento. E no 7º tendo atividades do que ele está aprendendo e já aprendeu.</p>
+<p>De forma que se ele errar muito pode ir fazendo revisões.</p>
+<ul>
+<li>Se o uso do Wallet-PC for restrito a escola</li>
+</ul>
+<p>Pense em usar o Wallet-PC na escola para aprender um novo assunto e o uso de livros físicos para treinar o conteúdo em casa.</p>
+<p>Dessa forma eliminamos a necessidade de provas e coisas assim já que os Wallet-PC podem gerar relatórios.</p>
+<h3 id="conclusão">Conclusão</h3>
+<p>Apesar da gigantesca tangente com a educação e de como os Wallet-PC&rsquo;s podem ajudar a melhorar o sistema educacional. Gostaria de concluir que está é a forma mais simples de como pensar nos Wallet-PC mas eles podem se tornar dispositivos de trabalho, dispositivos de acompanhamento médico e um dispositivo geral.</p>
+<p>Você tem alguma ideia de como Wallet-PC&rsquo;s podem contribuir com um melhor país?</p>
+]]></content:encoded></item><item><title>(Tradução): Em defesa do swap, equivocos comuns</title><link>https://FoxTechWorld.github.io/posts/tradu%C3%A7%C3%A3o-em-defesa-do-swap-equivocos-comuns/</link><pubDate>Mon, 13 May 2024 00:40:31 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/tradu%C3%A7%C3%A3o-em-defesa-do-swap-equivocos-comuns/</guid><description>Introdução Salve galera, desculpa a demora para trazer novos posts, ultimamente estive ocupado fazendo any coisas no meu privado que não tive o prazer de compartilhar com vocês.
 Enfim, esse não tão pedido de desculpas foi para trazer a tradução de um post que eu acho super relevante na área de Osdev In defence of swap: common misconceptions.
 Tradução Tl;Dr Ter swap é uma parte razoavelmente importante de um sistema que funciona bem.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
 <p>Salve galera, desculpa a demora para trazer novos posts, ultimamente estive ocupado fazendo any coisas no meu privado que não tive o prazer de compartilhar com vocês.</p>
@@ -518,9 +644,12 @@ Tradução Tl;Dr Ter swap é uma parte razoavelmente importante de um sistema qu
 <p>Você não consegue especificar as regiões onde quer que o Localtunnel atue, pois seu funcionamento é diferente do Ngrok que é diferente do Hamachi, mas todos servem para fazer uma conexão entre amigos via tunnel.</p>
 <p>Salve menção a Fabio Akita que explica o <strong>conceito de tunnel com ssh</strong>.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/T-jHuFnxZ2k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/T-jHuFnxZ2k?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <hr>
 <h3 id="conclusão">Conclusão</h3>
@@ -613,9 +742,12 @@ FreeBSD uses a Berkeley license, which has played a big role in its success, par
 <p>Mas isso é o básico que uma pessoa pode pensar sobre o reator ARC do UCM. Mas vamos analisá-lo como um geek.</p>
 <p>O canal The Hacksmith conseguiu fazer uma versão de um gerador de energia com o formato do reator ARC.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/pxf7YkF0iN0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pxf7YkF0iN0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Aqui vamos tentar explicar como um reator ARC real funcionaria</p>
 <p>Com esse disclaimer feito, vamos começar nossa análise.</p>
@@ -905,9 +1037,12 @@ Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha q
 <p>E novamente vamos falar do <a href="https://foxtechworld.github.io/posts/fkernel/">FKernel</a>, o segundo maior <a href="https://pt.wikipedia.org/wiki/Vaporware">VaporWare</a> da história depois do Microsoft Xenix. Leia mais sobre este assunto neste <a href="https://foxtechworld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/">Post</a>.</p>
 <p>Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MSDX_XFZ5_A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/MSDX_XFZ5_A?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.</p>
 <p>Dito isso vou apresentar a mudança na ideia do FKernel.</p>
