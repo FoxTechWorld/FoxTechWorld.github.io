@@ -1,3 +1,413 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geek on FoxTechWorld</title><link>https://FoxTechWorld.github.io/categories/geek/</link><description>Recent content in Geek on FoxTechWorld</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Mon, 22 Jul 2024 23:46:10 -0300</lastBuildDate><atom:link href="https://FoxTechWorld.github.io/categories/geek/index.xml" rel="self" type="application/rss+xml"/><item><title>Porque wallet pc's ainda não chegaram a existir</title><link>https://FoxTechWorld.github.io/posts/porque-wallet-pcs-ainda-n%C3%A3o-chegaram-a-existir/</link><pubDate>Mon, 22 Jul 2024 23:46:10 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/porque-wallet-pcs-ainda-n%C3%A3o-chegaram-a-existir/</guid><description>Introdução Olá novamente e desculpe-me pelo atraso em novos posts. Acabei conseguindo um emprego que é braçal 😁 e não tenho muito conteúdo sobre o que dizer e sinceramente eu queria falar conteúdo de qualidade para vocês.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geek on FoxTechWorld</title><link>https://FoxTechWorld.github.io/categories/geek/</link><description>Recent content in Geek on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 22 Jul 2024 23:46:10 -0300</lastBuildDate><atom:link href="https://FoxTechWorld.github.io/categories/geek/index.xml" rel="self" type="application/rss+xml"/><item><title>Porque wallet pc's ainda não chegaram a existir</title><link>https://FoxTechWorld.github.io/posts/porque-wallet-pcs-ainda-n%C3%A3o-chegaram-a-existir/</link><pubDate>Mon, 22 Jul 2024 23:46:10 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/porque-wallet-pcs-ainda-n%C3%A3o-chegaram-a-existir/</guid><description>Introdução Olá novamente e desculpe-me pelo atraso em novos posts. Acabei conseguindo um emprego que é braçal 😁 e não tenho muito conteúdo sobre o que dizer e sinceramente eu queria falar conteúdo de qualidade para vocês.
 Mas felizmente, comprei um fone de ouvido novo, um G7S gamer
-E sério estou amando usar ele ótimo microfone, ótima sonorização e uma belissima duração de batéria porém, isso é uma das coisas que me trouxe de volta a produzir artigos a este blog.</description></item><item><title>Como Substituir O Hamachi No Linux Para Jogar Minecraft Lan De Forma Facilitada</title><link>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</link><pubDate>Sat, 11 Nov 2023 20:09:05 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</guid><description>Este post apresenta alternativas ao Hamachi no Linux para facilitar a jogabilidade de Minecraft em LAN. O Hamachi, um aplicativo para Windows, simula uma rede local para conexões fáceis em jogos. Duas soluções são discutidas: o Ngrok, um proxy reverso global que suporta HTTP/TLS e TCP; e o Localtunnel, uma opção mais aberta com menos configurações. Ambas permitem a conexão entre amigos para jogar Minecraft em LAN, oferecendo opções personalizadas para diferentes preferências.</description></item><item><title>Como funciona o reator ARC</title><link>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</guid><description>Este post explora teoricamente o funcionamento do Reator ARC, uma tecnologia ficcional presente no universo do Homem de Ferro. O autor destaca a evolução do personagem ao longo do tempo, passando de um herói de classe B da Marvel para um dos mais amados. O foco principal é o Reator ARC, projetado para replicar a energia do Tesseract e alimentar as armaduras do Homem de Ferro.</description></item><item><title>Usando Deepin Linux no notebook primeiras impressões</title><link>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</guid><description>O post oferece uma análise detalhada da experiência pessoal do autor com a distribuição Deepin Linux. Ele explora os pontos positivos, como a interface elegante e as opções de configuração conveniente para notebooks, contrastando com os desafios encontrados, como a versão desatualizada do Flatpak e dificuldades na configuração de jogos. O autor destaca a conveniência do Pop!_OS para usuários menos experientes, enquanto sugere o Deepin como uma opção atrativa para aqueles familiarizados com a resolução de problemas no Linux. Em suma, o post oferece uma visão equilibrada e pessoal sobre o Deepin Linux, fornecendo insights valiosos para quem considera adotar essa distribuição.</description></item></channel></rss>
+E sério estou amando usar ele ótimo microfone, ótima sonorização e uma belissima duração de batéria porém, isso é uma das coisas que me trouxe de volta a produzir artigos a este blog.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<p>Olá novamente e desculpe-me pelo atraso em novos posts. Acabei conseguindo um emprego que é braçal 😁 e não tenho muito conteúdo sobre o que dizer e sinceramente eu queria falar conteúdo de qualidade para vocês.</p>
+<p>Mas felizmente, comprei um fone de ouvido novo, um G7S gamer</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/1AU-0024-006_zoom1_6290669076091945495_hu853883e1faa16b2f170585689ef41f50_59008_0x0_q75_.jpg"
+    width="1200"
+    height="1200"
+    alt=""
+  />
+</figure>
+
+<p>E sério estou amando usar ele ótimo microfone, ótima sonorização e uma belissima duração de batéria porém, isso é uma das coisas que me trouxe de volta a produzir artigos a este blog. Aproveitei para ouvir via Spotify alguns dos vídeos do Fábio Akita.</p>
+<p>No caso este foi o vídeo que me fez parar para pensar um pouco.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TLuVTO1vuv0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>Inclusive no seguinte momento em que aparece:</p>
+<blockquote>
+<p>O Wallet-PC substituiria vários documentos como a carteira de identidade, documento de motorista, passaporte, exames médicos e muito mais, bastando ao usuário digitar sua senha pessoal e acessar os dados pela rede. Assim, num aeroporto, a passagem seria validade pela transferência de dados do micro computador ao computador do aeroporto, o passaporte seria verificado e a passagem validada sem a necessidade de qualquer outra interação do usuário senão tocar na tela ( touch-screen ).</p>
+</blockquote>
+<blockquote>
+<p>(comentário) Uma das coisas que o Gates acertou foi a noção de smartphones que temos hoje. Ele chamava de Wallet-PC e tecnicamente ele descrevia como um computador do tamanho de uma carteira.</p>
+</blockquote>
+<p>E isso me fez pensar, um smartphone atual realmente é um <strong>Wallet-PC</strong>?</p>
+<h3 id="respondendo-com-a-minha-opinião">Respondendo com a minha opinião</h3>
+<p>Apesar do hardware atual parecer um Wallet-PC, a construção do software e a utilidade estão milhas de distância longe do que poderiamos chamar de Wallet-PC.</p>
+<p>Primeiramente que um &ldquo;PC&rdquo; deve permitir múltiplos usuários isolados. E sim, eu sei que o android tem suporte a <a href="https://source.android.com/docs/devices/admin/multi-user?hl=pt-br">múltiplos usuários</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hube2b8edbeb90274d3bc38c05294b140d_112973_1c950d08bfbdbd6215e149d0f435c1da.jpg"
+    width="1392"
+    height="784"
+    alt=""
+  />
+</figure>
+
+<p>Particularmente eu considero um erro porque o que deveria ser um <strong>Celular</strong> é um aparelho pessoal e incompartilhavel servindo apenas para ligações, mensagens SMS e coisas assim. (Principio de responsabilidade única) como um dumbphone.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/OIP_2310326148314295970_hu1bfe78032a17def81b3ff2c9b3860cdb_10830_0x0_q75_.jpg"
+    width="474"
+    height="266"
+    alt=""
+  />
+</figure>
+
+<p>Já o Wallet-PC deveria seguir a herança de um <a href="https://en.wikipedia.org/wiki/PalmPilot">Palm Pilot</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Palm-IMG_7025_1562380872709763100_hu687676fa9c9a045d54089de9a8f8bc4a_14823_0x0_q75_.jpg"
+    width="220"
+    height="330"
+    alt=""
+  />
+</figure>
+
+<h3 id="porque-dois-aparelhos-diferentes-e-separados">Porque dois aparelhos diferentes e separados</h3>
+<p>Acredito fortemente na separação de conceitos onde um dispositivo de chamadas não deveria ser misturar com um computador pessoal e dito isso, eu semprei achei estranho ter apps gov, carteira e coisas assim, misturado a camera, sms &hellip;</p>
+<p>Nada de errado, é apenas minha interpretação pessoal.</p>
+<p>Mas para mim onde estamos na melhor época da tecnologia. Talvez utilizando o mesmo hardware dos smartphones conseguiriamos um Wallet-PC.</p>
+<p>Veja bem:</p>
+<p>-Se substituimos a camera por um leitor de (QR-CODE / BarCode &hellip;)
+-Removermos os apps de chamada, sms
+-Removermos as lojas de aplicativos tradicionais como (Play Store)
+-E adicionarmos lojas customizadas com PWA&rsquo;s se ligando a núvem para salvar os dados</p>
+<p>Ainda teriamos a mesma coisa que celulares de hoje porém, porém dá para limitar
+ou evoluir de formas diferentes</p>
+<h3 id="e-que-tipos-de-evolução-um-wallet-pc-poderia-ter-que-um-smartphone-não-consegue-suprir">E que tipos de evolução um wallet-PC poderia ter, que um smartphone não consegue suprir?</h3>
+<p>Já repararam que o uso da tecnologia moderna não consegue suprir a educação corretamente? A resposta mais simples que eu posso dar é <a href="https://en.wikipedia.org/wiki/Information_overload"><strong>Information Overload</strong></a>.</p>
+<p>Eu estava conversando com minha amiga no meu <a href="https://discord.gg/WTMr49Nfp5">servidor do discord</a> e eu comecei a discutir que a quantidade de informação é um dos principais problemas que podem surgir com o aumento da banda e do processamento de informações.</p>
+<p>Um Wallet-PC com função única que seja rodar aplicativos de escola (e apenas isso) pode ajudar a mitigar o problema substituindo a quantidade de informação pela qualidade da informação aumentando a dificuldade do consumo e a especialização do mesmo.</p>
+<p>Veja um vídeo do TikTok de 1 minuto tem menos qualidade que um artigo texto em HTML simples feito por alguém esperiente. Tome como exemplo <a href="https://www.paulgraham.com/spam.html">The plan for Spam</a> e a dificuldade de consulta aumenta em muitos níveis o que torna a digestão da informação mais complexa o que consequentemente diminui a sobrecarga de informações.</p>
+<h3 id="isso-poderia-curar-a-educação-brasileira">Isso poderia curar a educação brasileira?</h3>
+<p>Infelizmente, <em><strong>NÃO EXISTE BALA DE PRATA</strong></em>. Somos um povo que precisa de <a href="https://www.fm2s.com.br/blog/motivacao-extrinseca">motivação extrinseca</a> para dar valor ao estudo, e se você acha isso bom como os <a href="https://g1.globo.com/educacao/noticia/2024/01/27/pe-de-meia-quando-comeca-como-se-inscrever-e-como-receber-a-bolsa-do-ensino-medio.ghtml">900 reais do pé de meia</a> pense de novo.</p>
+<p>Você literalmente está dizendo de forma implicita que estudar por si só não tem valor algum e precisa dar uma &ldquo;recompensa&rdquo; por fazer essa maldita tarefa.</p>
+<p>E para combater isso, algumas pessoas que fazem vídeos para internet tentar adicionar uma <a href="https://amenteemaravilhosa.com.br/motivacao-intrinseca/">motivação intriseca</a> para quem está tentando se ajudar a aprender.</p>
+<h3 id="o-que-seria-uma-possível-forma-de-cura-para-educação-brasileira">O que seria uma possível forma de cura para educação brasileira?</h3>
+<ol>
+<li>
+<p>Temos que tirar a ideia de que a educação não tem valor nenhum e reeducar pais, professores, &hellip; sobre o mundo digital. Sim, esse seria o primeiro passo saber como habilitar o modo familia dos sistemas operacionais, ativar firewall (para sites de DNS duvidosos) &hellip;</p>
+</li>
+<li>
+<p>Temos que melhorar a educação das nossas crianças <strong>EM CASA</strong>, professor nasceu para mentorar, ensinar alguns temas e não para cuidar do filho dos outros.</p>
+</li>
+<li>
+<p>Escolas precisam de políticas mais duras para <strong>Bullying</strong>, <strong>Falta de respeito</strong> &hellip;</p>
+</li>
+<li>
+<p>Precisamos recomeçar com a visão de sermos o <strong>POVO</strong> brasileiro e não uma <a href="https://disparada.com.br/brasil-pais-perdeu-seu-povo/">mera plateia</a>.</p>
+</li>
+<li>
+<p>Precisamos de educações básicas além das matérias que temos atualmente (educação financeira, educação domestica).</p>
+</li>
+<li>
+<p>Precisamos ignorar o <em>Jeitinho Brasileiro</em> que visa burlar a lei e dar mais valor a honestidade.</p>
+</li>
+</ol>
+<hr>
+<h4 id="provalvemente-você-pensou-e-como-wallet-pcs-ajudariam-nisso">Provalvemente, você pensou e como wallet-PC&rsquo;s ajudariam nisso?</h4>
+<p>Talvez ajude ilustrando um pouco. Mas o mundo não está realmente se tornando menos conectado. E apesar das <a href="https://g1.globo.com/educacao/noticia/2023/08/07/por-que-a-suecia-desistiu-da-educacao-100percent-digital-e-gastara-milhoes-de-euros-para-voltar-aos-livros-impressos.ghtml">tentativas europeias de tirar as crianças do celular</a>.</p>
+<p>Na ideia original pelo Wallet-PC ser algo de uso especificamente educação com conteúdo mais díficil de digerir, ele pode se tornar um bom caminho para a educação com alguns adendos:</p>
+<ul>
+<li>Se ele gerar diversas atividades randomicas para testar o conhecimento do aluno.</li>
+</ul>
+<p>Pense como um 6º ano tendo atividades que ele está aprendendo no momento. E no 7º tendo atividades do que ele está aprendendo e já aprendeu.</p>
+<p>De forma que se ele errar muito pode ir fazendo revisões.</p>
+<ul>
+<li>Se o uso do Wallet-PC for restrito a escola</li>
+</ul>
+<p>Pense em usar o Wallet-PC na escola para aprender um novo assunto e o uso de livros físicos para treinar o conteúdo em casa.</p>
+<p>Dessa forma eliminamos a necessidade de provas e coisas assim já que os Wallet-PC podem gerar relatórios.</p>
+<h3 id="conclusão">Conclusão</h3>
+<p>Apesar da gigantesca tangente com a educação e de como os Wallet-PC&rsquo;s podem ajudar a melhorar o sistema educacional. Gostaria de concluir que está é a forma mais simples de como pensar nos Wallet-PC mas eles podem se tornar dispositivos de trabalho, dispositivos de acompanhamento médico e um dispositivo geral.</p>
+<p>Você tem alguma ideia de como Wallet-PC&rsquo;s podem contribuir com um melhor país?</p>
+]]></content:encoded></item><item><title>Como Substituir O Hamachi No Linux Para Jogar Minecraft Lan De Forma Facilitada</title><link>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</link><pubDate>Sat, 11 Nov 2023 20:09:05 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</guid><description>Este post apresenta alternativas ao Hamachi no Linux para facilitar a jogabilidade de Minecraft em LAN. O Hamachi, um aplicativo para Windows, simula uma rede local para conexões fáceis em jogos. Duas soluções são discutidas: o Ngrok, um proxy reverso global que suporta HTTP/TLS e TCP; e o Localtunnel, uma opção mais aberta com menos configurações. Ambas permitem a conexão entre amigos para jogar Minecraft em LAN, oferecendo opções personalizadas para diferentes preferências.</description><content:encoded><![CDATA[<p>Como substituir o hamachi no linux para jogar minecraft LAN de forma facilitada</p>
+<hr>
+<h3 id="o-que-é-hamachi">O que é hamachi</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Hamachisoftware_5329973399256400102_hue1d933061b5170bdc8c2c5eb6cf8915a_20122_0x0__3.png"
+    width="263"
+    height="413"
+    alt=""
+  />
+</figure>
+
+<p>Se você já quis jogar num mundo survival com amigos, provavelmente já usou o hamachi que é um aplicativo para Windows que serve principalmente para que simula uma rede local ou <strong>L</strong>ocal <strong>A</strong>rea <strong>N</strong>etwork permitindo que pessoas se conectem de forma facilitada imitando LAN e é normalmente é utilizada para jogos no:</p>
+<ul>
+<li>FreeBSD</li>
+<li>Linux</li>
+<li>MacOSX</li>
+<li>Windows</li>
+</ul>
+<hr>
+<h3 id="primeira-solução-ngrok">Primeira solução: NGROK</h3>
+<p>Ngrok,a primeira vez pode parecer um pouco mais complicado por não ter interface gráfica mas ele é superior ao hamachi sendo um proxy reverso distribuído globalmente suportando entregas via HTTP / TLS ou aplicações baseadas em TCP.</p>
+<p>Isso significa que você pode usar TCP/IP pra usar ngrok e compartilhar um link com seu amigo e ambos podem jogar minecraft juntos.</p>
+<p>O uso é simples, após você instalar o ngrok em seu sistema operacional basta abrir a Lan no seu mapa minecraft que vai receber a porta contendo 5 dígitos. após isso é só usar o comando</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok tcp 127.0.0.1:<span style="color:#f92672">{</span>porta<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Temos opções extras como configurar o ngrok para usar apenas conexões de um determinado continente garantindo melhor performance do servidor</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok tcp 127.0.0.1:<span style="color:#f92672">{</span>porta<span style="color:#f92672">}</span> --region sa
+</span></span></code></pre></div><p>Para mais informações visite a <a href="https://ngrok.com/docs~/">documentação oficial do ngrok</a>~</p>
+<p>Como substituir o hamachi no linux para jogar minecraft lan de forma facilitada</p>
+<hr>
+<h3 id="segunda-solução-localtunnel">Segunda solução: Localtunnel</h3>
+<p>Uma opção mais aberta ao Hamachi e ao Ngrok, se chama Localtunnel, diferente do ngrok temos menos configurações de acesso o que nos permite menor granularidade de configurações, em contrapartida para abrir o servidor passamos apenas a porta do servidor e não seu ip completo com</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lt --port <span style="color:#f92672">{</span>porta<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>inclusive, você pode pegar e estudar o código do Localtunnel através de seu github: <a href="https://github.com/localtunnel/localtunnel">Github do Localtunnel</a></p>
+<p>Você não consegue especificar as regiões onde quer que o Localtunnel atue, pois seu funcionamento é diferente do Ngrok que é diferente do Hamachi, mas todos servem para fazer uma conexão entre amigos via tunnel.</p>
+<p>Salve menção a Fabio Akita que explica o <strong>conceito de tunnel com ssh</strong>.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/T-jHuFnxZ2k?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Com isso podemos concluir diversas opções que podem substituir o hamachi como seu software para jogar lan entre amigos com diversos outros que além de serem cli, podem ser expandidos e adaptados para rodar via script.</p>
+<p>Qualquer dúvida que tiverem é só deixar nos comentários, compartilhe com seus amigos e flw.</p>
+]]></content:encoded></item><item><title>Como funciona o reator ARC</title><link>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</guid><description>Este post explora teoricamente o funcionamento do Reator ARC, uma tecnologia ficcional presente no universo do Homem de Ferro. O autor destaca a evolução do personagem ao longo do tempo, passando de um herói de classe B da Marvel para um dos mais amados. O foco principal é o Reator ARC, projetado para replicar a energia do Tesseract e alimentar as armaduras do Homem de Ferro.</description><content:encoded><![CDATA[<p><strong>DISCLAIMER:</strong></p>
+<p><strong>Esse é um modelo teórico de como um Reator ARC provavelmente funciona.</strong></p>
+<p><strong>Toda essa teoria pertence a <a href="https://gizmodo.uol.com.br/reator-arc-homem-de-ferro/">este post</a></strong></p>
+<p><strong>A partir deste ponto, o post ficará muito pesado em física, por favor qualquer dúvida que tiverem podem retirar comigo</strong></p>
+<hr>
+<h3 id="introdução">Introdução</h3>
+<p>De novo aqui estamos falando do Homem de Ferro, tirei para re-assistir os filmes e ter insight&rsquo;s das coisas, mas, uma coisa que não pode ser negada é que eu amo este super-herói. Stan Lee fez bem em criá-lo, apesar do mesmo ser considerado um personagem série B da Marvel na época.</p>
+<p>Provavelmente você não está acreditando em mim, bom o blog <a href="https://canaltech.com.br/quadrinhos/sabia-que-o-homem-de-ferro-era-serie-b-na-marvel-veja-como-ele-foi-promovido-166586/">Canaltech</a> fez um excelente post contando a história da promoção do Iron Man de classe B para um dos mais amados da Marvel.</p>
+<p>Mas novamente, isso não é toda história. Teve algumas outras nos bastidores, mas enfim&hellip; Vamos ao personagem.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/arcreactor_sqrsignature_0000_15380309616253657433_hu775eef6664926dad96d8dabc935535ad_59885_0x0_q75_.jpg"
+    width="600"
+    height="600"
+    alt=""
+  />
+</figure>
+
+<h3 id="homem-de-ferro">Homem de ferro</h3>
+<p>Se você não conhece ou nunca assistiu o <a href="https://www.adorocinema.com/filmes/filme-53751/">Homem de Ferro (2008)</a> sugiro muito que assista. Esse foi com certeza um dos melhores filmes da Marvel até hoje. Dependendo de onde você olha pode ter diversas impressões diferentes, eu particularmente gosto muito do herói e de seus filmes, este post tem um ranking de melhores filmes do <a href="https://www.marvel616.com/2023/02/veja-os-melhores-e-piores-filmes-da.html">M.C.U</a> seguindo o Rotten Tomatoes. E MCU para quem não sabia é uma sigla para <strong>Marvel Cinematic Universe</strong> ou Universo Cinematográfico Marvel.</p>
+<p>Nosso herói era apenas um milionário fabricante de armas que viu suas &ldquo;armas&rdquo; sendo utilizadas por terroristas, então decidiu parar de fazer armas e mudar sua empresa para melhorar a vida da população em geral com energia limpa e tals advinda a partir do reator ARC de sua empresa. O mesmo reator que está preso em seu peito e que fornece energia ao eletroímã que protege seu coração e, ao mesmo tempo, alimenta suas armaduras.</p>
+<p>Com essa descrição feita vamos para falar sobre o assunto principal.</p>
+<hr>
+<h3 id="o-reator-arc">O reator ARC</h3>
+<p>No contexto do UCM, o reator ARC foi criado e projetado por Howard Stark e Anton Vanko para replicar a energia do tesseract. Após o sequestro no Afeganistão, Tony miniaturizou o reator e o utilizou para alimentar suas armaduras.</p>
+<p>Mas isso é o básico que uma pessoa pode pensar sobre o reator ARC do UCM. Mas vamos analisá-lo como um geek.</p>
+<p>O canal The Hacksmith conseguiu fazer uma versão de um gerador de energia com o formato do reator ARC.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pxf7YkF0iN0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>Aqui vamos tentar explicar como um reator ARC real funcionaria</p>
+<p>Com esse disclaimer feito, vamos começar nossa análise.</p>
+<hr>
+<h3 id="analisando-o-reator-arc">Analisando o Reator Arc</h3>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Reator_Arc_Stark_Obadiah_561449186718097011_hu24375f4a1ac2eb43cb24467e3d82d13c_694643_0x0__3.png"
+    width="1000"
+    height="417"
+    alt=""
+  />
+</figure>
+
+<p>Este é o reator ARC utilizado nas indústrias Stark durante o primeiro filme, até ser explodido por Tony.</p>
+<p>E seu formato lembra muito com um sistema de contenção de plasma em formato toroide, similar ao reator de fusão ITER</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hu204cc89cfdcb3d2a6c59f4219df10040_1079768_cea62f874824939fc11beb3dd8a3da8c.jpg"
+    width="1920"
+    height="1236"
+    alt=""
+  />
+</figure>
+
+<p>Os reatores de fusão existem hoje em formato de pesquisa, o iter está sendo construído e pretende ser o primeiro reator de fusão grande o bastante para gerar &ldquo;saldo positivo em energia&rdquo;. Ou seja, gerar mais saldo energético do que o necessário para gerar plasma, esse extra é utilizado pela população se houver um confinamento eficiente.</p>
+<p>Reatores de fusão funcionam assim, esmagando dois isotopos do hidrogênio em alta velocidade, liberando energia na forma de um elétron e um novo átomo do elemento (Hélio).</p>
+<p>Criticamente, o hélio e o elétron livre tem menos massa que os isotopos de hidrogênio, a massa ausente é convertida em energia que pode ser capturada como calor para esquentar a água e fazer rodar uma turbina que gera energia.</p>
+<p>O formato de <a href="https://en.wikipedia.org/wiki/Toroid">toroide</a> significa que existem partículas carregadas movendo-se em círculo, contidas por um campo magnético. Sendo essas partículas altamente carregadas, pois se movem muito rápido e os campos magnéticos conseguem curvar o movimento das partículas carregadas mantendo em um local por tempo suficiente até a colisão.</p>
+<p>Mas note que no projeto do reator Arc existem diversas bobinas eletromagnéticas na parte externa do toroide. Isso se vale, pois a contenção plasmática é o maior desafio para a fusão núclear, mas o reator Arc faz parecer simples induzindo um campo magnético. Então podemos concluir que a tecnologia chave para o reator Arc de grande escala é o fato dele dar um jeito de <strong>conter a reação em um anel autossustentável</strong>.</p>
+<p>Essa linha é corroborada pelas linhas de campos toroidais desenhadas no projeto do reator Arc.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Projeto-do-reator-arc_10734834496683316315_huf100569f47e70e482321d3e51540a156_482978_0x0__3.png"
+    width="636"
+    height="488"
+    alt=""
+  />
+</figure>
+
+<p>Também podemos ver que nesse projeto faltam laços de resfriamento, turbinas ou qualquer outra coisa que um reator térmico tradicional precisaria para funcionar, o que significa. O reator Arc não é um reator térmico convencional, ele produz eletricidade diretamente em vez de todo procedimento de transformar energia em calor para esquentar a água e transformar em vapor para então mover a turbina e gerar energia.</p>
+<p>Essa observação é observada em um momento interessante. &ldquo;O reator de Tony não frita ele vivo&rdquo;</p>
+<p>O que mais sabemos:</p>
+<ul>
+<li>Antes de colocar o <a href="https://marvelcinematicuniverse.fandom.com/wiki/Tony_Stark%27s_New_Element">Badassium</a>, o reator Arc era movido a <a href="https://pt.wikipedia.org/wiki/Pal%C3%A1dio">Paládio</a>.</li>
+<li>Paládio é danificado por nêutrons, então precisamos de um isótopo específico.</li>
+<li>O reator Arc tem bobinas eletromagnéticas em formato de toroide.</li>
+<li>O reator Arc emite luz azul.</li>
+<li>Pode ser construído em uma caverna com ferramentas de complexidade moderada.</li>
+<li>Não exige materiais exóticos, fora os que você pode conseguir desmontando armas convencionais.</li>
+<li>A energia acaba em momentos inconvenientes, o que significa que ele deve ter algum tipo de combustível ou carga consumível.</li>
+</ul>
+<p>O paládio tem sido proposto como uma possível solução para a <a href="https://pt.wikipedia.org/wiki/Fus%C3%A3o_a_frio">fusão &ldquo;fria&rdquo;</a> basicamente uma fusão nuclear que ocorre em temperatura ambiente, em vez dos milhões de graus célsius requeridos para reações de fusão do plasma.</p>
+<p>Embora, o uso de fusão a frio tenha sido desacreditada no mundo real.</p>
+<p>Isso, aliás, me lembra de uma frase, de uma fanfic que eu tava lendo que dizia: <a href="https://www.spiritfanfiction.com/historia/o-homem-por-de-tras-das-sombras-23950940/capitulos/25014788"><!-- raw HTML omitted -->“Quando você elimina o impossível, o que restar, não importa o quão improvável, deve ser a verdade” (Naruto)<!-- raw HTML omitted --></a>.</p>
+<p>Enfim, o paládio possui algumas propriedades de captura e <a href="https://pt.wikipedia.org/wiki/Radioatividade">decaimento</a>.</p>
+<p>Lembra que necessitamos de isotopos específicos, pois bem:</p>
+<ul>
+<li>
+<p>Com o isotopo PD-103 de paládio, ao ser decaído produz RH-103 (ródio) via captura de elétrons. Isso quer dizer que um elétron interno é absorvido pelo núcleo juntando-se com um próton para produzir um nêutron e <a href="https://pt.wikipedia.org/wiki/Radia%C3%A7%C3%A3o_gama">fóton energizado</a>.</p>
+</li>
+<li>
+<p>Com o isotopo PD-107 de paládio, ao ser decaído produz AG-107 (prata) via decaimento beta. Isso quer dizer que liberando um elétron quando um nêutron vira um próton. (Reação oposta a cima).</p>
+</li>
+</ul>
+<p>Nosso ponto é que a geração desses isotopos tem números diferentes de prótons, equilibram os números atômicos resultantes, os elétrons são equilibrados e não há fluxo positivo de energia (energia não é liberada para uso externo a reação).</p>
+<p><strong>Propondo que a teoria de Howard Stark de fato encontrou uma forma de usar o declínio beta dos íons PD-107 como uma fonte de elétrons PD-103 gerando um circuito elétrico entre dois isotopos radioativos</strong>.</p>
+<p>O PD-103 é muito radioativo contendo uma <a href="https://pt.wikipedia.org/wiki/Meia-vida">meia-vida</a> de 17 dias enquanto o PD-107 possui uma meia vida de 6.5M de anos, então deveria haver mais do isotopo mais pesado para compensação a disparidade da taxa de declínio.</p>
+<p>O núcleo de paládio PD-107 deveria ser o núcleo do dispositivo emitindo elétrons de alta energia enquanto declina para prata. Este é um isótopo estável presente no paládio normal que Tony Stark poderia extrair de uma arma convencional.</p>
+<hr>
+<h3 id="recapitulando">Recapitulando</h3>
+<p>O dispositivo usa partículas carregadas viajando em um anel de eletroímãs, com uma pequena quantidade de PD-103 ionizada por um arco elétrico (arco ⇾ arc) que permite o PD-103⁺ circular em alta velocidade dentro de outro anel.</p>
+<p>A ionização serve para atrasar a etapa de captura do elétron até que o átomo encontre um elétron livre para ser capturado e a alta energia cinética devido à velocidade aumenta as chances do elétron ser capturado, o que ocorre uma vez que o elétron é capturado. O declino PD-103 é iniciado, interrompido e preso pelo dispositivo simplesmente controlando a ionização e a circulação do PD-103.</p>
+<p>O declínio é preso simplesmente controlando ionização e a circulação de PD-103.</p>
+<p>A geometria e os campos magnéticos do dispositivo direcionam os elétrons altamente energizados do núcleo de PD-107 em direção ao anel externo. O processo de captura desses elétrons emitem raios gama desviados para catalisar o declínio beta de PD-103.</p>
+<p>Para resumir: elétrons são projetados para fora do núcleo interno e os raios gama, para dentro do anel externo essa contracorrente elétron/fóton cria um deficit de elétrons no núcleo, um potencial eletrostático massivo é desenvolvido e o núcleo de paládio atrai elétrons pouco energizados da fiação da armadura.</p>
+<hr>
+<h3 id="proposta-de-como-a-ignição-funciona">Proposta de como a ignição funciona</h3>
+<p>O reator Arc precisa de um ponto de partida, então&hellip;</p>
+<ul>
+<li>Usando a energia externa, o PD-103 é ionizado por um arco elétrico e acelerado por altas velocidades é provável a agência de raios gama para iniciar o núcleo interno.</li>
+<li>O PD-107 do núcleo interno é iniciado para emitir elétrons altamente energizados enquanto declinam para AG-107. Os elétrons escapam do núcleo e são direcionados via campo magnético em direção ao anel externo com a falta de elétrons criando um saldo positivo de carga no núcleo, que reduz a emissão até que os elétrons possam ser reabastecidos externamente.</li>
+<li>No anel externo, os elétrons livres altamente energizados colidem com íons altamente energizados PD-103⁺. Isso causa a captura instantânea do elétron e a emissão de raios gama. Os raios gama são defletidos para dentro em direção ao núcleo, catalisando ainda mais a emissão de elétrons e produzindo uma reação autossuficiente.</li>
+<li>O fluxo do núcleo interno para o externo cria uma diferença de potencial elétrico. Quando um circuito é criado através das cargas elétricas da armadura, o anel externo tem excesso de elétrons e o núcleo interno tem uma carência de elétrons. Isso gera uma corrente.</li>
+<li>A corrente elétrica mediante uma carga externa alivia os acúmulos eletro-estáticos que inicialmente retarda as reações. Então, quanto menos energia a armadura suga, mais lentamente a reação produz declínios radioativos e quanto mais a armadura suga, mais rapidamente são catalisadas as reações. Desta forma a saída de energia se autorregula com a demanda.</li>
+<li>O paládio é lentamente convertido em RH-103 e Ah-107 e a reação fica sem energia quando o paládio é totalmente consumido.</li>
+</ul>
+<h3 id="miniaturização-do-reator-arc">Miniaturização do reator Arc</h3>
+<p>E agora? Como faríamos a miniaturização do reator Arc para algo pequeno o suficiente a ser levado e carregado a mão?</p>
+<p>Ignorando totalmente o conceito do Badassium que seria um novo elemento para o reator Arc que também é submetido a decaimento beta, menos radioativo com maior saída.</p>
+<p>Uma coisa que precisamos reparar é que o brilho do reator é <strong>azul</strong>.</p>
+<p>Isso pode ser explicado pela ionização do Arc, mas também podemos usar o <a href="https://pt.wikipedia.org/wiki/Efeito_Tcherenkov">efeito de Tcherenkov</a> como uma explicação plausível, pois-se trata de um tipo especial de emissão de luz que ocorre quando uma partícula energética (não apenas o elétron) entra em um meio a uma velocidade maior que a da luz naquele meio. O fluido de elétron energizado dentro do reator Arc seria um espaço natural para gerar este efeito.</p>
+<p>Outro aspecto do modelo original a base de paládio era o envenenamento devido a &ldquo;toxicidade do paládio&rdquo;. É bem possível que o reator ejete paládio no sangue de Tony por todas as colisões energizadas que ocorrem no mesmo, mas isso não explica as linhas de circuito em seu peito.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/iron-man-main_16634291785127974714_hub5fb7e87e3f316a37cdd9b55dc606744_35195_0x0_q75_.jpg"
+    width="725"
+    height="302"
+    alt=""
+  />
+</figure>
+
+<p>Uma outra possível teoria seria exposição a prata, pois o excesso de prata gera uma condição conhecida como <a href="https://www.jornalciencia.com/voce-sabia-que-humanos-podem-ter-pele-azul/">pele azul</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/8mzy4tvjbd_27g6r4t09c_file_14316109629760988546_hue06d1bcc4d95242a8f2a4b4a24b7ebd3_67822_0x0_q75_.jpg"
+    width="699"
+    height="420"
+    alt=""
+  />
+</figure>
+
+<p>Também conhecido como argiria.</p>
+<p>Afinal, lembre-se que o processo de coleta de nêutrons e decaimento beta geram prata e ródio.</p>
+<p>Compostos de ródio também podem manchar a pele e são altamente tóxicos. Na realidade, pelo fato que a maioria das pessoas tem essencialmente zero exposição ao ródio, a toxicidade do mesmo é pouco compreendida. Isso também explica porque Tony não busca ajuda da medicina pelo acúmulo de metais pesados em seu organismo, ele sabia que os médicos não saberiam lidar com envenenamento por ródio.</p>
+<p><strong>Tony não estava envenenado por paládio e sim pelo produto do decaimento do paládio</strong>, e até agora toda teoria está se encaixando.</p>
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Falei que ia ficar pesado o post com muita física em especial física nuclear. Nunca tente construir um <strong>reator Arc</strong> real em casa, só se for um igual o do the hacksmith.</p>
+<p>Espero que tenham gostado do post, qualquer dúvida que tiver pode tirar comigo.</p>
+]]></content:encoded></item><item><title>Usando Deepin Linux no notebook primeiras impressões</title><link>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</guid><description>O post oferece uma análise detalhada da experiência pessoal do autor com a distribuição Deepin Linux. Ele explora os pontos positivos, como a interface elegante e as opções de configuração conveniente para notebooks, contrastando com os desafios encontrados, como a versão desatualizada do Flatpak e dificuldades na configuração de jogos. O autor destaca a conveniência do Pop!_OS para usuários menos experientes, enquanto sugere o Deepin como uma opção atrativa para aqueles familiarizados com a resolução de problemas no Linux. Em suma, o post oferece uma visão equilibrada e pessoal sobre o Deepin Linux, fornecendo insights valiosos para quem considera adotar essa distribuição.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<p>Desde 2021 eu venho usando distribuições GNU/Linux no meu computador e já passei por diversas distribuições como: <a href="https://pt.wikipedia.org/wiki/Pop!_OS">Pop!OS</a>, <a href="https://pt.wikipedia.org/wiki/Manjaro_Linux">Manjaro Linux</a>, <a href="https://pt.wikipedia.org/wiki/Fedora_Linux">Fedora</a>.</p>
+<p>E hoje estou usando a famosa distribuição chinesa <a href="https://pt.wikipedia.org/wiki/Deepin">Deepin Linux</a>.</p>
+<hr>
+<h3 id="o-que-é-o-deepin">O que é o Deepin</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hub56d6cb0329ea1293ab2631dde5ed0e9_758851_a56aabcf279c6d5883ecc55ab2be4ea1.png"
+    width="1200"
+    height="678"
+    alt=""
+  />
+</figure>
+
+<p>A distribuição Deepin é baseada no <a href="https://pt.wikipedia.org/wiki/Debian">Debian</a> e apresenta uma interface própria chamada <em>D.D.E</em> ou <em>Deepin Desktop Enviroment</em> além de um acervo completo de aplicações próprias sendo desenvolvida pela empresa <em>Wuhan Deepin Technology Company Limited</em> localizada em Wuhan na China.</p>
+<p>Deepin também é famoso por ser um dos ambientes linux mais bonitos estando par a par com Gnome</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hu2fb97a43e958ff307d3ed19bdfd14c24_146629_a15212c0e4e8c895d4315637d3692cac.png"
+    width="1200"
+    height="675"
+    alt=""
+  />
+</figure>
+
+<p>e KDE.<!-- raw HTML omitted --></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/KDE-Desktop-5_17167192046815499822_hue70047de9b90d3a47706836cc32a4870_117678_0x0_q75_.jpg"
+    width="1000"
+    height="563"
+    alt=""
+  />
+</figure>
+
+<p>Essa distribuição linux apesar de alguns reveses que encontrei pode ser considerada perfeita em muitos níveis para uso em notebooks.</p>
+<p>Primeiramente, se você quer um sistema atualizado e mais instável, esse sistema pode não servir para você, neste caso especifico, o Manjaro pode servir bem como sua escolha padrão.</p>
+<p>Em segundo lugar, se você é muito iniciante no mundo Linux, este também não serve muito bem como um <em>Sistema Inicial</em>, você ainda vai precisar aprender um pouco a sentar a bunda na cadeira e usar o <em>Google</em> para solucionar problemas que você vai encontrar, e acredite com toda certeza você vai precisar.</p>
+<p>Em terceiro lugar, está é uma distribuição baseada em Debian e não em Ubuntu, então esqueça os <a href="https://pt.wikipedia.org/wiki/Personal_Package_Archive">PPA&rsquo;s</a></p>
+<hr>
+<h3 id="como-se-originou-o-deepin">Como se originou o Deepin</h3>
+<p>O Deepin se originou sob o nome Hiwix em 28 de fevereiro de 2004 está versão inicial foi baseado em <a href="https://archiveos.org/morphix/">Morphix</a>.</p>
+<p>E também já teve o <a href="https://pt.wikipedia.org/wiki/IceWM">IceWM</a> sendo usado como sua interface padrão.</p>
+<p>Desde então sua interface padrão e sua base vem sendo trocado diversas vezes.</p>
+<p>Em dezembro de 2009 o nome foi trocado para <em>Linux Deepin</em> e a interface padrão para uma versão modificada do <em>Gnome</em>. Eventualmente foi decidido fazer uma troca do <em>Gnome</em> para o <em>D.D.E</em>.</p>
+<p>Linux também foi retirado do nome e desde a versão 15.1 o projeto mudou a base do sistema para Debian.</p>
+<hr>
+<h3 id="o-que-eu-gosto-no-deepin">O que eu gosto no Deepin</h3>
+<p>O Deepin vem com muitas opções por padrão que eu gosto, talvez pelo meu saudosismo e talvez pela facilidade de utilizar as ferramentas padrão.</p>
+<p>Por exemplo, a função <a href="https://pt.wikipedia.org/wiki/Hiberna%C3%A7%C3%A3o_(computa%C3%A7%C3%A3o)">Hibernar</a> que é a função mais útil para um notebook não foi omitida no Deepin Linux como foi no Manjaro Linux, Pop!OS, Fedora, <a href="https://pt.wikipedia.org/wiki/Windows_10">Windows 10</a>/<a href="https://pt.wikipedia.org/wiki/Windows_11">11</a> em prol da função <a href="https://help.gnome.org/users/gnome-help/stable/power-suspend.html.pt_BR">Suspender</a>.</p>
+<p><code>&quot;não quero fazer meu hardware parecer pior então vou desativar essa função útil aqui 👍-Empresas&quot;</code></p>
+<p>E acredite essa síndrome de que o melhor hardware é sempre o mais rápido ataca muitas empresas ao mesmo tempo, mesmo quando sabemos que o melhor é a conveniência.</p>
+<p>Bom, pelo menos eu acredito fundamentalmente que a conveniência é melhor que a velocidade em determinados casos.</p>
+<p>Além disso, o Deepin trouxe de volta uma coisa que eu sentia muita saudade e não lembrava mais <code>Barulhinho de inicialização e desligamento do sistema</code>.</p>
+<p>Sim, eu sei que tem como reativar no Windows ou ativar no Linux, mas sinceramente eu gosto quando vem por padrão.</p>
+<p>A loja de aplicativos é bem simples de se usar então é um ponto a mais, junto com a capacidade de configurar o armazenamento de energia para hibernar automaticamente o sistema operacional se bater determinado nível de energia. <code>se tu tá numa faculdade sem carregador por exemplo e não quer perder tudo que realizou no dia por falta de energia</code></p>
+<hr>
+<h3 id="o-que-não-gostei-no-deepin">O que não gostei no Deepin</h3>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/Flatpak">Flatpak</a> antigo no repositório.
+A versão disponível no repositório é a versão <strong>1.10.7</strong> enquanto a versão mais recente do flatpak é a <strong>1.14.5</strong> o que impede de rodar coisas mais recentes como a Steam.</li>
+<li>Dificuldade na configuração de jogos.
+Pode ser pela versão antiga do flatpak mas a instalação da <a href="https://pt.wikipedia.org/wiki/Steam">Steam</a> com <a href="https://pt.wikipedia.org/wiki/Proton_(software)">Proton</a> e sinceramente, baixar o <a href="https://pt.wikipedia.org/wiki/.deb">.deb</a> mais recente não ajudou.</li>
+</ul>
+<p>Tirando esses pequenos empecilhos, a experiência com o Deepin, está sendo bem interessante principalmente com o desenvolvimento do <a href="https://foxtechworld.github.io/2023/12/fkernel/">FKernel</a> está tudo ocorrendo muito bem e obrigado por perguntar.</p>
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Deepin é uma opção muito interessante a se tentar apesar de determinados empecilhos que se apresentaram enquanto estava trabalhando neste post, fiquei tentado a compilar o <a href="https://pt.wikipedia.org/wiki/Flatpak">flatpak</a> mais recente para voltar a usar Steam.</p>
+<p>Enfim, isso é um dos motivos que eu prefiro sugerir o Pop!OS a alguma outra distribuição que me perguntam. É um sistema tão monótono que quase nunca um problema precisa ser resolvido. Ele fica vegetando, não precisa de muita configuração interna para funcionar bem, ele já funciona bem e só precisa de <a href="https://pt.wikipedia.org/wiki/Personaliza%C3%A7%C3%A3o">personalização</a> para o seu gosto de sistema.</p>
+<p>Caso você já tenha algum tempo na estrada resolvendo e entendendo problemas linux. O Deepin pode vir a ser a solução que você procurava como sistema operacional de Notebook.</p>
+]]></content:encoded></item></channel></rss>

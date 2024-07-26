@@ -1,1 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Multiplayer on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/multiplayer/</link><description>Recent content in Multiplayer on FoxTechWorld</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Sat, 11 Nov 2023 20:09:05 -0300</lastBuildDate><atom:link href="https://FoxTechWorld.github.io/tags/multiplayer/index.xml" rel="self" type="application/rss+xml"/><item><title>Como Substituir O Hamachi No Linux Para Jogar Minecraft Lan De Forma Facilitada</title><link>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</link><pubDate>Sat, 11 Nov 2023 20:09:05 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</guid><description>Este post apresenta alternativas ao Hamachi no Linux para facilitar a jogabilidade de Minecraft em LAN. O Hamachi, um aplicativo para Windows, simula uma rede local para conexões fáceis em jogos. Duas soluções são discutidas: o Ngrok, um proxy reverso global que suporta HTTP/TLS e TCP; e o Localtunnel, uma opção mais aberta com menos configurações. Ambas permitem a conexão entre amigos para jogar Minecraft em LAN, oferecendo opções personalizadas para diferentes preferências.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Multiplayer on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/multiplayer/</link><description>Recent content in Multiplayer on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 11 Nov 2023 20:09:05 -0300</lastBuildDate><atom:link href="https://FoxTechWorld.github.io/tags/multiplayer/index.xml" rel="self" type="application/rss+xml"/><item><title>Como Substituir O Hamachi No Linux Para Jogar Minecraft Lan De Forma Facilitada</title><link>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</link><pubDate>Sat, 11 Nov 2023 20:09:05 -0300</pubDate><guid>https://FoxTechWorld.github.io/posts/como-substituir-o-hamachi-no-linux-para-jogar-minecraft-lan-de-forma-facilitada/</guid><description>Este post apresenta alternativas ao Hamachi no Linux para facilitar a jogabilidade de Minecraft em LAN. O Hamachi, um aplicativo para Windows, simula uma rede local para conexões fáceis em jogos. Duas soluções são discutidas: o Ngrok, um proxy reverso global que suporta HTTP/TLS e TCP; e o Localtunnel, uma opção mais aberta com menos configurações. Ambas permitem a conexão entre amigos para jogar Minecraft em LAN, oferecendo opções personalizadas para diferentes preferências.</description><content:encoded><![CDATA[<p>Como substituir o hamachi no linux para jogar minecraft LAN de forma facilitada</p>
+<hr>
+<h3 id="o-que-é-hamachi">O que é hamachi</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Hamachisoftware_5329973399256400102_hue1d933061b5170bdc8c2c5eb6cf8915a_20122_0x0__3.png"
+    width="263"
+    height="413"
+    alt=""
+  />
+</figure>
+
+<p>Se você já quis jogar num mundo survival com amigos, provavelmente já usou o hamachi que é um aplicativo para Windows que serve principalmente para que simula uma rede local ou <strong>L</strong>ocal <strong>A</strong>rea <strong>N</strong>etwork permitindo que pessoas se conectem de forma facilitada imitando LAN e é normalmente é utilizada para jogos no:</p>
+<ul>
+<li>FreeBSD</li>
+<li>Linux</li>
+<li>MacOSX</li>
+<li>Windows</li>
+</ul>
+<hr>
+<h3 id="primeira-solução-ngrok">Primeira solução: NGROK</h3>
+<p>Ngrok,a primeira vez pode parecer um pouco mais complicado por não ter interface gráfica mas ele é superior ao hamachi sendo um proxy reverso distribuído globalmente suportando entregas via HTTP / TLS ou aplicações baseadas em TCP.</p>
+<p>Isso significa que você pode usar TCP/IP pra usar ngrok e compartilhar um link com seu amigo e ambos podem jogar minecraft juntos.</p>
+<p>O uso é simples, após você instalar o ngrok em seu sistema operacional basta abrir a Lan no seu mapa minecraft que vai receber a porta contendo 5 dígitos. após isso é só usar o comando</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok tcp 127.0.0.1:<span style="color:#f92672">{</span>porta<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Temos opções extras como configurar o ngrok para usar apenas conexões de um determinado continente garantindo melhor performance do servidor</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok tcp 127.0.0.1:<span style="color:#f92672">{</span>porta<span style="color:#f92672">}</span> --region sa
+</span></span></code></pre></div><p>Para mais informações visite a <a href="https://ngrok.com/docs~/">documentação oficial do ngrok</a>~</p>
+<p>Como substituir o hamachi no linux para jogar minecraft lan de forma facilitada</p>
+<hr>
+<h3 id="segunda-solução-localtunnel">Segunda solução: Localtunnel</h3>
+<p>Uma opção mais aberta ao Hamachi e ao Ngrok, se chama Localtunnel, diferente do ngrok temos menos configurações de acesso o que nos permite menor granularidade de configurações, em contrapartida para abrir o servidor passamos apenas a porta do servidor e não seu ip completo com</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lt --port <span style="color:#f92672">{</span>porta<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>inclusive, você pode pegar e estudar o código do Localtunnel através de seu github: <a href="https://github.com/localtunnel/localtunnel">Github do Localtunnel</a></p>
+<p>Você não consegue especificar as regiões onde quer que o Localtunnel atue, pois seu funcionamento é diferente do Ngrok que é diferente do Hamachi, mas todos servem para fazer uma conexão entre amigos via tunnel.</p>
+<p>Salve menção a Fabio Akita que explica o <strong>conceito de tunnel com ssh</strong>.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/T-jHuFnxZ2k?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Com isso podemos concluir diversas opções que podem substituir o hamachi como seu software para jogar lan entre amigos com diversos outros que além de serem cli, podem ser expandidos e adaptados para rodar via script.</p>
+<p>Qualquer dúvida que tiverem é só deixar nos comentários, compartilhe com seus amigos e flw.</p>
+]]></content:encoded></item></channel></rss>

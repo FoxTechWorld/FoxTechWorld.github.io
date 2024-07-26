@@ -1,1 +1,161 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vingadores on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/vingadores/</link><description>Recent content in Vingadores on FoxTechWorld</description><generator>Hugo</generator><language>pt-br</language><atom:link href="https://FoxTechWorld.github.io/tags/vingadores/index.xml" rel="self" type="application/rss+xml"/><item><title>Como funciona o reator ARC</title><link>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</guid><description>Este post explora teoricamente o funcionamento do Reator ARC, uma tecnologia ficcional presente no universo do Homem de Ferro. O autor destaca a evolução do personagem ao longo do tempo, passando de um herói de classe B da Marvel para um dos mais amados. O foco principal é o Reator ARC, projetado para replicar a energia do Tesseract e alimentar as armaduras do Homem de Ferro.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vingadores on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/vingadores/</link><description>Recent content in Vingadores on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><atom:link href="https://FoxTechWorld.github.io/tags/vingadores/index.xml" rel="self" type="application/rss+xml"/><item><title>Como funciona o reator ARC</title><link>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/como-funciona-o-reator-arc/</guid><description>Este post explora teoricamente o funcionamento do Reator ARC, uma tecnologia ficcional presente no universo do Homem de Ferro. O autor destaca a evolução do personagem ao longo do tempo, passando de um herói de classe B da Marvel para um dos mais amados. O foco principal é o Reator ARC, projetado para replicar a energia do Tesseract e alimentar as armaduras do Homem de Ferro.</description><content:encoded><![CDATA[<p><strong>DISCLAIMER:</strong></p>
+<p><strong>Esse é um modelo teórico de como um Reator ARC provavelmente funciona.</strong></p>
+<p><strong>Toda essa teoria pertence a <a href="https://gizmodo.uol.com.br/reator-arc-homem-de-ferro/">este post</a></strong></p>
+<p><strong>A partir deste ponto, o post ficará muito pesado em física, por favor qualquer dúvida que tiverem podem retirar comigo</strong></p>
+<hr>
+<h3 id="introdução">Introdução</h3>
+<p>De novo aqui estamos falando do Homem de Ferro, tirei para re-assistir os filmes e ter insight&rsquo;s das coisas, mas, uma coisa que não pode ser negada é que eu amo este super-herói. Stan Lee fez bem em criá-lo, apesar do mesmo ser considerado um personagem série B da Marvel na época.</p>
+<p>Provavelmente você não está acreditando em mim, bom o blog <a href="https://canaltech.com.br/quadrinhos/sabia-que-o-homem-de-ferro-era-serie-b-na-marvel-veja-como-ele-foi-promovido-166586/">Canaltech</a> fez um excelente post contando a história da promoção do Iron Man de classe B para um dos mais amados da Marvel.</p>
+<p>Mas novamente, isso não é toda história. Teve algumas outras nos bastidores, mas enfim&hellip; Vamos ao personagem.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/arcreactor_sqrsignature_0000_15380309616253657433_hu775eef6664926dad96d8dabc935535ad_59885_0x0_q75_.jpg"
+    width="600"
+    height="600"
+    alt=""
+  />
+</figure>
+
+<h3 id="homem-de-ferro">Homem de ferro</h3>
+<p>Se você não conhece ou nunca assistiu o <a href="https://www.adorocinema.com/filmes/filme-53751/">Homem de Ferro (2008)</a> sugiro muito que assista. Esse foi com certeza um dos melhores filmes da Marvel até hoje. Dependendo de onde você olha pode ter diversas impressões diferentes, eu particularmente gosto muito do herói e de seus filmes, este post tem um ranking de melhores filmes do <a href="https://www.marvel616.com/2023/02/veja-os-melhores-e-piores-filmes-da.html">M.C.U</a> seguindo o Rotten Tomatoes. E MCU para quem não sabia é uma sigla para <strong>Marvel Cinematic Universe</strong> ou Universo Cinematográfico Marvel.</p>
+<p>Nosso herói era apenas um milionário fabricante de armas que viu suas &ldquo;armas&rdquo; sendo utilizadas por terroristas, então decidiu parar de fazer armas e mudar sua empresa para melhorar a vida da população em geral com energia limpa e tals advinda a partir do reator ARC de sua empresa. O mesmo reator que está preso em seu peito e que fornece energia ao eletroímã que protege seu coração e, ao mesmo tempo, alimenta suas armaduras.</p>
+<p>Com essa descrição feita vamos para falar sobre o assunto principal.</p>
+<hr>
+<h3 id="o-reator-arc">O reator ARC</h3>
+<p>No contexto do UCM, o reator ARC foi criado e projetado por Howard Stark e Anton Vanko para replicar a energia do tesseract. Após o sequestro no Afeganistão, Tony miniaturizou o reator e o utilizou para alimentar suas armaduras.</p>
+<p>Mas isso é o básico que uma pessoa pode pensar sobre o reator ARC do UCM. Mas vamos analisá-lo como um geek.</p>
+<p>O canal The Hacksmith conseguiu fazer uma versão de um gerador de energia com o formato do reator ARC.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pxf7YkF0iN0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>Aqui vamos tentar explicar como um reator ARC real funcionaria</p>
+<p>Com esse disclaimer feito, vamos começar nossa análise.</p>
+<hr>
+<h3 id="analisando-o-reator-arc">Analisando o Reator Arc</h3>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Reator_Arc_Stark_Obadiah_561449186718097011_hu24375f4a1ac2eb43cb24467e3d82d13c_694643_0x0__3.png"
+    width="1000"
+    height="417"
+    alt=""
+  />
+</figure>
+
+<p>Este é o reator ARC utilizado nas indústrias Stark durante o primeiro filme, até ser explodido por Tony.</p>
+<p>E seu formato lembra muito com um sistema de contenção de plasma em formato toroide, similar ao reator de fusão ITER</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hu204cc89cfdcb3d2a6c59f4219df10040_1079768_cea62f874824939fc11beb3dd8a3da8c.jpg"
+    width="1920"
+    height="1236"
+    alt=""
+  />
+</figure>
+
+<p>Os reatores de fusão existem hoje em formato de pesquisa, o iter está sendo construído e pretende ser o primeiro reator de fusão grande o bastante para gerar &ldquo;saldo positivo em energia&rdquo;. Ou seja, gerar mais saldo energético do que o necessário para gerar plasma, esse extra é utilizado pela população se houver um confinamento eficiente.</p>
+<p>Reatores de fusão funcionam assim, esmagando dois isotopos do hidrogênio em alta velocidade, liberando energia na forma de um elétron e um novo átomo do elemento (Hélio).</p>
+<p>Criticamente, o hélio e o elétron livre tem menos massa que os isotopos de hidrogênio, a massa ausente é convertida em energia que pode ser capturada como calor para esquentar a água e fazer rodar uma turbina que gera energia.</p>
+<p>O formato de <a href="https://en.wikipedia.org/wiki/Toroid">toroide</a> significa que existem partículas carregadas movendo-se em círculo, contidas por um campo magnético. Sendo essas partículas altamente carregadas, pois se movem muito rápido e os campos magnéticos conseguem curvar o movimento das partículas carregadas mantendo em um local por tempo suficiente até a colisão.</p>
+<p>Mas note que no projeto do reator Arc existem diversas bobinas eletromagnéticas na parte externa do toroide. Isso se vale, pois a contenção plasmática é o maior desafio para a fusão núclear, mas o reator Arc faz parecer simples induzindo um campo magnético. Então podemos concluir que a tecnologia chave para o reator Arc de grande escala é o fato dele dar um jeito de <strong>conter a reação em um anel autossustentável</strong>.</p>
+<p>Essa linha é corroborada pelas linhas de campos toroidais desenhadas no projeto do reator Arc.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Projeto-do-reator-arc_10734834496683316315_huf100569f47e70e482321d3e51540a156_482978_0x0__3.png"
+    width="636"
+    height="488"
+    alt=""
+  />
+</figure>
+
+<p>Também podemos ver que nesse projeto faltam laços de resfriamento, turbinas ou qualquer outra coisa que um reator térmico tradicional precisaria para funcionar, o que significa. O reator Arc não é um reator térmico convencional, ele produz eletricidade diretamente em vez de todo procedimento de transformar energia em calor para esquentar a água e transformar em vapor para então mover a turbina e gerar energia.</p>
+<p>Essa observação é observada em um momento interessante. &ldquo;O reator de Tony não frita ele vivo&rdquo;</p>
+<p>O que mais sabemos:</p>
+<ul>
+<li>Antes de colocar o <a href="https://marvelcinematicuniverse.fandom.com/wiki/Tony_Stark%27s_New_Element">Badassium</a>, o reator Arc era movido a <a href="https://pt.wikipedia.org/wiki/Pal%C3%A1dio">Paládio</a>.</li>
+<li>Paládio é danificado por nêutrons, então precisamos de um isótopo específico.</li>
+<li>O reator Arc tem bobinas eletromagnéticas em formato de toroide.</li>
+<li>O reator Arc emite luz azul.</li>
+<li>Pode ser construído em uma caverna com ferramentas de complexidade moderada.</li>
+<li>Não exige materiais exóticos, fora os que você pode conseguir desmontando armas convencionais.</li>
+<li>A energia acaba em momentos inconvenientes, o que significa que ele deve ter algum tipo de combustível ou carga consumível.</li>
+</ul>
+<p>O paládio tem sido proposto como uma possível solução para a <a href="https://pt.wikipedia.org/wiki/Fus%C3%A3o_a_frio">fusão &ldquo;fria&rdquo;</a> basicamente uma fusão nuclear que ocorre em temperatura ambiente, em vez dos milhões de graus célsius requeridos para reações de fusão do plasma.</p>
+<p>Embora, o uso de fusão a frio tenha sido desacreditada no mundo real.</p>
+<p>Isso, aliás, me lembra de uma frase, de uma fanfic que eu tava lendo que dizia: <a href="https://www.spiritfanfiction.com/historia/o-homem-por-de-tras-das-sombras-23950940/capitulos/25014788"><!-- raw HTML omitted -->“Quando você elimina o impossível, o que restar, não importa o quão improvável, deve ser a verdade” (Naruto)<!-- raw HTML omitted --></a>.</p>
+<p>Enfim, o paládio possui algumas propriedades de captura e <a href="https://pt.wikipedia.org/wiki/Radioatividade">decaimento</a>.</p>
+<p>Lembra que necessitamos de isotopos específicos, pois bem:</p>
+<ul>
+<li>
+<p>Com o isotopo PD-103 de paládio, ao ser decaído produz RH-103 (ródio) via captura de elétrons. Isso quer dizer que um elétron interno é absorvido pelo núcleo juntando-se com um próton para produzir um nêutron e <a href="https://pt.wikipedia.org/wiki/Radia%C3%A7%C3%A3o_gama">fóton energizado</a>.</p>
+</li>
+<li>
+<p>Com o isotopo PD-107 de paládio, ao ser decaído produz AG-107 (prata) via decaimento beta. Isso quer dizer que liberando um elétron quando um nêutron vira um próton. (Reação oposta a cima).</p>
+</li>
+</ul>
+<p>Nosso ponto é que a geração desses isotopos tem números diferentes de prótons, equilibram os números atômicos resultantes, os elétrons são equilibrados e não há fluxo positivo de energia (energia não é liberada para uso externo a reação).</p>
+<p><strong>Propondo que a teoria de Howard Stark de fato encontrou uma forma de usar o declínio beta dos íons PD-107 como uma fonte de elétrons PD-103 gerando um circuito elétrico entre dois isotopos radioativos</strong>.</p>
+<p>O PD-103 é muito radioativo contendo uma <a href="https://pt.wikipedia.org/wiki/Meia-vida">meia-vida</a> de 17 dias enquanto o PD-107 possui uma meia vida de 6.5M de anos, então deveria haver mais do isotopo mais pesado para compensação a disparidade da taxa de declínio.</p>
+<p>O núcleo de paládio PD-107 deveria ser o núcleo do dispositivo emitindo elétrons de alta energia enquanto declina para prata. Este é um isótopo estável presente no paládio normal que Tony Stark poderia extrair de uma arma convencional.</p>
+<hr>
+<h3 id="recapitulando">Recapitulando</h3>
+<p>O dispositivo usa partículas carregadas viajando em um anel de eletroímãs, com uma pequena quantidade de PD-103 ionizada por um arco elétrico (arco ⇾ arc) que permite o PD-103⁺ circular em alta velocidade dentro de outro anel.</p>
+<p>A ionização serve para atrasar a etapa de captura do elétron até que o átomo encontre um elétron livre para ser capturado e a alta energia cinética devido à velocidade aumenta as chances do elétron ser capturado, o que ocorre uma vez que o elétron é capturado. O declino PD-103 é iniciado, interrompido e preso pelo dispositivo simplesmente controlando a ionização e a circulação do PD-103.</p>
+<p>O declínio é preso simplesmente controlando ionização e a circulação de PD-103.</p>
+<p>A geometria e os campos magnéticos do dispositivo direcionam os elétrons altamente energizados do núcleo de PD-107 em direção ao anel externo. O processo de captura desses elétrons emitem raios gama desviados para catalisar o declínio beta de PD-103.</p>
+<p>Para resumir: elétrons são projetados para fora do núcleo interno e os raios gama, para dentro do anel externo essa contracorrente elétron/fóton cria um deficit de elétrons no núcleo, um potencial eletrostático massivo é desenvolvido e o núcleo de paládio atrai elétrons pouco energizados da fiação da armadura.</p>
+<hr>
+<h3 id="proposta-de-como-a-ignição-funciona">Proposta de como a ignição funciona</h3>
+<p>O reator Arc precisa de um ponto de partida, então&hellip;</p>
+<ul>
+<li>Usando a energia externa, o PD-103 é ionizado por um arco elétrico e acelerado por altas velocidades é provável a agência de raios gama para iniciar o núcleo interno.</li>
+<li>O PD-107 do núcleo interno é iniciado para emitir elétrons altamente energizados enquanto declinam para AG-107. Os elétrons escapam do núcleo e são direcionados via campo magnético em direção ao anel externo com a falta de elétrons criando um saldo positivo de carga no núcleo, que reduz a emissão até que os elétrons possam ser reabastecidos externamente.</li>
+<li>No anel externo, os elétrons livres altamente energizados colidem com íons altamente energizados PD-103⁺. Isso causa a captura instantânea do elétron e a emissão de raios gama. Os raios gama são defletidos para dentro em direção ao núcleo, catalisando ainda mais a emissão de elétrons e produzindo uma reação autossuficiente.</li>
+<li>O fluxo do núcleo interno para o externo cria uma diferença de potencial elétrico. Quando um circuito é criado através das cargas elétricas da armadura, o anel externo tem excesso de elétrons e o núcleo interno tem uma carência de elétrons. Isso gera uma corrente.</li>
+<li>A corrente elétrica mediante uma carga externa alivia os acúmulos eletro-estáticos que inicialmente retarda as reações. Então, quanto menos energia a armadura suga, mais lentamente a reação produz declínios radioativos e quanto mais a armadura suga, mais rapidamente são catalisadas as reações. Desta forma a saída de energia se autorregula com a demanda.</li>
+<li>O paládio é lentamente convertido em RH-103 e Ah-107 e a reação fica sem energia quando o paládio é totalmente consumido.</li>
+</ul>
+<h3 id="miniaturização-do-reator-arc">Miniaturização do reator Arc</h3>
+<p>E agora? Como faríamos a miniaturização do reator Arc para algo pequeno o suficiente a ser levado e carregado a mão?</p>
+<p>Ignorando totalmente o conceito do Badassium que seria um novo elemento para o reator Arc que também é submetido a decaimento beta, menos radioativo com maior saída.</p>
+<p>Uma coisa que precisamos reparar é que o brilho do reator é <strong>azul</strong>.</p>
+<p>Isso pode ser explicado pela ionização do Arc, mas também podemos usar o <a href="https://pt.wikipedia.org/wiki/Efeito_Tcherenkov">efeito de Tcherenkov</a> como uma explicação plausível, pois-se trata de um tipo especial de emissão de luz que ocorre quando uma partícula energética (não apenas o elétron) entra em um meio a uma velocidade maior que a da luz naquele meio. O fluido de elétron energizado dentro do reator Arc seria um espaço natural para gerar este efeito.</p>
+<p>Outro aspecto do modelo original a base de paládio era o envenenamento devido a &ldquo;toxicidade do paládio&rdquo;. É bem possível que o reator ejete paládio no sangue de Tony por todas as colisões energizadas que ocorrem no mesmo, mas isso não explica as linhas de circuito em seu peito.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/iron-man-main_16634291785127974714_hub5fb7e87e3f316a37cdd9b55dc606744_35195_0x0_q75_.jpg"
+    width="725"
+    height="302"
+    alt=""
+  />
+</figure>
+
+<p>Uma outra possível teoria seria exposição a prata, pois o excesso de prata gera uma condição conhecida como <a href="https://www.jornalciencia.com/voce-sabia-que-humanos-podem-ter-pele-azul/">pele azul</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/8mzy4tvjbd_27g6r4t09c_file_14316109629760988546_hue06d1bcc4d95242a8f2a4b4a24b7ebd3_67822_0x0_q75_.jpg"
+    width="699"
+    height="420"
+    alt=""
+  />
+</figure>
+
+<p>Também conhecido como argiria.</p>
+<p>Afinal, lembre-se que o processo de coleta de nêutrons e decaimento beta geram prata e ródio.</p>
+<p>Compostos de ródio também podem manchar a pele e são altamente tóxicos. Na realidade, pelo fato que a maioria das pessoas tem essencialmente zero exposição ao ródio, a toxicidade do mesmo é pouco compreendida. Isso também explica porque Tony não busca ajuda da medicina pelo acúmulo de metais pesados em seu organismo, ele sabia que os médicos não saberiam lidar com envenenamento por ródio.</p>
+<p><strong>Tony não estava envenenado por paládio e sim pelo produto do decaimento do paládio</strong>, e até agora toda teoria está se encaixando.</p>
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Falei que ia ficar pesado o post com muita física em especial física nuclear. Nunca tente construir um <strong>reator Arc</strong> real em casa, só se for um igual o do the hacksmith.</p>
+<p>Espero que tenham gostado do post, qualquer dúvida que tiver pode tirar comigo.</p>
+]]></content:encoded></item></channel></rss>

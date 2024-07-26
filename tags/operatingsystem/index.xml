@@ -1,3 +1,285 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OperatingSystem on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/operatingsystem/</link><description>Recent content in OperatingSystem on FoxTechWorld</description><generator>Hugo</generator><language>pt-br</language><atom:link href="https://FoxTechWorld.github.io/tags/operatingsystem/index.xml" rel="self" type="application/rss+xml"/><item><title>FKernel</title><link>https://FoxTechWorld.github.io/posts/fkernel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel/</guid><description>Este post aborda a visão por trás do FKernel, um projeto ambicioso de desenvolvimento de sistema operacional focado em um kernel x86_64 moderno escrito em C++. Os diferenciais incluem uma atenção especial a uma arquitetura específica, um framework de desenvolvimento de drivers e sistemas de arquivos inspirado no DriverKit da Apple, além de um compromisso com a modularidade por meio de sistemas baseados em módulos internos.</description></item><item><title>FKernel com cpp e rust. Explicando as noias</title><link>https://FoxTechWorld.github.io/posts/fkernel-com-cpp-e-rust.-explicando-as-noias/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel-com-cpp-e-rust.-explicando-as-noias/</guid><description>Introdução E novamente vamos falar do FKernel, o segundo maior VaporWare da história depois do Microsoft Xenix. Leia mais sobre este assunto neste Post.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OperatingSystem on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/operatingsystem/</link><description>Recent content in OperatingSystem on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><atom:link href="https://FoxTechWorld.github.io/tags/operatingsystem/index.xml" rel="self" type="application/rss+xml"/><item><title>FKernel</title><link>https://FoxTechWorld.github.io/posts/fkernel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel/</guid><description>Este post aborda a visão por trás do FKernel, um projeto ambicioso de desenvolvimento de sistema operacional focado em um kernel x86_64 moderno escrito em C++. Os diferenciais incluem uma atenção especial a uma arquitetura específica, um framework de desenvolvimento de drivers e sistemas de arquivos inspirado no DriverKit da Apple, além de um compromisso com a modularidade por meio de sistemas baseados em módulos internos.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<p>OSDev é um acrônimo para Operating System Development ou Desenvolvimento de Sistema Operacional, e isso é uma base importante do que pretendo fazer futuramente. O desenvolvimento de um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">Kernel</a> moderno para a <a href="https://pt.wikipedia.org/wiki/AMD64">arquitetura x86 64</a> em <a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++</a>.</p>
+<p>A ideia é que o kernel tenha algumas licenças para permitir que o código seja atualizável como a GPL com um pouco mais de tranquilidade como a licença do MIT.</p>
+<p>Com uma incrível capacidade de adaptação como o <a href="https://pt.wikipedia.org/wiki/MINIX">MINIX</a> / <a href="https://pt.wikipedia.org/wiki/Mach_(n%C3%BAcleo)">MACH</a> sem desgastar muito o desempenho do sistema operacional usando o modelo de um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">kernel híbrido</a></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Kernel-hybrid.svg_8339383942674100102_hu77394cbbd262d6c86cf918d2b5520474_39917_0x0__3.png"
+    width="1280"
+    height="960"
+    alt=""
+  />
+</figure>
+
+<h3 id="quais-seriam-os-diferencias-do-fkernel-em-comparação-com-outros-kerneis">Quais seriam os diferencias do FKernel em comparação com outros kerneis</h3>
+<ul>
+<li><strong><em>Especificidade de Arquitetura</em></strong>: Não estamos tentando abraçar o mundo alcançando todos os lugares, o FKernel é feito para somente uma arquitetura por projeto. Isso significa que estamos apenas melhorando o kernel em apenas um ponto de arquitetura, tornando-o mais fácil de entender e manter.</li>
+<li><strong><em>Facilidade de Desenvolvimento de Drivers / Filesystem</em></strong>: É Basicamente a mesma ideia da Apple e seu DriverKit, é criar uma classe virtual onde podemos definir o que é um driver / o que é um VFS e inicializa-los corretamente além de criar um parser de struct para os Kits.</li>
+</ul>
+<p><strong>Driver Interface</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Enum para representar o estado do driver
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">enum</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DriverStatus</span> {
+</span></span><span style="display:flex;"><span>    OK,
+</span></span><span style="display:flex;"><span>    Error,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Adicione outros estados conforme necessário
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Interface virtual para o driver
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DriverInterface</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> DriverStatus initDriver() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> DriverStatus <span style="color:#a6e22e">readData</span>(<span style="color:#66d9ef">uint8_t</span><span style="color:#f92672">*</span> buffer, size_t size) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> DriverStatus <span style="color:#a6e22e">writeData</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">uint8_t</span><span style="color:#f92672">*</span> buffer, size_t size) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">shutdownDriver</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>DriverInterface() <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Adicione métodos adicionais conforme necessário, por exemplo:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">virtual</span> DriverStatus <span style="color:#a6e22e">resetDriver</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> DriverStatus <span style="color:#a6e22e">setConfiguration</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> config, size_t configSize) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Adicione métodos getters para informações do driver, por exemplo:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">virtual</span> String <span style="color:#a6e22e">getDriverName</span>() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> String <span style="color:#a6e22e">getDriverVersion</span>() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><p><strong>Filesystem Interface</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FileStatus</span> {
+</span></span><span style="display:flex;"><span>    Opened,
+</span></span><span style="display:flex;"><span>    Closed
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FileSystemInterface</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>FileSystemInterface() <span style="color:#f92672">=</span> <span style="color:#66d9ef">default</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Operações comuns do sistema de arquivos
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">open</span>(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> filename) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">close</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> size_t <span style="color:#a6e22e">read</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> buffer, size_t size) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> size_t <span style="color:#a6e22e">write</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> buffer, size_t size) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Métodos de acesso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">virtual</span> FileStatus <span style="color:#a6e22e">getStatus</span>() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> std<span style="color:#f92672">::</span>string getFileName() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Tratamento de erros
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isError</span>() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">virtual</span> String <span style="color:#a6e22e">getErrorDescription</span>() <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Podemos dizer que esses Kits vão precisar ser rapidamente atualizados e reescritos em breve, para poderem ser parsear structs de C entre outras funções para aumentar compatibilidade.</p>
+<hr>
+<h3 id="alguns-recursos-monoliticamente-instalados-do-fkernel">Alguns recursos monoliticamente instalados do FKernel</h3>
+<ul>
+<li>
+<p><strong><em>Sistemas de Módulos internos</em></strong>: Os drivers / Filesystem seriam instalados como servidores / módulos do Kernel, podendo expandir sem necessariamente afetar o código-fonte atual do kernel.</p>
+</li>
+<li>
+<p><strong><em>ZRam</em></strong>: Uso de uma RAM comprimida para aumentar a eficiência do gerenciamento de memória.</p>
+</li>
+<li>
+<p><strong><em>ZSwap</em></strong>: Uso de uma Swap comprimida para aumentar a eficiência do gerenciamento de memória, além de habilitar por padrão o suporte ao hibernar do computador.</p>
+</li>
+<li>
+<p><strong><em>Preload / Prelink</em></strong>: Suporte a estrutura do <a href="https://en.wikipedia.org/wiki/Preload_(software)">preload</a> ao nível de kernel junto do <a href="https://en.wikipedia.org/wiki/Prelink">prelink</a></p>
+</li>
+<li>
+<p><strong><em>VKerneis</em></strong>: Uso de <a href="https://en.wikipedia.org/wiki/Vkernel">virtual kerneis (DragonFlyBSD)</a> para debug, testes no kernel ou mesmo uso de Jails.</p>
+</li>
+<li>
+<p><strong><em>DTrace</em></strong>: Suporte ao <a href="https://en.wikipedia.org/wiki/DTrace">DTrace do Solaris</a> junto ao uso de <a href="https://computersciencewiki.org/index.php/Policies">politicies / políticas</a> para melhorar o desempenho / funcionamento do sistema operacional.</p>
+</li>
+<li>
+<p><strong><em>CGroups</em></strong>: Uso de <a href="https://en.wikipedia.org/wiki/Cgroups">cgroups</a> para controlar processos granuladamente dentro do kernel, com as políticas sendo utilizadas para que o kernel não precise usar o <a href="https://en.wikipedia.org/wiki/Out_of_memory">OOM</a> instantaneamente.</p>
+</li>
+<li>
+<p><strong><em>Namespace</em></strong>: Uso de <a href="https://en.wikipedia.org/wiki/Namespace">Namespace</a> para adicionar suporte ao <a href="https://en.wikipedia.org/wiki/Open_Container_Initiative">OCI</a>.</p>
+</li>
+<li>
+<p><strong><em>Jails</em></strong>: Suporte a uma versão customizada do <a href="https://en.wikipedia.org/wiki/FreeBSD_jail">Jails de FreeBSD</a> usando o <strong>VKernel</strong>.</p>
+</li>
+</ul>
+<hr>
+<h3 id="hypervisors-monoliticamente-instalados-no-fkernel">Hypervisors Monoliticamente instalados no FKernel</h3>
+<ul>
+<li>
+<p><strong><em>Kvm</em></strong>: Suporte ao driver de <a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">para virtualização KVM</a>.</p>
+</li>
+<li>
+<p><strong><em>Xen</em></strong>: Suporte ao driver de <a href="https://en.wikipedia.org/wiki/Xen">para virtualização XEN</a>.</p>
+</li>
+</ul>
+<hr>
+<h3 id="formatos-de-arquivos-monoliticamente-instalados-no-fkernel">Formatos de Arquivos Monoliticamente instalados no FKernel</h3>
+<ul>
+<li>
+<p><strong><em>Suporte ao Formato de Arquivos Unix: ELF</em></strong>: Planejo adicionar um suporte básico ao <a href="https://pt.wikipedia.org/wiki/Executable_and_Linkable_Format">formato ELF</a> de forma monolítica no Kernel.</p>
+</li>
+<li>
+<p><strong><em>Suporte ao Formato de Arquivos Mach-O</em></strong>: Planejo adicionar suporte básico ao <a href="https://en.wikipedia.org/wiki/Mach-O">formato de arquivos Mach-O</a> de forma monolítica no Kernel.</p>
+</li>
+</ul>
+<hr>
+<h3 id="sistema-de-arquivos-monoliticamente-instalados-do-fkernel">Sistema de Arquivos Monoliticamente instalados do FKernel</h3>
+<ul>
+<li>
+<p><strong><em>Suporte ao Sistema de Arquivos: <a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT</a></em></strong>: Como um filesystem simples, e contendo uma especificação aberta, seria uma boa opção deixar o Kernel poder usar este filesystem como uma opção.</p>
+</li>
+<li>
+<p><strong><em>Suporte ao Sistema de Arquivos: <a href="https://en.wikipedia.org/wiki/Unix_File_System">UFS</a></em></strong>: Como um filesystem padrão em sistema Unix Like, este seria um bom filesystem para ser utilizado como padrão em desktop e afins.</p>
+</li>
+<li>
+<p><strong><em>Suporte ao Sistema de Arquivos: <a href="https://en.wikipedia.org/wiki/ExFAT">EXFAT</a></em></strong>: Esse é um filesystem que pode ser utilizado para compartilhar arquivos entre sistemas operacionais.</p>
+</li>
+<li>
+<p><strong><em>Suporte ao Sistema de Arquivos: <a href="https://en.wikipedia.org/wiki/F2FS">F2FS</a></em></strong>. Este é um filesystem interessante para ser utilizado em SSD&rsquo;s / SSD&rsquo;s NVME.</p>
+</li>
+</ul>
+<p>Está é uma categoria que eu chamo de sistemas de arquivos **Reais,ou seja,a está literalmente trabalhando com seus arquivos, mas tem uma subcategoria chamada sistemas de arquivos <strong>Virtuais</strong> ou **Falsos**.</p>
+<p>Aqui é escusado explicar em detalhes, mas deixo uma visão geral. Da mesma forma que alguns sistemas de arquivos trabalham em armazenamento de dados, outros funcionam mostrando seus dados em arquivos virtuais aka <a href="https://pt.wikipedia.org/wiki/Sysfs"><em>SysFS</em></a>, <a href="https://pt.wikipedia.org/wiki/Arquivo_de_dispositivo"><em>DevFS</em></a>, <a href="https://pt.wikipedia.org/wiki/TMPFS"><em>TmpFS</em></a>. Eles também serão inclusos no FKernel junto de outros sistemas como <em>9p</em>, <em>SSHFS</em>, <em>UnionFS</em>, *OverlayFS&hellip; De forma monolítica</p>
+<hr>
+<h3 id="atraindo-pessoas-para-o-fkernel">Atraindo pessoas para o FKernel</h3>
+<p>Claro que não pretendo deixar apenas isso no Kernel, sua expansibilidade permite adicione novos formatos, drivers, dispositivos&hellip; Contanto que a versão default não seja alterado, ou seja, além do que já temos.</p>
+<p>No momento, o FKernel está em fase de planejamento, mas esses são alguns recursos-base que pretendo adicionar ao FKernel, com algumas optimizações de C++ em suas instruções que seriam sobrecarregadas por versões otimizadas utilizando <a href="https://pt.wikipedia.org/wiki/SIMD">SIMD</a> em instruções acessíveis ao limite do SIMD que é maior que 8 ou maior que 16.</p>
+<p>Uma coisa que posso dizer é que o código vai ter um <a href="https://pt.wikipedia.org/wiki/Diretrizes_de_interface_humana">HIG</a> para melhor desenvolvimento do Kernel seguindo algumas boas práticas da programação:</p>
+<ul>
+<li><a href="https://balta.io/blog/clean-code">Clean Code</a></li>
+<li><a href="https://kottke.org/23/06/how-nasa-writes-space-proof-code">Space Proof Code</a></li>
+<li><a href="https://medium.com/swlh/return-early-pattern-3d18a41bba8">Early Return</a></li>
+<li><a href="https://betterprogramming.pub/refactoring-guard-clauses-2ceeaa1a9da">Clause Guards</a></li>
+</ul>
+<p>Claro que seria bastante chato para convencer novas pessoas a pelo menos testarem o FKernel, então penso que uma boa solução seria criar um montador de distros como o <a href="https://en.wikipedia.org/wiki/SUSE_Studio">SUSE Studio</a> usando <a href="https://en.wikipedia.org/wiki/Dialog_(software)">Dialog</a> + <a href="https://en.wikipedia.org/wiki/Shell_script">Shell Script</a> + <a href="https://xmake.io">Xmake</a> que possa ser usado tanto para Linux quanto para FKernel, dessa forma atraímos pela utilidade e mantemos pela curiosidade do que seria FKernel.</p>
+<p>Outra boa forma seria aprofundar o FKernel num OS, próprio mais customizado para ser direto ao ponto com suporte a DRI, HDI, &hellip; Entre outros usando a estrutura aberta e permitindo a fechada de forma facilitada.</p>
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>No fim de toda essa explicação, podemos dizer que o código do FKernel deve ser preparado para ser legível, modular, com diversas capacidades para melhorar seu desenvolvimento e execução em runtime.</p>
+<p>Valendo-se de recursos como containers, virtualização, para virtualização, módulos de Kernel com VFS, DriverKit, Jails&hellip; Entre outros para garantir o melhor desempenho em comparação com outros Kerneis.</p>
+]]></content:encoded></item><item><title>FKernel com cpp e rust. Explicando as noias</title><link>https://FoxTechWorld.github.io/posts/fkernel-com-cpp-e-rust.-explicando-as-noias/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/fkernel-com-cpp-e-rust.-explicando-as-noias/</guid><description>Introdução E novamente vamos falar do FKernel, o segundo maior VaporWare da história depois do Microsoft Xenix. Leia mais sobre este assunto neste Post.
 Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.
-Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.</description></item><item><title>Usando Deepin Linux no notebook primeiras impressões</title><link>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</guid><description>O post oferece uma análise detalhada da experiência pessoal do autor com a distribuição Deepin Linux. Ele explora os pontos positivos, como a interface elegante e as opções de configuração conveniente para notebooks, contrastando com os desafios encontrados, como a versão desatualizada do Flatpak e dificuldades na configuração de jogos. O autor destaca a conveniência do Pop!_OS para usuários menos experientes, enquanto sugere o Deepin como uma opção atrativa para aqueles familiarizados com a resolução de problemas no Linux. Em suma, o post oferece uma visão equilibrada e pessoal sobre o Deepin Linux, fornecendo insights valiosos para quem considera adotar essa distribuição.</description></item></channel></rss>
+Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<p>E novamente vamos falar do <a href="https://foxtechworld.github.io/posts/fkernel/">FKernel</a>, o segundo maior <a href="https://pt.wikipedia.org/wiki/Vaporware">VaporWare</a> da história depois do Microsoft Xenix. Leia mais sobre este assunto neste <a href="https://foxtechworld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/">Post</a>.</p>
+<p>Entre muitos objetivos dessa reescrita de concepção, decidi escolher melhores as linguagens com base neste vídeo.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/MSDX_XFZ5_A?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<p>Provavelmente você viu esse tanto de vídeo no YouTube e não julgo quem acha que o rust vai substituir. E não, definitivamente não vai, mas não impedimos ninguém de sonhar.</p>
+<p>Dito isso vou apresentar a mudança na ideia do FKernel.</p>
+<ol>
+<li>Vamos seguir toda a base de um projeto <a href="https://pt.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> usando obviamente a licença BSD.</li>
+<li>Vamos substituir <a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)">C</a> por <a href="https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)">Rust</a>, mas continuar usando <a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++</a> e <a href="https://pt.wikipedia.org/wiki/NASM">Nasm</a>.</li>
+</ol>
+<p>Sim, parece contraditório como tudo que faço, mas tenho explicações que considero no mínimo convincentes para isso.</p>
+<h3 id="motivos-de-substituir-c-por-rust">Motivos de substituir C por Rust</h3>
+<p>Bom, primeiramente vamos entender o motivo da criação do rust. Como muitos já devem ter falado, o rust surgiu como uma forma de substituir o C e dar mais segurança, desempenho e simultaneidade no desenvolvimento de software. E da forma que o compilador Rust foi projetado, também nos dá uma alta proteção a memória.</p>
+<p>Mas o mesmo não vale para o C++ que possui <a href="https://pt.wikipedia.org/wiki/Ponteiro_inteligente">Smart Pointers</a> um conceito elegante na programação que torna o C++ que o usa seguro.</p>
+<h3 id="o-abismo-das-linguagens-seguras">O abismo das linguagens seguras</h3>
+<p>Existem diversas (e eu generalizo o máximo que posso) diversas linguagens consideradas memory safety:</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/1668175782934_123062719136275623_huf0a4b117535cd2da4362e54725260395_58792_0x0_q75_.jpg"
+    width="800"
+    height="800"
+    alt=""
+  />
+</figure>
+
+<p>Essas linguagens como:</p>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)">Ruby</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Swift_(linguagem_de_programa%C3%A7%C3%A3o)">Swift</a> / <a href="https://pt.wikipedia.org/wiki/Objective-C">Objective-C</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)">Java</a> / Outras linguagens <a href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual_Java">JVM</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/C_Sharp">C#</a> / <a href="https://pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)">Go</a> / <a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++</a></li>
+</ul>
+<p>Podem ser consideradas Memory Safety isso pela definição do mesmo:</p>
+<pre tabindex="0"><code>Segurança da memória (memory safety) é o estado de proteção contra vários bugs de software e vulnerabilidades de segurança ao lidar com o acesso à memória, como estouro de buffer e ponteiros pendentes. Por exemplo, o Java é considerado seguro para a memória porque sua detecção de erro em tempo de execução verifica os limites de array e desreferências de ponteiro. Em contraste, C e C++ permitem aritmética arbitrária de ponteiros com ponteiros implementados como endereços diretos de memória sem provisão para verificação de limites, e, portanto, são potencialmente inseguros para a memória (memory-unsafe).
+</code></pre><p>Veja que C++ não se enquadrava na definição de memory-safe pela operação arbitraria de ponteiros, coisa que veio mudar com o advento dos Smart pointers.</p>
+<p>Interessante que os smart pointers são similares ao recurso do <a href="https://en.wikipedia.org/wiki/Automatic_Reference_Counting">ARC</a> e isso é motivo suficiente para cogitar usar o C++ como linguagem base do FKernel enquanto uso o Rust como uma linguagem secundária (da forma que o <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> vem fazendo) e isso que Andreas Kling está demostrando ser capaz de fazer em seu projeto <a href="https://en.wikipedia.org/wiki/SerenityOS">SerenityOS</a>.</p>
+<p><a href="https://github.com/SerenityOS/serenity/blob/master/Kernel/Memory/PhysicalRegion.cpp">SerenityOS usando smart pointers no Kernel</a> além de garantir que a memória não vaze, podemos construir um &ldquo;smart pointer customizado para nosso kernel&rdquo; com centenas de templates que podem agilizar o desenvolvimento.</p>
+<h3 id="apesar-de-tudo">Apesar de tudo</h3>
+<p>Apesar de tudo, o kernel se mantém na ideia primária de ser um kernel híbrido pegando um pouco da ideia do <a href="https://pt.wikipedia.org/wiki/XNU">XNU</a> de misturar BSD/Unix com OpenMach garantindo um sistema mais seguro com mais features que os habituais</p>
+<h3 id="conclusão">Conclusão</h3>
+<p>Esse foi um tipo de post que uso para dumpar meu cérebro de ideias e motivos, se este post foi útil para você fico feliz. Ele com certeza foi útil para mim</p>
+]]></content:encoded></item><item><title>Usando Deepin Linux no notebook primeiras impressões</title><link>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/usando-deepin-linux-no-notebook-primeiras-impress%C3%B5es/</guid><description>O post oferece uma análise detalhada da experiência pessoal do autor com a distribuição Deepin Linux. Ele explora os pontos positivos, como a interface elegante e as opções de configuração conveniente para notebooks, contrastando com os desafios encontrados, como a versão desatualizada do Flatpak e dificuldades na configuração de jogos. O autor destaca a conveniência do Pop!_OS para usuários menos experientes, enquanto sugere o Deepin como uma opção atrativa para aqueles familiarizados com a resolução de problemas no Linux. Em suma, o post oferece uma visão equilibrada e pessoal sobre o Deepin Linux, fornecendo insights valiosos para quem considera adotar essa distribuição.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<p>Desde 2021 eu venho usando distribuições GNU/Linux no meu computador e já passei por diversas distribuições como: <a href="https://pt.wikipedia.org/wiki/Pop!_OS">Pop!OS</a>, <a href="https://pt.wikipedia.org/wiki/Manjaro_Linux">Manjaro Linux</a>, <a href="https://pt.wikipedia.org/wiki/Fedora_Linux">Fedora</a>.</p>
+<p>E hoje estou usando a famosa distribuição chinesa <a href="https://pt.wikipedia.org/wiki/Deepin">Deepin Linux</a>.</p>
+<hr>
+<h3 id="o-que-é-o-deepin">O que é o Deepin</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hub56d6cb0329ea1293ab2631dde5ed0e9_758851_a56aabcf279c6d5883ecc55ab2be4ea1.png"
+    width="1200"
+    height="678"
+    alt=""
+  />
+</figure>
+
+<p>A distribuição Deepin é baseada no <a href="https://pt.wikipedia.org/wiki/Debian">Debian</a> e apresenta uma interface própria chamada <em>D.D.E</em> ou <em>Deepin Desktop Enviroment</em> além de um acervo completo de aplicações próprias sendo desenvolvida pela empresa <em>Wuhan Deepin Technology Company Limited</em> localizada em Wuhan na China.</p>
+<p>Deepin também é famoso por ser um dos ambientes linux mais bonitos estando par a par com Gnome</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hu2fb97a43e958ff307d3ed19bdfd14c24_146629_a15212c0e4e8c895d4315637d3692cac.png"
+    width="1200"
+    height="675"
+    alt=""
+  />
+</figure>
+
+<p>e KDE.<!-- raw HTML omitted --></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/KDE-Desktop-5_17167192046815499822_hue70047de9b90d3a47706836cc32a4870_117678_0x0_q75_.jpg"
+    width="1000"
+    height="563"
+    alt=""
+  />
+</figure>
+
+<p>Essa distribuição linux apesar de alguns reveses que encontrei pode ser considerada perfeita em muitos níveis para uso em notebooks.</p>
+<p>Primeiramente, se você quer um sistema atualizado e mais instável, esse sistema pode não servir para você, neste caso especifico, o Manjaro pode servir bem como sua escolha padrão.</p>
+<p>Em segundo lugar, se você é muito iniciante no mundo Linux, este também não serve muito bem como um <em>Sistema Inicial</em>, você ainda vai precisar aprender um pouco a sentar a bunda na cadeira e usar o <em>Google</em> para solucionar problemas que você vai encontrar, e acredite com toda certeza você vai precisar.</p>
+<p>Em terceiro lugar, está é uma distribuição baseada em Debian e não em Ubuntu, então esqueça os <a href="https://pt.wikipedia.org/wiki/Personal_Package_Archive">PPA&rsquo;s</a></p>
+<hr>
+<h3 id="como-se-originou-o-deepin">Como se originou o Deepin</h3>
+<p>O Deepin se originou sob o nome Hiwix em 28 de fevereiro de 2004 está versão inicial foi baseado em <a href="https://archiveos.org/morphix/">Morphix</a>.</p>
+<p>E também já teve o <a href="https://pt.wikipedia.org/wiki/IceWM">IceWM</a> sendo usado como sua interface padrão.</p>
+<p>Desde então sua interface padrão e sua base vem sendo trocado diversas vezes.</p>
+<p>Em dezembro de 2009 o nome foi trocado para <em>Linux Deepin</em> e a interface padrão para uma versão modificada do <em>Gnome</em>. Eventualmente foi decidido fazer uma troca do <em>Gnome</em> para o <em>D.D.E</em>.</p>
+<p>Linux também foi retirado do nome e desde a versão 15.1 o projeto mudou a base do sistema para Debian.</p>
+<hr>
+<h3 id="o-que-eu-gosto-no-deepin">O que eu gosto no Deepin</h3>
+<p>O Deepin vem com muitas opções por padrão que eu gosto, talvez pelo meu saudosismo e talvez pela facilidade de utilizar as ferramentas padrão.</p>
+<p>Por exemplo, a função <a href="https://pt.wikipedia.org/wiki/Hiberna%C3%A7%C3%A3o_(computa%C3%A7%C3%A3o)">Hibernar</a> que é a função mais útil para um notebook não foi omitida no Deepin Linux como foi no Manjaro Linux, Pop!OS, Fedora, <a href="https://pt.wikipedia.org/wiki/Windows_10">Windows 10</a>/<a href="https://pt.wikipedia.org/wiki/Windows_11">11</a> em prol da função <a href="https://help.gnome.org/users/gnome-help/stable/power-suspend.html.pt_BR">Suspender</a>.</p>
+<p><code>&quot;não quero fazer meu hardware parecer pior então vou desativar essa função útil aqui 👍-Empresas&quot;</code></p>
+<p>E acredite essa síndrome de que o melhor hardware é sempre o mais rápido ataca muitas empresas ao mesmo tempo, mesmo quando sabemos que o melhor é a conveniência.</p>
+<p>Bom, pelo menos eu acredito fundamentalmente que a conveniência é melhor que a velocidade em determinados casos.</p>
+<p>Além disso, o Deepin trouxe de volta uma coisa que eu sentia muita saudade e não lembrava mais <code>Barulhinho de inicialização e desligamento do sistema</code>.</p>
+<p>Sim, eu sei que tem como reativar no Windows ou ativar no Linux, mas sinceramente eu gosto quando vem por padrão.</p>
+<p>A loja de aplicativos é bem simples de se usar então é um ponto a mais, junto com a capacidade de configurar o armazenamento de energia para hibernar automaticamente o sistema operacional se bater determinado nível de energia. <code>se tu tá numa faculdade sem carregador por exemplo e não quer perder tudo que realizou no dia por falta de energia</code></p>
+<hr>
+<h3 id="o-que-não-gostei-no-deepin">O que não gostei no Deepin</h3>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/Flatpak">Flatpak</a> antigo no repositório.
+A versão disponível no repositório é a versão <strong>1.10.7</strong> enquanto a versão mais recente do flatpak é a <strong>1.14.5</strong> o que impede de rodar coisas mais recentes como a Steam.</li>
+<li>Dificuldade na configuração de jogos.
+Pode ser pela versão antiga do flatpak mas a instalação da <a href="https://pt.wikipedia.org/wiki/Steam">Steam</a> com <a href="https://pt.wikipedia.org/wiki/Proton_(software)">Proton</a> e sinceramente, baixar o <a href="https://pt.wikipedia.org/wiki/.deb">.deb</a> mais recente não ajudou.</li>
+</ul>
+<p>Tirando esses pequenos empecilhos, a experiência com o Deepin, está sendo bem interessante principalmente com o desenvolvimento do <a href="https://foxtechworld.github.io/2023/12/fkernel/">FKernel</a> está tudo ocorrendo muito bem e obrigado por perguntar.</p>
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Deepin é uma opção muito interessante a se tentar apesar de determinados empecilhos que se apresentaram enquanto estava trabalhando neste post, fiquei tentado a compilar o <a href="https://pt.wikipedia.org/wiki/Flatpak">flatpak</a> mais recente para voltar a usar Steam.</p>
+<p>Enfim, isso é um dos motivos que eu prefiro sugerir o Pop!OS a alguma outra distribuição que me perguntam. É um sistema tão monótono que quase nunca um problema precisa ser resolvido. Ele fica vegetando, não precisa de muita configuração interna para funcionar bem, ele já funciona bem e só precisa de <a href="https://pt.wikipedia.org/wiki/Personaliza%C3%A7%C3%A3o">personalização</a> para o seu gosto de sistema.</p>
+<p>Caso você já tenha algum tempo na estrada resolvendo e entendendo problemas linux. O Deepin pode vir a ser a solução que você procurava como sistema operacional de Notebook.</p>
+]]></content:encoded></item></channel></rss>

@@ -1,1 +1,265 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1960sTo1980s on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/1960sto1980s/</link><description>Recent content in 1960sTo1980s on FoxTechWorld</description><generator>Hugo</generator><language>pt-br</language><atom:link href="https://FoxTechWorld.github.io/tags/1960sto1980s/index.xml" rel="self" type="application/rss+xml"/><item><title>O começo dos sistemas operacionais: DOS</title><link>https://FoxTechWorld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/</guid><description>Este texto abrange a história dos sistemas operacionais, com foco nas décadas de 1960 a 1980, destacando alguns dos sistemas operacionais mais notáveis durante esse período. Inicia-se com o UNIX, desenvolvido pela AT&amp;amp;T Bell Labs em 1969, apresentando suas características pioneiras, como portabilidade, multitarefa e multiusuário. Em seguida, explora o surgimento do BSD em 1977, uma ramificação do UNIX, que se tornou um dos primeiros sistemas operacionais de código aberto.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1960sTo1980s on FoxTechWorld</title><link>https://FoxTechWorld.github.io/tags/1960sto1980s/</link><description>Recent content in 1960sTo1980s on FoxTechWorld</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><atom:link href="https://FoxTechWorld.github.io/tags/1960sto1980s/index.xml" rel="self" type="application/rss+xml"/><item><title>O começo dos sistemas operacionais: DOS</title><link>https://FoxTechWorld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://FoxTechWorld.github.io/posts/o-come%C3%A7o-dos-sistemas-operacionais-dos/</guid><description>Este texto abrange a história dos sistemas operacionais, com foco nas décadas de 1960 a 1980, destacando alguns dos sistemas operacionais mais notáveis durante esse período. Inicia-se com o UNIX, desenvolvido pela AT&amp;amp;T Bell Labs em 1969, apresentando suas características pioneiras, como portabilidade, multitarefa e multiusuário. Em seguida, explora o surgimento do BSD em 1977, uma ramificação do UNIX, que se tornou um dos primeiros sistemas operacionais de código aberto.</description><content:encoded><![CDATA[<h3 id="introdução">Introdução</h3>
+<blockquote>
+<p>A melhor forma de entender seu futuro é buscar pelo passado: Akita, Fabio</p>
+</blockquote>
+<p>Deixei essa frase para exemplificar o processo atrás do meu pensamento sobre este assunto, saiba em primeiro lugar que eu <strong>AMO</strong> em negrito, baixo nível. E para que todos saibam, a coisa mais baixo nível que temos atualmente é &ldquo;Sistema Operacional&rdquo;. Não estamos na ladainha dos 8 bits que era tudo tão simples que poderia ser feito diretamente a mão, veja <a href="https://www.youtube.com/@The8BitGuy">8bitguy</a> para se haver um exemplo.</p>
+<p>Atualmente precisamos de sistemas operacionais para interfacear todo o hardware ter funcionalidades mais complexas, como segurança , funções como envio de email, abrir navegadores &hellip; etc. Coisa que é virtualmente impossível (pode ser possível mais é mais trabalhosos para quem se dispõe a tentar). Enfim, eu tenho minha propria concepção de tentativa de um osdev que planejo começar no futuro.</p>
+<p>A única coisa que posso dizer dessa minha concepção é que ela segue mais pro <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_h%C3%ADbrido">lado híbrido</a> do que o <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_monol%C3%ADtico">lado monolítico</a>, e usa mais <a href="https://pt.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> do que código próprio <a href="https://pt.wikipedia.org/wiki/XNU">XNU</a>.</p>
+<p>Para entender isso melhor vamos estudar sobre os sistemas operacionais e essa lista.</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Unix_history-simple.svg_17174008716008168282_hu237213e82e3cd94c5038e735db595de3_145481_0x0__3.png"
+    width="1280"
+    height="720"
+    alt=""
+  />
+</figure>
+
+<h3 id="começo-da-história">Começo da história</h3>
+<ul>
+<li><strong>1969: UNIX</strong></li>
+</ul>
+<p><em>Disponivel. Software Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Man-man_512602678038519724_hu39180addc070b8f35af5f6a6a9a20cd1_8311_0x0__3.png"
+    width="638"
+    height="311"
+    alt=""
+  />
+</figure>
+
+<p>Na década de 1960, uma equipe de desenvolvedores da <a href="https://pt.wikipedia.org/wiki/Bell_Labs">AT&amp;T Bell Labs</a> resolveram trabalhar em softwares mais objetivo e simplificado do que os utilizados nos mainframes da época. Após alguns anos mais precisamente em 1969 o resultado foi o sistema operacional proprietário UNIX que significava Serviço de Computação e Informação Uniplexada.</p>
+<p>O Unix era um sistema portável, <a href="https://pt.wikipedia.org/wiki/Multitarefa">multitarefa</a> e <a href="https://pt.wikipedia.org/wiki/Multiusu%C3%A1rio">multiusuário</a> e tinha como principal característica o uso de arquivos para abstrair tudo na máquina.</p>
+<p>Em realidade, o Unix era para ser Multics, que deveria ser um sistema operacional de tempo compartilhado (uma forma de fazer processamento paralelo) para uma grande comunidade de usuários porém esse era um projeto muito ambicioso para o hardware da época.</p>
+<p>Então <a href="https://pt.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a> pegando um computador ocioso <a href="https://pt.wikipedia.org/wiki/PDP-7">PDP-7</a> começou a reescrever o multics num conceito muito menos ambicioso começou a reescrever o multics num conceito muito menos ambicioso. Que seria chamado Unics mas foi renomeado para Unix.</p>
+<p>Outro marco importante foi quando Ken Thompson e Denis Ritchie reescreveram o Unix usando a <a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)">linguagem C</a> em um computador <a href="https://pt.wikipedia.org/wiki/PDP-11">PDP-11</a>.</p>
+<ul>
+<li><strong>1977: BSD</strong></li>
+</ul>
+<p><em>Indisponível. [Antigamente: Código Fechado | Atualmente: Código Aberto]</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/4.3_BSD_UWisc_VAX_Emulation_Login_17707691797702601824_hu5bf311d2ed78fe4d5f27ba33c9670fee_8588_0x0__3.png"
+    width="652"
+    height="416"
+    alt=""
+  />
+</figure>
+
+<p>Em 1977, o Unix teve seu primeiro descendente. Com suas próprias características, o BSD surgiu como uma forma da faculdade de Berkeley ainda possuir uso gratuito do Unix. Aliás, o BSD só pode ser considerado uma ramificação do Unix pois eles compartilham a mesma base de código que o Unix original da AT&amp;T.</p>
+<p>Existem algumas diferenças entre o BSD e o Unix mas elas só vieram aparecendo mais tarde, podemos dizer que por bem ou por mal o BSD foi um dos primeiros sistemas operacionais que se tornaram Open Source. O BSD versão 1 e 2 rodava em PDP-11, mas a partir da versão 3 o BSD foi portado para o VAX e foi graças ao BSD3 com suporte as unidades de memória virtual do Vax que convenceu a <a href="https://pt.wikipedia.org/wiki/Defense_Advanced_Research_Projects_Agency">D.A.R.P.A</a> a investir no <a href="https://en.wikipedia.org/wiki/Computer_Systems_Research_Group">CSRG</a>.</p>
+<p>A partir da versão 4 o BSD passou a oferecer um jobcontrol notável no csh, além do delivermail (antecessor do sendmail) além do uso de sinais mais confiáveis e a biblioteca curses.</p>
+<h3 id="sistemas-dos">Sistemas DOS</h3>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hu40115214938aac3ce79c3ac45244cb45_10757_776cea69199b381a85118af2dfde5dd5.png"
+    width="615"
+    height="300"
+    alt=""
+  />
+</figure>
+
+<p>Quando começamos a fletar com os <a href="https://pt.wikipedia.org/wiki/Computador_pessoal">computadores pessoais</a> também precisaríamos de um sistema operacional relativamente simples para uso geral, o único problema era &ldquo;armazenamento caro&rdquo;, então normalmente usávamos <a href="https://pt.wikipedia.org/wiki/Computador_pessoal">sistemas operacionais DOS</a> que era basicamente um sistema operacional simples que carregava na memória e era volátil. Isso significa que o DOS era um sistema operacional de usuário único e de tarefa única também com suas funções de kernel não <a href="https://pt.wikipedia.org/wiki/Reentr%C3%A2ncia">reentrantes</a>.</p>
+<p>Mesmo sendo um sistema operacional de tarefa única o DOS possuia uma forma de multitarefa (aposto que você pensou &ldquo;What The Fuck&rdquo;) mas o que ocorria é que existe uma exceção no DOS chamada <a href="https://pt.wikipedia.org/wiki/Terminate_and_Stay_Resident">TSR</a>. O DOS também possuia uma linha de comando chamado <a href="https://pt.wikipedia.org/wiki/COMMAND.COM">command.com</a> esse é uma linha de comando feia com cheiro de velho mofo largado a bel prazer e existe até hoje no Windows 10/11.</p>
+<hr>
+<h3 id="historia-dos-sistemas-operacionais-dos">Historia dos sistemas Operacionais DOS</h3>
+<ul>
+<li><strong>1978: Apple DOS</strong></li>
+</ul>
+<p><em>Indisponível. Código Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/a2_Apple_DOS_v3.3_1980_Apple_4901177656295295749_hu699378cb8a0d8c324e741f8cd7f5daf8_4954_0x0__1.gif"
+    width="560"
+    height="384"
+    alt=""
+  />
+</figure>
+
+<p>O primeiro sistema operacional da Apple e existia para os <a href="https://pt.wikipedia.org/wiki/Apple_II">Apple II</a>.</p>
+<p>O apple DOS foi desenvolvido por <a href="https://pt.wikipedia.org/wiki/Steve_Wozniak">Steve Wozniak</a>, <a href="https://pt.wikipedia.org/wiki/Randy_Wigginton">Randy Wigginton</a> e Paul Laughton e teve 3 versões principais:</p>
+<ul>
+<li>Apple DOS 3.1</li>
+<li>Apple DOS 3.2</li>
+<li>Apple DOS 3.3</li>
+</ul>
+<p>e apesar de todos os sistemas DOS terem atualizações de correções de bugs apenas o Apple DOS 3.2 que teve uma versão menor de correção de bugs a versão 3.2.1, porém a versão mais reconhecida e mais usada foi a versão 3.3.</p>
+<ul>
+<li><strong>1979: Atari DOS</strong></li>
+</ul>
+<p><em>Indisponivel. Código Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Ataridos-2.5_3434196573177149389_hu49faf309685eb08fb968b39af0478b6c_2070_0x0__3.png"
+    width="400"
+    height="243"
+    alt=""
+  />
+</figure>
+
+<p>Além de produzir jogos ruins no começo da história dos vídeos games e particularmente começar o universo dos jogos, a Atari também possuía um sistema operacional DOS que era utilizado com a família de computadores Atari de 8 bits.</p>
+<p>E incrivelmente esse sistema operacional trazia muitas novidades em comparação com os outros sistemas, pois ele podia carregar extensões no sistema operacional a partir da memória que permitia o Atari DOS gerenciar os arquivos armazenados em uma unidade de disco. A extensão mais importante é o manipulador de disco. E com essa tecnologia também houve muitos programas DOS criados a partir de terceiros compatíveis com o Atari DOS versão 2.</p>
+<p>Exemplo o SpartaDOSX que era uma versão do SpartaDOS muito aproximada do MSDOS e era enviado em cartuchos de 64kb..</p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/SpartaDOS_X_prompt_7882198378912472753_hub02443f5a326ffd92f255b10804ca8c8_2022_0x0__3.png"
+    width="663"
+    height="405"
+    alt=""
+  />
+</figure>
+
+<ul>
+<li><strong>1980: Apple SOS</strong></li>
+</ul>
+<p><em>Indisponivel. Código Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/SOSBootOnMess_17304322514428710353_hu5e065bf642f9284fdd361ce3f833c830_622_0x0__3.png"
+    width="280"
+    height="192"
+    alt=""
+  />
+</figure>
+
+<p>O Sophisticated Operating System ou SoS era o sistema operacional principal criado para o Apple III e veio como sucessor do Apple DOS e em 1985 apesar de criticar muito o <a href="https://en.wikipedia.org/wiki/Apple_III">Apple III</a> que era realmente bem ruinzinho em construção, elogiou o Apple SOS como o melhor sistema operacional em qualquer microcomputador de todos os tempos &ldquo;obviamente até aquela época&rdquo;.</p>
+<p>E apesar do SoS ser um sistema operacional monousuário e monotarefa. Ele disponibiliza os recursos do sistema como um programa orientado a menu&rsquo;s bem como contendo uma <a href="https://en.wikipedia.org/wiki/API">Interface de Programação de Aplicativos</a>.</p>
+<p>A API dos SOS é dividida em 4 partes:</p>
+<ul>
+<li>Chamadas de arquivo</li>
+<li>Chamadas de dispositivo</li>
+<li>Chamadas de memória</li>
+<li>Chamadas de utilidade</li>
+</ul>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Apple_SOS_1.0-1000x616_13513720328897796263_huf3ed6275a5709cbf1a50583879a57d84_55730_0x0_q75_.jpg"
+    width="1000"
+    height="616"
+    alt=""
+  />
+</figure>
+
+<ul>
+<li><strong>1980: Xenix</strong></li>
+</ul>
+<p><em>Indisponível. Código fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/microsoft-unix-xenix_12219006215098578_hue13b9fba235784d88ae278a9148c4a0b_47134_0x0_q75_.jpg"
+    width="1036"
+    height="614"
+    alt=""
+  />
+</figure>
+
+<p>Xenix foi um sistema operacional licenciado pela microsoft e pela AT&amp;T na década de 1980 antes da própria microsoft começar a trabalhar no MSDOS. Atualmente o Xenix pertence a SCO Unix que adquiriu os direitos exclusivos do mesmo.</p>
+<p>O Xenix foi uma versão do Unix que a microsoft pretendia usar em microcomputares a partir do momento em que a mesma não pode licenciar o próprio Unix.</p>
+<p>Posso não ter certeza 100% do que digo, mas em 2001 foi criado um sistema operacional que rodava o Unix dentro de microcomputadores &ldquo;lançado meio fora do momento&rdquo; mas que cumpriu o objetivo da microsoft. O chamado <a href="https://unix.fandom.com/pt-br/wiki/UZIX">UZIX</a>. &ldquo;Só para dar um desfecho ao unix nos microcomputadores&rdquo;</p>
+<ul>
+<li><strong>1980: 86DOS (Q-DOS)</strong></li>
+</ul>
+<p><em>Indisponivel. Código Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/_hube7db83a7ecdb27f430b603b92e2c234_787_62b86249cdf25c57affca3a4d5785ff5.png"
+    width="236"
+    height="169"
+    alt=""
+  />
+</figure>
+
+<p>Este foi um sistema operacional produzido para o <a href="https://en.wikipedia.org/wiki/Intel_8086">intel 8086</a> e logo seria modificado a se tornar o MSDOS.</p>
+<p>Ele também era conhecido como o Quick and Dirty Operating System (sistema operacional rápido e sujo, se você não conhece a terminologia). O 86-DOS compartilhava alguns comandos com o <a href="https://en.wikipedia.org/wiki/OS/8">OS/8</a> e o <a href="https://en.wikipedia.org/wiki/CP/M">CP/M</a>. Que falicilitou a portabilidade de programas do CP/M. Sua API era muito semelhante. O sistema foi comprado pela microsoft e usado para desenvolver o MS DOS e o <a href="https://en.wikipedia.org/wiki/IBM_PC_DOS">PC DOS</a>.</p>
+<ul>
+<li><strong>1981: MS-DOS/IBM PC DOS</strong></li>
+</ul>
+<p><em>Indisponivel. Código Aberto</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/Ms-dosdir_9044890480663277750_hu61f268a18144c3888d77c9a625cf4045_23635_0x0__3.png"
+    width="355"
+    height="367"
+    alt=""
+  />
+</figure>
+
+<p>Dentro da história da computação, foi esse sistema operacional que definiu a Microsoft como a gigante que ela é. O MSDOS.</p>
+<p>Este sistema teve muitas versões e nomes até se firmar com MSDOS e teve muitas modificações em seus internos.</p>
+<ul>
+<li>PC-DOS 1.0 (1981): Suportava até 256Kb de RAM e dois disquetes 160kb 5.25&quot; de face única.</li>
+<li>PC-DOS 1.1 (1983): Trouxe suporte a disquetes 320kb dupla-face.</li>
+<li>PC-DOS 2.0 (1983): Suportavam PC/XT e drives fixos (o começo dos HD&rsquo;s), também permitiram um programa carregar e rodar subprogramas e overlays de programas.</li>
+<li>MS-DOS 3.0 (1984): Suportavam disquetes de 1.2mb e discos rigidos de até 32MB. Também incluiu códigos de erros mais estendidos.</li>
+<li>MS-DOS 3.1 (1984): Adicionou suporte a redes, serviços que permitiam travamentos e destravamentos do acesso a todas as partes de um arquivo.</li>
+<li>MS-DOS 3.2 (1986): Adicionou suporte a disquetes 720kb 3.5&quot;.</li>
+<li>MS-DOS 3.3 (1987): Introduziu discos lógicos, e foi adicionado suporte a disquetes de 1.44mb 3.5&quot; e suporte a 4 portas seriais paralelas.</li>
+<li>MS-DOS 4.0 (1988): Suportava até discos de 2GB sem necessidade de partições lógicas e adicionou um novo shell codinome DOSSHELL.</li>
+<li>MS-DOS 5.0 (1991): Adicionou o interpretador BASIC em tela cheia, também um editor de texto em tela cheia, um utilitário de cache de disco, capacidade de undelete &hellip; entre outros.</li>
+<li>MS-DOS 6.0 (1993): Adicionou um utilitário de compressão de disco, um desfragmentador, um utilitário de backup, otimizador de memória e um antivírus.</li>
+<li>MS-DOS 6.21 (1994): Removeu o utilitário DoubleSpace que era usado para compactar o disco por problemas legais.</li>
+<li>MS-DOS 6.22 (1994): Adicionou o substituto DriveSpace e está foi a ultima versão stand-alone lançada para o mercado.</li>
+</ul>
+<p>Após isso também passou a existir as versões 6.23 a 6.25 mas essas eram privadas a bancos e a organizações militares estadunidenses. A partir de então o MS-DOS só existia como um kernel para o Windows 9x (95, 98, Me). Tanto que hoje você pode baixar o app <a href="https://dosbox-x.com/">DOSBOX-X</a> e rodar as versões 9x em cima deles.</p>
+<ul>
+<li><strong>1981: Pilot</strong></li>
+</ul>
+<p><em>Indisponivel. Código Fechado</em></p>
+<p>O sistema operacional Pilot foi criado pela empresa Xerox Parc e era um sistema operacional monousuário mas multitarefa além de ser o primeiro sistema operacional a usar interface de usuário e o mouse. Além disso, este sistema operacional foi escrito numa linguagem proprietária chamada Mesa e totalizou 24K linhas de código Além disso, este sistema operacional foi escrito numa linguagem proprietária chamada Mesa e totalizou 24K linhas de código.</p>
+<ul>
+<li><strong>1982: Suínos</strong></li>
+</ul>
+<p><em>Indisponivel. Código Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/591_sunos_8962171019493047022_hu82cdc5a223ca9c5e17a4662ceef50dbc_68968_0x0__3.png"
+    width="1023"
+    height="811"
+    alt=""
+  />
+</figure>
+
+<p>Esse é o sistema que surgiu anterior ao Solaris, o SunOS foi um sistema Unix desenvolvido pela SunMicrosystems para seus servidores e workstations. O nome SunOS geralmente é usado para se referir as versões da 1.0 a 4.1.4 onde o mesmo foi baseado nos BSD enquanto a partir da versão 5.0 e posterior são baseadas no Unix System V Release 4 e é comercializada sob a marca do <em>Solaris</em>.</p>
+<ul>
+<li>O SunOS 1 suportava apenas os sistemas da série Sun-2 (Nome das estações de trabalho), incluindo sistemas Sun-1 atualizados com placas de CPU Sun-2.</li>
+<li>O SunOS 2 suportava os sistemas da série Sun-2 e Sun-3.</li>
+<li>O SunOS 4 suportava as arquiteturas Sun-2 até a versão 4.0.3, Sun-3 até a versão 4.1.1, Sun386i (4.0, 4.0.1 e 4.0.2) e Sun4 (Sparc).</li>
+</ul>
+<p>Embora o SunOS 4 fosse o primeiro a oferecer suporte total ao novo processador SPARC da Sun, também havia um lançamento do SunOS 3.2 com suporte preliminar para Sistemas Sun-4.</p>
+<p>O SunOS 4.1.2 introduziu suporte as primeiras máquinas com <a href="https://en.wikipedia.org/wiki/Multiprocessor">multiprocessadores</a> da arquitetura sun4m da Sun, como tinha um único bloqueio para o kernel, apenas uma cpu por vez poderia ser executada no kernel.</p>
+<ul>
+<li><strong>1983: Apple ProDOS</strong></li>
+</ul>
+<p><em>Indisponivel. Código Fechado</em></p>
+<figure style="padding: 0.25rem; margin: 2rem 0">
+  <img
+    style="max-width: 100%; width: auto; height: auto"
+    src="/homepage_slide2_16086524919114304795_hu2743bd828f7e478d669fa4ed6b226499_9024_0x0__3.png"
+    width="1140"
+    height="620"
+    alt=""
+  />
+</figure>
+
+<p>O Apple ProDOS foi o último sistema operacional produzido para rodar nos Apple II da série de 8 bits, e seu código fonte surgiu através do Apple SOS e fui uma solução gap para o Apple II GS de 16 bits que logo foi substituído pelo GS/OS.</p>
+<p>Apple ProDOS foi comercializado pela Apple como Profissional Disk Operating System e se tornou o sistema operacional mais popular em 10 meses.</p>
+<p>O ProDOS surgiu para corrigir as deficiências que o Apple DOS começou a apresentar por sua idade. Apesar disso, houve muita resistência a adoção do ProDOS, primeiro que sua API não era efetivamente compatível com o Apple DOS e sim com o Apple SOS então muitos aplicativos não poderiam ser portados a menos que reescritos.</p>
+<p>Outro motivo foi que só a partir do lançamento do <a href="https://en.wikipedia.org/wiki/AppleWorks">AppleWorks</a> que a Apple chamou a atenção do mercado para seu ProDOS.</p>
+<hr>
+<h3 id="conclusão">Conclusão</h3>
+<p>Terminamos aqui a histórias dos sistemas operacionais abrangindo até o fim da era DOS, todos os sistemas operacionais a partir disso, possuíam interface gráfica ou eram linhas de comando Unix em HD&rsquo;s modernos.</p>
+]]></content:encoded></item></channel></rss>
