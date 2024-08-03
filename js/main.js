@@ -1,14 +1,5 @@
 (() => {
   // <stdin>
-  function menuToggle() {
-    document.addEventListener("DOMContentLoaded", function() {
-      const menuToggle2 = document.querySelector(".menu-toggle");
-      const menu = document.querySelector(".pageHeader nav ul");
-      menuToggle2.addEventListener("click", function() {
-        menu.classList.toggle("show");
-      });
-    });
-  }
   function listTags() {
     document.addEventListener("DOMContentLoaded", function() {
       const maxTags = 5;
@@ -42,7 +33,6 @@
   }
   function start() {
     listTags();
-    menuToggle();
   }
   start();
 })();
