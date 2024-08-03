@@ -1,66 +1,3 @@
-:root {
-    /* Color Palette */
-    --primary-color: #1e1e1e;
-    --secondary-color: #272727;
-    --accent-color: #ff9800;
-    --text-color: #e0e0e0;
-    --muted-text-color: #b0b0b0;
-    --link-color: #007bff;
-
-    /* Typography */
-    --website-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
-    --post-font: Georgia, "Times New Roman", monospace;
-
-    /* Font Sizes */
-    --small-font-size: 1.25rem;
-    --large-font-size: 2.75rem;
-
-    /* Spacing */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-
-    /* Card Styles */
-    --card-bg-color: #272727;
-    --card-padding: var(--space-md);
-    --card-border-radius: 0.5rem;
-    --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    --card-margin-bottom: var(--space-md);
-    --card-title-font-size: var(--small-font-size);
-    --card-title-color: var(--muted-text-color);
-    --card-text-color: var(--text-color);
-
-    /* Responsive Adjustments */
-    --card-width: 100%;
-    --card-padding-responsive: var(--space-sm);
-    --card-title-font-size-responsive: 1rem;
-    --card-text-font-size-responsive: 0.875rem;
-
-    /* Header Styles */
-    --header-padding: var(--space-md);
-    --header-font-size: var(--large-font-size);
-    --menu-spacing: var(--space-md);
-    --menu-font-size: var(--small-font-size);
-
-    /* Blog Post Styles */
-    --post-padding: var(--space-lg);
-    --post-bg-color: var(--secondary-color);
-    --post-border-radius: 0.5rem;
-    --post-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    --post-title-font-size: 2rem;
-    --post-date-font-size: 1rem;
-    --post-heading-font-size: 1.5rem;
-    --post-paragraph-font-size: var(--small-font-size);
-    --post-link-color: var(--accent-color);
-    --post-link-hover-color: #ff5722;
-    --post-code-bg-color: #333;
-    --post-code-text-color: #f8f8f8;
-    --post-figure-margin: var(--space-lg);
-}
-
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     :root {
@@ -68,131 +5,42 @@
         --header-font-size: 1.25rem;
         --menu-spacing: var(--space-sm);
         --menu-font-size: 1rem;
-        --card-width: 100%;
-        --card-padding: var(--card-padding-responsive);
-        --card-title-font-size: var(--card-title-font-size-responsive);
-        --card-text-font-size: var(--card-text-font-size-responsive);
-    }
-
-    .card {
-        width: var(--card-width);
+        --card-padding: var(--space-sm);
+        --card-title-font-size: var(--small-font-size);
+        --card-text-font-size: var(--small-font-size);
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --card-width: 100%;
         --header-padding: var(--space-xs);
         --header-font-size: 1rem;
         --menu-spacing: var(--space-xs);
         --menu-font-size: 1rem;
     }
 
-    .card {
-        width: var(--card-width);
-    }
-
     .blogPost {
         padding: var(--space-md);
     }
 
-    .blogPost h1 {
+    .blogPost > h1 {
         font-size: 1.5rem;
     }
 
-    .blogPost time {
+    .blogPost > time {
         font-size: 0.875rem;
     }
 
-    .blogPost .toc h3 {
+    .blogPost > .toc h3 {
         font-size: 1.25rem;
     }
 
-    .blogPost content {
+    .blogPost > content {
         font-size: 1rem;
     }
 }
 
-@font-face {
-    font-display: swap;
-}
-
-body {
-    max-width: 95ch;
-    margin: 0 auto;
-    font-family: var(--website-font);
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-size: var(--small-font-size);
-    line-height: 1.6;
-}
-
-#TableOfContents {
-    font-size: var(--small-font-size);
-}
-
-#TableOfContents > ul li {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: var(--space-xs);
-}
-
-#TableOfContents > ul li > a {
-    color: var(--post-link-color);
-    text-decoration: none;
-}
-
-#TableOfContents > ul li > a:hover {
-    color: var(--post-link-hover-color);
-    text-decoration: underline;
-}
-
-.pageHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--header-padding);
-    background-color: var(--secondary-color);
-}
-
-.pageHeader > h1 {
-    margin: 0;
-    font-size: var(--header-font-size);
-}
-
-.pageHeader > h1 > a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.menu > li {
-    margin-left: var(--menu-spacing);
-}
-
-.menu > li > a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: var(--menu-font-size);
-}
-
-.menu > li > a:hover {
-    color: var(--accent-color);
-}
-
-.homepage {
-    flex-direction: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
-    justify-content: center;
-}
-
+/* Card Component Styles */
 .card {
     background-color: var(--card-bg-color);
     padding: var(--card-padding);
@@ -211,7 +59,7 @@ body {
 
 .card > h2 > a {
     color: var(--card-title-color);
-    text-decoration: non;
+    text-decoration: none;
 }
 
 .card > h2 > a:hover {
@@ -225,6 +73,7 @@ body {
     line-height: 1.6;
 }
 
+/* Blog Post Styles */
 .blogPost {
     margin-top: 15px;
     background-color: var(--post-bg-color);
@@ -275,7 +124,6 @@ body {
 .blogPost > content > figure > img {
     min-width: 25%;
     min-height: 25%;
-
     max-width: 100%;
     max-height: 100%;
 }
@@ -317,11 +165,8 @@ body {
 }
 
 .blogPost > content > ul > li > a:hover,
-.blogPost > content > ul > li > a:focus,
 .blogPost > content > h4 > a:hover,
-.blogPost > content > h4 > a:focus,
-.blogPost > content > h3 > a:hover,
-.blogPost > content > h3 > a:focus {
+.blogPost > content > h3 > a:hover {
     color: var(--post-link-hover-color);
     text-decoration: underline;
 }
@@ -332,170 +177,22 @@ body {
     margin: var(--space-lg 0);
 }
 
-.blogPost > content > a,
-.blogPost > content > p > strong > a,
-.blogPost > content > ol > li > p > a,
-.blogPost > content > ol > li > a,
-.blogPost > content > ul > li > p > a,
-.blogPost > content > p > a,
-.blogPost > content > ul > li > p > strong > em > a {
-    color: var(--accent-color);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent-color);
-    transition:
-        color 0.3s ease,
-        border-bottom 0.3s ease;
-}
-
-.blogPost > content > ol > li > a:hover,
-.blogPost > content > ol > li > a:focus,
-.blogPost > content > ul > li > p > strong > em > a:hover,
-.blogPost > content > ul > li > p > strong > em > a:focus,
-.blogPost > content > p > strong > a:hover,
-.blogPost > content > p > strong > a:focus,
-.blogPost > content > ol > li > p > a:hover,
-.blogPost > content > ol > li > p > a:focus,
-.blogPost > content > ul > li > p > a:hover,
-.blogPost > content > ul > li > p > a:focus,
-.blogPost > content > p > a:hover,
-.blogPost > content > p > a:focus {
-    color: var(--post-link-hover-color);
-    border-bottom: 1px solid var(--post-link-hover-color);
-    text-decoration: none;
-}
-
-.blogPost > content > p > code,
-.blogPost > content > code {
-    border-left: 4px solid var(--accent-color);
-    padding-left: 1rem;
-    margin: 1rem 0;
-    font-style: italic;
-    color: var(--muted-text-color);
-}
-
-.blogPost > content > a:visited {
-    color: var(--muted-text-color);
-}
-
-.aboutPage {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    color: var(--text-color);
-}
-
-.aboutPage > h3,
-.aboutPage > content > h3 {
-    color: var(--text-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.aboutPage > content > ul {
-    list-style-type: disc;
-}
-
-.aboutPage > content > a {
-    color: var(--link-color);
-    text-decoration: none;
-    border-bottom: 1px solid var(--link-color);
-}
-
-.aboutPage>content: a:hover,
- .aboutPage>content>a:focus {
-    color: var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
-}
-
-.aboutPage > content > img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem 0;
-}
-
-.aboutPage > content > p {
-    line-height: 1.6;
-    margin: 1rem 0;
-}
-
-.aboutPage > content > blockquote {
-    border-left: 4px solid var(--accent-color);
-    padding-left: 1rem;
-    margin: 1rem 0;
-    font-style: italic;
-    color: var(--muted-text-color);
-}
-
-.aboutPage > content > h3 > a,
-.aboutPage > content > ul li > a,
-.aboutPage > content > p > a {
+.blogPost > content > p > a {
     color: var(--post-link-color);
-}
-
-.aboutPage > content > h3 > a:hover,
-.aboutPage > content > h3 > a:focus,
-.aboutPage > content > p > a:hover,
-.aboutPage > content > p > a:focus,
-.aboutPage > content > ul li > a:hover,
-.aboutPage > content > ul li > a:focus {
-    color: var(--post-link-hover-color);
-}
-
-.pageFooter {
-    background-color: var(--secondary-color);
-    color: var(--muted-text-color);
-    padding: var(--space-md);
-    text-align: center;
-    border-top: 1px solid var(--primary-color);
-    position: relative;
-    bottom: 0;
-
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.pageFooter > p {
-    margin: 0;
-    font-size: var(--small-font-size);
-}
-
-.tags {
-    background-color: var(--card-bg-color);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 2%;
-    margin: 2% 0;
-}
-
-.tags > div {
-    font-weight: bold;
-    margin-bottom: 1%;
-}
-
-.tags > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tags > ul li {
-    margin: 1%;
-}
-
-.tags > ul li > a {
     text-decoration: none;
-    color: var(--post-link-color);
-    padding: 0.5% 1%;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
 }
 
-.tags > ul li > a:hover,
-.tags > ul li > a:focus {
-    background-color: var(--secondary-color);
+.blogPost > content > p > a:hover {
     color: var(--post-link-hover-color);
+    text-decoration: underline;
+}
+
+.blogPost > content > a {
+    color: var(--post-link-color);
+    text-decoration: none;
+}
+
+.blogPost > content > a:hover {
+    color: var(--post-link-hover-color);
+    text-decoration: underline;
 }
