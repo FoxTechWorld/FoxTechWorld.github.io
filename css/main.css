@@ -111,6 +111,16 @@
     #mainContent .content {
         font-size: 1rem;
     }
+
+    #mainContent > .content > table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+html {
+   scroll-behavior: auto smooth;
 }
 
 @font-face {
@@ -125,6 +135,52 @@ body {
     color: var(--text-color);
     font-size: var(--small-font-size);
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#mainContent > .content > table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+}
+
+#mainContent > .content > table > th {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: var(--space-sm);
+    text-align: left;
+    font-size: var(--small-font-size);
+    border-bottom: 2px solid var(--text-color);
+}
+
+#mainContent > .content > table > td {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--muted-text-color);
+}
+
+#mainContent > .content > table > tr:nth-child(even) td {
+    background-color: var(--secondary-color);
+}
+
+#mainContent > .content > table > thead {
+    background-color: var(--secondary-color);
+}
+
+#mainContent > .content > table > tfoot {
+    background-color: var(--card-bg-color);
+}
+
+#mainContent > .content > table > tfoot > td {
+    padding: var(--space-sm);
+    font-weight: bold;
+    border-top: 2px solid var(--accent-color);
+}
+
+#mainContent > .content > table > tfoot > td:hover {
+    background-color: var(--muted-text-color);
+    color: var(--primary-color);
 }
 
 #TableOfContents {
@@ -382,6 +438,44 @@ body {
     color: var(--muted-text-color);
 }
 
+#mainContent > .content > table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    border: 1px solid var(--muted-text-color);
+    border-radius: var(--card-border-radius);
+}
+
+#mainContent > .content > table th {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: var(--space-sm);
+    text-align: left;
+    font-size: var(--small-font-size);
+    border-bottom: 2px solid var(--text-color);
+}
+
+#mainContent > .content > table td {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--muted-text-color);
+}
+
+#mainContent > .content > table thead {
+    background-color: var(--secondary-color);
+}
+
+#mainContent > .content > table tfoot {
+    background-color: var(--card-bg-color);
+}
+
+#mainContent > .content > table tfoot td {
+    padding: var(--space-sm);
+    font-weight: bold;
+    border-top: 2px solid var(--accent-color);
+}
+
 .pageFooter {
     background-color: var(--secondary-color);
     color: var(--muted-text-color);
@@ -451,6 +545,7 @@ body {
 }
 
 .pagination > li > a {
+    font-family: var(--website-font);
     text-decoration: none;
     color: var(--accent-color);
     padding: 0.5rem 1rem;
