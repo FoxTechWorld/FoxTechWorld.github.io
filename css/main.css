@@ -113,9 +113,10 @@
     }
 
     #mainContent > .content > table {
+        font-size: 75%;
         display: block;
         overflow-x: auto;
-        white-space: nowrap;
+        white-space: ;
     }
 }
 
