@@ -3,6 +3,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     const maxTags = 5;
     const tagsList = document.querySelectorAll(".tags-container .tag");
+    document.body.style.display = "block";
     tagsList.forEach((tag, index) => {
       if (index >= maxTags) {
         tag.style.display = "none";

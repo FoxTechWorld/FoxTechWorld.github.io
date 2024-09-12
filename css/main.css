@@ -116,7 +116,7 @@
         font-size: 75%;
         display: block;
         overflow-x: auto;
-        white-space:;
+        white-space: break-spaces;
     }
 }
 
@@ -124,11 +124,8 @@ html {
     scroll-behavior: auto smooth;
 }
 
-@font-face {
-    font-display: swap;
-}
-
 body {
+    display: block;
     max-width: 95ch;
     margin: 0 auto;
     font-family: var(--website-font);
