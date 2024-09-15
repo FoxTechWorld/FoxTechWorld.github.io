@@ -322,6 +322,7 @@ body {
 #mainContent > .content {
     font-size: var(--post-paragraph-font-size);
     line-height: 1.6;
+    overflow-x: auto;
 }
 
 #mainContent > .content > div > pre > code > span {
@@ -444,10 +445,12 @@ body {
 
 #mainContent > .content > table {
     width: 100%;
+    min-height: 100px;
     border-collapse: collapse;
     margin: var(--space-lg) 0;
     border: 1px solid var(--muted-text-color);
     border-radius: var(--card-border-radius);
+    min-width: 600px;
 }
 
 #mainContent > .content > table > th {
