@@ -437,6 +437,7 @@ body {
 }
 
 #mainContent > .content > table {
+    font-size: 75%;
     width: 100%;
     border-collapse: collapse;
     margin: var(--space-lg) 0;
