@@ -1,0 +1,580 @@
+:root {
+    /* Color Palette */
+    --primary-color: #1e1e1e;
+    --secondary-color: #272727;
+    --accent-color: #ff9800;
+    --text-color: #e0e0e0;
+    --muted-text-color: #b0b0b0;
+    --link-color: #007bff;
+
+    /* Typography */
+    --website-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+    --post-font: Georgia, "Times New Roman", monospace;
+
+    /* Font Sizes */
+    --small-font-size: 1.25rem;
+    --large-font-size: 2.75rem;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* Card Styles */
+    --card-bg-color: #272727;
+    --card-padding: var(--space-md);
+    --card-border-radius: 0.5rem;
+    --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --card-margin-bottom: var(--space-md);
+    --card-title-font-size: var(--small-font-size);
+    --card-title-color: var(--muted-text-color);
+    --card-text-color: var(--text-color);
+
+    /* Responsive Adjustments */
+    --card-width: 100%;
+    --card-padding-responsive: var(--space-sm);
+    --card-title-font-size-responsive: 1rem;
+    --card-text-font-size-responsive: 0.875rem;
+
+    /* Header Styles */
+    --header-padding: var(--space-md);
+    --header-font-size: var(--large-font-size);
+    --menu-spacing: var(--space-md);
+    --menu-font-size: var(--small-font-size);
+
+    /* Blog Post Styles */
+    --post-padding: var(--space-lg);
+    --post-bg-color: var(--secondary-color);
+    --post-border-radius: 0.5rem;
+    --post-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --post-title-font-size: 2rem;
+    --post-date-font-size: 1rem;
+    --post-heading-font-size: 1.5rem;
+    --post-paragraph-font-size: var(--small-font-size);
+    --post-link-color: var(--accent-color);
+    --post-link-hover-color: #ff5722;
+    --post-code-bg-color: #333;
+    --post-code-text-color: #f8f8f8;
+    --post-figure-margin: var(--space-lg);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    :root {
+        --header-padding: var(--space-sm);
+        --header-font-size: 1.25rem;
+        --menu-spacing: var(--space-sm);
+        --menu-font-size: 1rem;
+        --card-width: 100%;
+        --card-padding: var(--card-padding-responsive);
+        --card-title-font-size: var(--card-title-font-size-responsive);
+        --card-text-font-size: var(--card-text-font-size-responsive);
+    }
+
+    .card {
+        width: var(--card-width);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --card-width: 100%;
+        --header-padding: var(--space-xs);
+        --header-font-size: 1rem;
+        --menu-spacing: var(--space-xs);
+        --menu-font-size: 1rem;
+    }
+
+    .card {
+        width: var(--card-width);
+    }
+
+    #mainContent {
+        padding: var(--space-md);
+    }
+
+    #mainContent h1 {
+        font-size: 1.5rem;
+    }
+
+    #mainContent time {
+        font-size: 0.875rem;
+    }
+
+    #mainContent .toc h3 {
+        font-size: 1.25rem;
+    }
+
+    #mainContent .content {
+        font-size: 1rem;
+    }
+
+    #mainContent > .content > table {
+        width: 100%;
+        font-size: 85%;
+        display: block;
+        overflow-x: auto;
+        white-space: break-spaces;
+    }
+}
+
+@font-face {
+  font-family: var(--website-font);
+  font-display: swap;
+}
+
+html {
+    scroll-behavior: auto smooth;
+}
+
+body {
+    display: block;
+    max-width: 95ch;
+    margin: 0 auto;
+    font-family: var(--website-font);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#mainContent > .content > table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+}
+
+#mainContent > .content > table > th {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: var(--space-sm);
+    text-align: left;
+    font-size: var(--small-font-size);
+    border-bottom: 2px solid var(--text-color);
+}
+
+#mainContent > .content > table > td {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--muted-text-color);
+}
+
+#mainContent > .content > table > tr:nth-child(even) td {
+    background-color: var(--secondary-color);
+}
+
+#mainContent > .content > table > thead {
+    background-color: var(--secondary-color);
+}
+
+#mainContent > .content > table > tfoot {
+    background-color: var(--card-bg-color);
+}
+
+#mainContent > .content > table > tfoot > td {
+    padding: var(--space-sm);
+    font-weight: bold;
+    border-top: 2px solid var(--accent-color);
+}
+
+#mainContent > .content > table > tfoot > td:hover {
+    background-color: var(--muted-text-color);
+    color: var(--primary-color);
+}
+
+#TableOfContents {
+    font-size: var(--small-font-size);
+}
+
+#TableOfContents > ul li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: var(--space-xs);
+}
+
+#TableOfContents > ul li > a {
+    color: var(--post-link-color);
+    text-decoration: none;
+}
+
+#TableOfContents > ul li > a:hover {
+    color: var(--post-link-hover-color);
+    text-decoration: underline;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--header-padding);
+    background-color: var(--secondary-color);
+}
+
+.pageHeader > h1 {
+    margin: 0;
+    font-size: var(--header-font-size);
+}
+
+.pageHeader > h1 > a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    margin-left: var(--menu-spacing);
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--menu-font-size);
+}
+
+.menu > li > a:hover {
+    color: var(--accent-color);
+}
+
+.homepage {
+    flex-direction: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    box-sizing: border-box;
+    margin-top: var(--card-margin-bottom);
+    margin-bottom: var(--card-margin-bottom);
+    border: 2px solid var(--accent-color);
+}
+
+.card > h2 {
+    font-size: var(--card-title-font-size);
+    color: var(--card-title-color);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.card > h2 > a {
+    color: var(--card-title-color);
+    text-decoration: non;
+}
+
+.card > h2 > a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.card > p {
+    color: var(--card-text-color);
+    font-size: var(--small-font-size);
+    line-height: 1.6;
+}
+
+#mainContent {
+    margin-top: 15px;
+    background-color: var(--post-bg-color);
+    border-radius: var(--post-border-radius);
+    box-shadow: var(--post-box-shadow);
+    padding: var(--post-padding);
+    color: var(--text-color);
+    font-family: var(--post-font);
+}
+
+#mainContent > h1 {
+    font-size: var(--post-title-font-size);
+    margin-bottom: var(--space-md);
+}
+
+#mainContent > time {
+    display: block;
+    font-size: var(--post-date-font-size);
+    color: var(--muted-text-color);
+    margin-bottom: var(--space-md);
+}
+
+#mainContent > .toc {
+    margin-bottom: var(--space-lg);
+}
+
+#mainContent > .toc > h3 {
+    font-size: var(--post-heading-font-size);
+    margin-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--space-xs);
+}
+
+#mainContent > .content {
+    font-size: var(--post-paragraph-font-size);
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+#mainContent > .content > div > pre > code > span {
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+#mainContent > .content > figure {
+    text-align: center;
+    margin: var(--post-figure-margin) 0;
+}
+
+#mainContent > .content > div > iframe {
+    max-width: 100%;
+}
+
+#mainContent > .content > figure > img,
+#mainContent > .content > p > img {
+    min-width: 25%;
+    min-height: 25%;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#mainContent > .content > iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+#mainContent > .content > blockquote {
+    background-color: var(--post-code-bg-color);
+    color: var(--post-code-text-color);
+    padding: var(--space-md);
+    margin: var(--space-lg 0);
+    font-style: italic;
+}
+
+#mainContent > .content > code {
+    background-color: var(--post-code-bg-color);
+    color: var(--post-code-text-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+}
+
+#mainContent > .content > ul,
+#mainContent > .content > ol {
+    padding-left: 2rem;
+}
+
+#mainContent > .content > ul > li > a,
+#mainContent > .content > h3 > a,
+#mainContent > .content > h4 > a {
+    text-decoration: none;
+    color: var(--post-link-color);
+}
+
+#mainContent > .content > ul > li > a:hover,
+#mainContent > .content > ul > li > a:focus,
+#mainContent > .content > h4 > a:hover,
+#mainContent > .content > h4 > a:focus,
+#mainContent > .content > h3 > a:hover,
+#mainContent > .content > h3 > a:focus {
+    color: var(--post-link-hover-color);
+    text-decoration: underline;
+}
+
+#mainContent > .content > hr {
+    border: 0;
+    border-top: 1px solid var(--muted-text-color);
+    margin: var(--space-lg 0);
+}
+
+#mainContent > .content > a,
+#mainContent > .content > p > strong > a,
+#mainContent > .content > ol > li > p > a,
+#mainContent > .content > ol > li > a,
+#mainContent > .content > ul > li > p > a,
+#mainContent > .content > p > a,
+#mainContent > .content > ul > li > p > strong > em > a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-color);
+    transition:
+        color 0.3s ease,
+        border-bottom 0.3s ease;
+}
+
+#mainContent > .content > ol > li > a:hover,
+#mainContent > .content > ol > li > a:focus,
+#mainContent > .content > ul > li > p > strong > em > a:hover,
+#mainContent > .content > ul > li > p > strong > em > a:focus,
+#mainContent > .content > p > strong > a:hover,
+#mainContent > .content > p > strong > a:focus,
+#mainContent > .content > ol > li > p > a:hover,
+#mainContent > .content > ol > li > p > a:focus,
+#mainContent > .content > ul > li > p > a:hover,
+#mainContent > .content > ul > li > p > a:focus,
+#mainContent > .content > p > a:hover,
+#mainContent > .content > p > a:focus {
+    color: var(--post-link-hover-color);
+    border-bottom: 1px solid var(--post-link-hover-color);
+    text-decoration: none;
+}
+
+#mainContent > .content > p > code,
+#mainContent > .content > code {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--muted-text-color);
+}
+
+#mainContent > .content > a:visited {
+    color: var(--muted-text-color);
+}
+
+#mainContent > .content > table {
+    width: 100%;
+    min-height: 100px;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    border: 1px solid var(--muted-text-color);
+    border-radius: var(--card-border-radius);
+    min-width: 600px;
+}
+
+#mainContent > .content > table > th {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: var(--space-sm);
+    text-align: left;
+    font-size: var(--small-font-size);
+    border-bottom: 2px solid var(--text-color);
+}
+
+#mainContent > .content > table > td {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--muted-text-color);
+}
+
+#mainContent > .content > table thead {
+    background-color: var(--secondary-color);
+}
+
+#mainContent > .content > table tfoot {
+    background-color: var(--card-bg-color);
+}
+
+#mainContent > .content > table tfoot td {
+    padding: var(--space-sm);
+    font-weight: bold;
+    border-top: 2px solid var(--accent-color);
+}
+
+.pageFooter {
+    background-color: var(--secondary-color);
+    color: var(--muted-text-color);
+    padding: var(--space-md);
+    text-align: center;
+    border-top: 1px solid var(--primary-color);
+    position: relative;
+    bottom: 0;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pageFooter > p {
+    margin: 0;
+    font-size: var(--small-font-size);
+}
+
+.tags {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--muted-text-color);
+    border-radius: 0.5rem;
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+}
+
+.tags > div:first-child {
+    font-weight: bold;
+    margin-bottom: var(--space-sm);
+    color: var(--text-color);
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.tag {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 0.3rem;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.tag:hover,
+.tag:focus {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.tag.hidden {
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination > li {
+    margin: 0 0.5rem;
+}
+
+.pagination > li > a {
+    font-family: var(--website-font);
+    text-decoration: none;
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--accent-color);
+}
+
+.pagination > li > a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.pagination li.active a {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    font-weight: bold;
+    cursor: default;
+}
