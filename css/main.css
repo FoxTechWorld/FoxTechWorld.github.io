@@ -11,6 +11,8 @@ body {
   margin: 0 auto;
   max-width: 90ch;
 
+  padding: 1rem;
+
   font-family: Roboto, 'Open Sans', Lato;
   font-size: 18px;
 
@@ -145,4 +147,15 @@ nav ul li a:hover {
 
 div[x-show="open"] nav {
   display: block;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+
+#disqus_thread {
+  overflow: visible !important;
+  overflow-clip-margin: unset !important;
+  border-width: 0;
 }
