@@ -4,6 +4,10 @@
   margin-bottom: 1rem;
 }
 
+html {
+  scroll-behavior: auto smooth;
+}
+
 body {
   background-color: #121212;
   color: #d3d3d3;
@@ -13,7 +17,7 @@ body {
 
   padding: 1rem;
 
-  font-family: Roboto, 'Open Sans', Lato;
+  font-family: Roboto, "Open Sans", Lato;
   font-size: 18px;
 
   line-height: 2em;
@@ -63,12 +67,13 @@ h6 {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .post-card:hover {
-  border-color: #3498db;
+  border-color: #edffed;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -80,7 +85,7 @@ header {
   border-bottom: 2px solid #444;
 }
 
-header>h1>a {
+header > h1 > a {
   margin: 0;
   color: #ffffff;
   font-size: 32px;
@@ -95,7 +100,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 button:hover {
@@ -103,7 +110,7 @@ button:hover {
   color: #121212;
 }
 
-div>div {
+div > div {
   position: relative;
   display: inline-block;
 }
@@ -152,7 +159,6 @@ div[x-show="open"] nav {
 iframe {
   max-width: 100%;
 }
-
 
 #disqus_thread {
   overflow: visible !important;
