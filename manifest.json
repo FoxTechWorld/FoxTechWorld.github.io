@@ -1,0 +1,9 @@
+{
+  "name": "FoxTechWorld",
+  "short_name": "FoxTech",
+  "description": "Um site geek, otaku e de programação",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0077b5"
+}
