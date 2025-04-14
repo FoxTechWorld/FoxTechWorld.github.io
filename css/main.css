@@ -1,13 +1,40 @@
 :root {
-  /* Apple-style dark palette */
-  --background: hsla(220, 15%, 10%, 1); /* Base fundo */
-  --foreground: hsla(0, 0%, 95%, 1); /* Texto primário */
-  --subtle-text: hsla(0, 0%, 65%, 1); /* Texto secundário */
-  --highlight: hsla(210, 100%, 60%, 1); /* Ações / links */
-  --highlight-hover: hsla(210, 100%, 70%, 1); /* Hover */
-  --surface: hsla(220, 15%, 16%, 1); /* Cartões, menus */
-  --border: hsla(0, 0%, 25%, 1); /* Delimitação */
-  --shadow: hsla(0, 0%, 0%, 0.45); /* Profundidade */
+  /* Metálico e cinza azulado */
+  --background: hsla(210, 20%, 12%, 1); /* Fundo cinza azulado escuro */
+  --foreground: hsla(210, 15%, 95%, 1); /* Texto primário em cinza claro */
+  --subtle-text: hsla(210, 15%, 70%, 1); /* Texto secundário em cinza */
+  --highlight: hsla(210, 100%, 60%, 1); /* Ações / links em azul metálico */
+  --highlight-hover: hsla(210, 100%, 70%, 1); /* Hover com tom mais claro */
+  --surface: hsla(
+    210,
+    20%,
+    18%,
+    1
+  ); /* Cartões, menus com um tom mais profundo */
+  --border: hsla(0, 0%, 35%, 1); /* Delimitação metálica */
+  --shadow: hsla(0, 0%, 0%, 0.4); /* Profundidade mais suave */
+}
+
+time {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--subtle-text);
+  font-size: 1rem;
+  font-weight: 400; /* Menos peso para que não se destaque tanto */
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  text-transform: capitalize; /* Torna a data mais legível, capitalizando as primeiras letras */
+}
+
+time a {
+  color: var(--highlight);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+time a:hover {
+  color: var(--highlight-hover);
 }
 
 * {
@@ -62,12 +89,32 @@ ul,
 ol {
   list-style: none;
   margin-left: 0;
-  padding-left: 0;
+  padding-left: 1.5rem;
 }
 
-li {
-  padding-left: 0;
-  margin-bottom: 0.5rem;
+ul li,
+ol li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+ul li::before,
+ol li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--highlight);
+  box-shadow: 0 0 6px var(--shadow);
+}
+
+ol li::before {
+  width: 6px;
+  height: 6px;
 }
 
 h1,
@@ -157,7 +204,8 @@ div > div {
   display: inline-block;
 }
 
-nav {
+/* Aplica o estilo somente a nav quando for filho direto de div */
+div > nav {
   position: absolute;
   top: 60px;
   right: 0;
@@ -171,13 +219,14 @@ nav {
   z-index: 10;
 }
 
-nav ul {
+/* Ajuste para ul dentro de nav (ul é filho direto) */
+nav > ul {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-nav ul li a {
+nav > ul > li > a {
   display: block;
   padding: 0.75rem 1rem;
   border-radius: 6px;
@@ -187,15 +236,49 @@ nav ul li a {
   transition: background-color 0.2s ease;
 }
 
-nav ul li a:hover {
+nav > ul > li > a:hover {
   background-color: var(--highlight);
   color: var(--background);
 }
 
-div[x-show="open"] nav {
+div[x-show="open"] > nav {
   display: block;
 }
 
 [x-cloak] {
   display: none !important;
+}
+
+/* Estilos para Markdown - Citação (>) */
+blockquote {
+  background-color: var(--surface);
+  border-left: 4px solid var(--highlight);
+  color: var(--subtle-text);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-style: italic;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Estilos para Citações em Listas (Markdown com >) */
+blockquote ul,
+blockquote ol {
+  padding-left: 1.5rem;
+}
+
+blockquote ul li::before,
+blockquote ol li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--highlight);
+  box-shadow: 0 0 6px var(--shadow);
 }
