@@ -15,6 +15,33 @@
   --shadow: hsla(0, 0%, 0%, 0.4); /* Profundidade mais suave */
 }
 
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style-type: none; /* Remove os marcadores padrão da lista */
+  padding: 0; /* Remove o preenchimento da lista */
+  margin: 0; /* Remove as margens */
+}
+
+nav ul li {
+  list-style: none; /* Garante que nenhum item da lista tenha marcador */
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--highlight);
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--highlight);
+  color: var(--background);
+}
 time {
   display: block;
   margin-top: 0.25rem;
