@@ -1,5 +1,11 @@
 const CACHE_NAME = "kitsune-cache-v1";
-const urlsToCache = ["/", "/index.html", "/manifest.json", "/favicon.ico"];
+const urlsToCache = [
+  "/",
+  "/index.html",
+  "/main.css",
+  "/manifest.json",
+  "/favicon.ico",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
