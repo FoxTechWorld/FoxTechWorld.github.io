@@ -260,51 +260,24 @@ blockquote ol li::before {
   box-shadow: 0 0 6px var(--shadow);
 }
 
-header > nav > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  list-style-type: none; /* Remove os marcadores padrão da lista */
-  padding: 0; /* Remove o preenchimento da lista */
-  margin: 0; /* Remove as margens */
+nav > ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-header > nav > ul li {
-  list-style: none; /* Garante que nenhum item da lista tenha marcador */
+nav > ul.menu .menu-item {
+  margin: 0;
+  padding: 0;
 }
 
-header > nav > ul > li > a {
-  display: block;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 1rem;
-  color: var(--highlight);
-  transition: background-color 0.2s ease;
-}
-
-nav ul li a:hover {
-  background-color: var(--highlight);
-  color: var(--background);
-}
-time {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--subtle-text);
-  font-size: 1rem;
-  font-weight: 400; /* Menos peso para que não se destaque tanto */
-  line-height: 1.4;
-  letter-spacing: 0.1px;
-  text-transform: capitalize; /* Torna a data mais legível, capitalizando as primeiras letras */
-}
-
-time a {
-  color: var(--highlight);
-  font-weight: 500;
+nav > ul.menu .menu-item a {
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: var(--foreground);
+  padding: 8px 12px;
+  display: block;
 }
 
-time a:hover {
-  color: var(--highlight-hover);
+nav > ul.menu .menu-item a:hover {
+  background-color: var(--highlight-hover);
 }
