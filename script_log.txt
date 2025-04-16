@@ -1,2 +1,0 @@
-[INFO] Verificando mudanças em: public/
-[INFO] Mudanças detectadas em public/
