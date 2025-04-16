@@ -1,0 +1,1 @@
+[ERROR] public/ has some problem trying fix
