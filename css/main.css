@@ -1,0 +1,335 @@
+:root {
+  /* Metálico e cinza azulado */
+  --background: hsla(210, 20%, 12%, 1); /* Fundo cinza azulado escuro */
+  --foreground: hsla(210, 15%, 95%, 1); /* Texto primário em cinza claro */
+  --subtle-text: hsla(210, 15%, 70%, 1); /* Texto secundário em cinza */
+  --highlight: hsla(210, 100%, 60%, 1); /* Ações / links em azul metálico */
+  --highlight-hover: hsla(210, 100%, 70%, 1); /* Hover com tom mais claro */
+  --surface: hsla(
+    210,
+    20%,
+    18%,
+    1
+  ); /* Cartões, menus com um tom mais profundo */
+  --border: hsla(0, 0%, 35%, 1); /* Delimitação metálica */
+  --shadow: hsla(0, 0%, 0%, 0.4); /* Profundidade mais suave */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  max-width: 90ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--highlight-hover);
+}
+
+time {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--subtle-text);
+  font-size: 0.9rem;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.5rem;
+}
+
+ul li,
+ol li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+ul li::before,
+ol li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--highlight);
+  box-shadow: 0 0 6px var(--shadow);
+}
+
+ol li::before {
+  width: 6px;
+  height: 6px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header > h1 > a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--highlight);
+  color: var(--background);
+}
+
+.post-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px var(--shadow);
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.post-card:hover {
+  border-color: var(--highlight);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+div > div {
+  position: relative;
+  display: inline-block;
+}
+
+/* Aplica o estilo somente a nav quando for filho direto de div */
+div > nav {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+  display: none;
+  padding: 1rem;
+  z-index: 10;
+}
+
+/* Ajuste para ul dentro de nav (ul é filho direto) */
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--highlight);
+  transition: background-color 0.2s ease;
+}
+
+nav > ul > li > a:hover {
+  background-color: var(--highlight);
+  color: var(--background);
+}
+
+div[x-show="open"] > nav {
+  display: block;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+/* Estilos para Markdown - Citação (>) */
+blockquote {
+  background-color: var(--surface);
+  border-left: 4px solid var(--highlight);
+  color: var(--subtle-text);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-style: italic;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Estilos para Citações em Listas (Markdown com >) */
+blockquote ul,
+blockquote ol {
+  padding-left: 1.5rem;
+}
+
+blockquote ul li::before,
+blockquote ol li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--highlight);
+  box-shadow: 0 0 6px var(--shadow);
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > ul > .menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+.menu .menu-item a {
+  text-decoration: none;
+  color: var(--foreground);
+  padding: 8px 12px;
+  display: block;
+}
+
+.menu .menu-item a:hover {
+  background-color: var(--highlight-hover);
+}
+
+code {
+  background-color: hsla(210, 20%, 20%, 1);
+  color: var(--highlight);
+  font-family: "Fira Code", "Source Code Pro", monospace;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre {
+  background-color: hsla(210, 20%, 10%, 1);
+  color: var(--foreground);
+  padding: 1.25rem;
+  margin: 2rem 0;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px var(--shadow);
+  font-family: "Fira Code", "Source Code Pro", monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.hljs-keyword,
+.token.keyword {
+  color: hsl(200, 100%, 70%);
+}
+
+.hljs-string,
+.token.string {
+  color: hsl(100, 80%, 70%);
+}
+
+.hljs-number,
+.token.number {
+  color: hsl(40, 90%, 70%);
+}
+
+.hljs-function,
+.token.function {
+  color: hsl(270, 100%, 70%);
+}
