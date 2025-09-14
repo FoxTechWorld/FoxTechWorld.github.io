@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://foxtechword.github.io/sitemap.xml
