@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://foxtechword.github.io/images/favicon.png" />
+<title>Busca em Largura e Busca em profundidade | FoxTechWorld</title>
+<meta name="title" content="Busca em Largura e Busca em profundidade" />
+<meta name="description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos." />
+<meta name="author" content="KitsuneSemCalda" />
+<meta name="keywords" content="Algoritmos,Estrutura de Dados,Grafos,Algoritmos de Busca,Busca em Largura,Busca em Profundidade,Teoria dos Grafos," />
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:title" content="Busca em Largura e Busca em profundidade" />
+<meta property="og:description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foxtechword.github.io/posts/algortimos/bfs_dfs/" />
+
+<meta property="og:image" content="https://foxtechword.github.io/images/social_card_bg_hu_afa5d8a3be33286a.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-09-15T08:24:12-03:00" />
+<meta property="article:modified_time" content="2025-09-15T08:24:12-03:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://foxtechword.github.io/images/social_card_bg_hu_afa5d8a3be33286a.webp"/>
+<meta name="twitter:title" content="Busca em Largura e Busca em profundidade"/>
+<meta name="twitter:description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos."/>
+<meta name="twitter:site" content="@KitsuneSemCalda"/>
+
+
+
+<meta itemprop="name" content="Busca em Largura e Busca em profundidade">
+<meta itemprop="description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos."><meta itemprop="datePublished" content="2025-09-15T08:24:12-03:00" />
+<meta itemprop="dateModified" content="2025-09-15T08:24:12-03:00" />
+<meta itemprop="wordCount" content="631">
+
+<meta itemprop="image" content="https://foxtechword.github.io/images/social_card_bg_hu_afa5d8a3be33286a.webp"/>
+
+
+<meta itemprop="keywords" content="Algoritmos,Estrutura de Dados,Grafos,Algoritmos de Busca,Busca em Largura,Busca em Profundidade,Teoria dos Grafos," />
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  
+  <link href="/original.min.css" rel="stylesheet">
+
+  
+
+  
+
+  
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:title" content="Busca em Largura e Busca em profundidade" />
+<meta property="og:description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foxtechword.github.io/posts/algortimos/bfs_dfs/" />
+
+<meta property="og:image" content="https://foxtechword.github.io/images/social_card_bg_hu_afa5d8a3be33286a.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-09-15T08:24:12-03:00" />
+<meta property="article:modified_time" content="2025-09-15T08:24:12-03:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://foxtechword.github.io/images/social_card_bg_hu_afa5d8a3be33286a.webp"/>
+<meta name="twitter:title" content="Busca em Largura e Busca em profundidade"/>
+<meta name="twitter:description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos."/>
+<meta name="twitter:site" content="@KitsuneSemCalda"/>
+
+
+
+<meta itemprop="name" content="Busca em Largura e Busca em profundidade">
+<meta itemprop="description" content="O que são Grafos?
+Grafos são um ramo da matemática que estuda relações entre objetos pertencentes a um determinado conjunto.
+
+Você pode pensar por exemplo que 
+$$\{a, b\}$$ é um grafo que leva de a para b.
+Historicamente, foi Leonhard Euler, mesmo criador da identidade de Euler.
+$$E^{i\pi} &#43; 1 = 0$$Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.
+E este foi considerado o ponto de partida da teoria dos grafos."><meta itemprop="datePublished" content="2025-09-15T08:24:12-03:00" />
+<meta itemprop="dateModified" content="2025-09-15T08:24:12-03:00" />
+<meta itemprop="wordCount" content="631">
+
+<meta itemprop="image" content="https://foxtechword.github.io/images/social_card_bg_hu_afa5d8a3be33286a.webp"/>
+
+
+<meta itemprop="keywords" content="Algoritmos,Estrutura de Dados,Grafos,Algoritmos de Busca,Busca em Largura,Busca em Profundidade,Teoria dos Grafos," />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PSN4T418"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T8PSN4T418');
+  </script>
+
+</head>
+
+<body>
+  <header><a class="skip-link" href="#main-content">Skip to main content</a>
+
+<a href="/" class="title"><h1>FoxTechWorld</h1></a>
+<nav>
+  <a href="/">Home</a>
+
+  <a href="/posts/">Posts</a>
+
+<a href='https://foxtechword.github.io/index.xml'>RSS</a>
+
+
+
+
+
+
+
+</nav>
+</header>
+  <main id="main-content">
+
+<h1>Busca em Largura e Busca em profundidade</h1>
+<p class="byline">
+  <time datetime='2025-09-15' pubdate>
+    2025-09-15
+  </time>
+  · KitsuneSemCalda
+</p>
+
+
+<aside class="toc">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-são-grafos">O que são Grafos?</a>
+      <ul>
+        <li><a href="#onde-grafos-são-usados">Onde grafos são usados?</a></li>
+      </ul>
+    </li>
+    <li><a href="#algoritmos-de-busca">Algoritmos de Busca</a>
+      <ul>
+        <li><a href="#qual-critério">Qual critério?</a></li>
+      </ul>
+    </li>
+    <li><a href="#algoritmos">Algoritmos</a>
+      <ul>
+        <li><a href="#busca-em-largura-bfs">Busca em Largura (BFS)</a></li>
+        <li><a href="#busca-em-profundidade">Busca em Profundidade</a></li>
+        <li><a href="#conclusão">Conclusão</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+
+<content>
+  <h2 id="o-que-são-grafos">O que são Grafos?</h2>
+<p>Grafos são um ramo da matemática que estuda <em>relações</em> entre objetos pertencentes a um determinado conjunto.</p>
+<blockquote>
+<p>Você pode pensar por exemplo que </p>
+$$\{a, b\}$$<p> é um grafo que leva de a para b.</p></blockquote>
+<p>Historicamente, foi <code>Leonhard Euler</code>, mesmo criador da identidade de Euler.</p>
+$$E^{i\pi} + 1 = 0$$<p>Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.</p>
+<p>E este foi considerado o ponto de partida da teoria dos grafos.</p>
+<h3 id="onde-grafos-são-usados">Onde grafos são usados?</h3>
+<p>Dentro da computação em todo lugar diretamente ou indiretamente.</p>
+<ul>
+<li>Redes Neurais</li>
+<li>Estrutura de árvores</li>
+<li>Rede de computadores</li>
+<li>Computação Gráfica</li>
+<li>Redes Sociais</li>
+</ul>
+<p>Se precisa de coordenação provavelmente vai ter um grafo incluso.</p>
+<p>Fica ainda mais interessante porque <code>Linguagens Formais e Automatos</code>.</p>
+<p>Fundamental para a construções de linguagens (programação, regular, marcação).</p>
+<p>Também usa grafos como estrutura de representação para automatos e diagramas de transição</p>
+<h2 id="algoritmos-de-busca">Algoritmos de Busca</h2>
+<p>Como um grafo é formado por relações, contendo ou não um direcionamento.</p>
+<p>É necessário sob algum critério percorrer esse grafo.</p>
+<p>E para isso temos um problema essencial que precisa ser resolvido.</p>
+<h3 id="qual-critério">Qual critério?</h3>
+<p>Normalmente ou estamos trabalhando com grafos esparsos ou grafos densos.</p>
+<p>Sendo grafos esparsos aqueles que tem poucas arestas em relação ao número de vértices.</p>
+<p>E grafos densos aqueles que tem muitas arestas.</p>
+<p>Essa caracteristica influência diretamente a escolha do algoritmo de busca mais eficiente.</p>
+<p>Os dois algoritmos mais clássicos para essa busca são:</p>
+<ul>
+<li>(BFS - Breadth First Search): Busca em Largura.</li>
+<li>(DFS - Depth First Search): Busca em profundidade.</li>
+</ul>
+<h2 id="algoritmos">Algoritmos</h2>
+<h3 id="busca-em-largura-bfs">Busca em Largura (BFS)</h3>
+<p>O algoritmo de busca em largura explora nível por nível.</p>
+<p>Ou seja se pensarmos em uma árvore.</p>
+<p>Ele verificaria primeiros os vizinhos da raiz.</p>
+<p>Depois os vizinhos dos vizinhos da raiz e por assim vai.</p>
+<p>Para fazer isso a gente utiliza uma estrutura de dados fila/queue.</p>
+<h4 id="propriedades-da-busca-em-largura">Propriedades da busca em largura</h4>
+<ul>
+<li>
+<p>Se existir uma solução, este algoritmo consegue encontrar.</p>
+</li>
+<li>
+<p>Ótimo em arestas unitárias vai encontrar o caminho mais curto em termo de números de passos.</p>
+</li>
+<li>
+<p>Complexidade:</p>
+</li>
+<li>
+<p>Vai ter o tempo de percorrer </p>
+$$O(V + E)$$<p> ou seja o tempo para percorrer todos os vertices e arestas.</p>
+</li>
+<li>
+<p>Espaço: </p>
+$$O(V)$$<p> porque precisa armazenar a fila e o conjunto de visitados.</p>
+</li>
+</ul>
+<h4 id="lógica-passo-a-passo">Lógica passo a passo</h4>
+<ol>
+<li>Colocamos um nó na fila, e marcamos como visitado.</li>
+<li>Enquanto a fila não estiver vazia:</li>
+</ol>
+<ul>
+<li>Retiramos o primeiro elemento.</li>
+<li>Visitamos todos os vizinhos não visitados do nó.</li>
+<li>Adicionamos esses vizinhos a fila e marcamos como visitados.</li>
+</ul>
+<h3 id="busca-em-profundidade">Busca em Profundidade</h3>
+<p>A busca em profundidade em comparação explora todo um ramo do grafo até o fim antes de voltar e explorar outros ramos.</p>
+<p>Ao contrário da busca em largura, aqui usamos pilha/stack (Last In, First Out).</p>
+<h4 id="propriedades-da-busca-em-profundidade">Propriedades da busca em profundidade</h4>
+<ul>
+<li>
+<p>Completo? Em grafos finitos mas, não garante o caminho mais curto em grafos não ponderados.</p>
+</li>
+<li>
+<p>Ótimo? Não, não é adequado quando você precisa do menor número de arestas.</p>
+</li>
+<li>
+<p>Complexidade:</p>
+<ul>
+<li>Tempo: $$O(V + E)$$</li>
+<li>Espaço: $$O(V)$$</li>
+</ul>
+</li>
+<li>
+<p>Risco Prático em recursão pode estourar a pilha em grafos muito profundos, prefira uma versão iterativa.</p>
+</li>
+</ul>
+<h4 id="lógica-passo-a-passo-1">Lógica passo a passo</h4>
+<ol>
+<li>Marca o nó inicial como visitado e entre nele.</li>
+<li>Para cada vizinho não visitado, repita o processo.</li>
+<li>Quando o nó não tem vizinhos não visitados, realize um backtrack.</li>
+<li>Continue até visitar todos os nós alcançáveis.</li>
+</ol>
+<h3 id="conclusão">Conclusão</h3>
+<p>Não existe um algoritmo universalmente “melhor”: tudo depende do objetivo.</p>
+<p>BFS (Busca em Largura):</p>
+<ul>
+<li>
+<p>Garante o menor caminho em grafos não ponderados.</p>
+</li>
+<li>
+<p>Mais indicado quando o problema exige a solução mais curta.</p>
+</li>
+</ul>
+<p>DFS (Busca em Profundidade):</p>
+<ul>
+<li>
+<p>Útil para exploração completa, detecção de ciclos, ordenação topológica e backtracking.</p>
+</li>
+<li>
+<p>Mais indicado quando queremos percorrer toda a estrutura ou analisar propriedades do grafo.</p>
+</li>
+</ul>
+<p>Ambos têm mesma complexidade assintótica </p>
+$$
+O(V+E)$$<p> mas, se aplicam a cenários distintos.</p>
+<p>E devem ser tratados com cautela para não escolher a pior opção por puro achismo.</p>
+<p>Ademas, espero que tenham gostado do post e valeu</p>
+
+</content>
+<p>
+  
+    <a class="blog-tags" href="/tags/algoritmos/">#algoritmos</a>
+  
+    <a class="blog-tags" href="/tags/estrutura-de-dados/">#estrutura de dados</a>
+  
+    <a class="blog-tags" href="/tags/grafos/">#grafos</a>
+  
+    <a class="blog-tags" href="/tags/algoritmos-de-busca/">#algoritmos de busca</a>
+  
+    <a class="blog-tags" href="/tags/busca-em-largura/">#busca em largura</a>
+  
+    <a class="blog-tags" href="/tags/busca-em-profundidade/">#busca em profundidade</a>
+  
+    <a class="blog-tags" href="/tags/teoria-dos-grafos/">#teoria dos grafos</a>
+  
+</p>
+
+
+
+
+  </main>
+  <footer><small>
+  KitsuneSemCalda (CC BY 4.0) | 
+</small></footer>
+
+    
+</body>
+
+</html>
