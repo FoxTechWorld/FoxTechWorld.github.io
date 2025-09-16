@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Busca Em Largura on FoxTechWorld</title>
+    <link>https://foxtechword.github.io/tags/busca-em-largura/</link>
+    <description>Recent content in Busca Em Largura on FoxTechWorld</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <copyright>KitsuneSemCalda (CC BY 4.0)</copyright>
+    <lastBuildDate>Mon, 15 Sep 2025 08:24:12 -0300</lastBuildDate>
+    <atom:link href="https://foxtechword.github.io/tags/busca-em-largura/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Busca em Largura e Busca em profundidade</title>
+      <link>https://foxtechword.github.io/posts/algortimos/bfs_dfs/</link>
+      <pubDate>Mon, 15 Sep 2025 08:24:12 -0300</pubDate>
+      <guid>https://foxtechword.github.io/posts/algortimos/bfs_dfs/</guid>
+      <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;&#xA;&lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Historicamente, foi &lt;code&gt;Leonhard Euler&lt;/code&gt;, mesmo criador da identidade de Euler.&lt;/p&gt;&#xA;&lt;p&gt;$$E^{i\pi} + 1 = 0$$&lt;/p&gt;&#xA;&lt;p&gt;Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.&lt;/p&gt;&#xA;&lt;p&gt;E este foi considerado o ponto de partida da teoria dos grafos.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
