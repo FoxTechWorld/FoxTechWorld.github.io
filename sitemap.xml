@@ -2,12 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://foxtechword.github.io/tags/educa%C3%A7%C3%A3o/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/educa%C3%A7%C3%A3o-permissiva/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/educa%C3%A7%C3%A3o-positiva/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/educa%C3%A7%C3%A3o-tradicional/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/</loc>
     <lastmod>2025-09-17T14:09:04-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://foxtechword.github.io/tags/imediatismo/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/internet/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/mundo-moderno/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/posts/opinion/criar_filhos/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/opini%C3%A3o/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/posts/</loc>
+    <lastmod>2025-09-17T14:09:04-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/</loc>
     <lastmod>2025-09-17T14:09:04-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -27,7 +77,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://foxtechword.github.io/posts/algortimos/bfs_dfs/</loc>
+    <loc>https://foxtechword.github.io/posts/algoritimos/bfs_dfs/</loc>
     <lastmod>2025-09-15T08:24:12-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -43,11 +93,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://foxtechword.github.io/tags/grafos/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/</loc>
     <lastmod>2025-09-15T08:24:12-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
