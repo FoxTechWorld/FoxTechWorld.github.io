@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caminho Mais Curto Entre Todos Os Pares De Todos Os Vertices De Um Grafo on FoxTechWorld</title>
+    <link>http://localhost:1313/tags/caminho-mais-curto-entre-todos-os-pares-de-todos-os-vertices-de-um-grafo/</link>
+    <description>Recent content in Caminho Mais Curto Entre Todos Os Pares De Todos Os Vertices De Um Grafo on FoxTechWorld</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <copyright>KitsuneSemCalda (CC BY 4.0)</copyright>
+    <lastBuildDate>Thu, 18 Sep 2025 12:54:47 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/caminho-mais-curto-entre-todos-os-pares-de-todos-os-vertices-de-um-grafo/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algoritmos em Grafos: Warshall e Floyd-Warshall</title>
+      <link>http://localhost:1313/posts/algoritimos/floyd_warshall/</link>
+      <pubDate>Thu, 18 Sep 2025 12:54:47 -0300</pubDate>
+      <guid>http://localhost:1313/posts/algoritimos/floyd_warshall/</guid>
+      <description>&lt;p&gt;Continuando o post sobre &lt;a href=&#34;https://foxtechworld.github.io/posts/algoritimos/bfs_dfs/&#34;&gt;Busca em largura / Busca em Profundidade&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Gostaria de apresentar a segunda dupla de algoritmos mais importantes que temos: &lt;strong&gt;Algoritmo de Warshall&lt;/strong&gt; e &lt;strong&gt;Algoritmo de Floyd-Warshall&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

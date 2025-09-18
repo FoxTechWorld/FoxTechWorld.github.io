@@ -10,24 +10,24 @@
     <lastBuildDate>Wed, 17 Sep 2025 14:09:04 -0300</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/posts/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Não tenha crianças sem antes pensar nisso</title>
-      <link>https://foxtechword.github.io/posts/opinion/criar_filhos/</link>
+      <title>Opinião: Não tenha crianças sem antes pensar nisso</title>
+      <link>https://foxtechword.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</link>
       <pubDate>Wed, 17 Sep 2025 14:09:04 -0300</pubDate>
-      <guid>https://foxtechword.github.io/posts/opinion/criar_filhos/</guid>
+      <guid>https://foxtechword.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</guid>
       <description>&lt;p&gt;Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;seres-humanos-no-geral-não-são-racionais&#34;&gt;Seres Humanos no Geral não são racionais&lt;/h1&gt;&#xA;&lt;p&gt;Todo esse post no geral vem com essa máxima.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Busca em Largura e Busca em profundidade</title>
-      <link>https://foxtechword.github.io/posts/algoritimos/bfs_dfs/</link>
+      <title>Algoritmos em Grafos: Busca em Largura e Busca em profundidade</title>
+      <link>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link>
       <pubDate>Mon, 15 Sep 2025 08:24:12 -0300</pubDate>
-      <guid>https://foxtechword.github.io/posts/algoritimos/bfs_dfs/</guid>
+      <guid>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid>
       <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;&#xA;&lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Historicamente, foi &lt;code&gt;Leonhard Euler&lt;/code&gt;, mesmo criador da identidade de Euler.&lt;/p&gt;&#xA;&lt;p&gt;$$E^{i\pi} + 1 = 0$$&lt;/p&gt;&#xA;&lt;p&gt;Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.&lt;/p&gt;&#xA;&lt;p&gt;E este foi considerado o ponto de partida da teoria dos grafos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bem Vindos ao FoxTechWorld!</title>
-      <link>https://foxtechword.github.io/posts/bem_vindos/</link>
+      <link>https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</link>
       <pubDate>Sun, 14 Sep 2025 20:02:00 -0300</pubDate>
-      <guid>https://foxtechword.github.io/posts/bem_vindos/</guid>
+      <guid>https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</guid>
       <description>&lt;h2 id=&#34;bem-vindos-ao-foxtechworld&#34;&gt;Bem vindos ao FoxTechWorld&lt;/h2&gt;&#xA;&lt;p&gt;Este é um pequeno blog feito para distribuir conteúdo &lt;a href=&#34;https://vaporhole.xyz/~kitsune&#34;&gt;nérdico&lt;/a&gt;.&#xA;Através da Grande Rede Mundial de computadores.&lt;/p&gt;&#xA;&lt;h3 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu?&lt;/h3&gt;&#xA;&lt;p&gt;Meu nome é Arthur tenho no momento da criação deste post 23 anos.&lt;/p&gt;&#xA;&lt;p&gt;Sou um estudante de Ciências da Computação na &lt;a href=&#34;https://en.wikipedia.org/wiki/Federal_University_of_Lavras&#34;&gt;Universidade Federal de Lavras&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Tenho curiosidade em diversos assuntos, então você provavelmente vai me ver falando de assuntos:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Otaku&lt;/li&gt;&#xA;&lt;li&gt;Geek&lt;/li&gt;&#xA;&lt;li&gt;Nerd&lt;/li&gt;&#xA;&lt;li&gt;Gamer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Sobre:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Eletrônica&lt;/li&gt;&#xA;&lt;li&gt;Economia&lt;/li&gt;&#xA;&lt;li&gt;Politica&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&amp;hellip; e por ai vai.&lt;/p&gt;</description>
     </item>
   </channel>

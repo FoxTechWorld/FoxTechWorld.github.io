@@ -10,10 +10,10 @@
     <lastBuildDate>Mon, 15 Sep 2025 08:24:12 -0300</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/tags/grafos/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Busca em Largura e Busca em profundidade</title>
-      <link>https://foxtechword.github.io/posts/algoritimos/bfs_dfs/</link>
+      <title>Algoritmos em Grafos: Busca em Largura e Busca em profundidade</title>
+      <link>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link>
       <pubDate>Mon, 15 Sep 2025 08:24:12 -0300</pubDate>
-      <guid>https://foxtechword.github.io/posts/algoritimos/bfs_dfs/</guid>
+      <guid>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid>
       <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;&#xA;&lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Historicamente, foi &lt;code&gt;Leonhard Euler&lt;/code&gt;, mesmo criador da identidade de Euler.&lt;/p&gt;&#xA;&lt;p&gt;$$E^{i\pi} + 1 = 0$$&lt;/p&gt;&#xA;&lt;p&gt;Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.&lt;/p&gt;&#xA;&lt;p&gt;E este foi considerado o ponto de partida da teoria dos grafos.&lt;/p&gt;</description>
     </item>
   </channel>
