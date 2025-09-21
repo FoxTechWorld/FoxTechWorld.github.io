@@ -1,20 +1,470 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bem Vindos on FoxTechWorld</title>
-    <link>https://foxtechword.github.io/tags/bem-vindos/</link>
-    <description>Recent content in Bem Vindos on FoxTechWorld</description>
-    <generator>Hugo</generator>
+    <title>FoxTechWorld</title>
+    <link>https://foxtechword.github.io/</link>
+    <description>Um pequeno nerd tentando tornar o mundo menos pop e mais nérdico</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <copyright>KitsuneSemCalda (CC BY 4.0)</copyright>
-    <lastBuildDate>Sun, 14 Sep 2025 20:02:00 -0300</lastBuildDate>
-    <atom:link href="https://foxtechword.github.io/tags/bem-vindos/rss.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bem Vindos ao FoxTechWorld!</title>
-      <link>https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</link>
-      <pubDate>Sun, 14 Sep 2025 20:02:00 -0300</pubDate>
-      <guid>https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</guid>
-      <description>&lt;h2 id=&#34;bem-vindos-ao-foxtechworld&#34;&gt;Bem vindos ao FoxTechWorld&lt;/h2&gt;&#xA;&lt;p&gt;Este é um pequeno blog feito para distribuir conteúdo &lt;a href=&#34;https://vaporhole.xyz/~kitsune&#34;&gt;nérdico&lt;/a&gt;.&#xA;Através da Grande Rede Mundial de computadores.&lt;/p&gt;&#xA;&lt;h3 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu?&lt;/h3&gt;&#xA;&lt;p&gt;Meu nome é Arthur tenho no momento da criação deste post 23 anos.&lt;/p&gt;&#xA;&lt;p&gt;Sou um estudante de Ciências da Computação na &lt;a href=&#34;https://en.wikipedia.org/wiki/Federal_University_of_Lavras&#34;&gt;Universidade Federal de Lavras&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Tenho curiosidade em diversos assuntos, então você provavelmente vai me ver falando de assuntos:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Otaku&lt;/li&gt;&#xA;&lt;li&gt;Geek&lt;/li&gt;&#xA;&lt;li&gt;Nerd&lt;/li&gt;&#xA;&lt;li&gt;Gamer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Sobre:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Eletrônica&lt;/li&gt;&#xA;&lt;li&gt;Economia&lt;/li&gt;&#xA;&lt;li&gt;Politica&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&amp;hellip; e por ai vai.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Sun, 21 Sep 2025 11:27:20 GMT</lastBuildDate>
+    <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Opinião: Brasil a grande várzea</title>
+        <link>https://foxtechword.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</guid>
+        <pubDate>Fri, 19 Sep 2025 12:16:04 GMT</pubDate>
+        <description>&lt;p&gt;Até queria fazer um post recomendando mangás, manhwas&amp;hellip; mas, dado os eventos recentes.&lt;/p&gt;
+&lt;p&gt;Ocorrendo no inferno moderno a.k.a X, resolvi vir para cá reclamar para um cacete.&lt;/p&gt;
+&lt;p&gt;Já aviso que vai ter muita generalização aqui, é muito mais fácil juntar tudo do que contar parte por parte separado.&lt;/p&gt;
+&lt;h1 id=&#34;a-grande-burrada&#34;&gt;A grande burrada&lt;/h1&gt;
+&lt;p&gt;Politicamente o mundo está um inferno real, não falo de alguns ou outros países mas, de todo mundo globalizado.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Até queria fazer um post recomendando mangás, manhwas&hellip; mas, dado os eventos recentes.</p>
+<p>Ocorrendo no inferno moderno a.k.a X, resolvi vir para cá reclamar para um cacete.</p>
+<p>Já aviso que vai ter muita generalização aqui, é muito mais fácil juntar tudo do que contar parte por parte separado.</p>
+<h1 id="a-grande-burrada">A grande burrada</h1>
+<p>Politicamente o mundo está um inferno real, não falo de alguns ou outros países mas, de todo mundo globalizado.</p>
+<p>Eu já havia detectado alguns traços de que o mundo estava se tornando <a href="https://mundoeducacao.uol.com.br/filosofia/niilismo.htm"><strong>niilista</strong></a>. Mas, isso está pior do que poderia estar e dessa vez eu atribuo a culpa a <strong>amathia</strong>.</p>
+<blockquote>
+<p>Segundo Sócrates, Amathia (a ignorância) é o único mal.</p></blockquote>
+<p>E não, não estou chamando nenhum espectro de ignorante em si. Mas, a população que está ocupando os espectros estão em condição de fanatismo.</p>
+<h2 id="o-que-são-esquerda-e-direita">O que são esquerda e direita?</h2>
+<p>Antes de tudo é bom contextualizar um pouco sobre.</p>
+<p>Durante a revolução francesa (1789  -  1799) a população precisou de juntar na Convenção nacional.</p>
+<p>Os que apoiavam o rei se sentaram a direita do presidente da assembleia, aqueles que defendiam mudanças radicais e nova ordem se sentavam a esquerda.</p>
+<p>Não inesperado, muita coisa mudou daquele tempo para cá. Mas uma caracteristica da revolução se manteve:</p>
+<ul>
+<li>Direita continua sendo sobre manter o status quo, a preservação das tradições e da ordem social existente.</li>
+<li>Esquerda continua sendo aqueles que lutam pelas mudanças sociais, economicas e/ou politicas.</li>
+</ul>
+<p>Até aqui, como pudemos ver nada de amoral/imoral ou moral em um lado e outro.</p>
+<p>Capitalismo/Comunismo nem deveriam entrar aqui porque seria <a href="https://www.dicio.com.br/anacronico/"><em><strong>anacrônico</strong></em></a>.</p>
+<h3 id="o-fanatismo">O fanatismo</h3>
+<p>O ponto é, o certo seriam ambos os lados serem educados uns com outros, nem estou falando de respeito.</p>
+<p>Porém educação. Mas, ambos os lados políticos no mundo inteiro parece que viraram o cú para lua esperando cair uma chuva de pica.</p>
+<p>Eles parecem que querem ser os donos da <strong>moral</strong>.</p>
+<p>Ou seja, demonizaram o seu espectro oposto porque segundo eles <strong>é o time que mais mata</strong>.</p>
+<p>Primeiramente é um absurdo usar mortes de pessoas como argumento moral sobre politica.</p>
+<p>Se alguém foi assassinado, o assassino é um doente que nem em sociedade deveria estar.</p>
+<p>Sem meias palavras até aqui.</p>
+<p>O problema é que hoje em dia estamos olhando o espectro politico da coisa, chorando quando é o nosso, rindo quando é do outro.</p>
+<p>Ok! No cú dos outros pimenta é refresco, mas, já pararam para olhar fora do ponto de vista político? não consegue neh?</p>
+<h3 id="é-trabalho-caralho">É trabalho! CARALHO</h3>
+<p>Só porque um personagem político de direita se junta a de esquerda para entregar um projeto ou fazer uma votação na câmara não significa que ele trocou de lado político.</p>
+<p>Pode parecer raro mas existe uma coisa chamado convergência de ideias.</p>
+<p>Dois lados opostos podem concordar em algo, não sempre.</p>
+<p>Mas, podem concordar.</p>
+<p>Como por exemplo, na PEC da blindagem.</p>
+<p>A maioria dos de esquerda e direita votando a favor quando deveriam votar contra.</p>
+<h3 id="e-ninguém-liga-para-nada">E ninguém liga para nada</h3>
+<p>E tu que vai se fuder, principalmente quando tem eleição.</p>
+<p>Candidato do partido A é de esquerda
+Candidato do partido B é de direita
+Candidato do partido C é de esquerda
+Candidato do partido D é de direita</p>
+<p>Ai fica definido que os partidos A e D são os que seriam mais votados porém você é a favor do partido C ou B.</p>
+<p>Em vez de votar no partido que concorda com suas ideias vai votar no A ou no D na tentativa de evitar que o partido oposto ganhe.</p>
+<p>Virou rinha de galo nesse caralho?</p>
+<p>Hoje em dia a gente chama direita tem diversos Sub-rótulos Ideológicos:</p>
+<ul>
+<li>Agrarismo</li>
+<li>Anarquismo</li>
+<li>Democracia cristã</li>
+<li>Comunismo</li>
+<li>Conservadorismo</li>
+<li>Ambientalismo</li>
+<li>Fascismo</li>
+<li>Feminismo</li>
+<li>Política verde</li>
+<li>Hindutva</li>
+<li>Islamismo</li>
+<li>Liberalismo</li>
+<li>Libertarismo</li>
+<li>Monarquismo</li>
+<li>Nacionalismo</li>
+<li>Populismo</li>
+<li>Progressismo</li>
+<li>Radicalismo clássico</li>
+<li>Republicanismo</li>
+<li>Social democracia</li>
+<li>Socialismo</li>
+<li>Sincretismo</li>
+<li>Terceira Via</li>
+</ul>
+<p>E isso quando a gente não olha para as propostas individuais.</p>
+<h2 id="o-desespero">O desespero</h2>
+<p>Enfim, não tenho nenhuma intenção ou motivo para tentar te convencer de algo.</p>
+<p>Provavelmente esse post vai ser esquecido e jogado em um canto mofado.</p>
+<p>Também não estou defendendo nenhum lado politico.</p>
+<p>Mas quero manter um pouco de lúcidez enquanto vejo esse titanic desabando, por favor tragam a banda.</p>
+<p>Enfim, para mim e para o resto do mundo só basta aguardar o terceiro colapso social.</p>
+<h3 id="colapso-social">Colapso Social?</h3>
+<p>Ok, antes de terminar esse post vou mostrar um pouco das minhas previsões para o futuro próximo.</p>
+<p>Antes o disclaimer</p>
+<blockquote>
+<p>Toda previsão é um chute, a única forma de acertar 100% é prever depois do ocorrido.</p>
+<p>E outra, não existe previsão de profécia, é chute. Se alguém fala que uma profecia está ocorrendo, ela está errada até se concretizar.</p></blockquote>
+<p>Enfim, da mesma forma que na economia, eu acredito que exista uma correção na própria <a href="https://brasilescola.uol.com.br/geografia/globalizacao.htm">globalização</a>. Que por algum acaso começou com a <a href="https://www.todamateria.com.br/revolucao-industrial/">revolução industrial</a>.</p>
+<p>As guerras mundiais 1ª e 2ª são uma forma de correção que é engatilhado pelo próprio <a href="https://maestrovirtuale.com/o-que-e-tribalismo-analisando-esse-fenomeno-social/">tribalismo</a>.</p>
+<p>Veja que tribalismo não é algo anormal em animais sociais.</p>
+<p>E se resume praticamente no nós contra eles.</p>
+<p>O mundo em si parece novamente estar se dividindo em blocos economicos, e se divergindo cada vez mais. Espero que o próximo colapso não seja outra guerra mundial.</p>
+<p>Mas, é mais provável, que ocorra um evento <a href="https://www.megacurioso.com.br/ciencia/115982-utopia-dos-ratos-experimento-previu-a-extincao-da-humanidade-.htm">universo 25</a> não ironicamente no ocidente estamos na fase final da utópia dos ratos.</p>
+<p>Então, ou entramos em extinção silenciosa, ou entramos em guerra.</p>
+<p>O futuro é medonho.</p>
+<p>Enfim, espero que tenha gostado deste post, muito obrigado.</p>
+]]></content:encoded>
+        
+            <category>opinião</category>
+            <category>politica</category>
+            <category>brasil</category>
+            <category>futuro</category>
+            <category>passado</category>
+            <category>esquerda</category>
+            <category>direita</category>
+        
+      </item>
+    
+      <item>
+        <title>Opinião: Não tenha crianças sem antes pensar nisso</title>
+        <link>https://foxtechword.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</guid>
+        <pubDate>Wed, 17 Sep 2025 14:09:04 GMT</pubDate>
+        <description>&lt;p&gt;Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h1 id=&#34;seres-humanos-no-geral-não-são-racionais&#34;&gt;Seres Humanos no Geral não são racionais&lt;/h1&gt;
+&lt;p&gt;Todo esse post no geral vem com essa máxima.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.</p>
+<blockquote>
+<p>Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.</p></blockquote>
+<h1 id="seres-humanos-no-geral-não-são-racionais">Seres Humanos no Geral não são racionais</h1>
+<p>Todo esse post no geral vem com essa máxima.</p>
+<p>Isso não é uma negação da racionalidade e sim que a maioria das decisões tomadas também são instintos, que de mesma forma são condicionados.</p>
+<p>Isso é uma parte importante a se dizer porque, coisas como <strong>confiança</strong>, <strong>hierarquia</strong> e &hellip; são formados de duas formas.</p>
+<h2 id="confiança">Confiança</h2>
+<p>Durante a formação da capacidade racional e com a capacidade racional.</p>
+<p>Normalmente, a confiança nos pais é formada antes da capacidade de racionalização e a confiança nos amigos é formada após a formação da racionalização.</p>
+<p>Isso nos diz que de alguma forma, na maioria das vezes a confiança nos pais vai ser mais forte.</p>
+<p>Até que essa confiança seja quebrada de alguma forma.</p>
+<p>Após isso, qualquer confiança formada seria a segunda forma de confiança com racionalização.</p>
+<p>A diferença entre ambos é o nível de confiança, um é a confiança incondicional enquanto o outro é a confiança com cautela.</p>
+<h2 id="hierarquia">Hierarquia</h2>
+<p>O mais importante de se tornar pai, é se tornar o topo da hierarquia.</p>
+<p>Na visão de que você vai guiar uma versão menor de si mesmo a conseguir sobreviver nesse mundo.</p>
+<p>Isso também significa que todos os problemas vão em sua direção, os seus ou o de seu filho.</p>
+<p>E como já dito previamente, muitas das coisas da paternidade são desenvolvidos na primeira infância, isso também diz sobre a hierarquia.</p>
+<p>A quem os problemas devem ir quando aparecerem.</p>
+<p>E é uma discussão muito importante a se resolver.</p>
+<p>Muitas vezes, mesmo na primeira infância essa <strong>hierarquia</strong> vai ser desafiada.</p>
+<p>O pai pode dizer não, enquanto a cria vai na mãe fazer a mesma pergunta para ver se a resposta é diferente.</p>
+<p>Esse tipo de coisa mostra ao filho, quem tem a resposta mais mansa e a quem ele deve ir para ter o que quer.</p>
+<h1 id="como-isso-se-relaciona-a-educação">Como isso se relaciona a educação</h1>
+<p>Escapando um pouco da discussão qual a melhor.</p>
+<blockquote>
+<p><strong>Opinião pessoal:</strong> Prefiro a tradicional</p></blockquote>
+<p>Todas se relacionam com o nível de autoridade que o pai tem em relação a seu filho.</p>
+<p>Na tradicional, o pai assume papel mais autoritário em relação ao filho.</p>
+<p>Na positiva, o pai assume um papel mais manipulativo em relação ao filho.</p>
+<p>Dando uma dualidade de opções e pedindo pro filho escolher qual lhe agrada melhor.</p>
+<blockquote>
+<p><strong>Exemplo</strong>
+Você prefere guardar os brinquedos e tomar banho ou tomar banho e ir dormir?</p></blockquote>
+<p>Já a permissiva é um nome mais bonito para <em>indulgente</em>.</p>
+<p>No geral, a educação permissiva parte da premissa que você vai dar total autonomia para um incapaz se virar, acatando todas as ordens e regras dele.</p>
+<h2 id="porque-eu-prefiro-a-educação-tradicional">Porque eu prefiro a educação tradicional</h2>
+<p>No simples e no grosso, porque é mais simples.</p>
+<p>Só que não posso afirmar que é exatamente a educação tradicional também.</p>
+<p>É a educação tradicional quando aplicada a alguém que tem 10 anos ou mais. Menos que isso, a abordagem tem que ser mudada.</p>
+<h3 id="e-o-que-mudamos">E o que mudamos?</h3>
+<p>1º <strong>Frustre muito a criança</strong></p>
+<p>É meio cruel mas, com isso vem a oportunidade de trabalhar a educação e o controle emocional.</p>
+<blockquote>
+<p>Garanto que vai poupar grana quando o salário chegar e você precisar ir com ela no supermercado.</p>
+<p><strong>Opcional:</strong> Você não tem a necessidade real de fazer isso, se quiser manter a criança em casa.
+Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p></blockquote>
+<ol start="2">
+<li><strong>Nada de telas até 8/10 anos</strong></li>
+</ol>
+<p>Esse entra em contato direto com o 1º.</p>
+<p>Muitos dos problemas da paternidade moderno é calar a frustração com as telas em vídeos que são muito mais informativos do que os programas de antigamente.</p>
+<p>Fluxos mais rápidos, dialogos complexos e informação audiovisual muito mais animada.</p>
+<p>Ao tirar a tela, você volta com o dobro da frustração inicial e isso vai acarretar numa série de problemas como o próprio imediatismo.</p>
+<p>3º <strong>Celulares são importantes, compre um para seu filho</strong></p>
+<p>Não tem como fugir disso, celulares ainda são importantes e seu filho desde pequeno tem que saber usar um.</p>
+<p>Mas você como pai se esquece de uma coisa, você não precisa entregar um smartphone.</p>
+<p>Um bom e velho dumbphone com tecla e de preferência sem jogos ou outros distrativos é uma recomendação muito melhor do que um Samsung Galaxy S24, Google Z-Fold, Iphone &hellip; etc.</p>
+<h1 id="a-menor-idade-já-passou-o-que-fazer-durante-a-pré-adolecênciaadolecência">A menor idade já passou, o que fazer durante a pré-adolecência/adolecência</h1>
+<p>Comece respirando fundo, essa é a melhor/pior idade para você e para seu filho, sem sombras de dúvidas.</p>
+<p>Então, vamos começar com o liberar algumas coisas.</p>
+<p>Primeiro, liberar seu filho para ter um celular decente é um bom começo mas, não faça isso por fazer ou para comemorar algo.</p>
+<p>Faça na forma de uma recompensa por ele resolver um problema que você não pediu mas, mesmo assim ele decidiu ajudar.</p>
+<p>Não significa dar o top tier, nem um pro, nem mesmo algo caro.</p>
+<p>Talvez 1 ou 2 gerações anteriores de preferência.</p>
+<p>Além disso, siga uma progressão na lista de coisas a se fazer dentro de casa.</p>
+<p>Como por exemplo, ajudar a limpar e tudo mais. Não tudo de uma vez, uma responsabilidade por vez.</p>
+<p>E outra, acompanhar seu filho com o <a href="https://familylink.google.com/"><strong>family link</strong></a> é crucial.</p>
+<p>E apesar da <a href="https://g1.globo.com/economia/tecnologia/noticia/2018/09/24/o-polemico-app-do-google-que-permite-que-pais-monitorem-crianca-em-tempo-real.ghtml">maioria das críticas</a> que o app tem. É super necessário, que você acompanhe o que seu filho faz online.</p>
+<p>Apesar de que, tudo vai depender da sua capacidade como pai não ser super-protetor.</p>
+<blockquote>
+<p>Você como pai que já conhece o mundo e sabe quão pobre ele é, deve deixar seu filho rolar um pouquinho no barro, se sujar bastante e tentar se lavar.</p>
+<p>Este é a verdadeira paternidade, criar seu filho para que no momento de dificuldade ele ter certeza que pode procura - lo.</p></blockquote>
+<p>Assim dito, o ponto mais importante é você como pai deve enforçar algumas coisas:</p>
+<ul>
+<li>Leitura</li>
+<li>Esportes</li>
+<li>Artes Marciais</li>
+<li>Hobbies</li>
+</ul>
+<p>Religião é meio complicado, apesar de ser <strong>cristão</strong> e <strong>católico</strong> eu não acredito em batizar meu filho até pelo menos ele por conta própria decidir seguir minha fé ou não.</p>
+<p>Não significa não leva - lo a igreja mas, respeitar a decisão de fé do mesmo. Se, e somente se ele decidir que quer seguir minha fé ai sim, eu acredito que o batismo deve ser feito.</p>
+<p>E antes de qualquer dúvida razoável, eu já afirmo de primeira.</p>
+<blockquote>
+<p>O <strong>Batismo</strong> é o sacramento mais importante da igreja cristã. Valendo para os ortodoxos, protestantes ou os católicos em geral.</p>
+<p>Seria muito desrespeitoso da minha parte, colocar meu filho a ser batizado sem sua escolha. Para definir sua fé antes que de sua própria vontade, ele também a expresse.</p></blockquote>
+<h2 id="escolaridade">Escolaridade</h2>
+<p>Não tem muito o que fazer aqui, a educação é a parte mais importante do desenvolvimento de uma criança e adolescente.</p>
+<p>O problema é quando correlacionamos a educação a uma motivação extrinseca e logo ela perde o sentido.</p>
+<p>Seria interessante pelo menos no mínimo, você como pai, mostrar os pontos mais interessantes da educação.</p>
+<p>Para ele se tornar um <strong>nerd clássico</strong>, um verdadeiro <strong>nérdico</strong>.</p>
+<p>Não vou falar que é porque a educação é importante, principalmente não no Brasil.</p>
+<p>Mas, ela é um recurso de conhecimento que abre portas.</p>
+<p>Qualquer desejo que um pessoa tenha, pode ser resolvido com o conhecimento, que vai ser adquirido com a educação.</p>
+<p>Seja formal, seja autodidata.</p>
+<p>E tem mais, por mais que a educação formal no Brasil seja sucateada, ela ainda te dá uma coisa que nenhuma outra te dá.</p>
+<p>Um papel dizendo <strong>aprovado</strong>.</p>
+<p>Esse papel reduz a dificuldade de ganhar um emprego com salário razoável, então vale a pena tentar.</p>
+<h2 id="responsabilidade">Responsabilidade</h2>
+<p>Como neste ponto, já estamos falando de adolescentes. podemos dizer que a partir daqui, seu filho já pode começar a ser responsabilizado pelos atos sociais ou pela bagunça feita.</p>
+<p>Faça um tipo de <strong>sistema penal</strong> mais leve com possíveis consequências em atos não desejáveis.</p>
+<p>A ideia é não ser duro mas ser justo como na vida real.</p>
+<p>Além disso, ensinar o que &ldquo;direito ao contrário&rdquo; e o &ldquo;direito a defesa&rdquo; aparece aqui.</p>
+<p>Interessante seria &ldquo;simular um julgamento&rdquo;.</p>
+<h1 id="conclusão">Conclusão</h1>
+<p>Esses são alguns dos meus pensamentos sobre filhos, e como criar eles, coisas a mais, coisas a menos, é sempre importante ter esse tipo de coisa em mente.</p>
+<p>Obviamente cada criação é única. E a que você vai oferecer depende exatamente daquilo que você quer passar.</p>
+<h2 id="bibliografia">Bibliografia</h2>
+<ul>
+<li><a href="https://www.amazon.com.br/R%C3%A1pido-devagar-Daniel-Kahneman/dp/853900383X">Rápido e Devagar: Duas formas de Pensar</a></li>
+<li><a href="https://www.amazon.com.br/Teoria-Apego-Fundamentos-Pesquisas-Implica%C3%A7%C3%B5es/dp/8570740115/ref=sr_1_3?adgrpid=78637041982&amp;dib=eyJ2IjoiMSJ9.StdOasvrN1f3Lm8WtD6g7reE4leloRYX_8Qwmq8hWjV9tY-4fifGdTqtCQYPSataO2DIWChaxZV1g7lItAS7ugUq1fKgbcIi0NI26OqBwHT0m8uMMTF5brujiTkZwtd3XAeZMN3OznnFZtbxCzGOUTyHUvZr_pmw61HIfVnEeM-Dy260ohSBQJxOifRoBEXkRniGeO6AAEEeUhxnLmgfi1MNgJm1EvMPT7rA2_fbQfwyQ6ffBMb47VIZp5fA3JjWSOAlBpCKaHVwc70YJ1okpgDn7IOe_bW83JBUErHHyD4.okEzQBW08DjDlPHUJ57P9hyP9AiqQrfCeOhojvOCwSY&amp;dib_tag=se&amp;hvadid=425954655564&amp;hvdev=c&amp;hvlocphy=9074122&amp;hvnetw=g&amp;hvqmt=b&amp;hvrand=3798358303515855803&amp;hvtargid=kwd-803697528883&amp;hydadcr=5658_11235231&amp;keywords=john+bowlby+teoria+do+apego&amp;mcid=af9f2e17577f3e93b8e09e226e06755b&amp;qid=1758139544&amp;sr=8-3&amp;ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Teoria do Apego</a></li>
+<li><a href="https://www.amazon.com.br/Disciplina-sem-drama-desenvolvimento-comportamento/dp/8584441581/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=2A9QU200SB68V&amp;dib=eyJ2IjoiMSJ9.QJ1tvHilIubTJcFe_835Cecba96-TYp3Ni1FISvRsn8sx0QDzwVLFzfzbqXKr64H.aDMzE-MouDbLP7M-sY6YK-HNutr8EZBUkxa5BNJOG3c&amp;dib_tag=se&amp;keywords=Disciplina+sem+lagrimas&amp;qid=1758139597&amp;sprefix=disciplina+sem+lagrima%2Caps%2C181&amp;sr=8-1&amp;ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Disciplina Sem Drama</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>opinião</category>
+            <category>educação</category>
+            <category>educação permissiva</category>
+            <category>educação positiva</category>
+            <category>educação tradicional</category>
+            <category>internet</category>
+            <category>imediatismo</category>
+            <category>mundo moderno</category>
+        
+      </item>
+    
+      <item>
+        <title>Algoritmos em Grafos: Busca em Largura e Busca em profundidade</title>
+        <link>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid>
+        <pubDate>Mon, 15 Sep 2025 08:24:12 GMT</pubDate>
+        <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;
+&lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Historicamente, foi &lt;code&gt;Leonhard Euler&lt;/code&gt;, mesmo criador da identidade de Euler.&lt;/p&gt;
+&lt;p&gt;$$E^{i\pi} + 1 = 0$$&lt;/p&gt;
+&lt;p&gt;Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.&lt;/p&gt;
+&lt;p&gt;E este foi considerado o ponto de partida da teoria dos grafos.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2 id="o-que-são-grafos">O que são Grafos?</h2>
+<p>Grafos são um ramo da matemática que estuda <em>relações</em> entre objetos pertencentes a um determinado conjunto.</p>
+<blockquote>
+<p>Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.</p></blockquote>
+<p>Historicamente, foi <code>Leonhard Euler</code>, mesmo criador da identidade de Euler.</p>
+<p>$$E^{i\pi} + 1 = 0$$</p>
+<p>Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.</p>
+<p>E este foi considerado o ponto de partida da teoria dos grafos.</p>
+<h3 id="onde-grafos-são-usados">Onde grafos são usados?</h3>
+<p>Dentro da computação em todo lugar diretamente ou indiretamente.</p>
+<ul>
+<li>Redes Neurais</li>
+<li>Estrutura de árvores</li>
+<li>Rede de computadores</li>
+<li>Computação Gráfica</li>
+<li>Redes Sociais</li>
+</ul>
+<p>Se precisa de coordenação provavelmente vai ter um grafo incluso.</p>
+<p>Fica ainda mais interessante porque <code>Linguagens Formais e Automatos</code>.</p>
+<p>Fundamental para a construções de linguagens (programação, regular, marcação).</p>
+<p>Também usa grafos como estrutura de representação para automatos e diagramas de transição</p>
+<h2 id="algoritmos-de-busca">Algoritmos de Busca</h2>
+<p>Como um grafo é formado por relações, contendo ou não um direcionamento.</p>
+<p>É necessário sob algum critério percorrer esse grafo.</p>
+<p>E para isso temos um problema essencial que precisa ser resolvido.</p>
+<h3 id="qual-critério">Qual critério?</h3>
+<p>Normalmente ou estamos trabalhando com grafos esparsos ou grafos densos.</p>
+<p>Sendo grafos esparsos aqueles que tem poucas arestas em relação ao número de vértices.</p>
+<p>E grafos densos aqueles que tem muitas arestas.</p>
+<p>Essa caracteristica influência diretamente a escolha do algoritmo de busca mais eficiente.</p>
+<p>Os dois algoritmos mais clássicos para essa busca são:</p>
+<ul>
+<li>(BFS - Breadth First Search): Busca em Largura.</li>
+<li>(DFS - Depth First Search): Busca em profundidade.</li>
+</ul>
+<h2 id="algoritmos">Algoritmos</h2>
+<h3 id="busca-em-largura-bfs">Busca em Largura (BFS)</h3>
+<p>O algoritmo de busca em largura explora nível por nível.</p>
+<p>Ou seja se pensarmos em uma árvore.</p>
+<p>Ele verificaria primeiros os vizinhos da raiz.</p>
+<p>Depois os vizinhos dos vizinhos da raiz e por assim vai.</p>
+<p>Para fazer isso a gente utiliza uma estrutura de dados fila/queue.</p>
+<h4 id="propriedades-da-busca-em-largura">Propriedades da busca em largura</h4>
+<ul>
+<li>
+<p>Se existir uma solução, este algoritmo consegue encontrar.</p>
+</li>
+<li>
+<p>Ótimo em arestas unitárias vai encontrar o caminho mais curto em termo de números de passos.</p>
+</li>
+<li>
+<p>Complexidade:</p>
+</li>
+<li>
+<p>Vai ter o tempo de percorrer $$O(V + E)$$ ou seja o tempo para percorrer todos os vertices e arestas.</p>
+</li>
+<li>
+<p>Espaço: $$O(V)$$ porque precisa armazenar a fila e o conjunto de visitados.</p>
+</li>
+</ul>
+<h4 id="lógica-passo-a-passo">Lógica passo a passo</h4>
+<ol>
+<li>Colocamos um nó na fila, e marcamos como visitado.</li>
+<li>Enquanto a fila não estiver vazia:</li>
+</ol>
+<ul>
+<li>Retiramos o primeiro elemento.</li>
+<li>Visitamos todos os vizinhos não visitados do nó.</li>
+<li>Adicionamos esses vizinhos a fila e marcamos como visitados.</li>
+</ul>
+<h3 id="busca-em-profundidade">Busca em Profundidade</h3>
+<p>A busca em profundidade em comparação explora todo um ramo do grafo até o fim antes de voltar e explorar outros ramos.</p>
+<p>Ao contrário da busca em largura, aqui usamos pilha/stack (Last In, First Out).</p>
+<h4 id="propriedades-da-busca-em-profundidade">Propriedades da busca em profundidade</h4>
+<ul>
+<li>
+<p>Completo? Em grafos finitos mas, não garante o caminho mais curto em grafos não ponderados.</p>
+</li>
+<li>
+<p>Ótimo? Não, não é adequado quando você precisa do menor número de arestas.</p>
+</li>
+<li>
+<p>Complexidade:</p>
+<ul>
+<li>Tempo: $$O(V + E)$$</li>
+<li>Espaço: $$O(V)$$</li>
+</ul>
+</li>
+<li>
+<p>Risco Prático em recursão pode estourar a pilha em grafos muito profundos, prefira uma versão iterativa.</p>
+</li>
+</ul>
+<h4 id="lógica-passo-a-passo-1">Lógica passo a passo</h4>
+<ol>
+<li>Marca o nó inicial como visitado e entre nele.</li>
+<li>Para cada vizinho não visitado, repita o processo.</li>
+<li>Quando o nó não tem vizinhos não visitados, realize um backtrack.</li>
+<li>Continue até visitar todos os nós alcançáveis.</li>
+</ol>
+<h3 id="conclusão">Conclusão</h3>
+<p>Não existe um algoritmo universalmente “melhor”: tudo depende do objetivo.</p>
+<p>BFS (Busca em Largura):</p>
+<ul>
+<li>
+<p>Garante o menor caminho em grafos não ponderados.</p>
+</li>
+<li>
+<p>Mais indicado quando o problema exige a solução mais curta.</p>
+</li>
+</ul>
+<p>DFS (Busca em Profundidade):</p>
+<ul>
+<li>
+<p>Útil para exploração completa, detecção de ciclos, ordenação topológica e backtracking.</p>
+</li>
+<li>
+<p>Mais indicado quando queremos percorrer toda a estrutura ou analisar propriedades do grafo.</p>
+</li>
+</ul>
+<p>Ambos têm mesma complexidade assintótica $$
+O(V+E)$$ mas, se aplicam a cenários distintos.</p>
+<p>E devem ser tratados com cautela para não escolher a pior opção por puro achismo.</p>
+<p>Ademas, espero que tenham gostado do post e valeu</p>
+]]></content:encoded>
+        
+            <category>Algoritmos</category>
+            <category>Estrutura de Dados</category>
+            <category>Grafos</category>
+            <category>Algoritmos de Busca</category>
+            <category>Busca em Largura</category>
+            <category>Busca em Profundidade</category>
+            <category>Teoria dos Grafos</category>
+        
+      </item>
+    
+      <item>
+        <title>Bem Vindos ao FoxTechWorld!</title>
+        <link>https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</guid>
+        <pubDate>Sun, 14 Sep 2025 20:02:00 GMT</pubDate>
+        <description>&lt;h2 id=&#34;bem-vindos-ao-foxtechworld&#34;&gt;Bem vindos ao FoxTechWorld&lt;/h2&gt;
+&lt;p&gt;Este é um pequeno blog feito para distribuir conteúdo &lt;a href=&#34;https://vaporhole.xyz/~kitsune&#34;&gt;nérdico&lt;/a&gt;.
+Através da Grande Rede Mundial de computadores.&lt;/p&gt;
+&lt;h3 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu?&lt;/h3&gt;
+&lt;p&gt;Meu nome é Arthur tenho no momento da criação deste post 23 anos.&lt;/p&gt;
+&lt;p&gt;Sou um estudante de Ciências da Computação na &lt;a href=&#34;https://en.wikipedia.org/wiki/Federal_University_of_Lavras&#34;&gt;Universidade Federal de Lavras&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tenho curiosidade em diversos assuntos, então você provavelmente vai me ver falando de assuntos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Otaku&lt;/li&gt;
+&lt;li&gt;Geek&lt;/li&gt;
+&lt;li&gt;Nerd&lt;/li&gt;
+&lt;li&gt;Gamer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sobre:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Eletrônica&lt;/li&gt;
+&lt;li&gt;Economia&lt;/li&gt;
+&lt;li&gt;Politica&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;hellip; e por ai vai.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2 id="bem-vindos-ao-foxtechworld">Bem vindos ao FoxTechWorld</h2>
+<p>Este é um pequeno blog feito para distribuir conteúdo <a href="https://vaporhole.xyz/~kitsune">nérdico</a>.
+Através da Grande Rede Mundial de computadores.</p>
+<h3 id="quem-sou-eu">Quem sou eu?</h3>
+<p>Meu nome é Arthur tenho no momento da criação deste post 23 anos.</p>
+<p>Sou um estudante de Ciências da Computação na <a href="https://en.wikipedia.org/wiki/Federal_University_of_Lavras">Universidade Federal de Lavras</a>.</p>
+<p>Tenho curiosidade em diversos assuntos, então você provavelmente vai me ver falando de assuntos:</p>
+<ul>
+<li>Otaku</li>
+<li>Geek</li>
+<li>Nerd</li>
+<li>Gamer</li>
+</ul>
+<p>Sobre:</p>
+<ul>
+<li>Eletrônica</li>
+<li>Economia</li>
+<li>Politica</li>
+</ul>
+<p>&hellip; e por ai vai.</p>
+<p>Enfim, bem vindos a este novo começo.</p>
+]]></content:encoded>
+        
+            <category>Bem Vindos</category>
+            <category>First Post</category>
+            <category>New Blog</category>
+            <category>My First Blog</category>
+        
+      </item>
+    
   </channel>
 </rss>
