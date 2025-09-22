@@ -7,8 +7,204 @@
     <description>Um pequeno nerd tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 21 Sep 2025 12:47:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Sep 2025 19:38:14 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Osdev: Até onde dá para usar c++</title>
+        <link>https://foxtechword.github.io/2025/09/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</guid>
+        <pubDate>Mon, 22 Sep 2025 15:33:40 GMT</pubDate>
+        <description>&lt;p&gt;Estou desenvolvendo um &lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)&#34;&gt;kernel&lt;/a&gt; chamado FKernel.&lt;/p&gt;
+&lt;p&gt;Para uso desktop em código x86_64.&lt;/p&gt;
+&lt;p&gt;E lendo sobre algumas linguagens como &lt;strong&gt;&lt;em&gt;Rust&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;Zig&lt;/em&gt;&lt;/strong&gt; &amp;hellip;&lt;/p&gt;
+&lt;p&gt;Decidi fazer uma combinação de:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linguagens de Programação:
+&lt;ul&gt;
+&lt;li&gt;C&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linguagem de montagem:
+&lt;ul&gt;
+&lt;li&gt;Nasm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust e Zig que são considerados &amp;ldquo;memory-safe&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;porque-não-usar-linguagens-memory-safe&#34;&gt;Porque não usar linguagens memory-safe?&lt;/h2&gt;
+&lt;p&gt;Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado FKernel.</p>
+<p>Para uso desktop em código x86_64.</p>
+<p>E lendo sobre algumas linguagens como <strong><em>Rust</em></strong>, <strong><em>C</em></strong>, <strong><em>C++</em></strong>, <strong><em>Zig</em></strong> &hellip;</p>
+<p>Decidi fazer uma combinação de:</p>
+<ul>
+<li>Linguagens de Programação:
+<ul>
+<li>C</li>
+<li>C++</li>
+</ul>
+</li>
+<li>Linguagem de montagem:
+<ul>
+<li>Nasm</li>
+</ul>
+</li>
+</ul>
+<p>Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust e Zig que são considerados &ldquo;memory-safe&rdquo;.</p>
+<h2 id="porque-não-usar-linguagens-memory-safe">Porque não usar linguagens memory-safe?</h2>
+<p>Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.</p>
+<p>Se for para ter que lidar com sintaxes estranhas para programar um kernel, eu prefiro seguir no bom e velho C/C++.</p>
+<p>Também não quero fazer um overflow de logs de um compilador super-nanny para chegar a um subset daquilo que eu queria no meu código.</p>
+<h2 id="e-porque-c">E porque C++?</h2>
+<p>Muito tempo atrás Linus Torvalds havia tentado escrever um kernel com a versão de sua época.</p>
+<blockquote>
+<p>C++ leads to really, really bad design choices. You invariably start using the STL, boost, and other total and utter crap…</p></blockquote>
+<p>Ok, podemos concordar em algumas partes mas, isso não seria inevitavelmente ruim.</p>
+<p>Sim, C++ tem um monte de coisa, mas fugiria do ponto principal que é C++ dá contratos que structs sozinhas dificilmente conseguem.</p>
+<p>Pegue um exemplo do <code>SerenityOS</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> ErrorOr<span style="color:#f92672">&lt;</span>NonnullOwnPtr<span style="color:#f92672">&lt;</span>KBuffer<span style="color:#f92672">&gt;&gt;</span> try_create_with_size(StringView name,
+</span></span><span style="display:flex;"><span>size_t size,
+</span></span><span style="display:flex;"><span>Memory<span style="color:#f92672">::</span>Region<span style="color:#f92672">::</span>Access access <span style="color:#f92672">=</span> Memory<span style="color:#f92672">::</span>Region<span style="color:#f92672">::</span>Access<span style="color:#f92672">::</span>ReadWrite,
+</span></span><span style="display:flex;"><span>AllocationStrategy strategy <span style="color:#f92672">=</span> AllocationStrategy<span style="color:#f92672">::</span>Reserve){
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">auto</span> rounded_size <span style="color:#f92672">=</span> TRY(Memory<span style="color:#f92672">::</span>page_round_up(size));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">auto</span> region <span style="color:#f92672">=</span> TRY(MM.allocate_kernel_region(rounded_size, name, access, strategy));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">TRY</span>(adopt_nonnull_own_or_enomem(<span style="color:#66d9ef">new</span> (nothrow) KBuffer { size, move(region) }));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Consegue entender o que esse código faz? Todo esse contrato engloba em poucas linhas</p>
+<blockquote>
+<p>Essa função try_create_with_size serve para criar um buffer de memória no kernel de um tamanho específico e lidar com possíveis erros de forma segura.</p></blockquote>
+<p>Para termos o equivalente exato em C garantindo a mesma segurança seria necessária escrever dessa forma.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">try_create_with_size</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name,
+</span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">size_t</span> size,
+</span></span><span style="display:flex;"><span>                         MemoryAccess access,
+</span></span><span style="display:flex;"><span>                         AllocationStrategy strategy,
+</span></span><span style="display:flex;"><span>                         KBuffer<span style="color:#f92672">**</span> out_buffer) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>out_buffer) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">size_t</span> rounded_size;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> rc <span style="color:#f92672">=</span> <span style="color:#a6e22e">page_round_up</span>(size, <span style="color:#f92672">&amp;</span>rounded_size);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (rc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> rc;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    MemoryRegion<span style="color:#f92672">*</span> region;
+</span></span><span style="display:flex;"><span>    rc <span style="color:#f92672">=</span> <span style="color:#a6e22e">allocate_kernel_region</span>(rounded_size, name, access, strategy, <span style="color:#f92672">&amp;</span>region);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (rc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> rc;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    KBuffer<span style="color:#f92672">*</span> buffer <span style="color:#f92672">=</span> <span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(KBuffer));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>buffer) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(region<span style="color:#f92672">-&gt;</span>addr);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(region);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>ENOMEM;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    buffer<span style="color:#f92672">-&gt;</span>size <span style="color:#f92672">=</span> size;
+</span></span><span style="display:flex;"><span>    buffer<span style="color:#f92672">-&gt;</span>region <span style="color:#f92672">=</span> region;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>out_buffer <span style="color:#f92672">=</span> buffer;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// sucesso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>Ok, tivemos uma disparidade no tamanho, mas isso não significa nada no geral.</p>
+<p>Meu ponto defendido é que precisamos fazer muito mais código, que vai ser muito mais performático mas que vai resultar em um resultado muito menos seguro, e muito menos reusável no geral.</p>
+<p>Não ironicamente, muitos empresas incluindo a própria Apple usam o C++ em seus kernels.</p>
+<p>Mas não precisa ser o c++ inteiro e sim um subset chamado <a href="https://en.wikipedia.org/wiki/Embedded_C%2B%2B"><strong><em>embedded c++</em></strong></a>.</p>
+<h3 id="implementação-do-iokit">Implementação do IOKit</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Copyright (c) 1998-2000 Apple Computer, Inc. All rights reserved.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * This file contains Original Code and/or Modifications of Original Code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * as defined in and that are subject to the Apple Public Source License
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Version 2.0 (the &#39;License&#39;). You may not use this file except in
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * compliance with the License. The rights granted to you under the License
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * may not be used to create, or enable the creation or redistribution of,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * unlawful or unlicensed copies of an Apple operating system, or to
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * circumvent, violate, or enable the circumvention or violation of, any
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * terms of an Apple operating system software license agreement.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Please obtain a copy of the License at
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * http://www.opensource.apple.com/apsl/ and read it before using this file.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * The Original Code and all software distributed under the License are
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * distributed on an &#39;AS IS&#39; basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Please see the License for the specific language governing rights and
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * limitations under the License.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifndef _IOKIT_IONVRAMCONTROLLER_H
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define _IOKIT_IONVRAMCONTROLLER_H
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;IOKit/IOService.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IONVRAMController</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> IOService
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	OSDeclareAbstractStructors(IONVRAMController);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> registerService(IOOptionBits options <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) APPLE_KEXT_OVERRIDE;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sync</span>(<span style="color:#66d9ef">void</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">select</span>(<span style="color:#66d9ef">uint32_t</span> bank);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">eraseBank</span>(<span style="color:#66d9ef">void</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">read</span>(IOByteCount offset, UInt8 <span style="color:#f92672">*</span>buffer,
+</span></span><span style="display:flex;"><span>	    IOByteCount length) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">write</span>(IOByteCount offset, UInt8 <span style="color:#f92672">*</span>buffer,
+</span></span><span style="display:flex;"><span>	    IOByteCount length) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif </span><span style="color:#75715e">/* !_IOKIT_IONVRAMCONTROLLER_H */</span><span style="color:#75715e">
+</span></span></span></code></pre></div><p>Quem diria.</p>
+<p>Se fossemos falar do C++ antes da versão 17, eu até concordaria mas após a versão 17 muita coisa mudou.</p>
+<p>E veja que o IOKit é implementado na forma Embedded C++.</p>
+<p>Mas, e como tu há um mas, há em real,o ponto da STL que invariavelmente você vai acabar usando ou não.</p>
+<h3 id="realmente-preciso-do-stl">Realmente preciso do STL?</h3>
+<p>No fringir dos ovos há um outro superset de C++ chamado <a href="https://terminalroot.com.br/2023/07/conheca-o-cpp-ortodoxo.html"><strong><em>c++ ortodoxo</em></strong></a> jamais o use, sério.</p>
+<p>Uma das soluções que o FKernel e o SerenityOS fazem é criar sua própria STL.</p>
+<p>O SerenityOS com sua <strong>Abstraction Kit</strong>.
+E o FKernel com seu <strong>LibFK</strong>.</p>
+<p>Usar uma STL não é de todo mal, há diversos efeitos, como otimização em cascata.</p>
+<p>Genericos e todo resto.</p>
+<h2 id="e-no-fim">E no fim?</h2>
+<p>No fim, depende de você.</p>
+<p>Se você está desenvolvendo um app para desktop.</p>
+<p>Eu sugeriria:</p>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/D_(linguagem_de_programa%C3%A7%C3%A3o)">D</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)">Go</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Zig_(linguagem_de_programa%C3%A7%C3%A3o)">Zig</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)">Rust</a></li>
+</ul>
+<p>Para baixo nível certamente eu sugeriria:</p>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/B_(linguagem_de_programa%C3%A7%C3%A3o)">B</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)">C</a>,</li>
+<li><a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/D_(linguagem_de_programa%C3%A7%C3%A3o)">D</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)">Rust</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Zig_(linguagem_de_programa%C3%A7%C3%A3o)">Zig</a></li>
+</ul>
+<p>Mas em kernel estou muito mais satisfeito com minha escolha do que usar C puro.</p>
+<p>Não que eu não use C obviamente, por baixo dos panos da LibFK eu implementei uma LibC bem simples com funções que eu teria que usar dentro do FKernel para algumas funções da LibFK.</p>
+<p>Mas enfim, se uma linguagem que você prefere usar por algum motivo de design ou simplesmente por ser a que você sabe, simplesmente use.</p>
+<p>Desde que não seja usar algo interpretado para fazer baixo nível, tá valendo tudo.</p>
+]]></content:encoded>
+        
+            <category>osdev</category>
+            <category>c&#43;&#43;</category>
+            <category>cpp</category>
+            <category>kernel</category>
+            <category>linux</category>
+            <category>windows</category>
+            <category>macosx</category>
+        
+      </item>
     
       <item>
         <title>Opinião: Brasil a grande várzea</title>
