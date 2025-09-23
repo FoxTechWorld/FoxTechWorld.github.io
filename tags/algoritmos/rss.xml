@@ -7,8 +7,83 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 23 Sep 2025 09:02:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Sep 2025 18:42:12 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>SaaS: A ferramenta certa na hora certa</title>
+        <link>https://foxtechword.github.io/2025/09/saas-a-ferramenta-certa-na-hora-certa/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/saas-a-ferramenta-certa-na-hora-certa/</guid>
+        <pubDate>Tue, 23 Sep 2025 14:08:26 GMT</pubDate>
+        <description>&lt;p&gt;Bem a melhor ferramenta é aquela que resolve seu problema.&lt;/p&gt;
+&lt;p&gt;Isso é invariável em todo o mundo da programação.&lt;/p&gt;
+&lt;p&gt;No mundo do SaaS, sendo um desenvolvedor solo, você não deve confiar apenas em si mesmo.&lt;/p&gt;
+&lt;p&gt;Adicione Testes, testes, mais testes, enfie testes em tudo que puder e use softwares maduros.&lt;/p&gt;
+&lt;p&gt;Mas, ao mesmo tempo não deixe seu software parado no tempo.&lt;/p&gt;
+&lt;h2 id=&#34;as-duas-grandes-divisões&#34;&gt;As duas grandes divisões&lt;/h2&gt;
+&lt;p&gt;Dentro do mundo de software existem duas grandes divisões &lt;a href=&#34;https://roadmap.sh/frontend&#34;&gt;&lt;strong&gt;&lt;em&gt;frontend&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; e &lt;a href=&#34;https://roadmap.sh/backend&#34;&gt;&lt;strong&gt;&lt;em&gt;backend&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Bem a melhor ferramenta é aquela que resolve seu problema.</p>
+<p>Isso é invariável em todo o mundo da programação.</p>
+<p>No mundo do SaaS, sendo um desenvolvedor solo, você não deve confiar apenas em si mesmo.</p>
+<p>Adicione Testes, testes, mais testes, enfie testes em tudo que puder e use softwares maduros.</p>
+<p>Mas, ao mesmo tempo não deixe seu software parado no tempo.</p>
+<h2 id="as-duas-grandes-divisões">As duas grandes divisões</h2>
+<p>Dentro do mundo de software existem duas grandes divisões <a href="https://roadmap.sh/frontend"><strong><em>frontend</em></strong></a> e <a href="https://roadmap.sh/backend"><strong><em>backend</em></strong></a></p>
+<p>E uma parte menor que é <a href="https://roadmap.sh/DevOps"><strong><em>DevOps</em></strong></a>.</p>
+<p>Este post, em especifico é sobre frontend e backend.</p>
+<p>Assuma que que DevOps você pode contratar outros SaaS em vez de implementar você mesmo.</p>
+<h3 id="frontend">FrontEnd</h3>
+<p>Para o <strong><em>Frontend</em></strong> precisamos atingir o máximo de plataformas sozinho com uma interface moderna possa atingir:</p>
+<ul>
+<li><strong>Desktop</strong></li>
+<li><strong>Web</strong></li>
+<li><strong>Mobile</strong></li>
+</ul>
+<p>Além disso, é preferencial que seguirmos técnicas de design como:</p>
+<ul>
+<li><a href="https://www.alura.com.br/artigos/online-offline-first">Offline-First</a></li>
+<li><a href="https://conteudodigitall.com.br/glossario/o-que-e-mobile-first-entenda-a-importancia/">Mobile-First</a></li>
+</ul>
+<p>Com isso, temos uma base boa para ter um software que não fica irritante com o tempo.</p>
+<p>No geral, use <a href="https://flutter.dev/"><strong><em>Flutter</em></strong></a> para evitar ter que lidar com diversas plataformas manualmente.</p>
+<h3 id="backend">BackEnd</h3>
+<p>Para começar, precisamos entender do que é importante no backend de um SaaS.</p>
+<p>Nada mais importante do que usar um <a href="https://blog.somostera.com/desenvolvimento-web/o-que-eframework">framework</a> maduro.</p>
+<p>E no caso, pessoalmente falando, o melhor que temos é o <a href="https://rubyonrails.org/">Ruby On Rails</a> e veja que podemos migrar de <a href="https://www.ruby-lang.org/pt/"><strong><em>Ruby</em></strong></a> para <a href="https://www.jruby.org/"><strong><em>JRuby</em></strong></a> garantindo que a aplicação pode escalar se e somente se for necessário.</p>
+<p>Adote testes como dogma literalmente, teste tudo, se tiver erro gere um teste, se tiver um bug teste, se tiver uma vulnerabilidade teste também.</p>
+<p>Coloque:</p>
+<ul>
+<li><a href="https://github.com/rack/rack-attack"><strong><em>Rack Attack</em></strong></a></li>
+<li><a href="https://github.com/presidentbeef/brakeman"><strong><em>Brakeman</em></strong></a></li>
+<li><a href="https://github.com/teamcapybara/capybara"><strong><em>Capybara</em></strong></a></li>
+<li><a href="https://github.com/flyerhzm/bullet"><strong><em>Bullet</em></strong></a></li>
+<li><a href="https://github.com/MiniProfiler/rack-mini-profiler"><strong><em>Rack Mini Profiler</em></strong></a></li>
+</ul>
+<p>Veja que a ideia principal é que as libs do rails são maduras e testadas facilmente acopladas e no geral é muito melhor do que depender de si mesmo que só na cabeça vai querer inventar procedimentos de segurança que vai fazer pagar fortunas em indenizações.</p>
+<p>Vide <a href="https://canaltech.com.br/seguranca/sapphos-tinder-lesbico-do-brasil-tem-falha-de-seguranca-grave-e-e-tirado-do-ar/">Noticia sobre o Saphoos</a>.</p>
+<h3 id="devops">DevOps</h3>
+<p>Dentro de seu <a href="https://www.portalinsights.com.br/perguntas-frequentes/o-que-e-startup-SaaS"><strong><em>Software as Service</em></strong></a>.</p>
+<p>Você quer evitar ao máximo problemas de responsabilidade fiscal.</p>
+<p>Então a coisa mais inteligente a se fazer é se mover de <a href="https://blog.engeman.com.br/diferencas-entre-capex-e-opex">capex (investimento na própria infra) para opex (contrato de serviços externos)</a>.</p>
+<p>Use serviços como <a href="https://www.papertrail.com/solution/aws-logging/">paper-trail</a>, use a <a href="https://aws.amazon.com/pt/">amazon-web-service</a> &hellip;</p>
+<p>O software continua sendo sua responsabilidade mas, problemas internos de servidores gerenciados por provedores não recaem diretamente sobre você, reduzindo riscos e permitindo focar no desenvolvimento.</p>
+<p>Contrate <a href="https://www.malwarebytes.com/pt-br/cybersecurity/basics/what-is-ethical-hacking">Hackers Ético</a> e faça testes de segurança, corrija brechas periodicamente.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>No geral, a combinação ideal seria usar um <strong><em>backend</em></strong> em rails e um <strong><em>frontend</em></strong> em flutter.</p>
+<p>Para ter diversas plataformas e um backend sólido, caso precise de algo customizado, use um microsserviço da forma que achar melhor contanto que haja contratos fortes e testes.</p>
+<p>Jamais esqueça os testes.</p>
+]]></content:encoded>
+        
+            <category>programming</category>
+            <category>development</category>
+            <category>solo-dev</category>
+            <category>SaaS</category>
+            <category>ruby</category>
+            <category>flutter</category>
+            <category>go</category>
+            <category>javascript</category>
+        
+      </item>
     
       <item>
         <title>Osdev: Até onde dá para usar c++</title>
@@ -32,7 +107,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust e Zig que são considerados &amp;ldquo;memory-safe&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust, e aquelas que são considerados &amp;ldquo;memory-safe&amp;rdquo;.&lt;/p&gt;
 &lt;h2 id=&#34;porque-não-usar-linguagens-memory-safe&#34;&gt;Porque não usar linguagens memory-safe?&lt;/h2&gt;
 &lt;p&gt;Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado FKernel.</p>
@@ -52,7 +127,7 @@
 </ul>
 </li>
 </ul>
-<p>Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust e Zig que são considerados &ldquo;memory-safe&rdquo;.</p>
+<p>Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust, e aquelas que são considerados &ldquo;memory-safe&rdquo;.</p>
 <h2 id="porque-não-usar-linguagens-memory-safe">Porque não usar linguagens memory-safe?</h2>
 <p>Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.</p>
 <p>Se for para ter que lidar com sintaxes estranhas para programar um kernel, eu prefiro seguir no bom e velho C/C++.</p>
