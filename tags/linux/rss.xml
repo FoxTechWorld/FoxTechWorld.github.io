@@ -7,8 +7,188 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 02 Oct 2025 22:23:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Oct 2025 22:27:28 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Algoritmos em Grafos: Estrutura de dados - Disjoint-Set</title>
+        <link>https://foxtechword.github.io/2025/10/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</guid>
+        <pubDate>Wed, 01 Oct 2025 15:40:08 GMT</pubDate>
+        <description>&lt;h1 id=&#34;teoria-dos-conjuntos&#34;&gt;Teoria dos conjuntos&lt;/h1&gt;
+&lt;p&gt;Dentro da matemática temos os &lt;a href=&#34;https://www.todamateria.com.br/teoria-dos-conjuntos/&#34;&gt;&lt;strong&gt;Sets&lt;/strong&gt;&lt;/a&gt;, equivalente a conjuntos na teoria de conjuntos.&lt;/p&gt;
+&lt;p&gt;Também é um tipo de Python que você pode fazer para comprimir uma lista.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Exemplo em Python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;my_list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(set(my_list))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# {1, 2, 3}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;o-que-são-disjoint-sets&#34;&gt;O que são Disjoint-Sets&lt;/h2&gt;
+&lt;p&gt;E dentro dessa teoria, temos conjuntos disjuntos quando não tem elementos em comum entre eles.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tse3.mm.bing.net/th/id/OIP.1gaGGShk2pNEuYVwth-nDwHaE5?rs=1&amp;amp;pid=ImgDetMain&amp;amp;o=7&amp;amp;rm=3&#34; alt=&#34;Example of Disjoint-Set&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1 id="teoria-dos-conjuntos">Teoria dos conjuntos</h1>
+<p>Dentro da matemática temos os <a href="https://www.todamateria.com.br/teoria-dos-conjuntos/"><strong>Sets</strong></a>, equivalente a conjuntos na teoria de conjuntos.</p>
+<p>Também é um tipo de Python que você pode fazer para comprimir uma lista.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Exemplo em Python</span>
+</span></span><span style="display:flex;"><span>my_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,]
+</span></span><span style="display:flex;"><span>print(set(my_list))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {1, 2, 3}</span>
+</span></span></code></pre></div><h2 id="o-que-são-disjoint-sets">O que são Disjoint-Sets</h2>
+<p>E dentro dessa teoria, temos conjuntos disjuntos quando não tem elementos em comum entre eles.</p>
+<p><img src="https://tse3.mm.bing.net/th/id/OIP.1gaGGShk2pNEuYVwth-nDwHaE5?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt="Example of Disjoint-Set"></p>
+<blockquote>
+<p>Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.</p></blockquote>
+<p>Disjoint-Sets trabalham com a mesma ideia de verificar se conjuntos têm ou não interseção.</p>
+<p>Em realizadade, este é uma das melhores estruturas de dados para otimizar algoritmos em grafos.</p>
+<p>Dentro dele suportamos duas operações:</p>
+<ul>
+<li><strong><em>Union</em></strong>: Mesclando dois conjuntos em um único conjunto.</li>
+<li><strong><em>Find</em></strong> : Encontrando um representante de um conjunto disjunto.</li>
+</ul>
+<h3 id="exemplo-de-uso-em-grafos">Exemplo de uso em grafos</h3>
+<p>Imagine a situação de uma rede social com diversas pessoas e você tem as seguintes tarefas a serem executadas:</p>
+<ul>
+<li>
+<p>Adicione uma nova <strong><em>relação</em></strong> de <strong><em>amizade</em></strong>, ou seja, uma pessoa x se torna amiga de y adicionando um novo elemento a um conjunto.</p>
+</li>
+<li>
+<p>Descobrir se <strong><em>o indivíduo x é amigo do indivíduo y</em></strong> (amigo direto ou indireto)</p>
+</li>
+</ul>
+<h4 id="exemplo">Exemplo</h4>
+<blockquote>
+<p>Exemplo tirado do <a href="https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/">Geeks For Geeks</a></p></blockquote>
+<pre tabindex="0"><code>Recebemos 10 indivíduos, digamos, a,b,c,d,e,f,g,h,i,j
+
+A seguir estão as relações a serem adicionadas:
+
+a &lt;-&gt; b
+b &lt;-&gt; d
+c &lt;-&gt; f
+c &lt;-&gt; i
+j &lt;-&gt; e
+g &lt;-&gt; j
+
+Dadas perguntas como se a é amigo de d ou não.
+
+Basicamente, precisamos criar os seguintes 4 grupos e manter uma conexão rapidamente acessível entre os itens do grupo:
+
+G1 = {a, b, d}
+G2 = {c, f, i}
+G3 = {e, g, j}
+G4 = {h}
+</code></pre><p>Caso fomos implementar o <strong>UnionFind</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(size)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Inicializa cada elemento como seu próprio representante (pai)</span>
+</span></span><span style="display:flex;"><span>    @parent <span style="color:#f92672">=</span> Array<span style="color:#f92672">.</span>new(size) { <span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> i }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Rank ajuda a manter as árvores balanceadas</span>
+</span></span><span style="display:flex;"><span>    @rank <span style="color:#f92672">=</span> Array<span style="color:#f92672">.</span>new(size, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(i)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Aplica compressão de caminho</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> @parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> i
+</span></span><span style="display:flex;"><span>      @parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> find(@parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    @parent<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">unite</span>(i, j)
+</span></span><span style="display:flex;"><span>    irep <span style="color:#f92672">=</span> find(i)
+</span></span><span style="display:flex;"><span>    jrep <span style="color:#f92672">=</span> find(j)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">if</span> irep <span style="color:#f92672">==</span> jrep
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># União por rank</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> @rank<span style="color:#f92672">[</span>irep<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> @rank<span style="color:#f92672">[</span>jrep<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      @parent<span style="color:#f92672">[</span>irep<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> jrep
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elsif</span> @rank<span style="color:#f92672">[</span>irep<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> @rank<span style="color:#f92672">[</span>jrep<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      @parent<span style="color:#f92672">[</span>jrep<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> irep
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>      @parent<span style="color:#f92672">[</span>jrep<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> irep
+</span></span><span style="display:flex;"><span>      @rank<span style="color:#f92672">[</span>irep<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>names <span style="color:#f92672">=</span> <span style="color:#e6db74">%w[a b c d e f g h i j]</span>
+</span></span><span style="display:flex;"><span>name_to_index <span style="color:#f92672">=</span> names<span style="color:#f92672">.</span>each_with_index<span style="color:#f92672">.</span>to_h
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>uf <span style="color:#f92672">=</span> <span style="color:#66d9ef">UnionFind</span><span style="color:#f92672">.</span>new(names<span style="color:#f92672">.</span>size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>relations <span style="color:#f92672">=</span> <span style="color:#f92672">[[</span><span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;i&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;j&#34;</span>, <span style="color:#e6db74">&#34;e&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;g&#34;</span>, <span style="color:#e6db74">&#34;j&#34;</span><span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>relations<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>x, y<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  uf<span style="color:#f92672">.</span>unite(name_to_index<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span>, name_to_index<span style="color:#f92672">[</span>y<span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> uf<span style="color:#f92672">.</span>find(name_to_index<span style="color:#f92672">[</span>x<span style="color:#f92672">]</span>) <span style="color:#f92672">==</span> uf<span style="color:#f92672">.</span>find(name_to_index<span style="color:#f92672">[</span>y<span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>  puts <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>x<span style="color:#e6db74">}</span><span style="color:#e6db74"> e </span><span style="color:#e6db74">#{</span>y<span style="color:#e6db74">}</span><span style="color:#e6db74"> são amigos (diretos ou indiretos)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>  puts <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>x<span style="color:#e6db74">}</span><span style="color:#e6db74"> e </span><span style="color:#e6db74">#{</span>y<span style="color:#e6db74">}</span><span style="color:#e6db74"> não são amigos&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h3 id="onde-usar-o-disjoint-set">Onde usar o Disjoint-Set</h3>
+<p>Disjoint-Set é útil para a maioria dos problemas não triviais da computação muito provavelmente um problema em baixo nível pode ser resolvido com ele.</p>
+<h4 id="exemplos-de-alto-nível">Exemplos de Alto Nível</h4>
+<p>Qualquer grande E-Commerce, empresa, sistema que for mexer com grafos pode usar o Disjoint-Set para otimizar em algumas especifidades.</p>
+<h5 id="grafos">Grafos</h5>
+<ul>
+<li>
+<p>Podemos usar o Disjoint-Set no <a href="https://pt.wikipedia.org/wiki/Algoritmo_de_Kruskal"><strong><em>Algoritmo de Kruskal</em></strong></a> para encontrar uma árvore geradora mínima.</p>
+</li>
+<li>
+<p>Podemos usar o Disjoint-Set para detectar <strong><em>Cíclos em grafos não direcionados</em></strong>.</p>
+</li>
+<li>
+<p>Podemos usar o Disjoint-Set para a identificação de <strong><em>componentes conectados</em></strong>.</p>
+</li>
+</ul>
+<h3 id="simulação">Simulação</h3>
+<ul>
+<li>
+<p>Controle de <strong><em>conjuntos de objetos</em></strong> que se fundem e se dividem dinamicamente.</p>
+</li>
+<li>
+<p>Simulação de <strong><em>percolação</em></strong> ou <strong><em>clusters</em></strong>.</p>
+</li>
+</ul>
+<h4 id="exemplos-de-baixo-nível">Exemplos de Baixo Nível</h4>
+<p>Qualquer coisa mais escondida sendo dentro de linguagens de programação, sistemas operacionais, bibliotecas &hellip; etc.</p>
+<h3 id="problemas-de-equivalência">Problemas de Equivalência</h3>
+<ul>
+<li>
+<p>Manter classes de equivalência.</p>
+</li>
+<li>
+<p>Agrupamento por atributos compartilhados.</p>
+</li>
+</ul>
+<h3 id="e-no-geral">E no geral?</h3>
+<p>Se tiver muito no seu código questões do tipo &ldquo;X e Y são relacionados?&rdquo; em um conjunto dinâmico de relações, então <strong>Disjoint-Set</strong> é a escolha mais eficiente.</p>
+<h3 id="conclusão">Conclusão</h3>
+<p>A estrutura Disjoint-Set (Union-Find) resolve com eficiência problemas baseados em conectividade dinâmica.</p>
+<p>Com <strong>Union</strong> e <strong>Find</strong>, é possível gerenciar grupos, detectar relações e otimizar algoritmos em grafos com complexidade quase constante.</p>
+<p>Se o problema envolve:</p>
+<ul>
+<li>Particionar elementos</li>
+<li>Verificar conexões</li>
+<li>Unir componentes rapidamente</li>
+</ul>
+<p>Então <strong>Union-Find</strong> é a estrutura certa.</p>
+<p>Simples, rápida e usada desde sistemas reais até algoritmos clássicos.</p>
+]]></content:encoded>
+        
+            <category>Algoritmos</category>
+            <category>Estrutura de Dados</category>
+            <category>Grafos</category>
+            <category>Algoritmos de Busca</category>
+            <category>Busca em Largura</category>
+            <category>Busca em Profundidade</category>
+            <category>Teoria dos Grafos</category>
+        
+      </item>
     
       <item>
         <title>SaaS: A ferramenta certa na hora certa</title>

@@ -2,12 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://foxtechword.github.io/tags/algoritmos/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/algoritmos-de-busca/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/2025/10/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/busca-em-largura/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/busca-em-profundidade/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/estrutura-de-dados/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/</loc>
     <lastmod>2025-10-01T15:40:08-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://foxtechword.github.io/tags/grafos/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/posts/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/</loc>
+    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/teoria-dos-grafos/</loc>
     <lastmod>2025-10-01T15:40:08-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -53,11 +98,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://foxtechword.github.io/tags/solo-dev/</loc>
-    <lastmod>2025-09-23T14:08:26-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/</loc>
     <lastmod>2025-09-23T14:08:26-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -182,42 +222,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://foxtechword.github.io/tags/algoritmos/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/algoritmos-de-busca/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/busca-em-largura/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/busca-em-profundidade/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/estrutura-de-dados/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/grafos/</loc>
-    <lastmod>2025-09-15T08:24:12-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/teoria-dos-grafos/</loc>
     <lastmod>2025-09-15T08:24:12-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
