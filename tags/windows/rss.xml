@@ -7,7 +7,7 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 06 Oct 2025 20:29:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Oct 2025 20:39:51 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
@@ -270,7 +270,7 @@ G4 = {h}
         <link>https://foxtechword.github.io/2025/09/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</link>
         <guid isPermaLink="true">https://foxtechword.github.io/2025/09/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</guid>
         <pubDate>Mon, 22 Sep 2025 15:33:40 GMT</pubDate>
-        <description>&lt;p&gt;Estou desenvolvendo um &lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)&#34;&gt;kernel&lt;/a&gt; chamado FKernel.&lt;/p&gt;
+        <description>&lt;p&gt;Estou desenvolvendo um &lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)&#34;&gt;kernel&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/KitsuneBSD/FKernel&#34;&gt;FKernel&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Para uso desktop em código x86_64.&lt;/p&gt;
 &lt;p&gt;E lendo sobre algumas linguagens como &lt;strong&gt;&lt;em&gt;Rust&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;Zig&lt;/em&gt;&lt;/strong&gt; &amp;hellip;&lt;/p&gt;
 &lt;p&gt;Decidi fazer uma combinação de:&lt;/p&gt;
@@ -290,7 +290,7 @@ G4 = {h}
 &lt;p&gt;Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust, e aquelas que são considerados &amp;ldquo;memory-safe&amp;rdquo;.&lt;/p&gt;
 &lt;h2 id=&#34;porque-não-usar-linguagens-memory-safe&#34;&gt;Porque não usar linguagens memory-safe?&lt;/h2&gt;
 &lt;p&gt;Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado FKernel.</p>
+        <content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
 <p>Para uso desktop em código x86_64.</p>
 <p>E lendo sobre algumas linguagens como <strong><em>Rust</em></strong>, <strong><em>C</em></strong>, <strong><em>C++</em></strong>, <strong><em>Zig</em></strong> &hellip;</p>
 <p>Decidi fazer uma combinação de:</p>
