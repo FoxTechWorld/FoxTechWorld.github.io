@@ -7,7 +7,7 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 12 Oct 2025 13:20:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Oct 2025 13:24:47 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
@@ -15,11 +15,12 @@
         <link>https://foxtechword.github.io/2025/10/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</link>
         <guid isPermaLink="true">https://foxtechword.github.io/2025/10/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</guid>
         <pubDate>Wed, 08 Oct 2025 15:08:13 GMT</pubDate>
-        <description>&lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href=&#34;https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/&#34;&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href=&#34;https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/&#34;&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Primeiramente, este é um bom post, muito bem embassado de acordo com o blog post &lt;a href=&#34;https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns&#34;&gt;&lt;strong&gt;&lt;em&gt;Universe of Discourse&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.&lt;/p&gt;
-&lt;p&gt;Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog <strong><em>AkitaOnRails</em></strong>. E em um de seus posts entitulados <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em>[ <strong>Design Patterns representam defeitos nas linguagens</strong> ]</em></a></p>
+&lt;p&gt;Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<p>Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog <strong><em>AkitaOnRails</em></strong>. E em um de seus posts entitulados <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em>[ <strong>Design Patterns representam defeitos nas linguagens</strong> ]</em></a></p>
 <p>Primeiramente, este é um bom post, muito bem embassado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
 <p>Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.</p>
 <p>Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.</p>
@@ -35,7 +36,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> mp : m_children){
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do anything
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p>Sendo absorvido por uma linguagem, mas nunca um MVC é simplesmente uma diferença de escopo.</p>
+</span></span></code></pre></div><h3 id="o-incomodo">O incomodo</h3>
+<p>Sendo absorvido por uma linguagem, mas nunca um MVC é simplesmente uma diferença de escopo.</p>
 <p>Uma coisa é você aprimorar a <strong>ergonomia da linguagem</strong> facilitando um método de escrita em detrimento de outro.</p>
 <p>Outra coisa é pegar o <strong>modelamento</strong> da arquitetura e fazer uma linguagem com isso.</p>
 <p>Imagine dentro do lex de uma linguagem, você tem <code>print</code> que pertence a um <code>view</code> e os parametros seriam <code>models</code> com funções sendo <code>controllers</code>.</p>
