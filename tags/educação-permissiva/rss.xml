@@ -7,8 +7,79 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 06 Oct 2025 20:39:51 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Oct 2025 13:20:45 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Opinião: Design Patterns são um péssimo nome</title>
+        <link>https://foxtechword.github.io/2025/10/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</guid>
+        <pubDate>Wed, 08 Oct 2025 15:08:13 GMT</pubDate>
+        <description>&lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href=&#34;https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/&#34;&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Primeiramente, este é um bom post, muito bem embassado de acordo com o blog post &lt;a href=&#34;https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns&#34;&gt;&lt;strong&gt;&lt;em&gt;Universe of Discourse&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.&lt;/p&gt;
+&lt;p&gt;Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog <strong><em>AkitaOnRails</em></strong>. E em um de seus posts entitulados <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em>[ <strong>Design Patterns representam defeitos nas linguagens</strong> ]</em></a></p>
+<p>Primeiramente, este é um bom post, muito bem embassado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
+<p>Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.</p>
+<p>Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.</p>
+<blockquote>
+<p>Na última vez que escrevi sobre design patterns, foi para apontar que embora o movimento tenha sido inspirado pelo trabalho de “linguagem de pattern” de Christopher Alexander, não é parecido com nada que Alexander tenha sugerido, e que de fato o que Alexander sugeriu é mais interessante e provavelmente teria sido mais útil para programadores do que o movimento de design pattern escolheu seguir.</p></blockquote>
+<blockquote>
+<p>Uma das coisas que eu apontei foi essencialmente o que Norvig disse: que muitos patterns não estão realmente endereçando problemas recorrentes de design em programas orientados a objetos. Eles estão, na realidade, endereçando deficiências em linguagens de programação orientadas a objetos e que em linguagens melhores, esses problemas simplemente não aparecem ou são resolvidos de maneira tão fácil e trivial que a solução não requer um pattern. Em linguagem assembly, “chamada de sub-rotina” pode ser um pattern; em C, a solução é escrever result = function(args &hellip;), que é simples demais para se qualificar como pattern. Em uma linguagem como Lisp ou Haskell ou mesmo Perl, com um bom tipo de lista e poderosas primitivas para operar em valores de listas, o pattern “Iterator” (iterador) é aliviado em um grande degrau ou tido como invisível. Henry G. Baker pegou esse ponto em seu artigo Iterators: Sinais de Fraqueza em Linguagens Orientadas a Objetos.</p></blockquote>
+<blockquote>
+<p>Recebi muitas mensagens sobre isso, e curiosamente, alguns chegaram à mesma conclusão da mesma forma: eles disseram que embora eu estivesse certo sobre Iterator, era um exemplo pobre porque era um pattern muito simples, mas que era impossível imaginar um pattern mais complexo como Model-View-Controller ser absorvido e se tornar invisível dessa maneira.</p></blockquote>
+<p>Obviamente, como um post antigo não vou dar muito trelo ainda mas, veja.</p>
+<p>O motivo de conseguirmos enxergar um iterator</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> mp : m_children){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do anything
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>Sendo absorvido por uma linguagem, mas nunca um MVC é simplesmente uma diferença de escopo.</p>
+<p>Uma coisa é você aprimorar a <strong>ergonomia da linguagem</strong> facilitando um método de escrita em detrimento de outro.</p>
+<p>Outra coisa é pegar o <strong>modelamento</strong> da arquitetura e fazer uma linguagem com isso.</p>
+<p>Imagine dentro do lex de uma linguagem, você tem <code>print</code> que pertence a um <code>view</code> e os parametros seriam <code>models</code> com funções sendo <code>controllers</code>.</p>
+<p>Simplesmente estúpido ao máximo.</p>
+<h3 id="e-qual-o-problema-original">E qual o problema original&hellip;</h3>
+<p>Esse é um pequeno problema de usar o nome <code>pattern</code>, sendo mais especifico <code>design pattern</code> é muito pouco descritivo.</p>
+<p>Eu estou falando do <code>design</code> da linguagem para aumentar a produtividade do programador?</p>
+<p>Ou estou falando do <code>design</code> na arquitetura para melhorar legibilidade e manutenção do código ao todo?</p>
+<p>O Model-View-Controller deveria se enquadrar em <code>design pattern</code> então? <strong>SIM!!!</strong></p>
+<p>E Iteradores? <strong>SIM!!!</strong></p>
+<p>E Orientação a Objetos? <strong>SIM!!!</strong></p>
+<p>Isso porque novamente é um problema de nomeação e domínio. Se está tudo em um <code>design pattern</code> então fica dificil fazer uma categorização mais aprofundada.</p>
+<p>O mesmo serve quando colocamos <code>software monolitico</code> contra <code>microsserviços</code>.</p>
+<p>Aqui temos dois padrões de arquitetura de software que de alguma forma também um padrão de design.</p>
+<p>Podemos dizer que uma linguagem pode absorver uma arquitetura de software?</p>
+<h3 id="uma-solução">Uma solução</h3>
+<p>Podemos adjetivar o <code>design pattern</code> para seu domínio.</p>
+<ul>
+<li><code>Ergonic design pattern</code> para quando falamos de um padrão de arquitetura que pode ser absorvido pela linguagem.</li>
+</ul>
+<p>Sendo um exemplo o <code>Iterator</code>, <code>Goto</code>, <code>Function</code>.</p>
+<ul>
+<li><code>Architecture design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, mas pelo software em geral.</li>
+</ul>
+<p>Sendo exemplos: <code>Model-View-Controler</code>, <code>JSP Model1</code>, <code>Model-View-Adapter</code>, <code>Model-View-Presenter</code></p>
+<ul>
+<li><code>Implementation design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, nem pelo software em geral mas colocado para facilitar a implementação.</li>
+</ul>
+<p>Sendo exemplos: <code>Strategy Pattern</code>, <code>Observator pattern</code>, <code>Servant pattern</code>, <code>Command pattern</code>, <code>Chain of responsability pattern</code>.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>No geral, o termo <strong><em>Design Pattern</em></strong> é genérico demais para ser útil no debate técnico.</p>
+<p>Agrupando tudo desde ergonomia da linguagem até arquitetura distribuida sob o mesmo nome vira um deserviço.</p>
+<p>A proposta de <strong>Adjetivar os patterns conforme seu domínio</strong> deve trazer clareza e distinguir melhor o que é arquitetural e o que é uma boa prática de implementação.</p>
+<p>Talvez ao reclassificar os padrões com base não apenas naquilo <code>que elas resolvem</code> mas também no <strong>lugar onde operam</strong>.</p>
+]]></content:encoded>
+        
+            <category>Design Patterns</category>
+            <category>Opinião</category>
+            <category>Progrmação</category>
+            <category>Desenvolvimento</category>
+            <category>Arquitetura de software</category>
+            <category>Design de Software</category>
+        
+      </item>
     
       <item>
         <title>Algoritmos em Grafos: Estrutura de dados - Disjoint-Set</title>
