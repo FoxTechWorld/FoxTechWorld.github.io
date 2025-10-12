@@ -7,7 +7,7 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 12 Oct 2025 13:26:09 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Oct 2025 13:29:15 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
@@ -17,11 +17,11 @@
         <pubDate>Wed, 08 Oct 2025 15:08:13 GMT</pubDate>
         <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;
 &lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href=&#34;https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/&#34;&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Primeiramente, este é um bom post, muito bem embassado de acordo com o blog post &lt;a href=&#34;https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns&#34;&gt;&lt;strong&gt;&lt;em&gt;Universe of Discourse&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post &lt;a href=&#34;https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns&#34;&gt;&lt;strong&gt;&lt;em&gt;Universe of Discourse&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1 id="introdução">Introdução</h1>
 <p>Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog <strong><em>AkitaOnRails</em></strong>. E em um de seus posts entitulados <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em>[ <strong>Design Patterns representam defeitos nas linguagens</strong> ]</em></a></p>
-<p>Primeiramente, este é um bom post, muito bem embassado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
+<p>Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
 <p>Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.</p>
 <p>Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.</p>
 <blockquote>
@@ -66,7 +66,7 @@
 <ul>
 <li><code>Implementation design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, nem pelo software em geral mas colocado para facilitar a implementação.</li>
 </ul>
-<p>Sendo exemplos: <code>Strategy Pattern</code>, <code>Observator pattern</code>, <code>Servant pattern</code>, <code>Command pattern</code>, <code>Chain of responsability pattern</code>.</p>
+<p>Sendo exemplos: <code>Strategy Pattern</code>, <code>Observer pattern</code>, <code>Servant pattern</code>, <code>Command pattern</code>, <code>Chain of responsibility pattern</code>.</p>
 <h1 id="conclusão">Conclusão</h1>
 <p>No geral, o termo <strong><em>Design Pattern</em></strong> é genérico demais para ser útil no debate técnico.</p>
 <p>Agrupando tudo desde ergonomia da linguagem até arquitetura distribuida sob o mesmo nome vira um deserviço.</p>
@@ -76,7 +76,7 @@
         
             <category>Design Patterns</category>
             <category>Opinião</category>
-            <category>Progrmação</category>
+            <category>Programação</category>
             <category>Desenvolvimento</category>
             <category>Arquitetura de software</category>
             <category>Design de Software</category>
