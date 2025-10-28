@@ -7,7 +7,7 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 12 Oct 2025 13:29:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 22:20:24 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
@@ -25,11 +25,14 @@
 <p>Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.</p>
 <p>Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.</p>
 <blockquote>
-<p>Na última vez que escrevi sobre design patterns, foi para apontar que embora o movimento tenha sido inspirado pelo trabalho de “linguagem de pattern” de Christopher Alexander, não é parecido com nada que Alexander tenha sugerido, e que de fato o que Alexander sugeriu é mais interessante e provavelmente teria sido mais útil para programadores do que o movimento de design pattern escolheu seguir.</p></blockquote>
+<p>Na última vez que escrevi sobre design patterns, foi para apontar que embora o movimento tenha sido inspirado pelo trabalho de “linguagem de pattern” de Christopher Alexander, não é parecido com nada que Alexander tenha sugerido, e que de fato o que Alexander sugeriu é mais interessante e provavelmente teria sido mais útil para programadores do que o movimento de design pattern escolheu seguir.</p>
+</blockquote>
 <blockquote>
-<p>Uma das coisas que eu apontei foi essencialmente o que Norvig disse: que muitos patterns não estão realmente endereçando problemas recorrentes de design em programas orientados a objetos. Eles estão, na realidade, endereçando deficiências em linguagens de programação orientadas a objetos e que em linguagens melhores, esses problemas simplemente não aparecem ou são resolvidos de maneira tão fácil e trivial que a solução não requer um pattern. Em linguagem assembly, “chamada de sub-rotina” pode ser um pattern; em C, a solução é escrever result = function(args &hellip;), que é simples demais para se qualificar como pattern. Em uma linguagem como Lisp ou Haskell ou mesmo Perl, com um bom tipo de lista e poderosas primitivas para operar em valores de listas, o pattern “Iterator” (iterador) é aliviado em um grande degrau ou tido como invisível. Henry G. Baker pegou esse ponto em seu artigo Iterators: Sinais de Fraqueza em Linguagens Orientadas a Objetos.</p></blockquote>
+<p>Uma das coisas que eu apontei foi essencialmente o que Norvig disse: que muitos patterns não estão realmente endereçando problemas recorrentes de design em programas orientados a objetos. Eles estão, na realidade, endereçando deficiências em linguagens de programação orientadas a objetos e que em linguagens melhores, esses problemas simplemente não aparecem ou são resolvidos de maneira tão fácil e trivial que a solução não requer um pattern. Em linguagem assembly, “chamada de sub-rotina” pode ser um pattern; em C, a solução é escrever result = function(args &hellip;), que é simples demais para se qualificar como pattern. Em uma linguagem como Lisp ou Haskell ou mesmo Perl, com um bom tipo de lista e poderosas primitivas para operar em valores de listas, o pattern “Iterator” (iterador) é aliviado em um grande degrau ou tido como invisível. Henry G. Baker pegou esse ponto em seu artigo Iterators: Sinais de Fraqueza em Linguagens Orientadas a Objetos.</p>
+</blockquote>
 <blockquote>
-<p>Recebi muitas mensagens sobre isso, e curiosamente, alguns chegaram à mesma conclusão da mesma forma: eles disseram que embora eu estivesse certo sobre Iterator, era um exemplo pobre porque era um pattern muito simples, mas que era impossível imaginar um pattern mais complexo como Model-View-Controller ser absorvido e se tornar invisível dessa maneira.</p></blockquote>
+<p>Recebi muitas mensagens sobre isso, e curiosamente, alguns chegaram à mesma conclusão da mesma forma: eles disseram que embora eu estivesse certo sobre Iterator, era um exemplo pobre porque era um pattern muito simples, mas que era impossível imaginar um pattern mais complexo como Model-View-Controller ser absorvido e se tornar invisível dessa maneira.</p>
+</blockquote>
 <p>Obviamente, como um post antigo não vou dar muito trelo ainda mas, veja.</p>
 <p>O motivo de conseguirmos enxergar um iterator</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
@@ -111,7 +114,8 @@
 <p>E dentro dessa teoria, temos conjuntos disjuntos quando não tem elementos em comum entre eles.</p>
 <p><img src="https://tse3.mm.bing.net/th/id/OIP.1gaGGShk2pNEuYVwth-nDwHaE5?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt="Example of Disjoint-Set"></p>
 <blockquote>
-<p>Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.</p></blockquote>
+<p>Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.</p>
+</blockquote>
 <p>Disjoint-Sets trabalham com a mesma ideia de verificar se conjuntos têm ou não interseção.</p>
 <p>Em realidade, este é uma das melhores estruturas de dados para otimizar algoritmos em grafos.</p>
 <p>Dentro dele suportamos duas operações:</p>
@@ -131,7 +135,8 @@
 </ul>
 <h4 id="exemplo">Exemplo</h4>
 <blockquote>
-<p>Exemplo tirado do <a href="https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/">Geeks For Geeks</a></p></blockquote>
+<p>Exemplo tirado do <a href="https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/">Geeks For Geeks</a></p>
+</blockquote>
 <pre tabindex="0"><code>Recebemos 10 indivíduos, digamos, a,b,c,d,e,f,g,h,i,j
 
 A seguir estão as relações a serem adicionadas:
@@ -388,7 +393,8 @@ G4 = {h}
 <h2 id="e-porque-c">E porque C++?</h2>
 <p>Muito tempo atrás Linus Torvalds havia tentado escrever um kernel com a versão de sua época.</p>
 <blockquote>
-<p>C++ leads to really, really bad design choices. You invariably start using the STL, boost, and other total and utter crap…</p></blockquote>
+<p>C++ leads to really, really bad design choices. You invariably start using the STL, boost, and other total and utter crap…</p>
+</blockquote>
 <p>Ok, podemos concordar em algumas partes mas, isso não seria inevitavelmente ruim.</p>
 <p>Sim, C++ tem um monte de coisa, mas fugiria do ponto principal que é C++ dá contratos que structs sozinhas dificilmente conseguem.</p>
 <p>Pegue um exemplo do <code>SerenityOS</code></p>
@@ -402,7 +408,8 @@ G4 = {h}
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Consegue entender o que esse código faz? Todo esse contrato engloba em poucas linhas</p>
 <blockquote>
-<p>Essa função try_create_with_size serve para criar um buffer de memória no kernel de um tamanho específico e lidar com possíveis erros de forma segura.</p></blockquote>
+<p>Essa função try_create_with_size serve para criar um buffer de memória no kernel de um tamanho específico e lidar com possíveis erros de forma segura.</p>
+</blockquote>
 <p>Para termos o equivalente exato em C garantindo a mesma segurança seria necessária escrever dessa forma.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">try_create_with_size</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name,
 </span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">size_t</span> size,
@@ -551,7 +558,8 @@ E o FKernel com seu <strong>LibFK</strong>.</p>
 <p>Politicamente o mundo está um inferno real, não falo de alguns ou outros países mas, de todo mundo globalizado.</p>
 <p>Eu já havia detectado alguns traços de que o mundo estava se tornando <a href="https://mundoeducacao.uol.com.br/filosofia/niilismo.htm"><strong>niilista</strong></a>. Mas, isso está pior do que poderia estar e dessa vez eu atribuo a culpa a <strong>amathia</strong>.</p>
 <blockquote>
-<p>Segundo Sócrates, Amathia (a ignorância) é o único mal.</p></blockquote>
+<p>Segundo Sócrates, Amathia (a ignorância) é o único mal.</p>
+</blockquote>
 <p>E não, não estou chamando nenhum espectro de ignorante em si. Mas, a população que está ocupando os espectros estão em condição de fanatismo.</p>
 <h2 id="o-que-são-esquerda-e-direita">O que são esquerda e direita?</h2>
 <p>Antes de tudo é bom contextualizar um pouco sobre.</p>
@@ -628,7 +636,8 @@ Candidato do partido D é de direita</p>
 <p>Antes o disclaimer</p>
 <blockquote>
 <p>Toda previsão é um chute, a única forma de acertar 100% é prever depois do ocorrido.</p>
-<p>E outra, não existe previsão de profécia, é chute. Se alguém fala que uma profecia está ocorrendo, ela está errada até se concretizar.</p></blockquote>
+<p>E outra, não existe previsão de profécia, é chute. Se alguém fala que uma profecia está ocorrendo, ela está errada até se concretizar.</p>
+</blockquote>
 <p>Enfim, da mesma forma que na economia, eu acredito que exista uma correção na própria <a href="https://brasilescola.uol.com.br/geografia/globalizacao.htm">globalização</a>. Que por algum acaso começou com a <a href="https://www.todamateria.com.br/revolucao-industrial/">revolução industrial</a>.</p>
 <p>As guerras mundiais 1ª e 2ª são uma forma de correção que é engatilhado pelo próprio <a href="https://maestrovirtuale.com/o-que-e-tribalismo-analisando-esse-fenomeno-social/">tribalismo</a>.</p>
 <p>Veja que tribalismo não é algo anormal em animais sociais.</p>
@@ -657,12 +666,14 @@ Candidato do partido D é de direita</p>
         <pubDate>Wed, 17 Sep 2025 14:09:04 GMT</pubDate>
         <description>&lt;p&gt;Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1 id=&#34;seres-humanos-no-geral-não-são-racionais&#34;&gt;Seres Humanos no Geral não são racionais&lt;/h1&gt;
 &lt;p&gt;Todo esse post no geral vem com essa máxima.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<p>Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.</p>
 <blockquote>
-<p>Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.</p></blockquote>
+<p>Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.</p>
+</blockquote>
 <h1 id="seres-humanos-no-geral-não-são-racionais">Seres Humanos no Geral não são racionais</h1>
 <p>Todo esse post no geral vem com essa máxima.</p>
 <p>Isso não é uma negação da racionalidade e sim que a maioria das decisões tomadas também são instintos, que de mesma forma são condicionados.</p>
@@ -687,14 +698,16 @@ Candidato do partido D é de direita</p>
 <h1 id="como-isso-se-relaciona-a-educação">Como isso se relaciona a educação</h1>
 <p>Escapando um pouco da discussão qual a melhor.</p>
 <blockquote>
-<p><strong>Opinião pessoal:</strong> Prefiro a tradicional</p></blockquote>
+<p><strong>Opinião pessoal:</strong> Prefiro a tradicional</p>
+</blockquote>
 <p>Todas se relacionam com o nível de autoridade que o pai tem em relação a seu filho.</p>
 <p>Na tradicional, o pai assume papel mais autoritário em relação ao filho.</p>
 <p>Na positiva, o pai assume um papel mais manipulativo em relação ao filho.</p>
 <p>Dando uma dualidade de opções e pedindo pro filho escolher qual lhe agrada melhor.</p>
 <blockquote>
 <p><strong>Exemplo</strong>
-Você prefere guardar os brinquedos e tomar banho ou tomar banho e ir dormir?</p></blockquote>
+Você prefere guardar os brinquedos e tomar banho ou tomar banho e ir dormir?</p>
+</blockquote>
 <p>Já a permissiva é um nome mais bonito para <em>indulgente</em>.</p>
 <p>No geral, a educação permissiva parte da premissa que você vai dar total autonomia para um incapaz se virar, acatando todas as ordens e regras dele.</p>
 <h2 id="porque-eu-prefiro-a-educação-tradicional">Porque eu prefiro a educação tradicional</h2>
@@ -707,7 +720,8 @@ Você prefere guardar os brinquedos e tomar banho ou tomar banho e ir dormir?</p
 <blockquote>
 <p>Garanto que vai poupar grana quando o salário chegar e você precisar ir com ela no supermercado.</p>
 <p><strong>Opcional:</strong> Você não tem a necessidade real de fazer isso, se quiser manter a criança em casa.
-Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p></blockquote>
+Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p>
+</blockquote>
 <ol start="2">
 <li><strong>Nada de telas até 8/10 anos</strong></li>
 </ol>
@@ -733,7 +747,8 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p></blockquote>
 <p>Apesar de que, tudo vai depender da sua capacidade como pai não ser super-protetor.</p>
 <blockquote>
 <p>Você como pai que já conhece o mundo e sabe quão pobre ele é, deve deixar seu filho rolar um pouquinho no barro, se sujar bastante e tentar se lavar.</p>
-<p>Este é a verdadeira paternidade, criar seu filho para que no momento de dificuldade ele ter certeza que pode procura - lo.</p></blockquote>
+<p>Este é a verdadeira paternidade, criar seu filho para que no momento de dificuldade ele ter certeza que pode procura - lo.</p>
+</blockquote>
 <p>Assim dito, o ponto mais importante é você como pai deve enforçar algumas coisas:</p>
 <ul>
 <li>Leitura</li>
@@ -746,7 +761,8 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p></blockquote>
 <p>E antes de qualquer dúvida razoável, eu já afirmo de primeira.</p>
 <blockquote>
 <p>O <strong>Batismo</strong> é o sacramento mais importante da igreja cristã. Valendo para os ortodoxos, protestantes ou os católicos em geral.</p>
-<p>Seria muito desrespeitoso da minha parte, colocar meu filho a ser batizado sem sua escolha. Para definir sua fé antes que de sua própria vontade, ele também a expresse.</p></blockquote>
+<p>Seria muito desrespeitoso da minha parte, colocar meu filho a ser batizado sem sua escolha. Para definir sua fé antes que de sua própria vontade, ele também a expresse.</p>
+</blockquote>
 <h2 id="escolaridade">Escolaridade</h2>
 <p>Não tem muito o que fazer aqui, a educação é a parte mais importante do desenvolvimento de uma criança e adolescente.</p>
 <p>O problema é quando correlacionamos a educação a uma motivação extrinseca e logo ela perde o sentido.</p>
@@ -795,7 +811,8 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p></blockquote>
         <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;
 &lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Historicamente, foi &lt;code&gt;Leonhard Euler&lt;/code&gt;, mesmo criador da identidade de Euler.&lt;/p&gt;
 &lt;p&gt;$$E^{i\pi} + 1 = 0$$&lt;/p&gt;
 &lt;p&gt;Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.&lt;/p&gt;
@@ -803,7 +820,8 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p></blockquote>
         <content:encoded><![CDATA[<h2 id="o-que-são-grafos">O que são Grafos?</h2>
 <p>Grafos são um ramo da matemática que estuda <em>relações</em> entre objetos pertencentes a um determinado conjunto.</p>
 <blockquote>
-<p>Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.</p></blockquote>
+<p>Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.</p>
+</blockquote>
 <p>Historicamente, foi <code>Leonhard Euler</code>, mesmo criador da identidade de Euler.</p>
 <p>$$E^{i\pi} + 1 = 0$$</p>
 <p>Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.</p>
