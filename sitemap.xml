@@ -2,12 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://foxtechword.github.io/tags/algoritmos/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/2025/10/algoritmos-duff-device-for-loop-unrolling/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/duff-device/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/estrutura-de-dados/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/</loc>
     <lastmod>2025-10-26T18:20:07-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://foxtechword.github.io/tags/loop-unroll/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/otimiza%C3%A7%C3%A3o/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/posts/</loc>
+    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/</loc>
     <lastmod>2025-10-26T18:20:07-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -47,16 +82,6 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://foxtechword.github.io/tags/</loc>
-    <lastmod>2025-10-08T15:08:13-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/algoritmos/</loc>
-    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://foxtechword.github.io/tags/algoritmos-de-busca/</loc>
     <lastmod>2025-10-01T15:40:08-03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -73,11 +98,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://foxtechword.github.io/tags/busca-em-profundidade/</loc>
-    <lastmod>2025-10-01T15:40:08-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/estrutura-de-dados/</loc>
     <lastmod>2025-10-01T15:40:08-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

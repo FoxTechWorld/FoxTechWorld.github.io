@@ -7,8 +7,76 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 27 Oct 2025 22:20:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 22:23:20 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Algoritmos: Duff device for loop unrolling</title>
+        <link>https://foxtechword.github.io/2025/10/algoritmos-duff-device-for-loop-unrolling/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/algoritmos-duff-device-for-loop-unrolling/</guid>
+        <pubDate>Sun, 26 Oct 2025 18:20:07 GMT</pubDate>
+        <description>&lt;h1 id=&#34;como-os-compiladores-conseguem-otimizar-loops&#34;&gt;Como os compiladores conseguem otimizar loops?&lt;/h1&gt;
+&lt;p&gt;A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.&lt;/p&gt;
+&lt;p&gt;E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1 id="como-os-compiladores-conseguem-otimizar-loops">Como os compiladores conseguem otimizar loops?</h1>
+<p>A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.</p>
+<p>E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">register</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>to, <span style="color:#f92672">*</span>from;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">register</span> <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> (n <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">8</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (n <span style="color:#f92672">%</span> <span style="color:#ae81ff">8</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">do</span> { <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>      <span style="color:#f92672">*</span>to <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>from<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">while</span> (<span style="color:#f92672">--</span>count <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Este pequeno frame é o <a href="https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Duffs-Device.html"><strong><em>Duff Device</em></strong></a> criado por <a href="https://en.wikipedia.org/wiki/Tom_Duff"><strong>Tom Duff</strong></a> em 1983.</p>
+<h2 id="o-que-é-o-desenrolamento-de-loops">O que é o desenrolamento de loops?</h2>
+<p>Loop Unrolling (ou desenrolamento de loop) é uma técnica de otimização onde o compilador duplica o corpo do loop várias vezes para reduzir o custo do controle de iteração.</p>
+<p>Em vez de checar a condição e incrementar o contador a cada passo, ele faz operações por iterações, diminuindo o número total de saltos no código.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>i){
+</span></span><span style="display:flex;"><span>    copia[i] <span style="color:#f92672">=</span> origem[i];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>se transforma em algo conceitualmente similar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>) {
+</span></span><span style="display:flex;"><span>    copia[i] <span style="color:#f92672">=</span> origem[i];
+</span></span><span style="display:flex;"><span>    copia[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> origem[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    copia[i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> origem[i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>    copia[i<span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> origem[i<span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Menos branches, mais instruções seguidas, mais chance de o processador aproveitar o pipeline e executar tudo de forma quase branchless, parecido com o que o <code>SIMD</code> faz.</p>
+<p>O Duff Device foi a primeira vez que alguém usou essa ideia manualmente, antes de os compiladores modernos fazerem isso sozinhos.</p>
+<p>É uma daquelas otimizações que parecem mágica até você perceber que o compilador só está tentando evitar o que humanos mais odeiam: repetições desnecessárias.</p>
+<h2 id="e-porque-isso-funciona-em-c">E porque isso funciona em C?</h2>
+<p>A lógica do Duff Device não é muito diferente de acessar vários elementos de um array de uma vez. Se copia e origem têm o mesmo tamanho, você consegue fazer a mesma operação em uma única iteração, processando múltiplas posições do vetor ao mesmo tempo. Isso reduz o overhead de controle do loop e deixa o processador mais livre para executar instruções em sequência, aumentando a eficiência geral.</p>
+<p>O <code>do-while</code> sozinho é simples, executa a iteração uma vez e faz o teste da condição garantindo pelo menos uma execução.</p>
+<p>O <code>switch</code> é um salto condicional que usa <a href="https://en.wikipedia.org/wiki/Branch_table">jump-table</a> para ter tempo de execução O(1).</p>
+<p>Agora, dentro de truque do <strong>Duff-Device</strong>: ele <strong>remove os breaks de propósito</strong> e coloca o <code>switch</code> <strong>dentro do do-while</strong>.</p>
+<p>Isso cria efeitos simultâneos:</p>
+<ol>
+<li>O <code>switch</code> escolhe em qual ponto do loop começar</li>
+<li>O <code>do-while</code> continua repetindo o bloco inteiro várias vezes até completar todas as iterações.</li>
+</ol>
+<p>Na prática, isso significa que você começa no case certo (alinhando as iterações que sobraram) e depois &ldquo;cai&rdquo; pelos demais cases sem saltos adicionais, repetindo tudo até terminar.</p>
+<p>Cada execução <code>do-while</code> processa vários elementos do array, e o switch inicial só garante que você comece na posição correta.</p>
+<h1 id="conclusão">Conclusão</h1>
+<p>Pode ser uma técnica útil em alguns casos, mas não na maioria.</p>
+<p>É feio, parece gambiarra e seu compilador quando passa as flags <code>-O3</code> ou <code>-funroll-loops</code> já adiciona os Duff-Devices automaticamente.</p>
+<p>Porém se você estiver estudando programação ou pelo menos otimização de código fonte, complexidade de algoritmos vale a pena dar uama revisada.</p>
+]]></content:encoded>
+        
+            <category>Algoritmos</category>
+            <category>Estrutura de Dados</category>
+            <category>Otimização</category>
+            <category>Duff Device</category>
+            <category>Loop Unroll</category>
+        
+      </item>
     
       <item>
         <title>Opinião: Design Patterns são um péssimo nome</title>
