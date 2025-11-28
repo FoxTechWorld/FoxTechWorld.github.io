@@ -2,6 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://foxtechword.github.io/tags/beos/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/haiku/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/operating-system/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/osdev/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/2025/11/osdev-o-multithread-perdido-pervasive-multithread/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/posts/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/programming/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://foxtechword.github.io/tags/</loc>
+    <lastmod>2025-11-28T12:31:28-03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://foxtechword.github.io/tags/algoritmos/</loc>
     <lastmod>2025-10-26T18:20:07-03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -22,27 +72,12 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://foxtechword.github.io/</loc>
-    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://foxtechword.github.io/tags/loop-unroll/</loc>
     <lastmod>2025-10-26T18:20:07-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://foxtechword.github.io/tags/otimiza%C3%A7%C3%A3o/</loc>
-    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/posts/</loc>
-    <lastmod>2025-10-26T18:20:07-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/</loc>
     <lastmod>2025-10-26T18:20:07-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -132,11 +167,6 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://foxtechword.github.io/tags/programming/</loc>
-    <lastmod>2025-09-23T14:08:26-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://foxtechword.github.io/tags/ruby/</loc>
     <lastmod>2025-09-23T14:08:26-03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -157,11 +187,6 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://foxtechword.github.io/tags/c&#43;&#43;/</loc>
-    <lastmod>2025-09-22T15:33:40-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://foxtechword.github.io/tags/cpp/</loc>
     <lastmod>2025-09-22T15:33:40-03:00</lastmod>
     <changefreq>daily</changefreq>
@@ -178,11 +203,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://foxtechword.github.io/tags/macosx/</loc>
-    <lastmod>2025-09-22T15:33:40-03:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://foxtechword.github.io/tags/osdev/</loc>
     <lastmod>2025-09-22T15:33:40-03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

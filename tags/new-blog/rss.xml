@@ -7,8 +7,66 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 27 Oct 2025 22:23:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Nov 2025 13:57:37 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Osdev: O multithread perdido - Pervasive Multithread</title>
+        <link>https://foxtechword.github.io/2025/11/osdev-o-multithread-perdido-pervasive-multithread/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/11/osdev-o-multithread-perdido-pervasive-multithread/</guid>
+        <pubDate>Fri, 28 Nov 2025 12:31:28 GMT</pubDate>
+        <description>&lt;p&gt;Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.&lt;/p&gt;
+&lt;h2 id=&#34;o-diferencial-do-beos--haiku&#34;&gt;O diferencial do BeOS / Haiku&lt;/h2&gt;
+&lt;p&gt;O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.</p>
+<h2 id="o-diferencial-do-beos--haiku">O diferencial do BeOS / Haiku</h2>
+<p>O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.</p>
+<p>Essa ênfase na responsividade ajuda a explicar decisões de projeto aparentemente simples — por exemplo, por que tratar a unidade de escalonamento como a thread em vez do processo — e prepara o terreno para entendermos o conceito que vem a seguir.</p>
+<h2 id="o-que-é-pervasive-multithread">O que é Pervasive Multithread</h2>
+<p>Pervasive Multithread é um modelo composto — kernel e runtime cooperam — em que o sistema trata a concorrência como algo onipresente: o scheduler opera por thread, há prioridades finas (tipicamente 0–120) e políticas que privilegiam latência e previsibilidade sobre o rendimento bruto.</p>
+<p>O resultado prático é que a aplicação vê threads leves com prioridades ajustáveis, e o kernel faz o mínimo necessário ao salvar/restaurar contexto, mantendo a máquina responsiva para cargas interativas.</p>
+<p>Com essa definição em mente, vale contrastar como o hardware moderno tenta aumentar paralelismo com técnicas como SMT — e por que essa camada física pode confundir as decisões de escalonamento quando não é considerada explicitamente.</p>
+<h2 id="por-que-smt-não-é-um-cpu--explicação-técnica">Por que SMT não é um “CPU” — explicação técnica</h2>
+<p>Simultaneous multithreading (SMT) cria múltiplas hardware threads dentro do mesmo núcleo físico. Essas hardware threads compartilham pipelines, unidades funcionais, níveis de cache e o mesmo domínio energético. Em particular:</p>
+<ul>
+<li>Compartilhamento de execution units: duas hardware threads podem disputar as mesmas ALUs, FPU e portas de memória.</li>
+<li>Contenção em caches: L1 e, em muitos designs, partes do L2/L3 são compartilhadas ou têm efeitos de conflito entre threads.</li>
+<li>Dependência de largura de banda e buffers internos: estruturas como reorder buffers e filas de load/store são limitadas por núcleo.</li>
+</ul>
+<p>Esses recursos compartilhados significam que duas hardware threads no mesmo núcleo não oferecem isolamento equivalente ao de dois núcleos físicos. Tratar cada hardware thread como uma CPU independente ignora dependências microarquiteturais e pode degradar throughput e previsibilidade ao induzir contenção e conflitos que o sistema não prevê.</p>
+<p>Em outras palavras: o escalonador que vê apenas &ldquo;CPUs lógicas&rdquo; perde contexto sobre contendas internas do núcleo — um fator crítico quando buscamos baixa latência e previsibilidade.</p>
+<h2 id="onde-os-schedulers-modernos-erram">Onde os schedulers modernos erram</h2>
+<p>Muitos escalonadores expõem cada hardware thread lógico como uma CPU separada (p. ex. quando <code>htop</code> mostra &ldquo;cores lógicos&rdquo;). Essa abstração facilita balanceamento de carga, mas apaga a topologia real: quando cargas pesadas são espalhadas por hardware threads de um mesmo núcleo, surgem colisões internas que reduzem performance por watt e aumentam a variabilidade de latência.</p>
+<p>O problema não é apenas teórico — medições mostram degradações em throughput e latência em cenários de mistura de cargas CPU-bound e latência-sensível quando o escalonador não considera afinidade por núcleo físico e partição de recursos.</p>
+<p>Por isso é importante que camadas de software acima do escalonador compreendam a topologia do processador ou que o próprio escalonador exponha políticas que evitem colocar cargas conflitantes em hardware threads do mesmo núcleo.</p>
+<h2 id="a-proposta-do-fkernel-consciência-de-topologia">A proposta do FKernel: consciência de topologia</h2>
+<p>No FKernel, a responsabilidade de lidar com essa complexidade é deslocada para camadas que entendem o perfil da carga. A ideia central é uma pipeline decidida antes do despacho para hardware threads:</p>
+<p>Green Threads → Multilevel Feedback Queue (MLFQ) → Pervasive Layer → Hardware Threads (SMT)</p>
+<p>Detalhes práticos:</p>
+<ul>
+<li>O MLFQ organiza e amostra comportamento das green threads para estimar sua sensibilidade à latência e ao throughput.</li>
+<li>A Pervasive Layer usa esse perfil para decidir mapeamentos: algumas execuções ocupam uma hardware thread sozinho (para evitar contenda), outras são pareadas com cargas complementares para aproveitar vazios da unidade funcional.</li>
+</ul>
+<p>Isso torna o SMT um recurso gerenciado — um &ldquo;acelerador&rdquo; que é usado conscientemente e não um substituto direto de um núcleo físico.</p>
+<p>Na prática, isso permite duas estratégias opostas: isolar workloads sensíveis à latência em hardware threads próprias, ou cooperar uma workload de alta utilização com outra complementar para maximizar uso de unidades funcionais sem bloquear latência crítica.</p>
+<h3 id="flag-o_hpc--atalho-para-throughput">Flag <code>O_HPC</code> — atalho para throughput</h3>
+<p>Para workloads puramente orientados a throughput, o desenvolvedor pode usar a flag <code>O_HPC</code>. Nesse modo, o caminho é encurtado: a aplicação solicita pinagem e afinidade mais agressivas (possivelmente com garantia de partição de cache L2/L3), sacrificando previsibilidade para ganhar rendimento bruto.</p>
+<p>Em resumo, <code>O_HPC</code> é uma exceção explícita ao modelo orientado a latência — uma forma de o desenvolvedor indicar que prefere rendimento bruto em vez de previsibilidade quando as medições justificam essa escolha.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Tratar hardware threads SMT como CPUs independentes é uma simplificação que não reflete a microarquitetura moderna: ela produz contenção interna, variabilidade de latência e desperdício de recursos. O FKernel propõe empurrar a complexidade para camadas que conhecem o perfil das cargas — MLFQ e Pervasive Layer — para mapear threads de forma consciente sobre a topologia real do processador.</p>
+<p>O ganho esperado é simples e direto: menor latência, interatividade consistente e uso mais eficiente de caches e unidades funcionais. Para cargas de throughput extremo, a flag <code>O_HPC</code> permite abrir mão dessa previsibilidade de propósito.</p>
+<p>Se você curte esse tipo de discussão ou quer acompanhar o desenvolvimento do FKernel, deixe um comentário, compartilhe como seu sistema lida com SMT ou sugira workloads para testarmos — medições práticas vão mostrar o impacto real, e eu pretendo publicar resultados em posts futuros.</p>
+<p>Dentre eles temos o <a href="https://en.wikipedia.org/wiki/BeOS">beOS</a> e seu sucessor <a href="https://www.haiku-os.org/">HaikuOS</a>.</p>
+]]></content:encoded>
+        
+            <category>Programming</category>
+            <category>Operating System</category>
+            <category>osdev</category>
+            <category>c&#43;&#43;</category>
+            <category>haiku</category>
+            <category>beos</category>
+        
+      </item>
     
       <item>
         <title>Algoritmos: Duff device for loop unrolling</title>
