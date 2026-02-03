@@ -7,7 +7,7 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Fri, 28 Nov 2025 13:57:37 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Feb 2026 23:51:52 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
@@ -79,7 +79,7 @@
         <content:encoded><![CDATA[<h1 id="como-os-compiladores-conseguem-otimizar-loops">Como os compiladores conseguem otimizar loops?</h1>
 <p>A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.</p>
 <p>E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">register</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>to, <span style="color:#f92672">*</span>from;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">register</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>to, <span style="color:#f92672">*</span>from;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">register</span> <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> (n <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">8</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (n <span style="color:#f92672">%</span> <span style="color:#ae81ff">8</span>) {
@@ -97,11 +97,11 @@
 <h2 id="o-que-é-o-desenrolamento-de-loops">O que é o desenrolamento de loops?</h2>
 <p>Loop Unrolling (ou desenrolamento de loop) é uma técnica de otimização onde o compilador duplica o corpo do loop várias vezes para reduzir o custo do controle de iteração.</p>
 <p>Em vez de checar a condição e incrementar o contador a cada passo, ele faz operações por iterações, diminuindo o número total de saltos no código.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>i){
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>i){
 </span></span><span style="display:flex;"><span>    copia[i] <span style="color:#f92672">=</span> origem[i];
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>se transforma em algo conceitualmente similar:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span>) {
 </span></span><span style="display:flex;"><span>    copia[i] <span style="color:#f92672">=</span> origem[i];
 </span></span><span style="display:flex;"><span>    copia[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> origem[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>];
 </span></span><span style="display:flex;"><span>    copia[i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> origem[i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>];
@@ -161,10 +161,10 @@
 </blockquote>
 <p>Obviamente, como um post antigo não vou dar muito trelo ainda mas, veja.</p>
 <p>O motivo de conseguirmos enxergar um iterator</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> mp : m_children){
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do anything
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="o-incomodo">O incomodo</h2>
 <p>Sendo absorvido por uma linguagem, mas nunca um MVC é simplesmente uma diferença de escopo.</p>
 <p>Uma coisa é você aprimorar a <strong>ergonomia da linguagem</strong> facilitando um método de escrita em detrimento de outro.</p>
@@ -220,7 +220,7 @@
         <description>&lt;h1 id=&#34;teoria-dos-conjuntos&#34;&gt;Teoria dos conjuntos&lt;/h1&gt;
 &lt;p&gt;Dentro da matemática temos os &lt;a href=&#34;https://www.todamateria.com.br/teoria-dos-conjuntos/&#34;&gt;&lt;strong&gt;Sets&lt;/strong&gt;&lt;/a&gt;, equivalente a conjuntos na teoria de conjuntos.&lt;/p&gt;
 &lt;p&gt;Também é um tipo de Python que você pode fazer para comprimir uma lista.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Exemplo em Python&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Exemplo em Python&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;my_list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(set(my_list))
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# {1, 2, 3}&lt;/span&gt;
@@ -232,7 +232,7 @@
         <content:encoded><![CDATA[<h1 id="teoria-dos-conjuntos">Teoria dos conjuntos</h1>
 <p>Dentro da matemática temos os <a href="https://www.todamateria.com.br/teoria-dos-conjuntos/"><strong>Sets</strong></a>, equivalente a conjuntos na teoria de conjuntos.</p>
 <p>Também é um tipo de Python que você pode fazer para comprimir uma lista.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Exemplo em Python</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Exemplo em Python</span>
 </span></span><span style="display:flex;"><span>my_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,]
 </span></span><span style="display:flex;"><span>print(set(my_list))
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># {1, 2, 3}</span>
@@ -283,7 +283,7 @@ G2 = {c, f, i}
 G3 = {e, g, j}
 G4 = {h}
 </code></pre><p>Caso fomos implementar o <strong>UnionFind</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(size)
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Inicializa cada elemento como seu próprio representante (pai)</span>
 </span></span><span style="display:flex;"><span>    @parent <span style="color:#f92672">=</span> Array<span style="color:#f92672">.</span>new(size) { <span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> i }
@@ -524,7 +524,7 @@ G4 = {h}
 <p>Ok, podemos concordar em algumas partes mas, isso não seria inevitavelmente ruim.</p>
 <p>Sim, C++ tem um monte de coisa, mas fugiria do ponto principal que é C++ dá contratos que structs sozinhas dificilmente conseguem.</p>
 <p>Pegue um exemplo do <code>SerenityOS</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> ErrorOr<span style="color:#f92672">&lt;</span>NonnullOwnPtr<span style="color:#f92672">&lt;</span>KBuffer<span style="color:#f92672">&gt;&gt;</span> try_create_with_size(StringView name,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> ErrorOr<span style="color:#f92672">&lt;</span>NonnullOwnPtr<span style="color:#f92672">&lt;</span>KBuffer<span style="color:#f92672">&gt;&gt;</span> try_create_with_size(StringView name,
 </span></span><span style="display:flex;"><span>size_t size,
 </span></span><span style="display:flex;"><span>Memory<span style="color:#f92672">::</span>Region<span style="color:#f92672">::</span>Access access <span style="color:#f92672">=</span> Memory<span style="color:#f92672">::</span>Region<span style="color:#f92672">::</span>Access<span style="color:#f92672">::</span>ReadWrite,
 </span></span><span style="display:flex;"><span>AllocationStrategy strategy <span style="color:#f92672">=</span> AllocationStrategy<span style="color:#f92672">::</span>Reserve){
@@ -537,7 +537,7 @@ G4 = {h}
 <p>Essa função try_create_with_size serve para criar um buffer de memória no kernel de um tamanho específico e lidar com possíveis erros de forma segura.</p>
 </blockquote>
 <p>Para termos o equivalente exato em C garantindo a mesma segurança seria necessária escrever dessa forma.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">try_create_with_size</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">try_create_with_size</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name,
 </span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">size_t</span> size,
 </span></span><span style="display:flex;"><span>                         MemoryAccess access,
 </span></span><span style="display:flex;"><span>                         AllocationStrategy strategy,
@@ -564,13 +564,13 @@ G4 = {h}
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>out_buffer <span style="color:#f92672">=</span> buffer;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// sucesso
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Ok, tivemos uma disparidade no tamanho, mas isso não significa nada no geral.</p>
 <p>Meu ponto defendido é que precisamos fazer muito mais código, que vai ser muito mais performático mas que vai resultar em um resultado muito menos seguro, e muito menos reusável no geral.</p>
 <p>Não ironicamente, muitos empresas incluindo a própria Apple usam o C++ em seus kernels.</p>
 <p>Mas não precisa ser o c++ inteiro e sim um subset chamado <a href="https://en.wikipedia.org/wiki/Embedded_C%2B%2B"><strong><em>embedded c++</em></strong></a>.</p>
 <h3 id="implementação-do-iokit">Implementação do IOKit</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">/*
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">/*
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Copyright (c) 1998-2000 Apple Computer, Inc. All rights reserved.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
@@ -600,9 +600,9 @@ G4 = {h}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#ifndef _IOKIT_IONVRAMCONTROLLER_H
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define _IOKIT_IONVRAMCONTROLLER_H
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;IOKit/IOService.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IONVRAMController</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> IOService
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	OSDeclareAbstractStructors(IONVRAMController);
