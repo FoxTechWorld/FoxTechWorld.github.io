@@ -7,8 +7,72 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 03 Feb 2026 01:26:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Feb 2026 01:28:50 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>programming: programação assistida por ai, usando ralph wiggum pra acelerar o desenvolvimento</title>
+        <link>https://foxtechword.github.io/2026/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2026/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</guid>
+        <pubDate>Mon, 02 Feb 2026 02:13:05 GMT</pubDate>
+        <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;No mundo moderno, não existe nada pior do que se defasar e pior ainda ficar travado por causa de &lt;em&gt;&lt;strong&gt;opinião sem embasamento&lt;/strong&gt;&lt;/em&gt;, obviamente eu dou opinião, pelo menos o suficiente para produzir os posts como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://foxtechworld.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/&#34;&gt;Como criar filhos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://foxtechworld.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/&#34;&gt;Brasil, a grande várzea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E alguns outros que ainda pretendo postar.&lt;/p&gt;
+&lt;p&gt;Porém, entretanto, todavia uma coisa que tenho pensado é no hype das AI e no novo modelo de desenvolvimento baseado em &lt;strong&gt;Ralph Willgum&lt;/strong&gt;&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<p>No mundo moderno, não existe nada pior do que se defasar e pior ainda ficar travado por causa de <em><strong>opinião sem embasamento</strong></em>, obviamente eu dou opinião, pelo menos o suficiente para produzir os posts como:</p>
+<ul>
+<li><a href="https://foxtechworld.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/">Como criar filhos</a></li>
+<li><a href="https://foxtechworld.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/">Brasil, a grande várzea</a></li>
+</ul>
+<p>E alguns outros que ainda pretendo postar.</p>
+<p>Porém, entretanto, todavia uma coisa que tenho pensado é no hype das AI e no novo modelo de desenvolvimento baseado em <strong>Ralph Willgum</strong></p>
+<p><img src="https://static.simpsonswiki.com/images/thumb/1/14/Ralph_Wiggum.png/345px-Ralph_Wiggum.png" alt="Ralph Wiggum   Wikisimpsons, the Simpsons Wiki"></p>
+<p>Para contextualizar, eu estava em um dia normal assistindo alguns vídeos no Freetube (o melhor frontend para youtuber que eu conheço) e encontrei ou melhor reencontrei um vídeo falando deste modelo de desenvolvimento e como já tinha instalado o Omarchy do DHH e testado o OpenCode que possui ferramentas gratuitas decidi testar no meu projeto de osdev, o <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
+<p>Em questão o vídeo que eu assisti foi</p>
+<!-- raw HTML omitted -->
+<h2 id="o-que-é-o-metodo-ralph-wiggum">O que é o metodo Ralph Wiggum</h2>
+<p>Basicamente é assumir que LLM é uma porra e usar força bruta + memória longa + pequenas tarefas para conseguir um resultado melhor, ambas as memórias são mantidas no sistema operacional do agente na forma de tasks em json e um prompt.</p>
+<p>Após isso colocamos um for-loop que deve infinitamente rodar lendo o prompt e atualizando as tasks.</p>
+<p>Para tarefas longas, tudo vira tarefas curtas que são infinitamente mais supportaveis de se fazer me um problema longo.</p>
+<blockquote>
+<p>Dividir e conquistar é a meta da programação</p>
+</blockquote>
+<h2 id="e-o-que-eu-pretendo-com-isso">E o que eu pretendo com isso?</h2>
+<p>O FKernel em seu modelo é essencialmente lindo, mas, é mantido por uma pessoa só &ldquo;eu&rdquo;.</p>
+<p>E o geral a programação tende a ter muito débito técnico quando não se sabe como atingir o que quer e meu processo de desenvolvimento é saber o que quero fazer em A mas não saber que preciso integrar a B.</p>
+<p>Então é necessário fazer uma reescrita ou uma refatoração, mesmo uma nova feature que seja maior que o projeto fica mais fácil de desenvolve - lo a longo prazo.</p>
+<p>Mesmo recursos ou práticas avançadas do FKernel.</p>
+<h2 id="porém-é-um-projeto-bsd-3-clause">Porém é um projeto BSD-3-Clause</h2>
+<p>Sendo um projeto aberto é normal se esperar contribuições, eu mesmo não tive, porém seria bom normalizar o processo para ficar automático para todos os desenvolvedores que quiserem contribuir usando obviamente modelos gratuitos.</p>
+<p>Particularmente neste kernel eu decidi fugir um pouco do mundo Unix Total e estou usando <strong>Lua</strong> como a única linguagem de script dentro do kernel.</p>
+<p>Vantagens e desvantagens a parte qualquer script de gerenciamento é normalizado em scripts no diretório <code>/Meta</code> e podemos dividir em pequenas libs em <code>/Meta/Lib</code>  reusáveis.</p>
+<p>Obviamente não dependendo de LuaRocks para gerenciar libs.</p>
+<p>Não pretendo explicar muito além de dizer que é uma prática irrecomendável, porém facilita o pipeline de qualquer pessoa que quiser contribuir.</p>
+<p>Baixar &gt; Ter o mínimo de dependencia externa &gt; Gerar o binário</p>
+<h2 id="funciona">Funciona?</h2>
+<p>Não é exatamente o claude-code então não consegui replicar perfeitamente o comportamento esperado, fora que os logs em si não contribuem muito ainda.</p>
+<p>Ou seja precisa de muito trabalho para ser 100% funcional da forma esperada, tirando isso.</p>
+<p>Acredito que o progresso e o resultado em si devam ser proveitosos no dia a dia quando estiver num ponto agradavel de uso.</p>
+<p>Bom em especial quando eu tiver grandes e chatas tasks de refatoração em especifico ou de implementação.</p>
+<h2 id="o-futuro-é-pica">O futuro é pica</h2>
+<p><img src="https://i.pinimg.com/736x/4c/ce/65/4cce6525d3c302e9bac2496991a7a321.jpg" alt="O futuro é pica"></p>
+<p>Com tudo isso dito, a única coisa que posso aguardar é um melhor futuro no desenvolvimento do meu kernel já que agora tarefas incrivelmente custosas em tempo pode ser executada não em menos tempo, mas em menos iteração manual. Rodou esqueceu e ele que se ajuste.</p>
+<p>Fora na subdivisão em tarefas menoras e o monitoramente continuo de como continuar a progressão</p>
+]]></content:encoded>
+        
+            <category>programming</category>
+            <category>osdev</category>
+            <category>ai</category>
+            <category>llm</category>
+            <category>vibe coding</category>
+            <category>ralph wiggum</category>
+        
+      </item>
     
       <item>
         <title>Osdev: O multithread perdido - Pervasive Multithread</title>
