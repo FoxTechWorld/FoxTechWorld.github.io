@@ -7,13 +7,13 @@
     <description>Tentando tornar o mundo menos pop e mais nérdico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 03 Feb 2026 01:33:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Feb 2026 04:01:47 GMT</lastBuildDate>
     <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
         <title>Osdev: programação assistida por ai, usando ralph wiggum pra acelerar o desenvolvimento</title>
-        <link>https://foxtechword.github.io/2026/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2026/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</guid>
+        <link>https://foxtechword.github.io/2026/02/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2026/02/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</guid>
         <pubDate>Mon, 02 Feb 2026 02:13:05 GMT</pubDate>
         <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;No mundo moderno, não existe nada pior do que se defasar e pior ainda ficar travado por causa de &lt;em&gt;&lt;strong&gt;opinião sem embasamento&lt;/strong&gt;&lt;/em&gt;, obviamente eu dou opinião, pelo menos o suficiente para produzir os posts como:&lt;/p&gt;
@@ -34,7 +34,10 @@
 <p><img src="https://static.simpsonswiki.com/images/thumb/1/14/Ralph_Wiggum.png/345px-Ralph_Wiggum.png" alt="Ralph Wiggum   Wikisimpsons, the Simpsons Wiki"></p>
 <p>Para contextualizar, eu estava em um dia normal assistindo alguns vídeos no Freetube (o melhor frontend para youtuber que eu conheço) e encontrei ou melhor reencontrei um vídeo falando deste modelo de desenvolvimento e como já tinha instalado o Omarchy do DHH e testado o OpenCode que possui ferramentas gratuitas decidi testar no meu projeto de osdev, o <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
 <p>Em questão o vídeo que eu assisti foi</p>
-<!-- raw HTML omitted -->
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rv756w-DHhk?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
 <h2 id="o-que-é-o-metodo-ralph-wiggum">O que é o metodo Ralph Wiggum</h2>
 <p>Basicamente é assumir que LLM é uma porra e usar força bruta + memória longa + pequenas tarefas para conseguir um resultado melhor, ambas as memórias são mantidas no sistema operacional do agente na forma de tasks em json e um prompt.</p>
 <p>Após isso colocamos um for-loop que deve infinitamente rodar lendo o prompt e atualizando as tasks.</p>
@@ -59,6 +62,7 @@
 <p>Ou seja precisa de muito trabalho para ser 100% funcional da forma esperada, tirando isso.</p>
 <p>Acredito que o progresso e o resultado em si devam ser proveitosos no dia a dia quando estiver num ponto agradavel de uso.</p>
 <p>Bom em especial quando eu tiver grandes e chatas tasks de refatoração em especifico ou de implementação.</p>
+<p><img src="images/wiggum_2026_02.png" alt="wiggum funcionando 2026/02/03"></p>
 <h2 id="o-futuro-é-pica">O futuro é pica</h2>
 <p><img src="https://i.pinimg.com/736x/4c/ce/65/4cce6525d3c302e9bac2496991a7a321.jpg" alt="O futuro é pica"></p>
 <p>Com tudo isso dito, a única coisa que posso aguardar é um melhor futuro no desenvolvimento do meu kernel já que agora tarefas incrivelmente custosas em tempo pode ser executada não em menos tempo, mas em menos iteração manual. Rodou esqueceu e ele que se ajuste.</p>
@@ -76,8 +80,8 @@
     
       <item>
         <title>Osdev: O multithread perdido - Pervasive Multithread</title>
-        <link>https://foxtechword.github.io/2025/11/osdev-o-multithread-perdido-pervasive-multithread/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/11/osdev-o-multithread-perdido-pervasive-multithread/</guid>
+        <link>https://foxtechword.github.io/2025/11/28/osdev-o-multithread-perdido-pervasive-multithread/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/11/28/osdev-o-multithread-perdido-pervasive-multithread/</guid>
         <pubDate>Fri, 28 Nov 2025 12:31:28 GMT</pubDate>
         <description>&lt;p&gt;Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.&lt;/p&gt;
 &lt;h2 id=&#34;o-diferencial-do-beos--haiku&#34;&gt;O diferencial do BeOS / Haiku&lt;/h2&gt;
@@ -134,8 +138,8 @@
     
       <item>
         <title>Algoritmos: Duff device for loop unrolling</title>
-        <link>https://foxtechword.github.io/2025/10/algoritmos-duff-device-for-loop-unrolling/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/algoritmos-duff-device-for-loop-unrolling/</guid>
+        <link>https://foxtechword.github.io/2025/10/26/algoritmos-duff-device-for-loop-unrolling/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/26/algoritmos-duff-device-for-loop-unrolling/</guid>
         <pubDate>Sun, 26 Oct 2025 18:20:07 GMT</pubDate>
         <description>&lt;h1 id=&#34;como-os-compiladores-conseguem-otimizar-loops&#34;&gt;Como os compiladores conseguem otimizar loops?&lt;/h1&gt;
 &lt;p&gt;A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.&lt;/p&gt;
@@ -202,8 +206,8 @@
     
       <item>
         <title>Opinião: Design Patterns são um péssimo nome</title>
-        <link>https://foxtechword.github.io/2025/10/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</guid>
+        <link>https://foxtechword.github.io/2025/10/08/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/08/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</guid>
         <pubDate>Wed, 08 Oct 2025 15:08:13 GMT</pubDate>
         <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;
 &lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href=&#34;https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/&#34;&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -278,8 +282,8 @@
     
       <item>
         <title>Algoritmos em Grafos: Estrutura de dados - Disjoint-Set</title>
-        <link>https://foxtechword.github.io/2025/10/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</guid>
+        <link>https://foxtechword.github.io/2025/10/01/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/01/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</guid>
         <pubDate>Wed, 01 Oct 2025 15:40:08 GMT</pubDate>
         <description>&lt;h1 id=&#34;teoria-dos-conjuntos&#34;&gt;Teoria dos conjuntos&lt;/h1&gt;
 &lt;p&gt;Dentro da matemática temos os &lt;a href=&#34;https://www.todamateria.com.br/teoria-dos-conjuntos/&#34;&gt;&lt;strong&gt;Sets&lt;/strong&gt;&lt;/a&gt;, equivalente a conjuntos na teoria de conjuntos.&lt;/p&gt;
@@ -460,8 +464,8 @@ G4 = {h}
     
       <item>
         <title>SaaS: A ferramenta certa na hora certa</title>
-        <link>https://foxtechword.github.io/2025/09/saas-a-ferramenta-certa-na-hora-certa/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/saas-a-ferramenta-certa-na-hora-certa/</guid>
+        <link>https://foxtechword.github.io/2025/09/23/saas-a-ferramenta-certa-na-hora-certa/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/23/saas-a-ferramenta-certa-na-hora-certa/</guid>
         <pubDate>Tue, 23 Sep 2025 14:08:26 GMT</pubDate>
         <description>&lt;p&gt;Bem a melhor ferramenta é aquela que resolve seu problema.&lt;/p&gt;
 &lt;p&gt;Isso é invariável em todo o mundo da programação.&lt;/p&gt;
@@ -535,8 +539,8 @@ G4 = {h}
     
       <item>
         <title>Osdev: Até onde dá para usar c++</title>
-        <link>https://foxtechword.github.io/2025/09/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</guid>
+        <link>https://foxtechword.github.io/2025/09/22/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/22/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</guid>
         <pubDate>Mon, 22 Sep 2025 15:33:40 GMT</pubDate>
         <description>&lt;p&gt;Estou desenvolvendo um &lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)&#34;&gt;kernel&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/KitsuneBSD/FKernel&#34;&gt;FKernel&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Para uso desktop em código x86_64.&lt;/p&gt;
@@ -733,8 +737,8 @@ E o FKernel com seu <strong>LibFK</strong>.</p>
     
       <item>
         <title>Opinião: Brasil a grande várzea</title>
-        <link>https://foxtechword.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</guid>
+        <link>https://foxtechword.github.io/2025/09/19/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/19/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</guid>
         <pubDate>Fri, 19 Sep 2025 12:16:04 GMT</pubDate>
         <description>&lt;p&gt;Até queria fazer um post recomendando mangás, manhwas&amp;hellip; mas, dado os eventos recentes.&lt;/p&gt;
 &lt;p&gt;Ocorrendo no inferno moderno a.k.a X, resolvi vir para cá reclamar para um cacete.&lt;/p&gt;
@@ -851,8 +855,8 @@ Candidato do partido D é de direita</p>
     
       <item>
         <title>Opinião: Não tenha crianças sem antes pensar nisso</title>
-        <link>https://foxtechword.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</guid>
+        <link>https://foxtechword.github.io/2025/09/17/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/17/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</guid>
         <pubDate>Wed, 17 Sep 2025 14:09:04 GMT</pubDate>
         <description>&lt;p&gt;Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -995,8 +999,8 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p>
     
       <item>
         <title>Algoritmos em Grafos: Busca em Largura e Busca em profundidade</title>
-        <link>https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid>
+        <link>https://foxtechword.github.io/2025/09/15/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/15/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid>
         <pubDate>Mon, 15 Sep 2025 08:24:12 GMT</pubDate>
         <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;
 &lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;
@@ -1145,8 +1149,8 @@ O(V+E)$$ mas, se aplicam a cenários distintos.</p>
     
       <item>
         <title>Bem Vindos ao FoxTechWorld!</title>
-        <link>https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/bem-vindos-ao-foxtechworld/</guid>
+        <link>https://foxtechword.github.io/2025/09/14/bem-vindos-ao-foxtechworld/</link>
+        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/14/bem-vindos-ao-foxtechworld/</guid>
         <pubDate>Sun, 14 Sep 2025 20:02:00 GMT</pubDate>
         <description>&lt;h2 id=&#34;bem-vindos-ao-foxtechworld&#34;&gt;Bem vindos ao FoxTechWorld&lt;/h2&gt;
 &lt;p&gt;Este é um pequeno blog feito para distribuir conteúdo &lt;a href=&#34;https://vaporhole.xyz/~kitsune&#34;&gt;nérdico&lt;/a&gt;.
