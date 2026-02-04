@@ -1,21 +1,4 @@
-<rss version="2.0"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>FoxTechWorld</title>
-    <link>https://foxtechword.github.io/</link>
-    <description>Tentando tornar o mundo menos pop e mais nérdico</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-BR</language>
-    <lastBuildDate>Wed, 04 Feb 2026 04:32:40 GMT</lastBuildDate>
-    <atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/>
-    
-      <item>
-        <title>Otaku: Power Scaling em Jujutsu Kaisen é quebrado, lide com isso</title>
-        <link>https://foxtechword.github.io/2026/02/03/otaku-power-scaling-em-jujutsu-kaisen-e-quebrado-lide-com-isso/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2026/02/03/otaku-power-scaling-em-jujutsu-kaisen-e-quebrado-lide-com-isso/</guid>
-        <pubDate>Tue, 03 Feb 2026 22:26:17 GMT</pubDate>
-        <description>&lt;h1 id=&#34;o-que-é-jujutsu-kaisen&#34;&gt;O que é Jujutsu Kaisen&lt;/h1&gt;
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FoxTechWorld</title><link>https://foxtechword.github.io/</link><description>Tentando tornar o mundo menos pop e mais nérdico</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Wed, 04 Feb 2026 05:18:51 GMT</lastBuildDate><atom:link href="https://foxtechword.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Otaku: Power Scaling em Jujutsu Kaisen é quebrado, lide com isso</title><link>https://foxtechword.github.io/2026/02/03/otaku-power-scaling-em-jujutsu-kaisen-e-quebrado-lide-com-isso/</link><guid isPermaLink="true">https://foxtechword.github.io/2026/02/03/otaku-power-scaling-em-jujutsu-kaisen-e-quebrado-lide-com-isso/</guid><pubDate>Tue, 03 Feb 2026 22:26:17 GMT</pubDate><description>&lt;h1 id="o-que-é-jujutsu-kaisen"&gt;O que é Jujutsu Kaisen&lt;/h1&gt;
 &lt;p&gt;Jujutsu Kaisen é uma série shounen onde acompanhamos a história de Yuji Itadori que tem como principal objetivo consumir e eliminar todos os dedos de Sukuna.&lt;/p&gt;
 &lt;p&gt;Para isso, ele tem que lidar com maldições, feiticeiros e usuários de maldições usando como poder a &amp;ldquo;Energia Amaldiçoada&amp;rdquo; e as &amp;ldquo;Técnicas Amaldiçoadas&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Dentre as &amp;ldquo;Técnicas Amaldiçoadas&amp;rdquo; existem alguns tipos:&lt;/p&gt;
@@ -26,8 +9,7 @@
 &lt;li&gt;&amp;ldquo;punho divergente&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;&amp;hellip; entre outras&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.pinimg.com/474x/b1/07/6f/b1076f2f77316c618ea0ef32db131cc5.jpg&#34; alt=&#34;Black Flash&#34;&gt;&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1 id="o-que-é-jujutsu-kaisen">O que é Jujutsu Kaisen</h1>
+&lt;p&gt;&lt;img src="https://i.pinimg.com/474x/b1/07/6f/b1076f2f77316c618ea0ef32db131cc5.jpg" alt="Black Flash"&gt;&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="o-que-é-jujutsu-kaisen">O que é Jujutsu Kaisen</h1>
 <p>Jujutsu Kaisen é uma série shounen onde acompanhamos a história de Yuji Itadori que tem como principal objetivo consumir e eliminar todos os dedos de Sukuna.</p>
 <p>Para isso, ele tem que lidar com maldições, feiticeiros e usuários de maldições usando como poder a &ldquo;Energia Amaldiçoada&rdquo; e as &ldquo;Técnicas Amaldiçoadas&rdquo;.</p>
 <p>Dentre as &ldquo;Técnicas Amaldiçoadas&rdquo; existem alguns tipos:</p>
@@ -84,29 +66,14 @@
 <p>Além de ter o problema dos cívis que não são correlacionados ao mundo e obviamente a necessidade do mundo.</p>
 <p>Fora isso, temos diversos conceitos sendo mostrados como o buraco negro da Yuki Tsukumo.</p>
 <p>Ou o teste dos mais fortes, Mahoraga.</p>
-]]></content:encoded>
-        
-            <category>Otaku</category>
-            <category>Jujutsu Kaisen</category>
-            <category>Power Scaling</category>
-            <category>Rant</category>
-        
-      </item>
-    
-      <item>
-        <title>Osdev: Programação assistida por ai, usando ralph wiggum pra acelerar o desenvolvimento</title>
-        <link>https://foxtechword.github.io/2026/02/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2026/02/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</guid>
-        <pubDate>Mon, 02 Feb 2026 02:13:05 GMT</pubDate>
-        <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+]]></content:encoded><category>Otaku</category><category>Jujutsu Kaisen</category><category>Power Scaling</category><category>Rant</category></item><item><title>Osdev: Programação assistida por ai, usando ralph wiggum pra acelerar o desenvolvimento</title><link>https://foxtechword.github.io/2026/02/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</link><guid isPermaLink="true">https://foxtechword.github.io/2026/02/02/programacao-assistida-por-ai-usando-ralph-wiggum-pra-acelerar-o-desenvolvimento/</guid><pubDate>Mon, 02 Feb 2026 02:13:05 GMT</pubDate><description>&lt;h2 id="introdução"&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;No mundo moderno, não existe nada pior do que se defasar e pior ainda ficar travado por causa de &lt;em&gt;&lt;strong&gt;opinião sem embasamento&lt;/strong&gt;&lt;/em&gt;, obviamente eu dou opinião, pelo menos o suficiente para produzir os posts como:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://foxtechworld.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/&#34;&gt;Como criar filhos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://foxtechworld.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/&#34;&gt;Brasil, a grande várzea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://foxtechworld.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/"&gt;Como criar filhos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://foxtechworld.github.io/2025/09/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/"&gt;Brasil, a grande várzea&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E alguns outros que ainda pretendo postar.&lt;/p&gt;
-&lt;p&gt;Porém, entretanto, todavia uma coisa que tenho pensado é no hype das AI e no novo modelo de desenvolvimento baseado em &lt;strong&gt;Ralph Willgum&lt;/strong&gt;&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+&lt;p&gt;Porém, entretanto, todavia uma coisa que tenho pensado é no hype das AI e no novo modelo de desenvolvimento baseado em &lt;strong&gt;Ralph Willgum&lt;/strong&gt;&lt;/p&gt;</description><content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
 <p>No mundo moderno, não existe nada pior do que se defasar e pior ainda ficar travado por causa de <em><strong>opinião sem embasamento</strong></em>, obviamente eu dou opinião, pelo menos o suficiente para produzir os posts como:</p>
 <ul>
 <li><a href="https://foxtechworld.github.io/2025/09/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/">Como criar filhos</a></li>
@@ -150,26 +117,9 @@
 <p><img src="https://i.pinimg.com/736x/4c/ce/65/4cce6525d3c302e9bac2496991a7a321.jpg" alt="O futuro é pica"></p>
 <p>Com tudo isso dito, a única coisa que posso aguardar é um melhor futuro no desenvolvimento do meu kernel já que agora tarefas incrivelmente custosas em tempo pode ser executada não em menos tempo, mas em menos iteração manual. Rodou esqueceu e ele que se ajuste.</p>
 <p>Fora na subdivisão em tarefas menoras e o monitoramente continuo de como continuar a progressão</p>
-]]></content:encoded>
-        
-            <category>programming</category>
-            <category>osdev</category>
-            <category>ai</category>
-            <category>llm</category>
-            <category>vibe coding</category>
-            <category>ralph wiggum</category>
-        
-      </item>
-    
-      <item>
-        <title>Osdev: O multithread perdido - Pervasive Multithread</title>
-        <link>https://foxtechword.github.io/2025/11/28/osdev-o-multithread-perdido-pervasive-multithread/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/11/28/osdev-o-multithread-perdido-pervasive-multithread/</guid>
-        <pubDate>Fri, 28 Nov 2025 12:31:28 GMT</pubDate>
-        <description>&lt;p&gt;Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.&lt;/p&gt;
-&lt;h2 id=&#34;o-diferencial-do-beos--haiku&#34;&gt;O diferencial do BeOS / Haiku&lt;/h2&gt;
-&lt;p&gt;O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.</p>
+]]></content:encoded><category>programming</category><category>osdev</category><category>ai</category><category>llm</category><category>vibe coding</category><category>ralph wiggum</category></item><item><title>Osdev: O multithread perdido - Pervasive Multithread</title><link>https://foxtechword.github.io/2025/11/28/osdev-o-multithread-perdido-pervasive-multithread/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/11/28/osdev-o-multithread-perdido-pervasive-multithread/</guid><pubDate>Fri, 28 Nov 2025 12:31:28 GMT</pubDate><description>&lt;p&gt;Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.&lt;/p&gt;
+&lt;h2 id="o-diferencial-do-beos--haiku"&gt;O diferencial do BeOS / Haiku&lt;/h2&gt;
+&lt;p&gt;O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.</p>
 <h2 id="o-diferencial-do-beos--haiku">O diferencial do BeOS / Haiku</h2>
 <p>O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.</p>
 <p>Essa ênfase na responsividade ajuda a explicar decisões de projeto aparentemente simples — por exemplo, por que tratar a unidade de escalonamento como a thread em vez do processo — e prepara o terreno para entendermos o conceito que vem a seguir.</p>
@@ -208,26 +158,9 @@
 <p>O ganho esperado é simples e direto: menor latência, interatividade consistente e uso mais eficiente de caches e unidades funcionais. Para cargas de throughput extremo, a flag <code>O_HPC</code> permite abrir mão dessa previsibilidade de propósito.</p>
 <p>Se você curte esse tipo de discussão ou quer acompanhar o desenvolvimento do FKernel, deixe um comentário, compartilhe como seu sistema lida com SMT ou sugira workloads para testarmos — medições práticas vão mostrar o impacto real, e eu pretendo publicar resultados em posts futuros.</p>
 <p>Dentre eles temos o <a href="https://en.wikipedia.org/wiki/BeOS">beOS</a> e seu sucessor <a href="https://www.haiku-os.org/">HaikuOS</a>.</p>
-]]></content:encoded>
-        
-            <category>Programming</category>
-            <category>Operating System</category>
-            <category>osdev</category>
-            <category>c&#43;&#43;</category>
-            <category>haiku</category>
-            <category>beos</category>
-        
-      </item>
-    
-      <item>
-        <title>Algoritmos: Duff device for loop unrolling</title>
-        <link>https://foxtechword.github.io/2025/10/26/algoritmos-duff-device-for-loop-unrolling/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/26/algoritmos-duff-device-for-loop-unrolling/</guid>
-        <pubDate>Sun, 26 Oct 2025 18:20:07 GMT</pubDate>
-        <description>&lt;h1 id=&#34;como-os-compiladores-conseguem-otimizar-loops&#34;&gt;Como os compiladores conseguem otimizar loops?&lt;/h1&gt;
+]]></content:encoded><category>Programming</category><category>Operating System</category><category>osdev</category><category>c++</category><category>haiku</category><category>beos</category></item><item><title>Algoritmos: Duff device for loop unrolling</title><link>https://foxtechword.github.io/2025/10/26/algoritmos-duff-device-for-loop-unrolling/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/10/26/algoritmos-duff-device-for-loop-unrolling/</guid><pubDate>Sun, 26 Oct 2025 18:20:07 GMT</pubDate><description>&lt;h1 id="como-os-compiladores-conseguem-otimizar-loops"&gt;Como os compiladores conseguem otimizar loops?&lt;/h1&gt;
 &lt;p&gt;A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.&lt;/p&gt;
-&lt;p&gt;E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1 id="como-os-compiladores-conseguem-otimizar-loops">Como os compiladores conseguem otimizar loops?</h1>
+&lt;p&gt;E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="como-os-compiladores-conseguem-otimizar-loops">Como os compiladores conseguem otimizar loops?</h1>
 <p>A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.</p>
 <p>E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">register</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>to, <span style="color:#f92672">*</span>from;
@@ -277,26 +210,10 @@
 <p>Pode ser uma técnica útil em alguns casos, mas não na maioria.</p>
 <p>É feio, parece gambiarra e seu compilador quando passa as flags <code>-O3</code> ou <code>-funroll-loops</code> já adiciona os Duff-Devices automaticamente.</p>
 <p>Porém se você estiver estudando programação ou pelo menos otimização de código fonte, complexidade de algoritmos vale a pena dar uama revisada.</p>
-]]></content:encoded>
-        
-            <category>Algoritmos</category>
-            <category>Estrutura de Dados</category>
-            <category>Otimização</category>
-            <category>Duff Device</category>
-            <category>Loop Unroll</category>
-        
-      </item>
-    
-      <item>
-        <title>Opinião: Design Patterns são um péssimo nome</title>
-        <link>https://foxtechword.github.io/2025/10/08/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/08/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</guid>
-        <pubDate>Wed, 08 Oct 2025 15:08:13 GMT</pubDate>
-        <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;
-&lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href=&#34;https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/&#34;&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post &lt;a href=&#34;https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns&#34;&gt;&lt;strong&gt;&lt;em&gt;Universe of Discourse&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1 id="introdução">Introdução</h1>
+]]></content:encoded><category>Algoritmos</category><category>Estrutura de Dados</category><category>Otimização</category><category>Duff Device</category><category>Loop Unroll</category></item><item><title>Opinião: Design Patterns são um péssimo nome</title><link>https://foxtechword.github.io/2025/10/08/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/10/08/opini%C3%A3o-design-patterns-s%C3%A3o-um-p%C3%A9ssimo-nome/</guid><pubDate>Wed, 08 Oct 2025 15:08:13 GMT</pubDate><description>&lt;h1 id="introdução"&gt;Introdução&lt;/h1&gt;
+&lt;p&gt;Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog &lt;strong&gt;&lt;em&gt;AkitaOnRails&lt;/em&gt;&lt;/strong&gt;. E em um de seus posts entitulados &lt;a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"&gt;&lt;em&gt;[ &lt;strong&gt;Design Patterns representam defeitos nas linguagens&lt;/strong&gt; ]&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post &lt;a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"&gt;&lt;strong&gt;&lt;em&gt;Universe of Discourse&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="introdução">Introdução</h1>
 <p>Um dos meus hobbies, atualmente está sendo ler posts antigos, como os do blog <strong><em>AkitaOnRails</em></strong>. E em um de seus posts entitulados <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em>[ <strong>Design Patterns representam defeitos nas linguagens</strong> ]</em></a></p>
 <p>Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
 <p>Mas, um dos pontos que me incomodou foi a mistura de Design do Software com Arquitetura de Software e a Ergonomia da linguagem.</p>
@@ -352,35 +269,18 @@
 <p>Agrupando tudo desde ergonomia da linguagem até arquitetura distribuida sob o mesmo nome vira um deserviço.</p>
 <p>A proposta de <strong>Adjetivar os patterns conforme seu domínio</strong> deve trazer clareza e distinguir melhor o que é arquitetural e o que é uma boa prática de implementação.</p>
 <p>Talvez ao reclassificar os padrões com base não apenas naquilo <code>que elas resolvem</code> mas também no <strong>lugar onde operam</strong>.</p>
-]]></content:encoded>
-        
-            <category>Design Patterns</category>
-            <category>Opinião</category>
-            <category>Programação</category>
-            <category>Desenvolvimento</category>
-            <category>Arquitetura de software</category>
-            <category>Design de Software</category>
-        
-      </item>
-    
-      <item>
-        <title>Algoritmos em Grafos: Estrutura de dados - Disjoint-Set</title>
-        <link>https://foxtechword.github.io/2025/10/01/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/10/01/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</guid>
-        <pubDate>Wed, 01 Oct 2025 15:40:08 GMT</pubDate>
-        <description>&lt;h1 id=&#34;teoria-dos-conjuntos&#34;&gt;Teoria dos conjuntos&lt;/h1&gt;
-&lt;p&gt;Dentro da matemática temos os &lt;a href=&#34;https://www.todamateria.com.br/teoria-dos-conjuntos/&#34;&gt;&lt;strong&gt;Sets&lt;/strong&gt;&lt;/a&gt;, equivalente a conjuntos na teoria de conjuntos.&lt;/p&gt;
+]]></content:encoded><category>Design Patterns</category><category>Opinião</category><category>Programação</category><category>Desenvolvimento</category><category>Arquitetura de software</category><category>Design de Software</category></item><item><title>Algoritmos em Grafos: Estrutura de dados - Disjoint-Set</title><link>https://foxtechword.github.io/2025/10/01/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/10/01/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</guid><pubDate>Wed, 01 Oct 2025 15:40:08 GMT</pubDate><description>&lt;h1 id="teoria-dos-conjuntos"&gt;Teoria dos conjuntos&lt;/h1&gt;
+&lt;p&gt;Dentro da matemática temos os &lt;a href="https://www.todamateria.com.br/teoria-dos-conjuntos/"&gt;&lt;strong&gt;Sets&lt;/strong&gt;&lt;/a&gt;, equivalente a conjuntos na teoria de conjuntos.&lt;/p&gt;
 &lt;p&gt;Também é um tipo de Python que você pode fazer para comprimir uma lista.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Exemplo em Python&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;my_list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(set(my_list))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# {1, 2, 3}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;o-que-são-disjoint-sets&#34;&gt;O que são Disjoint-Sets&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Exemplo em Python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;my_list &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;,]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(set(my_list))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# {1, 2, 3}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="o-que-são-disjoint-sets"&gt;O que são Disjoint-Sets&lt;/h2&gt;
 &lt;p&gt;E dentro dessa teoria, temos conjuntos disjuntos quando não tem elementos em comum entre eles.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://tse3.mm.bing.net/th/id/OIP.1gaGGShk2pNEuYVwth-nDwHaE5?rs=1&amp;amp;pid=ImgDetMain&amp;amp;o=7&amp;amp;rm=3&#34; alt=&#34;Example of Disjoint-Set&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://tse3.mm.bing.net/th/id/OIP.1gaGGShk2pNEuYVwth-nDwHaE5?rs=1&amp;amp;pid=ImgDetMain&amp;amp;o=7&amp;amp;rm=3" alt="Example of Disjoint-Set"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1 id="teoria-dos-conjuntos">Teoria dos conjuntos</h1>
+&lt;p&gt;Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="teoria-dos-conjuntos">Teoria dos conjuntos</h1>
 <p>Dentro da matemática temos os <a href="https://www.todamateria.com.br/teoria-dos-conjuntos/"><strong>Sets</strong></a>, equivalente a conjuntos na teoria de conjuntos.</p>
 <p>Também é um tipo de Python que você pode fazer para comprimir uma lista.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Exemplo em Python</span>
@@ -533,31 +433,13 @@ G4 = {h}
 </ul>
 <p>Então <strong>Union-Find</strong> é a estrutura certa.</p>
 <p>Simples, rápida e usada desde sistemas reais até algoritmos clássicos.</p>
-]]></content:encoded>
-        
-            <category>Algoritmos</category>
-            <category>Estrutura de Dados</category>
-            <category>Grafos</category>
-            <category>Algoritmos de Busca</category>
-            <category>Busca em Largura</category>
-            <category>Busca em Profundidade</category>
-            <category>Teoria dos Grafos</category>
-        
-      </item>
-    
-      <item>
-        <title>SaaS: A ferramenta certa na hora certa</title>
-        <link>https://foxtechword.github.io/2025/09/23/saas-a-ferramenta-certa-na-hora-certa/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/23/saas-a-ferramenta-certa-na-hora-certa/</guid>
-        <pubDate>Tue, 23 Sep 2025 14:08:26 GMT</pubDate>
-        <description>&lt;p&gt;Bem a melhor ferramenta é aquela que resolve seu problema.&lt;/p&gt;
+]]></content:encoded><category>Algoritmos</category><category>Estrutura de Dados</category><category>Grafos</category><category>Algoritmos de Busca</category><category>Busca em Largura</category><category>Busca em Profundidade</category><category>Teoria dos Grafos</category></item><item><title>SaaS: A ferramenta certa na hora certa</title><link>https://foxtechword.github.io/2025/09/23/saas-a-ferramenta-certa-na-hora-certa/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/09/23/saas-a-ferramenta-certa-na-hora-certa/</guid><pubDate>Tue, 23 Sep 2025 14:08:26 GMT</pubDate><description>&lt;p&gt;Bem a melhor ferramenta é aquela que resolve seu problema.&lt;/p&gt;
 &lt;p&gt;Isso é invariável em todo o mundo da programação.&lt;/p&gt;
 &lt;p&gt;No mundo do SaaS, sendo um desenvolvedor solo, você não deve confiar apenas em si mesmo.&lt;/p&gt;
 &lt;p&gt;Adicione Testes, testes, mais testes, enfie testes em tudo que puder e use softwares maduros.&lt;/p&gt;
 &lt;p&gt;Mas, ao mesmo tempo não deixe seu software parado no tempo.&lt;/p&gt;
-&lt;h2 id=&#34;as-duas-grandes-divisões&#34;&gt;As duas grandes divisões&lt;/h2&gt;
-&lt;p&gt;Dentro do mundo de software existem duas grandes divisões &lt;a href=&#34;https://roadmap.sh/frontend&#34;&gt;&lt;strong&gt;&lt;em&gt;frontend&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; e &lt;a href=&#34;https://roadmap.sh/backend&#34;&gt;&lt;strong&gt;&lt;em&gt;backend&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Bem a melhor ferramenta é aquela que resolve seu problema.</p>
+&lt;h2 id="as-duas-grandes-divisões"&gt;As duas grandes divisões&lt;/h2&gt;
+&lt;p&gt;Dentro do mundo de software existem duas grandes divisões &lt;a href="https://roadmap.sh/frontend"&gt;&lt;strong&gt;&lt;em&gt;frontend&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; e &lt;a href="https://roadmap.sh/backend"&gt;&lt;strong&gt;&lt;em&gt;backend&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description><content:encoded><![CDATA[<p>Bem a melhor ferramenta é aquela que resolve seu problema.</p>
 <p>Isso é invariável em todo o mundo da programação.</p>
 <p>No mundo do SaaS, sendo um desenvolvedor solo, você não deve confiar apenas em si mesmo.</p>
 <p>Adicione Testes, testes, mais testes, enfie testes em tudo que puder e use softwares maduros.</p>
@@ -607,25 +489,7 @@ G4 = {h}
 <p>No geral, a combinação ideal seria usar um <strong><em>backend</em></strong> em rails e um <strong><em>frontend</em></strong> em flutter.</p>
 <p>Para ter diversas plataformas e um backend sólido, caso precise de algo customizado, use um microsserviço da forma que achar melhor contanto que haja contratos fortes e testes.</p>
 <p>Jamais esqueça os testes.</p>
-]]></content:encoded>
-        
-            <category>programming</category>
-            <category>development</category>
-            <category>solo-dev</category>
-            <category>SaaS</category>
-            <category>ruby</category>
-            <category>flutter</category>
-            <category>go</category>
-            <category>javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>Osdev: Até onde dá para usar c++</title>
-        <link>https://foxtechword.github.io/2025/09/22/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/22/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</guid>
-        <pubDate>Mon, 22 Sep 2025 15:33:40 GMT</pubDate>
-        <description>&lt;p&gt;Estou desenvolvendo um &lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)&#34;&gt;kernel&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/KitsuneBSD/FKernel&#34;&gt;FKernel&lt;/a&gt;.&lt;/p&gt;
+]]></content:encoded><category>programming</category><category>development</category><category>solo-dev</category><category>SaaS</category><category>ruby</category><category>flutter</category><category>go</category><category>javascript</category></item><item><title>Osdev: Até onde dá para usar c++</title><link>https://foxtechword.github.io/2025/09/22/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/09/22/osdev-at%C3%A9-onde-d%C3%A1-para-usar-c/</guid><pubDate>Mon, 22 Sep 2025 15:33:40 GMT</pubDate><description>&lt;p&gt;Estou desenvolvendo um &lt;a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)"&gt;kernel&lt;/a&gt; chamado &lt;a href="https://github.com/KitsuneBSD/FKernel"&gt;FKernel&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Para uso desktop em código x86_64.&lt;/p&gt;
 &lt;p&gt;E lendo sobre algumas linguagens como &lt;strong&gt;&lt;em&gt;Rust&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;Zig&lt;/em&gt;&lt;/strong&gt; &amp;hellip;&lt;/p&gt;
 &lt;p&gt;Decidi fazer uma combinação de:&lt;/p&gt;
@@ -643,9 +507,8 @@ G4 = {h}
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust, e aquelas que são considerados &amp;ldquo;memory-safe&amp;rdquo;.&lt;/p&gt;
-&lt;h2 id=&#34;porque-não-usar-linguagens-memory-safe&#34;&gt;Porque não usar linguagens memory-safe?&lt;/h2&gt;
-&lt;p&gt;Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
+&lt;h2 id="porque-não-usar-linguagens-memory-safe"&gt;Porque não usar linguagens memory-safe?&lt;/h2&gt;
+&lt;p&gt;Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
 <p>Para uso desktop em código x86_64.</p>
 <p>E lendo sobre algumas linguagens como <strong><em>Rust</em></strong>, <strong><em>C</em></strong>, <strong><em>C++</em></strong>, <strong><em>Zig</em></strong> &hellip;</p>
 <p>Decidi fazer uma combinação de:</p>
@@ -806,29 +669,11 @@ E o FKernel com seu <strong>LibFK</strong>.</p>
 <p>Não que eu não use C obviamente, por baixo dos panos da LibFK eu implementei uma LibC bem simples com funções que eu teria que usar dentro do FKernel para algumas funções da LibFK.</p>
 <p>Mas enfim, se uma linguagem que você prefere usar por algum motivo de design ou simplesmente por ser a que você sabe, simplesmente use.</p>
 <p>Desde que não seja usar algo interpretado para fazer baixo nível, tá valendo tudo.</p>
-]]></content:encoded>
-        
-            <category>osdev</category>
-            <category>c&#43;&#43;</category>
-            <category>cpp</category>
-            <category>kernel</category>
-            <category>linux</category>
-            <category>windows</category>
-            <category>macosx</category>
-        
-      </item>
-    
-      <item>
-        <title>Opinião: Brasil a grande várzea</title>
-        <link>https://foxtechword.github.io/2025/09/19/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/19/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</guid>
-        <pubDate>Fri, 19 Sep 2025 12:16:04 GMT</pubDate>
-        <description>&lt;p&gt;Até queria fazer um post recomendando mangás, manhwas&amp;hellip; mas, dado os eventos recentes.&lt;/p&gt;
+]]></content:encoded><category>osdev</category><category>c++</category><category>cpp</category><category>kernel</category><category>linux</category><category>windows</category><category>macosx</category></item><item><title>Opinião: Brasil a grande várzea</title><link>https://foxtechword.github.io/2025/09/19/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/09/19/opini%C3%A3o-brasil-a-grande-v%C3%A1rzea/</guid><pubDate>Fri, 19 Sep 2025 12:16:04 GMT</pubDate><description>&lt;p&gt;Até queria fazer um post recomendando mangás, manhwas&amp;hellip; mas, dado os eventos recentes.&lt;/p&gt;
 &lt;p&gt;Ocorrendo no inferno moderno a.k.a X, resolvi vir para cá reclamar para um cacete.&lt;/p&gt;
 &lt;p&gt;Já aviso que vai ter muita generalização aqui, é muito mais fácil juntar tudo do que contar parte por parte separado.&lt;/p&gt;
-&lt;h1 id=&#34;a-grande-burrada&#34;&gt;A grande burrada&lt;/h1&gt;
-&lt;p&gt;Politicamente o mundo está um inferno real, não falo de alguns ou outros países mas, de todo mundo globalizado.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Até queria fazer um post recomendando mangás, manhwas&hellip; mas, dado os eventos recentes.</p>
+&lt;h1 id="a-grande-burrada"&gt;A grande burrada&lt;/h1&gt;
+&lt;p&gt;Politicamente o mundo está um inferno real, não falo de alguns ou outros países mas, de todo mundo globalizado.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Até queria fazer um post recomendando mangás, manhwas&hellip; mas, dado os eventos recentes.</p>
 <p>Ocorrendo no inferno moderno a.k.a X, resolvi vir para cá reclamar para um cacete.</p>
 <p>Já aviso que vai ter muita generalização aqui, é muito mais fácil juntar tudo do que contar parte por parte separado.</p>
 <h1 id="a-grande-burrada">A grande burrada</h1>
@@ -924,30 +769,12 @@ Candidato do partido D é de direita</p>
 <p>Então, ou entramos em extinção silenciosa, ou entramos em guerra.</p>
 <p>O futuro é medonho.</p>
 <p>Enfim, espero que tenha gostado deste post, muito obrigado.</p>
-]]></content:encoded>
-        
-            <category>opinião</category>
-            <category>politica</category>
-            <category>brasil</category>
-            <category>futuro</category>
-            <category>passado</category>
-            <category>esquerda</category>
-            <category>direita</category>
-        
-      </item>
-    
-      <item>
-        <title>Opinião: Não tenha crianças sem antes pensar nisso</title>
-        <link>https://foxtechword.github.io/2025/09/17/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/17/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</guid>
-        <pubDate>Wed, 17 Sep 2025 14:09:04 GMT</pubDate>
-        <description>&lt;p&gt;Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.&lt;/p&gt;
+]]></content:encoded><category>opinião</category><category>politica</category><category>brasil</category><category>futuro</category><category>passado</category><category>esquerda</category><category>direita</category></item><item><title>Opinião: Não tenha crianças sem antes pensar nisso</title><link>https://foxtechword.github.io/2025/09/17/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/09/17/opini%C3%A3o-n%C3%A3o-tenha-crian%C3%A7as-sem-antes-pensar-nisso/</guid><pubDate>Wed, 17 Sep 2025 14:09:04 GMT</pubDate><description>&lt;p&gt;Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;seres-humanos-no-geral-não-são-racionais&#34;&gt;Seres Humanos no Geral não são racionais&lt;/h1&gt;
-&lt;p&gt;Todo esse post no geral vem com essa máxima.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.</p>
+&lt;h1 id="seres-humanos-no-geral-não-são-racionais"&gt;Seres Humanos no Geral não são racionais&lt;/h1&gt;
+&lt;p&gt;Todo esse post no geral vem com essa máxima.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Salve pessoal, dessa vez decidi sair um pouco do mundo da programação e colocar um pouco de opinião baseada em dados sobre psicologia e antropologia relacionado em como criar crianças.</p>
 <blockquote>
 <p>Inicialmente, eu gostaria de dizer que isso é um post de opinião e que qualquer decisão tomada é exclusivamente baseada na sua decisão como pai. Ou seja, leia isso com uma quantidade saudável de sal.</p>
 </blockquote>
@@ -1067,25 +894,7 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p>
 <li><a href="https://www.amazon.com.br/Teoria-Apego-Fundamentos-Pesquisas-Implica%C3%A7%C3%B5es/dp/8570740115/ref=sr_1_3?adgrpid=78637041982&amp;dib=eyJ2IjoiMSJ9.StdOasvrN1f3Lm8WtD6g7reE4leloRYX_8Qwmq8hWjV9tY-4fifGdTqtCQYPSataO2DIWChaxZV1g7lItAS7ugUq1fKgbcIi0NI26OqBwHT0m8uMMTF5brujiTkZwtd3XAeZMN3OznnFZtbxCzGOUTyHUvZr_pmw61HIfVnEeM-Dy260ohSBQJxOifRoBEXkRniGeO6AAEEeUhxnLmgfi1MNgJm1EvMPT7rA2_fbQfwyQ6ffBMb47VIZp5fA3JjWSOAlBpCKaHVwc70YJ1okpgDn7IOe_bW83JBUErHHyD4.okEzQBW08DjDlPHUJ57P9hyP9AiqQrfCeOhojvOCwSY&amp;dib_tag=se&amp;hvadid=425954655564&amp;hvdev=c&amp;hvlocphy=9074122&amp;hvnetw=g&amp;hvqmt=b&amp;hvrand=3798358303515855803&amp;hvtargid=kwd-803697528883&amp;hydadcr=5658_11235231&amp;keywords=john+bowlby+teoria+do+apego&amp;mcid=af9f2e17577f3e93b8e09e226e06755b&amp;qid=1758139544&amp;sr=8-3&amp;ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Teoria do Apego</a></li>
 <li><a href="https://www.amazon.com.br/Disciplina-sem-drama-desenvolvimento-comportamento/dp/8584441581/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=2A9QU200SB68V&amp;dib=eyJ2IjoiMSJ9.QJ1tvHilIubTJcFe_835Cecba96-TYp3Ni1FISvRsn8sx0QDzwVLFzfzbqXKr64H.aDMzE-MouDbLP7M-sY6YK-HNutr8EZBUkxa5BNJOG3c&amp;dib_tag=se&amp;keywords=Disciplina+sem+lagrimas&amp;qid=1758139597&amp;sprefix=disciplina+sem+lagrima%2Caps%2C181&amp;sr=8-1&amp;ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Disciplina Sem Drama</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>opinião</category>
-            <category>educação</category>
-            <category>educação permissiva</category>
-            <category>educação positiva</category>
-            <category>educação tradicional</category>
-            <category>internet</category>
-            <category>imediatismo</category>
-            <category>mundo moderno</category>
-        
-      </item>
-    
-      <item>
-        <title>Algoritmos em Grafos: Busca em Largura e Busca em profundidade</title>
-        <link>https://foxtechword.github.io/2025/09/15/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/15/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid>
-        <pubDate>Mon, 15 Sep 2025 08:24:12 GMT</pubDate>
-        <description>&lt;h2 id=&#34;o-que-são-grafos&#34;&gt;O que são Grafos?&lt;/h2&gt;
+]]></content:encoded><category>opinião</category><category>educação</category><category>educação permissiva</category><category>educação positiva</category><category>educação tradicional</category><category>internet</category><category>imediatismo</category><category>mundo moderno</category></item><item><title>Algoritmos em Grafos: Busca em Largura e Busca em profundidade</title><link>https://foxtechword.github.io/2025/09/15/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/09/15/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid><pubDate>Mon, 15 Sep 2025 08:24:12 GMT</pubDate><description>&lt;h2 id="o-que-são-grafos"&gt;O que são Grafos?&lt;/h2&gt;
 &lt;p&gt;Grafos são um ramo da matemática que estuda &lt;em&gt;relações&lt;/em&gt; entre objetos pertencentes a um determinado conjunto.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.&lt;/p&gt;
@@ -1093,8 +902,7 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p>
 &lt;p&gt;Historicamente, foi &lt;code&gt;Leonhard Euler&lt;/code&gt;, mesmo criador da identidade de Euler.&lt;/p&gt;
 &lt;p&gt;$$E^{i\pi} + 1 = 0$$&lt;/p&gt;
 &lt;p&gt;Publicou em 1736 um artigo sobre o problema das sete pontes de Königsberg.&lt;/p&gt;
-&lt;p&gt;E este foi considerado o ponto de partida da teoria dos grafos.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h2 id="o-que-são-grafos">O que são Grafos?</h2>
+&lt;p&gt;E este foi considerado o ponto de partida da teoria dos grafos.&lt;/p&gt;</description><content:encoded><![CDATA[<h2 id="o-que-são-grafos">O que são Grafos?</h2>
 <p>Grafos são um ramo da matemática que estuda <em>relações</em> entre objetos pertencentes a um determinado conjunto.</p>
 <blockquote>
 <p>Você pode pensar por exemplo que $${a, b}$$ é um grafo que leva de a para b.</p>
@@ -1218,29 +1026,12 @@ Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p>
 O(V+E)$$ mas, se aplicam a cenários distintos.</p>
 <p>E devem ser tratados com cautela para não escolher a pior opção por puro achismo.</p>
 <p>Ademas, espero que tenham gostado do post e valeu</p>
-]]></content:encoded>
-        
-            <category>Algoritmos</category>
-            <category>Estrutura de Dados</category>
-            <category>Grafos</category>
-            <category>Algoritmos de Busca</category>
-            <category>Busca em Largura</category>
-            <category>Busca em Profundidade</category>
-            <category>Teoria dos Grafos</category>
-        
-      </item>
-    
-      <item>
-        <title>Bem Vindos ao FoxTechWorld!</title>
-        <link>https://foxtechword.github.io/2025/09/14/bem-vindos-ao-foxtechworld/</link>
-        <guid isPermaLink="true">https://foxtechword.github.io/2025/09/14/bem-vindos-ao-foxtechworld/</guid>
-        <pubDate>Sun, 14 Sep 2025 20:02:00 GMT</pubDate>
-        <description>&lt;h2 id=&#34;bem-vindos-ao-foxtechworld&#34;&gt;Bem vindos ao FoxTechWorld&lt;/h2&gt;
-&lt;p&gt;Este é um pequeno blog feito para distribuir conteúdo &lt;a href=&#34;https://vaporhole.xyz/~kitsune&#34;&gt;nérdico&lt;/a&gt;.
+]]></content:encoded><category>Algoritmos</category><category>Estrutura de Dados</category><category>Grafos</category><category>Algoritmos de Busca</category><category>Busca em Largura</category><category>Busca em Profundidade</category><category>Teoria dos Grafos</category></item><item><title>Bem Vindos ao FoxTechWorld!</title><link>https://foxtechword.github.io/2025/09/14/bem-vindos-ao-foxtechworld/</link><guid isPermaLink="true">https://foxtechword.github.io/2025/09/14/bem-vindos-ao-foxtechworld/</guid><pubDate>Sun, 14 Sep 2025 20:02:00 GMT</pubDate><description>&lt;h2 id="bem-vindos-ao-foxtechworld"&gt;Bem vindos ao FoxTechWorld&lt;/h2&gt;
+&lt;p&gt;Este é um pequeno blog feito para distribuir conteúdo &lt;a href="https://vaporhole.xyz/~kitsune"&gt;nérdico&lt;/a&gt;.
 Através da Grande Rede Mundial de computadores.&lt;/p&gt;
-&lt;h3 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu?&lt;/h3&gt;
+&lt;h3 id="quem-sou-eu"&gt;Quem sou eu?&lt;/h3&gt;
 &lt;p&gt;Meu nome é Arthur tenho no momento da criação deste post 23 anos.&lt;/p&gt;
-&lt;p&gt;Sou um estudante de Ciências da Computação na &lt;a href=&#34;https://en.wikipedia.org/wiki/Federal_University_of_Lavras&#34;&gt;Universidade Federal de Lavras&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sou um estudante de Ciências da Computação na &lt;a href="https://en.wikipedia.org/wiki/Federal_University_of_Lavras"&gt;Universidade Federal de Lavras&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Tenho curiosidade em diversos assuntos, então você provavelmente vai me ver falando de assuntos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Otaku&lt;/li&gt;
@@ -1254,8 +1045,7 @@ Através da Grande Rede Mundial de computadores.&lt;/p&gt;
 &lt;li&gt;Economia&lt;/li&gt;
 &lt;li&gt;Politica&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;hellip; e por ai vai.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h2 id="bem-vindos-ao-foxtechworld">Bem vindos ao FoxTechWorld</h2>
+&lt;p&gt;&amp;hellip; e por ai vai.&lt;/p&gt;</description><content:encoded><![CDATA[<h2 id="bem-vindos-ao-foxtechworld">Bem vindos ao FoxTechWorld</h2>
 <p>Este é um pequeno blog feito para distribuir conteúdo <a href="https://vaporhole.xyz/~kitsune">nérdico</a>.
 Através da Grande Rede Mundial de computadores.</p>
 <h3 id="quem-sou-eu">Quem sou eu?</h3>
@@ -1276,14 +1066,4 @@ Através da Grande Rede Mundial de computadores.</p>
 </ul>
 <p>&hellip; e por ai vai.</p>
 <p>Enfim, bem vindos a este novo começo.</p>
-]]></content:encoded>
-        
-            <category>Bem Vindos</category>
-            <category>First Post</category>
-            <category>New Blog</category>
-            <category>My First Blog</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+]]></content:encoded><category>Bem Vindos</category><category>First Post</category><category>New Blog</category><category>My First Blog</category></item></channel></rss>
