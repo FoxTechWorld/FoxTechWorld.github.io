@@ -1,4 +1,197 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FoxTechWorld</title><link>https://foxtechworld.github.io/</link><description>Tentando tornar o mundo menos pop e mais nérdico</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Fri, 13 Feb 2026 00:35:16 GMT</lastBuildDate><atom:link href="https://foxtechworld.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Um jornada de reforço, planos para 2026</title><link>https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/</link><guid isPermaLink="true">https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/</guid><pubDate>Fri, 13 Feb 2026 03:00:22 GMT</pubDate><description>&lt;h1 id="o-tempo-passa"&gt;O tempo passa&lt;/h1&gt;
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FoxTechWorld</title><link>https://foxtechworld.github.io/</link><description>Tentando tornar o mundo menos pop e mais nérdico</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Sat, 14 Feb 2026 04:59:49 GMT</lastBuildDate><atom:link href="https://foxtechworld.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Organizando meu estudos com o obsidian</title><link>https://foxtechworld.github.io/organizando-meu-estudos-com-o-obsidian/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizando-meu-estudos-com-o-obsidian/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 GMT</pubDate><description>&lt;h1 id="e-como-vou-estudar"&gt;E como vou estudar?&lt;/h1&gt;
+&lt;p&gt;Pois é, para alguem que falou que ia demorar fazer mais posts este ano, cá estou eu de novo.&lt;/p&gt;
+&lt;p&gt;Dessa vez, em complemento o meu post anterior &lt;a href="https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/"&gt;Um jornada de reforço, planos para 2026&lt;/a&gt; onde eu prometi que o ano seria mais lento. Mostrando como estou configurando o meu obsidian para estudar.&lt;/p&gt;
+&lt;p&gt;Antes de mais nada, estudo é uma mistura de metodo e disciplina para memorizar e memorizar o entendimento da memória e os resultados de certas ações, formulas ou ocorrências.&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="e-como-vou-estudar">E como vou estudar?</h1>
+<p>Pois é, para alguem que falou que ia demorar fazer mais posts este ano, cá estou eu de novo.</p>
+<p>Dessa vez, em complemento o meu post anterior <a href="https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/">Um jornada de reforço, planos para 2026</a> onde eu prometi que o ano seria mais lento. Mostrando como estou configurando o meu obsidian para estudar.</p>
+<p>Antes de mais nada, estudo é uma mistura de metodo e disciplina para memorizar e memorizar o entendimento da memória e os resultados de certas ações, formulas ou ocorrências.</p>
+<p>Isso claro, na forma mais bruta do que é estudar. Então quando seu professor te criticar por memórizar a formula só diga isso:</p>
+<p>&ldquo;Se eu não memorizar, como vou entender e por consequência aprender&rdquo;.</p>
+<p>Enfim, em muitos casos, existem diversas tecnicas e formas de se aprender algo.</p>
+<h2 id="meu-obsidian">Meu Obsidian</h2>
+<p>Eu particularmente decidi adotar o zettelkasten que é perfeito para se combinar com o obsidian.</p>
+<p><img src="https://i.pinimg.com/originals/f0/38/d1/f038d1a12df70cb5c87842bf4737098d.png" alt="Obsidian   Sharpen Your Thinking with the Best Note Taking App"></p>
+<p>Mas obviamente não de forma crua como está, então eu adicionei alguns plugins como:</p>
+<ul>
+<li>Advanced Canvas</li>
+<li>Dataview</li>
+<li>Iconize</li>
+<li>Tag Wrangler</li>
+<li>Templater</li>
+<li>Escalidraw</li>
+<li>Omnisearch</li>
+</ul>
+<p>Coisinhas simples que vão cobrir 80% do que você precisa estudar fora que assim você ligar conteudos de forma muito mais interessante do que antes.</p>
+<p>E adicionei também alguns diretórios:</p>
+<p>00 - Assets</p>
+<p>01 - Referencias</p>
+<p>02 - Permanentes</p>
+<p>03 - Map of Contents</p>
+<p>xx - Escalidraw</p>
+<p>xx é usado para representar sem valor númerico aqui</p>
+<p>Mas, a coisa mais importante disso tudo está sendo encontrada em Assets/_Templates</p>
+<p>Que sim, são os templates do projeto</p>
+<ul>
+<li>Nota MOC -&gt; Lê se Nota Mapa de Conteúdo</li>
+<li>Nota Permanente</li>
+<li>Nota Referencia</li>
+</ul>
+<p>Aliás, dica importante</p>
+<blockquote>
+<p>Dentro do seu obsidian, vá nas configurações do templater e em template folders location coloque como: 00 - Assets/_Templates</p>
+<p>Isso evita que o mesmo sugira outras notas como seu templates de notas.</p>
+</blockquote>
+<p>Bom, a ideia é simples:</p>
+<p>Tudo que eu ler e for útil para algo vai virar uma <code>Referência</code></p>
+<blockquote>
+<p>Depois que a referência for feita, ela não pode mais ser editada, somente para alguma revisão ou em nova versão v2.</p>
+</blockquote>
+<p>Lemos a refência e transformamos os insights em versões permanentes cuja ideia é ter:</p>
+<ul>
+<li>Argumento Central</li>
+<li>Resumo do que ocorreu</li>
+<li>Conexões com outras notas</li>
+<li>Link para as referencias originais</li>
+</ul>
+<blockquote>
+<p>Pode usar o Dataview para checar se já existe algum permanente deste tipo antes de criar duplicatas</p>
+</blockquote>
+<p>Por fim atualizamos o MOC da área correspondente listando ou linkando todos os permanentes de suas respectivas areas ou subáreas, alias adicione quantas quiser.</p>
+<p>Se houver alguma dúvida ou questão em aberto você pode colocar em <strong>questões em aberto</strong></p>
+<p>Agora, o mais importante é o processo de revisão, sempre releia as permanentes antigas e atualize o MOC se surgirem novas conexões.</p>
+<h3 id="templates">Templates</h3>
+<h4 id="nota-referencia">Nota Referencia</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>tipo: referencia
+</span></span><span style="display:flex;"><span>area:
+</span></span><span style="display:flex;"><span>fonte:
+</span></span><span style="display:flex;"><span>autor:
+</span></span><span style="display:flex;"><span>link:
+</span></span><span style="display:flex;"><span>created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span style="display:flex;"><span>status:
+</span></span><span style="display:flex;"><span>tags:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> nota-referencia
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># &lt;% tp.system.prompt() %&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Resumo bruto
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Pontos Importantes
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Ideias Provocadas
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Possíveis Permanentes
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span></code></pre></div><p>Yeah, bem simples para um template, o uso do <code>&lt;%tp.system.prompt%&gt;</code> permite que você crie um titulo baseado diretamente no prompt que o usuário colocar e dentro de uma referencia onde podemos ter diversas referencias para um único permanente.</p>
+<p>Além disso, dentro do template temos diversas própriedades como:</p>
+<p><code>area</code>-&gt; Categoria do conteúdo</p>
+<p><code>fonte/autor/link</code> -&gt; informações da fonte original</p>
+<p><code>resumo bruto</code> -&gt; sintese direta da fonte</p>
+<p><code>pontos importantes</code> -&gt; destaque de ideias que podem se tornar permanentes</p>
+<p><code>ideias provocadas</code> -&gt; insights iniciais que surgem ao ler a fonte</p>
+<p><code>Possiveis Permanentes</code> -&gt; conceitos que poderão virar nota consolidada.</p>
+<h4 id="nota-permanente">Nota Permanente</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>tipo: permanente
+</span></span><span style="display:flex;"><span>area:
+</span></span><span style="display:flex;"><span>status: rascunho
+</span></span><span style="display:flex;"><span>origin:
+</span></span><span style="display:flex;"><span>created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span style="display:flex;"><span>updated:
+</span></span><span style="display:flex;"><span>conexões:
+</span></span><span style="display:flex;"><span>referencias:
+</span></span><span style="display:flex;"><span>tags:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> nota-permanente
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># &lt;% tp.file.title() %&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Explique a ideia com suas palavras.
+</span></span><span style="display:flex;"><span>Seja específico
+</span></span><span style="display:flex;"><span>Evite copiar a fonte.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Argumento Central
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>Diferente da nota referencias, aqui pegamos o titulo literal do arquivo usado <code>&lt;% tp.file.title() %&gt;</code> para gerar o título do modelo permanente.</p>
+<p>Junto com algums campos como:</p>
+<p><code>area</code> -&gt; precisa ser a mesma da referência relacionada</p>
+<p><code>origin</code> -&gt; referência de origem</p>
+<p><code>argumento central</code> -&gt; explicação própria do conceito</p>
+<p><code>conexões</code> -&gt; links para outras permanentes relacionadas</p>
+<p><code>referencia</code> -&gt; cite refências usados</p>
+<p><code>status</code> -&gt; pode ser rascunho, ativo e reevisado</p>
+<blockquote>
+<p>Permanentes são a base do conhecimento consolidado, revisável e linkado pelo MOC</p>
+</blockquote>
+<h4 id="nota-moc">Nota MOC</h4>
+<pre tabindex="0"><code>---
+tags:
+tipo: moc
+area:
+status: ativo
+created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+---
+
+# &lt;% tp.file.title() %&gt;
+
+## Escopo
+
+Descreva claramente o que este Map of Content cobre.
+
+---
+
+## Conceitos Fundamentais
+
+```dataview
+table area, status
+from &#34;02 - Permanentes&#34;
+where area = this.area
+```dataview
+---
+## Subáreas
+
+- ***
+
+## Referências Base
+
+```dataview
+table fonte, autor
+from &#34;01 - Referencias&#34;
+where area = this.area
+```dataview
+---
+
+## Questões em aberto
+
+-
+</code></pre><blockquote>
+<p>Eu acabei quebrando o dataview no exemplo acima para garantir que ficasse tudo em um único codeblock, assim caso copiem diretamente basta trocar ```dataview pela sua versão sem dataview usando regex.</p>
+</blockquote>
+<p>A nota MOC tem como objetivo principal agir como indice e dar umma visão geral da área de estudo, aqui também usamos <code>&lt;% tp.file.title() %&gt;</code> para gerar o título do modelo.</p>
+<p>Conceitualmente a tarefa do moc é puxar diretamente do dataview lista de todos os permanentes relacionados a mesma área e organalizos - los em relação a área e a subárea presente em clusters ou topicos.</p>
+<p>Ainda há o questões em aberto sobre duvidas em geral de acordo com o temas que você pode realizar, literalmente um TODO do que falta estudar, e acredito há muito do que quero estudar</p>
+<p><img src="images/roadmap_sh.png" alt="Foto do meu roadmap.sh pessoal"></p>
+<h2 id="fluxo-e-isso-é-importante">Fluxo e isso é importante</h2>
+<ol>
+<li>Encontrei algo novo: Crio <code>Referencia</code></li>
+<li>Processo a informação: transformo em <code>Permanente</code> com minhas palavras, citando origem</li>
+<li>Organizo no MOC: Atualizo Conceitos Fundamentais, Subáreas e Questões em aberto.</li>
+<li>Prático: Esse é o mais importante, tudo que existe é uma prática e não adianta nada se você não práticar.</li>
+<li>Revisar periodicamente: mantenha permanentes e MOC atualizado adicionando novas conexões</li>
+</ol>
+<p>Bem este é o meu Obsidian de Estudo, chamado carinhosamente de <strong><em>Mind Order</em></strong>, espero que tenham gostado fui.</p>
+]]></content:encoded><category>Obsidian</category><category>Estudos</category><category>Seja um estudante melhor</category><category>Seja um programador melhor</category><category>Zettelkasten</category></item><item><title>Um jornada de reforço, planos para 2026</title><link>https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/</link><guid isPermaLink="true">https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/</guid><pubDate>Fri, 13 Feb 2026 03:00:22 GMT</pubDate><description>&lt;h1 id="o-tempo-passa"&gt;O tempo passa&lt;/h1&gt;
 &lt;p&gt;Cá estamos nos em feveireiro e eu realmente não consigo acreditar que faz pouco mais de 6 anos que me tornei alguém ativo na WWW.&lt;/p&gt;
 &lt;p&gt;Não que eu seja famoso, ativo no sentido de estar presente em diversas plataformas online, mantendo esse blog, conversando no discord, perdendo tempo no vaporhole (que é uma rede social brasileira estilo tilde.club, algo como um pc Unix compartilhado entre diversas pessoas via SSH), perdendo tempo vendo vídeos no Youtube, perdendo tempo no X, perdendo tempo no Instagram.&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="o-tempo-passa">O tempo passa</h1>
 <p>Cá estamos nos em feveireiro e eu realmente não consigo acreditar que faz pouco mais de 6 anos que me tornei alguém ativo na WWW.</p>
