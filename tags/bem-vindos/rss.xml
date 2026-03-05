@@ -1,4 +1,67 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FoxTechWorld</title><link>https://foxtechworld.github.io/</link><description>Tentando tornar o mundo menos pop e mais nérdico</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Thu, 05 Mar 2026 04:10:05 GMT</lastBuildDate><atom:link href="https://foxtechworld.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Estudo: Organizando meu estudos com o obsidian</title><link>https://foxtechworld.github.io/organizando-meu-estudos-com-o-obsidian/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizando-meu-estudos-com-o-obsidian/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 GMT</pubDate><description>&lt;h1 id="e-como-vou-estudar"&gt;E como vou estudar?&lt;/h1&gt;
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FoxTechWorld</title><link>https://foxtechworld.github.io/</link><description>Tentando tornar o mundo menos pop e mais nérdico</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Thu, 05 Mar 2026 04:13:44 GMT</lastBuildDate><atom:link href="https://foxtechworld.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Opinião: A Reviravolta do FOSS vem com a burrice da política</title><link>https://foxtechworld.github.io/a-reviravolta-do-foss-vem-com-a-burrice-da-politica/</link><guid isPermaLink="true">https://foxtechworld.github.io/a-reviravolta-do-foss-vem-com-a-burrice-da-politica/</guid><pubDate>Thu, 05 Mar 2026 06:19:04 GMT</pubDate><description>&lt;h1 id="contextualizando"&gt;Contextualizando&lt;/h1&gt;
+&lt;p&gt;Galera, se você tem acompanhado as notícias recentes, a situação não está nada tranquila. Resumindo: estamos indo para a merda rápido.&lt;/p&gt;
+&lt;p&gt;O Brasil decidiu que todos os sistemas operacionais e lojas de aplicativos devem implementar algum tipo de verificação de idade. Para piorar, a Califórnia seguiu a mesma linha.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Brazil Law: All OS&amp;#39;s Have 13 Days to Add Age Verification&lt;br&gt;&lt;br&gt;A new law, in Brazil, requires age verification on all Operating Systems (including Linux &amp;amp; Windows) by March 17th. Plus a rundown on similar laws in California, Colorado, and New York. &lt;a href="https://t.co/2Ik1hNEDf8"&gt;pic.twitter.com/2Ik1hNEDf8&lt;/a&gt;&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="contextualizando">Contextualizando</h1>
+<p>Galera, se você tem acompanhado as notícias recentes, a situação não está nada tranquila. Resumindo: estamos indo para a merda rápido.</p>
+<p>O Brasil decidiu que todos os sistemas operacionais e lojas de aplicativos devem implementar algum tipo de verificação de idade. Para piorar, a Califórnia seguiu a mesma linha.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Brazil Law: All OS&#39;s Have 13 Days to Add Age Verification<br><br>A new law, in Brazil, requires age verification on all Operating Systems (including Linux &amp; Windows) by March 17th. Plus a rundown on similar laws in California, Colorado, and New York. <a href="https://t.co/2Ik1hNEDf8">pic.twitter.com/2Ik1hNEDf8</a></p>&mdash; The Lunduke Journal (@LundukeJournal) <a href="https://twitter.com/LundukeJournal/status/2029266433318809776?ref_src=twsrc%5Etfw">March 4, 2026</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Segundo o Lunduke Journal
+, algumas empresas, como a Apple, optaram por não implementar a medida, com DHH sendo publicamente contra.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">“Omarchy has no plans to do anything in response to this retarded California law.”<br><br>That is what <a href="https://twitter.com/dhh?ref_src=twsrc%5Etfw">@DHH</a> told me when I asked him if <a href="https://twitter.com/OmarchyLinux?ref_src=twsrc%5Etfw">@OmarchyLinux</a> plans to implement age verification functionality to comply with the new California and Brazilian laws. <a href="https://t.co/2bkaDwwNU0">pic.twitter.com/2bkaDwwNU0</a></p>&mdash; The Lunduke Journal (@LundukeJournal) <a href="https://twitter.com/LundukeJournal/status/2029226614068801768?ref_src=twsrc%5Etfw">March 4, 2026</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Enquanto isso, distribuições como Fedora, Mint, Ubuntu e ElementaryOS já confirmaram que vão seguir a lei brasileira/californiana.</p>
+<p>E para ilustrar o que isso significa na prática, o compatriota @Jocadbz escreveu o post <a href="https://jocadbz.xyz/posts/leis_de_verificacao_de_idade/">O Grande Irmão veste roupas de babá</a>
+, onde detalha o impacto dessa vigilância:</p>
+<blockquote>
+<p>Quando um sistema operacional compartilha um “sinal criptografado”, políticos afirmam que isso é uma vitória para a privacidade, porque o aplicativo específico não vê seu documento físico. Mas, ao vincular a faixa etária verificada a um ID de hardware permanente ou a uma conta central do Google/Apple, encerramos a era do perfil “descartável”.</p>
+<p>Cada aplicativo que você baixa – de fóruns de nicho a rastreadores de fitness – recebe o mesmo token verificado do seu sistema operacional. Sua identidade entre plataformas se torna unificada: você deixa de ser um usuário anônimo e se torna “Usuário nº 88291, homem, 24 anos, verificado via hardware”.</p>
+<p>A Lei 15.211 do Brasil leva isso um passo além. “Garantia razoável” é apenas um eufemismo jurídico para vigilância biométrica. Plataformas estão migrando para “Provedores de Identidade” de terceiros. Em breve, para assistir a um vídeo ou entrar em um chat, será necessário escanear o rosto ou enviar documentos nacionais. Isso cria enormes bancos de dados centralizados, vulneráveis a ataques. Estamos sendo forçados a fornecer dados biológicos para atravessar uma corda de veludo digital, tudo em nome de “proteger as crianças”.</p>
+</blockquote>
+<h2 id="o-impacto-para-nós-e-para-o-foss">O impacto para nós e para o FOSS</h2>
+<p>Para os usuários, isso significa mudanças profundas no dia a dia da internet. Mas existe uma alternativa que muitas vezes é ignorada: o FOSS (Free/Open Source Software), também chamado de Software Livre.</p>
+<h2 id="o-que-é-foss">O que é FOSS?</h2>
+<p>O Software Livre é baseado em quatro liberdades essenciais:</p>
+<ol start="0">
+<li>Executar o software para qualquer propósito.</li>
+<li>Estudar como o software funciona.</li>
+<li>Redistribuir cópias do software.</li>
+<li>Aperfeiçoar o software e distribuir melhorias.</li>
+</ol>
+<p>Essas liberdades nos dão a base para reduzir a dependência da internet e de sistemas centralizados. Ou seja, podemos começar a nos proteger sem depender de Google, Apple ou quaisquer leis invasivas.</p>
+<h2 id="como-agir-agora">Como agir agora</h2>
+<ul>
+<li>
+<p>Se você está preocupado com privacidade, procure softwares que:</p>
+</li>
+<li>
+<p>Não dependam da internet para funcionar.</p>
+</li>
+<li>
+<p>Não sigam as leis de verificação de idade.</p>
+</li>
+<li>
+<p>Possuam instalação e distribuição offline, por meios físicos (pendrives, DVDs, etc.).</p>
+</li>
+</ul>
+<h2 id="exemplos-práticos">Exemplos práticos:</h2>
+<ul>
+<li>
+<p>Linux-Libre ou BSD – distribuições que priorizam liberdade e privacidade.</p>
+</li>
+<li>
+<p>Linux offline – muitas distros Linux podem ser configuradas para funcionar sem conexão, embora alguns pacotes adicionais precisem de internet.</p>
+</li>
+</ul>
+<p>Evite qualquer software que já tenha concordado com a lei de verificação de idade ou que exija autenticação online obrigatória. A ideia é recuperar autonomia digital e manter o anonimato mínimo possível.</p>
+<h1 id="conclusão">Conclusão</h1>
+<p>O movimento de verificação de idade global é só o começo de um controle digital que afeta todos os usuários. A boa notícia é que o FOSS oferece meios concretos de resistência.</p>
+<p>Não é sobre conspiracionismo, é sobre recuperar liberdade e autonomia. E, se você ainda não pensou nisso, o momento de agir é agora: escolha software livre, offline, e proteja sua identidade digital antes que vire um número em algum banco de dados central.</p>
+]]></content:encoded><category>Free Software</category><category>FOSS</category><category>Imediatismo</category><category>Oportunidade</category><category>Censura</category><category>Lei Felca</category></item><item><title>Estudo: Organizando meu estudos com o obsidian</title><link>https://foxtechworld.github.io/organizando-meu-estudos-com-o-obsidian/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizando-meu-estudos-com-o-obsidian/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 GMT</pubDate><description>&lt;h1 id="e-como-vou-estudar"&gt;E como vou estudar?&lt;/h1&gt;
 &lt;p&gt;Pois é, para alguem que falou que ia demorar fazer mais posts este ano, cá estou eu de novo.&lt;/p&gt;
 &lt;p&gt;Dessa vez, em complemento o meu post anterior &lt;a href="https://foxtechworld.github.io/um-jornada-de-reforco-planos-para-2026/"&gt;Um jornada de reforço, planos para 2026&lt;/a&gt; onde eu prometi que o ano seria mais lento. Mostrando como estou configurando o meu obsidian para estudar.&lt;/p&gt;
 &lt;p&gt;Antes de mais nada, estudo é uma mistura de metodo e disciplina para memorizar e memorizar o entendimento da memória e os resultados de certas ações, formulas ou ocorrências.&lt;/p&gt;</description><content:encoded><![CDATA[<h1 id="e-como-vou-estudar">E como vou estudar?</h1>
