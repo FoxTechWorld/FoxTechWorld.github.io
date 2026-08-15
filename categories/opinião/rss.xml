@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Opinião | FoxTechWorld</title><link>https://foxtechworld.github.io/categories/opini%C3%A3o/</link><description>Conteúdo recente em Opinião no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/categories/opini%C3%A3o/" rel="self" type="application/rss+xml"/><item><title>A reviravolta do FOSS diante da regulação e da censura</title><link>https://foxtechworld.github.io/foss-regulacao-censura/</link><guid isPermaLink="true">https://foxtechworld.github.io/foss-regulacao-censura/</guid><pubDate>Thu, 05 Mar 2026 06:19:04 +0000</pubDate><description>Como regulação, verificação de idade e censura podem aumentar o interesse por software livre, Linux, sideloading e plataformas abertas.</description><category>Software Livre</category><category>Opinião</category><category>Free Software</category><category>FOSS</category><category>Imediatismo</category><category>Oportunidade</category><category>Censura</category><category>Lei Felca</category><content:encoded><![CDATA[<h2 id="contextualizando">Contextualizando</h2>
+<p>Galera, se você tem acompanhado as notícias recentes, a situação não está nada tranquila. Resumindo: estamos indo para a merda rápido.</p>
+<p>O Brasil decidiu que todos os sistemas operacionais e lojas de aplicativos devem implementar algum tipo de verificação de idade. Para piorar, a Califórnia seguiu a mesma linha.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Brazil Law: All OS&#39;s Have 13 Days to Add Age Verification<br><br>A new law, in Brazil, requires age verification on all Operating Systems (including Linux &amp; Windows) by March 17th. Plus a rundown on similar laws in California, Colorado, and New York. <a href="https://t.co/2Ik1hNEDf8">pic.twitter.com/2Ik1hNEDf8</a></p>&mdash; The Lunduke Journal (@LundukeJournal) <a href="https://x.com/LundukeJournal/status/2029266433318809776?ref_src=twsrc%5Etfw">March 4, 2026</a></blockquote>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Segundo o Lunduke Journal, algumas empresas, como a Apple, optaram por não implementar a medida, enquanto DHH se posicionou publicamente contra ela.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">“Omarchy has no plans to do anything in response to this retarded California law.”<br><br>That is what <a href="https://x.com/DHH?ref_src=twsrc%5Etfw">@DHH</a> told me when I asked him if <a href="https://x.com/OmarchyLinux?ref_src=twsrc%5Etfw">@OmarchyLinux</a> plans to implement age verification functionality to comply with the new California and Brazilian laws. <a href="https://t.co/2bkaDwwNU0">pic.twitter.com/2bkaDwwNU0</a></p>&mdash; The Lunduke Journal (@LundukeJournal) <a href="https://x.com/LundukeJournal/status/2029226614068801768?ref_src=twsrc%5Etfw">March 4, 2026</a></blockquote>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Enquanto isso, distribuições como Fedora, Mint, Ubuntu e ElementaryOS já confirmaram que vão seguir a lei brasileira/californiana.</p>
+<p>Para ilustrar o que isso significa na prática, o compatriota @Jocadbz escreveu o post <a href="https://jocadbz.xyz/posts/leis_de_verificacao_de_idade/">O Grande Irmão veste roupas de babá</a>, no qual detalha o impacto dessa vigilância:</p>
+<blockquote>
+<p>Quando um sistema operacional compartilha um “sinal criptografado”, políticos afirmam que isso é uma vitória para a privacidade, porque o aplicativo específico não vê seu documento físico. Mas, ao vincular a faixa etária verificada a um ID de hardware permanente ou a uma conta central do Google/Apple, encerramos a era do perfil “descartável”.</p>
+<p>Cada aplicativo que você baixa – de fóruns de nicho a rastreadores de fitness – recebe o mesmo token verificado do seu sistema operacional. Sua identidade entre plataformas se torna unificada: você deixa de ser um usuário anônimo e se torna “Usuário nº 88291, homem, 24 anos, verificado via hardware”.</p>
+<p>A Lei 15.211 do Brasil leva isso um passo além. “Garantia razoável” é apenas um eufemismo jurídico para vigilância biométrica. Plataformas estão migrando para “Provedores de Identidade” de terceiros. Em breve, para assistir a um vídeo ou entrar em um chat, será necessário escanear o rosto ou enviar documentos nacionais. Isso cria enormes bancos de dados centralizados, vulneráveis a ataques. Estamos sendo forçados a fornecer dados biológicos para atravessar uma corda de veludo digital, tudo em nome de “proteger as crianças”.</p>
+</blockquote>
+<h2 id="o-impacto-para-nós-e-para-o-foss">O impacto para nós e para o FOSS</h2>
+<p>Para os usuários, isso significa mudanças profundas no dia a dia da internet. Mas existe uma alternativa que muitas vezes é ignorada: o FOSS (Free/Open Source Software), também chamado de Software Livre.</p>
+<h2 id="o-que-é-foss">O que é FOSS?</h2>
+<p>O Software Livre é baseado em quatro liberdades essenciais:</p>
+<ol start="0">
+<li>Executar o software para qualquer propósito.</li>
+<li>Estudar como o software funciona.</li>
+<li>Redistribuir cópias do software.</li>
+<li>Aperfeiçoar o software e distribuir melhorias.</li>
+</ol>
+<p>Essas liberdades nos dão a base para reduzir a dependência da internet e de sistemas centralizados. Ou seja, podemos começar a nos proteger sem depender de Google, Apple ou quaisquer leis invasivas.</p>
+<h2 id="como-agir-agora">Como agir agora</h2>
+<p>Se você está preocupado com privacidade, procure softwares que:</p>
+<ul>
+<li>não dependam da internet para funcionar;</li>
+<li>preservem a privacidade diante de mecanismos de verificação de idade;</li>
+<li>permitam instalação e distribuição offline por meios físicos, como pendrives e DVDs.</li>
+</ul>
+<h2 id="exemplos-práticos">Exemplos práticos</h2>
+<ul>
+<li>
+<p>Linux-Libre ou BSD – distribuições que priorizam liberdade e privacidade.</p>
+</li>
+<li>
+<p>Linux offline – muitas distros Linux podem ser configuradas para funcionar sem conexão, embora alguns pacotes adicionais precisem de internet.</p>
+</li>
+</ul>
+<p>Evite qualquer software que já tenha concordado com a lei de verificação de idade ou que exija autenticação online obrigatória. A ideia é recuperar autonomia digital e manter o anonimato mínimo possível.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>O movimento de verificação de idade global é só o começo de um controle digital que afeta todos os usuários. A boa notícia é que o FOSS oferece meios concretos de resistência.</p>
+<p>Não é sobre conspiracionismo, é sobre recuperar liberdade e autonomia. E, se você ainda não pensou nisso, o momento de agir é agora: escolha software livre, offline, e proteja sua identidade digital antes que vire um número em algum banco de dados central.</p>
+]]></content:encoded></item><item><title>Por que “design patterns” é um nome genérico demais</title><link>https://foxtechworld.github.io/opiniao-design-patterns-sao-um-pessimo-nome/</link><guid isPermaLink="true">https://foxtechworld.github.io/opiniao-design-patterns-sao-um-pessimo-nome/</guid><pubDate>Wed, 08 Oct 2025 15:08:13 -0300</pubDate><description>Uma crítica ao termo design pattern e uma proposta para distinguir padrões de ergonomia, arquitetura e implementação de software.</description><category>Programação</category><category>Opinião</category><category>Design Patterns</category><category>Opinião</category><category>Programação</category><category>Desenvolvimento</category><category>Arquitetura De Software</category><category>Design De Software</category><content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<p>Um dos meus hobbies atuais é ler posts antigos, como os do blog <em><strong>AkitaOnRails</strong></em>. Um deles é <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em><strong>Design Patterns representam defeitos nas linguagens</strong></em></a>.</p>
+<p>Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
+<p>Um dos pontos que me incomodou foi a mistura entre design de software, arquitetura de software e ergonomia da linguagem.</p>
+<p>Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.</p>
+<blockquote>
+<p>Na última vez que escrevi sobre design patterns, foi para apontar que embora o movimento tenha sido inspirado pelo trabalho de “linguagem de pattern” de Christopher Alexander, não é parecido com nada que Alexander tenha sugerido, e que de fato o que Alexander sugeriu é mais interessante e provavelmente teria sido mais útil para programadores do que o movimento de design pattern escolheu seguir.</p>
+</blockquote>
+<blockquote>
+<p>Uma das coisas que eu apontei foi essencialmente o que Norvig disse: que muitos patterns não estão realmente endereçando problemas recorrentes de design em programas orientados a objetos. Eles estão, na realidade, endereçando deficiências em linguagens de programação orientadas a objetos e que em linguagens melhores, esses problemas simplemente não aparecem ou são resolvidos de maneira tão fácil e trivial que a solução não requer um pattern. Em linguagem assembly, “chamada de sub-rotina” pode ser um pattern; em C, a solução é escrever result = function(args &hellip;), que é simples demais para se qualificar como pattern. Em uma linguagem como Lisp ou Haskell ou mesmo Perl, com um bom tipo de lista e poderosas primitivas para operar em valores de listas, o pattern “Iterator” (iterador) é aliviado em um grande degrau ou tido como invisível. Henry G. Baker pegou esse ponto em seu artigo Iterators: Sinais de Fraqueza em Linguagens Orientadas a Objetos.</p>
+</blockquote>
+<blockquote>
+<p>Recebi muitas mensagens sobre isso, e curiosamente, alguns chegaram à mesma conclusão da mesma forma: eles disseram que embora eu estivesse certo sobre Iterator, era um exemplo pobre porque era um pattern muito simples, mas que era impossível imaginar um pattern mais complexo como Model-View-Controller ser absorvido e se tornar invisível dessa maneira.</p>
+</blockquote>
+<p>Obviamente, como um post antigo não vou dar muito trelo ainda mas, veja.</p>
+<p>O motivo de conseguirmos enxergar um iterator</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> mp : m_children){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do anything
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="o-incômodo">O incômodo</h2>
+<p>Sendo absorvido por uma linguagem, mas nunca um MVC é simplesmente uma diferença de escopo.</p>
+<p>Uma coisa é você aprimorar a <strong>ergonomia da linguagem</strong> facilitando um método de escrita em detrimento de outro.</p>
+<p>Outra coisa é pegar o <strong>modelamento</strong> da arquitetura e fazer uma linguagem com isso.</p>
+<p>Imagine que, no léxico de uma linguagem, <code>print</code> pertença a uma <code>view</code>, os parâmetros sejam <code>models</code> e as funções sejam <code>controllers</code>.</p>
+<p>Simplesmente estúpido ao máximo.</p>
+<h3 id="e-qual-o-problema-original">E qual o problema original&hellip;</h3>
+<p>Esse é um problema do nome <code>pattern</code>: mesmo <code>design pattern</code> ainda é pouco descritivo.</p>
+<p>Eu estou falando do <code>design</code> da linguagem para aumentar a produtividade do programador?</p>
+<p>Ou estou falando do <code>design</code> na arquitetura para melhorar legibilidade e manutenção do código ao todo?</p>
+<p>O Model-View-Controller deveria se enquadrar em <code>design pattern</code> então? <strong>SIM!!!</strong></p>
+<p>E Iteradores? <strong>SIM!!!</strong></p>
+<p>E Orientação a Objetos? <strong>SIM!!!</strong></p>
+<p>Novamente, é um problema de nomeação e domínio. Se tudo é um <code>design pattern</code>, fica difícil criar uma categorização mais aprofundada.</p>
+<p>O mesmo ocorre quando comparamos <code>software monolítico</code> e <code>microsserviços</code>.</p>
+<p>Aqui temos dois padrões de arquitetura de software que de alguma forma também um padrão de design.</p>
+<p>Podemos dizer que uma linguagem pode absorver uma arquitetura de software?</p>
+<h2 id="uma-solução">Uma solução</h2>
+<p>Podemos adjetivar o <code>design pattern</code> para seu domínio.</p>
+<ul>
+<li><code>Ergonic design pattern</code> para quando falamos de um padrão de arquitetura que pode ser absorvido pela linguagem.</li>
+</ul>
+<p>Sendo um exemplo o <code>Iterator</code>, <code>Goto</code>, <code>Function</code>.</p>
+<ul>
+<li><code>Architecture design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, mas pelo software em geral.</li>
+</ul>
+<p>Sendo exemplos: <code>Model-View-Controler</code>, <code>JSP Model1</code>, <code>Model-View-Adapter</code>, <code>Model-View-Presenter</code></p>
+<ul>
+<li><code>Implementation design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, nem pelo software em geral mas colocado para facilitar a implementação.</li>
+</ul>
+<p>Sendo exemplos: <code>Strategy Pattern</code>, <code>Observer pattern</code>, <code>Servant pattern</code>, <code>Command pattern</code>, <code>Chain of responsibility pattern</code>.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>No geral, o termo <strong><em>Design Pattern</em></strong> é genérico demais para ser útil no debate técnico.</p>
+<p>Agrupar desde ergonomia da linguagem até arquitetura distribuída sob o mesmo nome é um desserviço.</p>
+<p>A proposta de <strong>Adjetivar os patterns conforme seu domínio</strong> deve trazer clareza e distinguir melhor o que é arquitetural e o que é uma boa prática de implementação.</p>
+<p>Talvez ao reclassificar os padrões com base não apenas naquilo <code>que elas resolvem</code> mas também no <strong>lugar onde operam</strong>.</p>
+]]></content:encoded></item><item><title>Brasil, polarização política e tribalismo</title><link>https://foxtechworld.github.io/opiniao-brasil-a-grande-varzea/</link><guid isPermaLink="true">https://foxtechworld.github.io/opiniao-brasil-a-grande-varzea/</guid><pubDate>Fri, 19 Sep 2025 12:16:04 -0300</pubDate><description>Uma opinião sobre polarização política, tribalismo e a transformação do debate público em uma disputa entre grupos rivais.</description><category>Opinião</category><category>Opinião</category><category>Política</category><category>Brasil</category><category>Futuro</category><category>Passado</category><category>Esquerda</category><category>Direita</category><content:encoded><![CDATA[<p>Até queria fazer um post recomendando mangás, manhwas&hellip; mas, dado os eventos recentes.</p>
+<p>Ocorrendo no inferno moderno a.k.a X, resolvi vir para cá reclamar para um cacete.</p>
+<p>Já aviso que vai ter muita generalização aqui, é muito mais fácil juntar tudo do que contar parte por parte separado.</p>
+<h2 id="a-grande-burrada">A grande burrada</h2>
+<p>Politicamente o mundo está um inferno real, não falo de alguns ou outros países mas, de todo mundo globalizado.</p>
+<p>Eu já havia detectado alguns traços de que o mundo estava se tornando <a href="https://mundoeducacao.uol.com.br/filosofia/niilismo.htm"><strong>niilista</strong></a>. Mas, isso está pior do que poderia estar e dessa vez eu atribuo a culpa a <strong>amathia</strong>.</p>
+<blockquote>
+<p>Segundo Sócrates, Amathia (a ignorância) é o único mal.</p>
+</blockquote>
+<p>E não, não estou chamando nenhum espectro de ignorante em si. Mas, a população que está ocupando os espectros estão em condição de fanatismo.</p>
+<h3 id="o-que-são-esquerda-e-direita">O que são esquerda e direita?</h3>
+<p>Antes de tudo é bom contextualizar um pouco sobre.</p>
+<p>Durante a Revolução Francesa (1789–1799), os representantes se reuniram na Convenção Nacional.</p>
+<p>Os que apoiavam o rei sentavam-se à direita do presidente da assembleia; aqueles que defendiam mudanças radicais e uma nova ordem sentavam-se à esquerda.</p>
+<p>Como era de esperar, muita coisa mudou desde então. Mas uma característica dessa divisão permaneceu:</p>
+<ul>
+<li>A direita continua associada à manutenção do <em>status quo</em>, à preservação das tradições e da ordem social existente.</li>
+<li>A esquerda continua associada à busca por mudanças sociais, econômicas e políticas.</li>
+</ul>
+<p>Até aqui, como pudemos ver nada de amoral/imoral ou moral em um lado e outro.</p>
+<p>Capitalismo/Comunismo nem deveriam entrar aqui porque seria <a href="https://www.dicio.com.br/anacronico/"><em><strong>anacrônico</strong></em></a>.</p>
+<h3 id="o-fanatismo">O fanatismo</h3>
+<p>O ponto é, o certo seriam ambos os lados serem educados uns com outros, nem estou falando de respeito.</p>
+<p>Porém educação. Mas, ambos os lados políticos no mundo inteiro parece que viraram o cú para lua esperando cair uma chuva de pica.</p>
+<p>Eles parecem que querem ser os donos da <strong>moral</strong>.</p>
+<p>Ou seja, demonizaram o seu espectro oposto porque segundo eles <strong>é o time que mais mata</strong>.</p>
+<p>Primeiramente, é um absurdo usar mortes como argumento moral sobre política.</p>
+<p>Se alguém foi assassinado, o assassino é um doente que nem em sociedade deveria estar.</p>
+<p>Sem meias palavras até aqui.</p>
+<p>O problema é que hoje olhamos apenas o espectro político da questão: choramos quando é do nosso lado e rimos quando é do outro.</p>
+<p>Ok! No cú dos outros pimenta é refresco, mas, já pararam para olhar fora do ponto de vista político? não consegue neh?</p>
+<h3 id="é-trabalho-caralho">É trabalho! CARALHO</h3>
+<p>Só porque um personagem político de direita se junta a de esquerda para entregar um projeto ou fazer uma votação na câmara não significa que ele trocou de lado político.</p>
+<p>Pode parecer raro, mas existe algo chamado convergência de ideias.</p>
+<p>Dois lados opostos podem concordar em algo, não sempre.</p>
+<p>Mas, podem concordar.</p>
+<p>Como por exemplo, na PEC da blindagem.</p>
+<p>A maioria dos de esquerda e direita votando a favor quando deveriam votar contra.</p>
+<h3 id="e-ninguém-liga-para-nada">E ninguém liga para nada</h3>
+<p>E tu que vai se fuder, principalmente quando tem eleição.</p>
+<p>Candidato do partido A é de esquerda
+Candidato do partido B é de direita
+Candidato do partido C é de esquerda
+Candidato do partido D é de direita</p>
+<p>Aí, fica definido que os partidos A e D serão os mais votados, embora você prefira o partido C ou B.</p>
+<p>Em vez de votar no partido que concorda com suas ideias vai votar no A ou no D na tentativa de evitar que o partido oposto ganhe.</p>
+<p>Virou rinha de galo nesse caralho?</p>
+<p>Hoje, tanto a direita quanto a esquerda abrigam diversos sub-rótulos ideológicos:</p>
+<ul>
+<li>Agrarismo</li>
+<li>Anarquismo</li>
+<li>Democracia cristã</li>
+<li>Comunismo</li>
+<li>Conservadorismo</li>
+<li>Ambientalismo</li>
+<li>Fascismo</li>
+<li>Feminismo</li>
+<li>Política verde</li>
+<li>Hindutva</li>
+<li>Islamismo</li>
+<li>Liberalismo</li>
+<li>Libertarismo</li>
+<li>Monarquismo</li>
+<li>Nacionalismo</li>
+<li>Populismo</li>
+<li>Progressismo</li>
+<li>Radicalismo clássico</li>
+<li>Republicanismo</li>
+<li>Social democracia</li>
+<li>Socialismo</li>
+<li>Sincretismo</li>
+<li>Terceira Via</li>
+</ul>
+<p>E isso quando a gente não olha para as propostas individuais.</p>
+<h2 id="o-desespero">O desespero</h2>
+<p>Enfim, não tenho nenhuma intenção ou motivo para tentar te convencer de algo.</p>
+<p>Provavelmente esse post vai ser esquecido e jogado em um canto mofado.</p>
+<p>Também não estou defendendo nenhum lado político.</p>
+<p>Quero apenas manter um pouco de lucidez enquanto vejo este Titanic afundar. Por favor, tragam a banda.</p>
+<p>Enfim, para mim e para o resto do mundo só basta aguardar o terceiro colapso social.</p>
+<h3 id="colapso-social">Colapso Social?</h3>
+<p>Ok, antes de terminar esse post vou mostrar um pouco das minhas previsões para o futuro próximo.</p>
+<p>Antes o disclaimer</p>
+<blockquote>
+<p>Toda previsão é um chute, a única forma de acertar 100% é prever depois do ocorrido.</p>
+<p>E outra: previsão não é profecia, é chute. Se alguém diz que uma profecia está ocorrendo, ela continua incerta até se concretizar.</p>
+</blockquote>
+<p>Enfim, da mesma forma que na economia, eu acredito que exista uma correção na própria <a href="https://brasilescola.uol.com.br/geografia/globalizacao.htm">globalização</a>. Que por algum acaso começou com a <a href="https://www.todamateria.com.br/revolucao-industrial/">revolução industrial</a>.</p>
+<p>As duas guerras mundiais podem ser vistas como correções brutais desencadeadas pelo próprio <a href="https://maestrovirtuale.com/o-que-e-tribalismo-analisando-esse-fenomeno-social/">tribalismo</a>.</p>
+<p>Veja que tribalismo não é algo anormal em animais sociais.</p>
+<p>E se resume praticamente no nós contra eles.</p>
+<p>O mundo parece estar novamente se dividindo em blocos econômicos cada vez mais divergentes. Espero que o próximo colapso não seja outra guerra mundial.</p>
+<p>Talvez seja mais provável ocorrer algo semelhante ao experimento <a href="https://www.megacurioso.com.br/ciencia/115982-utopia-dos-ratos-experimento-previu-a-extincao-da-humanidade-.htm">Universo 25</a>. Não ironicamente, acredito que o Ocidente esteja em uma fase parecida com a etapa final da chamada utopia dos ratos.</p>
+<p>Então, ou entramos em extinção silenciosa, ou entramos em guerra.</p>
+<p>O futuro é medonho.</p>
+<p>Enfim, espero que tenha gostado deste post, muito obrigado.</p>
+]]></content:encoded></item><item><title>Antes de ter filhos: educação e responsabilidade</title><link>https://foxtechworld.github.io/opiniao-nao-tenha-criancas-sem-antes-pensar-nisso/</link><guid isPermaLink="true">https://foxtechworld.github.io/opiniao-nao-tenha-criancas-sem-antes-pensar-nisso/</guid><pubDate>Wed, 17 Sep 2025 14:09:04 -0300</pubDate><description>Uma reflexão pessoal sobre autoridade, confiança, telas, educação e responsabilidade na criação de crianças e adolescentes.</description><category>Opinião</category><category>Opinião</category><category>Educação</category><category>Educação Permissiva</category><category>Educação Positiva</category><category>Educação Tradicional</category><category>Internet</category><category>Imediatismo</category><category>Mundo Moderno</category><content:encoded><![CDATA[<p>Salve, pessoal! Desta vez, decidi sair um pouco do mundo da programação e apresentar algumas reflexões sobre psicologia, educação e criação de crianças.</p>
+<blockquote>
+<p>Este é um post de opinião, não uma orientação profissional. As decisões sobre uma criança cabem aos responsáveis; leia o texto com uma dose saudável de ceticismo.</p>
+</blockquote>
+<h2 id="seres-humanos-não-são-completamente-racionais">Seres humanos não são completamente racionais</h2>
+<p>Todo esse post no geral vem com essa máxima.</p>
+<p>Isso não é uma negação da racionalidade e sim que a maioria das decisões tomadas também são instintos, que de mesma forma são condicionados.</p>
+<p>Isso é importante porque aspectos como <strong>confiança</strong> e <strong>hierarquia</strong> podem ser formados de maneiras diferentes.</p>
+<h3 id="confiança">Confiança</h3>
+<p>Durante a formação da capacidade racional e com a capacidade racional.</p>
+<p>Normalmente, a confiança nos pais é formada antes da capacidade de racionalização e a confiança nos amigos é formada após a formação da racionalização.</p>
+<p>Isso nos diz que de alguma forma, na maioria das vezes a confiança nos pais vai ser mais forte.</p>
+<p>Até que essa confiança seja quebrada de alguma forma.</p>
+<p>Após isso, qualquer confiança formada seria a segunda forma de confiança com racionalização.</p>
+<p>A diferença entre ambos é o nível de confiança, um é a confiança incondicional enquanto o outro é a confiança com cautela.</p>
+<h3 id="hierarquia">Hierarquia</h3>
+<p>O mais importante de se tornar pai, é se tornar o topo da hierarquia.</p>
+<p>Na visão de que você vai guiar uma versão menor de si mesmo a conseguir sobreviver nesse mundo.</p>
+<p>Isso também significa que todos os problemas vão em sua direção, os seus ou o de seu filho.</p>
+<p>E como já dito previamente, muitas das coisas da paternidade são desenvolvidos na primeira infância, isso também diz sobre a hierarquia.</p>
+<p>A quem os problemas devem ir quando aparecerem.</p>
+<p>E é uma discussão muito importante a se resolver.</p>
+<p>Muitas vezes, mesmo na primeira infância essa <strong>hierarquia</strong> vai ser desafiada.</p>
+<p>O pai pode dizer não, enquanto a cria vai na mãe fazer a mesma pergunta para ver se a resposta é diferente.</p>
+<p>Esse tipo de coisa mostra ao filho, quem tem a resposta mais mansa e a quem ele deve ir para ter o que quer.</p>
+<h2 id="como-isso-se-relaciona-à-educação">Como isso se relaciona à educação?</h2>
+<p>Escapando um pouco da discussão qual a melhor.</p>
+<blockquote>
+<p><strong>Opinião pessoal:</strong> Prefiro a tradicional</p>
+</blockquote>
+<p>Todas se relacionam com o nível de autoridade que o pai tem em relação a seu filho.</p>
+<p>Na tradicional, o pai assume papel mais autoritário em relação ao filho.</p>
+<p>Na positiva, o pai assume um papel mais manipulativo em relação ao filho.</p>
+<p>Dando uma dualidade de opções e pedindo pro filho escolher qual lhe agrada melhor.</p>
+<blockquote>
+<p><strong>Exemplo</strong>
+Você prefere guardar os brinquedos e tomar banho ou tomar banho e ir dormir?</p>
+</blockquote>
+<p>Já a permissiva é um nome mais bonito para <em>indulgente</em>.</p>
+<p>No geral, a educação permissiva parte da premissa que você vai dar total autonomia para um incapaz se virar, acatando todas as ordens e regras dele.</p>
+<h3 id="por-que-eu-prefiro-a-educação-tradicional">Por que eu prefiro a educação tradicional?</h3>
+<p>No simples e no grosso, porque é mais simples.</p>
+<p>Só que não posso afirmar que é exatamente a educação tradicional também.</p>
+<p>É a educação tradicional quando aplicada a alguém que tem 10 anos ou mais. Menos que isso, a abordagem tem que ser mudada.</p>
+<h4 id="e-o-que-mudamos">E o que mudamos?</h4>
+<p>1º <strong>Frustre muito a criança</strong></p>
+<p>É um pouco cruel, mas isso cria uma oportunidade para trabalhar a educação e o controle emocional.</p>
+<blockquote>
+<p>Garanto que vai poupar grana quando o salário chegar e você precisar ir com ela no supermercado.</p>
+<p><strong>Opcional:</strong> Você não tem a necessidade real de fazer isso, se quiser manter a criança em casa.
+Este tipo de aprendizado a vida vai ensinar de qualquer forma.</p>
+</blockquote>
+<ol start="2">
+<li><strong>Nada de telas até 8/10 anos</strong></li>
+</ol>
+<p>Esse entra em contato direto com o 1º.</p>
+<p>Um dos problemas da paternidade moderna é silenciar a frustração com telas e vídeos muito mais estimulantes que os programas de antigamente.</p>
+<p>São fluxos mais rápidos, diálogos complexos e informação audiovisual muito mais animada.</p>
+<p>Ao tirar a tela, você volta com o dobro da frustração inicial e isso vai acarretar numa série de problemas como o próprio imediatismo.</p>
+<p>3º <strong>Celulares são importantes, compre um para seu filho</strong></p>
+<p>Não tem como fugir disso, celulares ainda são importantes e seu filho desde pequeno tem que saber usar um.</p>
+<p>Mas você, como responsável, pode se esquecer de uma coisa: não precisa entregar um smartphone.</p>
+<p>Um bom e velho <em>dumbphone</em>, com teclado e de preferência sem jogos ou outras distrações, pode ser uma opção melhor que um smartphone de última geração.</p>
+<h2 id="o-que-fazer-durante-a-pré-adolescência-e-a-adolescência">O que fazer durante a pré-adolescência e a adolescência?</h2>
+<p>Comece respirando fundo, essa é a melhor/pior idade para você e para seu filho, sem sombras de dúvidas.</p>
+<p>Então, vamos começar com o liberar algumas coisas.</p>
+<p>Primeiro, liberar seu filho para ter um celular decente é um bom começo mas, não faça isso por fazer ou para comemorar algo.</p>
+<p>Faça na forma de uma recompensa por ele resolver um problema que você não pediu mas, mesmo assim ele decidiu ajudar.</p>
+<p>Não significa dar o top tier, nem um pro, nem mesmo algo caro.</p>
+<p>Talvez 1 ou 2 gerações anteriores de preferência.</p>
+<p>Além disso, siga uma progressão na lista de coisas a se fazer dentro de casa.</p>
+<p>Como por exemplo, ajudar a limpar e tudo mais. Não tudo de uma vez, uma responsabilidade por vez.</p>
+<p>Além disso, acompanhar seu filho com o <a href="https://familylink.google.com/"><strong>Family Link</strong></a> pode ser importante.</p>
+<p>E apesar da <a href="https://g1.globo.com/economia/tecnologia/noticia/2018/09/24/o-polemico-app-do-google-que-permite-que-pais-monitorem-crianca-em-tempo-real.ghtml">maioria das críticas</a> que o app tem. É super necessário, que você acompanhe o que seu filho faz online.</p>
+<p>Apesar de que, tudo vai depender da sua capacidade como pai não ser super-protetor.</p>
+<blockquote>
+<p>Você como pai que já conhece o mundo e sabe quão pobre ele é, deve deixar seu filho rolar um pouquinho no barro, se sujar bastante e tentar se lavar.</p>
+<p>Esta é a verdadeira paternidade: criar seu filho para que, em um momento de dificuldade, ele tenha certeza de que pode procurá-lo.</p>
+</blockquote>
+<p>Dito isso, é importante incentivar algumas atividades:</p>
+<ul>
+<li>Leitura</li>
+<li>Esportes</li>
+<li>Artes Marciais</li>
+<li>Hobbies</li>
+</ul>
+<p>Religião é meio complicado, apesar de ser <strong>cristão</strong> e <strong>católico</strong> eu não acredito em batizar meu filho até pelo menos ele por conta própria decidir seguir minha fé ou não.</p>
+<p>Isso não significa deixar de levá-lo à igreja, mas respeitar sua decisão de fé. Se ele decidir seguir minha fé, acredito que o batismo poderá ser realizado.</p>
+<p>E antes de qualquer dúvida razoável, eu já afirmo de primeira.</p>
+<blockquote>
+<p>O <strong>Batismo</strong> é o sacramento mais importante da igreja cristã. Valendo para os ortodoxos, protestantes ou os católicos em geral.</p>
+<p>Seria muito desrespeitoso da minha parte, colocar meu filho a ser batizado sem sua escolha. Para definir sua fé antes que de sua própria vontade, ele também a expresse.</p>
+</blockquote>
+<h3 id="escolaridade">Escolaridade</h3>
+<p>Não tem muito o que fazer aqui, a educação é a parte mais importante do desenvolvimento de uma criança e adolescente.</p>
+<p>O problema aparece quando relacionamos a educação apenas a uma motivação extrínseca; assim, ela perde o sentido.</p>
+<p>Seria interessante pelo menos no mínimo, você como pai, mostrar os pontos mais interessantes da educação.</p>
+<p>Para ele se tornar um <strong>nerd clássico</strong>, um verdadeiro <strong>nérdico</strong>.</p>
+<p>Não vou falar que é porque a educação é importante, principalmente não no Brasil.</p>
+<p>Mas, ela é um recurso de conhecimento que abre portas.</p>
+<p>Muitos objetivos podem ser alcançados com o conhecimento adquirido por meio da educação.</p>
+<p>Seja formal, seja autodidata.</p>
+<p>E tem mais, por mais que a educação formal no Brasil seja sucateada, ela ainda te dá uma coisa que nenhuma outra te dá.</p>
+<p>Um papel dizendo <strong>aprovado</strong>.</p>
+<p>Esse papel reduz a dificuldade de ganhar um emprego com salário razoável, então vale a pena tentar.</p>
+<h3 id="responsabilidade">Responsabilidade</h3>
+<p>Como, neste ponto, já estamos falando de adolescentes, eles podem começar a assumir responsabilidade por seus atos e pela bagunça que fazem.</p>
+<p>Faça um tipo de <strong>sistema penal</strong> mais leve com possíveis consequências em atos não desejáveis.</p>
+<p>A ideia é não ser duro mas ser justo como na vida real.</p>
+<p>Além disso, surge a oportunidade de ensinar o contraditório e o direito à defesa.</p>
+<p>Interessante seria &ldquo;simular um julgamento&rdquo;.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Esses são alguns dos meus pensamentos sobre filhos e sobre como criá-los. Com coisas a mais ou a menos, é importante refletir sobre essas questões.</p>
+<p>Obviamente cada criação é única. E a que você vai oferecer depende exatamente daquilo que você quer passar.</p>
+<h3 id="referências-e-leituras-recomendadas">Referências e leituras recomendadas</h3>
+<ul>
+<li><a href="https://www.amazon.com.br/R%C3%A1pido-devagar-Daniel-Kahneman/dp/853900383X">Rápido e Devagar: Duas formas de Pensar</a></li>
+<li><a href="https://www.amazon.com.br/Teoria-Apego-Fundamentos-Pesquisas-Implica%C3%A7%C3%B5es/dp/8570740115/ref=sr_1_3?adgrpid=78637041982&amp;dib=eyJ2IjoiMSJ9.StdOasvrN1f3Lm8WtD6g7reE4leloRYX_8Qwmq8hWjV9tY-4fifGdTqtCQYPSataO2DIWChaxZV1g7lItAS7ugUq1fKgbcIi0NI26OqBwHT0m8uMMTF5brujiTkZwtd3XAeZMN3OznnFZtbxCzGOUTyHUvZr_pmw61HIfVnEeM-Dy260ohSBQJxOifRoBEXkRniGeO6AAEEeUhxnLmgfi1MNgJm1EvMPT7rA2_fbQfwyQ6ffBMb47VIZp5fA3JjWSOAlBpCKaHVwc70YJ1okpgDn7IOe_bW83JBUErHHyD4.okEzQBW08DjDlPHUJ57P9hyP9AiqQrfCeOhojvOCwSY&amp;dib_tag=se&amp;hvadid=425954655564&amp;hvdev=c&amp;hvlocphy=9074122&amp;hvnetw=g&amp;hvqmt=b&amp;hvrand=3798358303515855803&amp;hvtargid=kwd-803697528883&amp;hydadcr=5658_11235231&amp;keywords=john+bowlby+teoria+do+apego&amp;mcid=af9f2e17577f3e93b8e09e226e06755b&amp;qid=1758139544&amp;sr=8-3&amp;ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Teoria do Apego</a></li>
+<li><a href="https://www.amazon.com.br/Disciplina-sem-drama-desenvolvimento-comportamento/dp/8584441581/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=2A9QU200SB68V&amp;dib=eyJ2IjoiMSJ9.QJ1tvHilIubTJcFe_835Cecba96-TYp3Ni1FISvRsn8sx0QDzwVLFzfzbqXKr64H.aDMzE-MouDbLP7M-sY6YK-HNutr8EZBUkxa5BNJOG3c&amp;dib_tag=se&amp;keywords=Disciplina+sem+lagrimas&amp;qid=1758139597&amp;sprefix=disciplina+sem+lagrima%2Caps%2C181&amp;sr=8-1&amp;ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Disciplina Sem Drama</a></li>
+</ul>
+]]></content:encoded></item></channel></rss>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Produtividade | FoxTechWorld</title><link>https://foxtechworld.github.io/categories/produtividade/</link><description>Conteúdo recente em Produtividade no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/categories/produtividade/" rel="self" type="application/rss+xml"/><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Estudos</category><category>Produtividade</category><category>Obsidian</category><category>Estudos</category><category>Aprendizado</category><category>Produtividade</category><category>Zettelkasten</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
+<p>Pois é: para alguém que disse que demoraria a publicar mais posts neste ano, cá estou eu de novo.</p>
+<p>Desta vez, em complemento ao post <a href="/jornada-reforco-estudos-2026/">Uma jornada de reforço nos estudos: planos para 2026</a>, no qual prometi que o ano seria mais lento, mostrarei como estou configurando o Obsidian para estudar.</p>
+<p>Antes de mais nada, estudar exige uma mistura de método e disciplina para memorizar conceitos e compreender os resultados de certas ações, fórmulas ou ocorrências.</p>
+<p>Essa é, claro, uma definição bastante crua. Então, quando seu professor criticar você por memorizar a fórmula, diga:</p>
+<blockquote>
+<p>Se eu não memorizar, como vou entender e, consequentemente, aprender?</p>
+</blockquote>
+<p>Enfim, existem diversas técnicas e formas de aprender algo.</p>
+<h2 id="meu-obsidian">Meu Obsidian</h2>
+<p>Decidi adotar o Zettelkasten, que combina muito bem com o Obsidian.</p>
+<p><figure><img src="https://i.pinimg.com/originals/f0/38/d1/f038d1a12df70cb5c87842bf4737098d.png" loading="lazy" decoding="async" alt="Obsidian   Sharpen Your Thinking with the Best Note Taking App">
+</figure>
+</p>
+<p>Mas obviamente não de forma crua como está, então eu adicionei alguns plugins como:</p>
+<ul>
+<li>Advanced Canvas</li>
+<li>Dataview</li>
+<li>Iconize</li>
+<li>Tag Wrangler</li>
+<li>Templater</li>
+<li>Escalidraw</li>
+<li>Omnisearch</li>
+</ul>
+<p>Esses plugins cobrem grande parte do que preciso e permitem ligar conteúdos de forma muito mais interessante.</p>
+<p>E adicionei também alguns diretórios:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>00 - Assets
+</span></span><span style="display:flex;"><span>01 - Referências
+</span></span><span style="display:flex;"><span>02 - Permanentes
+</span></span><span style="display:flex;"><span>03 - Map of Contents
+</span></span><span style="display:flex;"><span>xx - Excalidraw
+</span></span></code></pre></div><p><code>xx</code> representa um diretório sem valor numérico.</p>
+<p>Mas a parte mais importante fica em <code>Assets/_Templates</code>.</p>
+<p>Ali ficam os templates do projeto:</p>
+<ul>
+<li>Nota MOC → lê-se &ldquo;nota de mapa de conteúdo&rdquo;</li>
+<li>Nota Permanente</li>
+<li>Nota Referência</li>
+</ul>
+<p>Aliás, dica importante</p>
+<blockquote>
+<p>No Obsidian, abra as configurações do Templater e defina <em>Template folder location</em> como <code>00 - Assets/_Templates</code>.</p>
+<p>Isso evita que o plugin sugira outras notas como templates.</p>
+</blockquote>
+<p>Bom, a ideia é simples:</p>
+<p>Tudo o que eu ler e considerar útil virará uma <code>Referência</code>.</p>
+<blockquote>
+<p>Depois que a referência for feita, ela não pode mais ser editada, somente para alguma revisão ou em nova versão v2.</p>
+</blockquote>
+<p>Depois, lemos a referência e transformamos os <em>insights</em> em notas permanentes, que devem ter:</p>
+<ul>
+<li>Argumento central</li>
+<li>Resumo do que ocorreu</li>
+<li>Conexões com outras notas</li>
+<li>Link para as referências originais</li>
+</ul>
+<blockquote>
+<p>Você pode usar o Dataview para verificar se já existe uma nota permanente desse tipo antes de criar duplicatas.</p>
+</blockquote>
+<p>Por fim, atualizamos o MOC da área correspondente, listando ou vinculando todas as notas permanentes das respectivas áreas e subáreas.</p>
+<p>Se houver alguma dúvida, ela pode ser registrada em <strong>Questões em aberto</strong>.</p>
+<p>Agora, o mais importante é o processo de revisão, sempre releia as permanentes antigas e atualize o MOC se surgirem novas conexões.</p>
+<h3 id="templates">Templates</h3>
+<h4 id="nota-de-referência">Nota de referência</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tipo</span>: <span style="color:#ae81ff">referencia</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">area</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fonte</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">autor</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">link</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#ae81ff">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">nota-referencia</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># &lt;% tp.system.prompt() %&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Resumo bruto
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Pontos Importantes
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Ideias Provocadas
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Possíveis Permanentes
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-
+</span></span></code></pre></div><p>É um template simples. O uso de <code>&lt;% tp.system.prompt() %&gt;</code> permite criar um título a partir do texto informado pelo usuário. Também podemos ter diversas referências para uma única nota permanente.</p>
+<p>O template possui propriedades como:</p>
+<p><code>area</code>-&gt; Categoria do conteúdo</p>
+<p><code>fonte/autor/link</code> -&gt; informações da fonte original</p>
+<p><code>resumo bruto</code> → síntese direta da fonte</p>
+<p><code>pontos importantes</code> -&gt; destaque de ideias que podem se tornar permanentes</p>
+<p><code>ideias provocadas</code> -&gt; insights iniciais que surgem ao ler a fonte</p>
+<p><code>possíveis permanentes</code> → conceitos que poderão virar notas consolidadas</p>
+<h4 id="nota-permanente">Nota Permanente</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tipo</span>: <span style="color:#ae81ff">permanente</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">area</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>: <span style="color:#ae81ff">rascunho</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">origin</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#ae81ff">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">updated</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">conexões</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">referencias</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">nota-permanente</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># #Title
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Explique a ideia com suas palavras.
+</span></span><span style="display:flex;"><span>Seja específico
+</span></span><span style="display:flex;"><span>Evite copiar a fonte.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Argumento Central
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>Diferentemente da nota de referência, aqui usamos o título literal do arquivo, <code>#Title</code>, para gerar o título da nota permanente.</p>
+<p>Ela também possui alguns campos:</p>
+<p><code>area</code> -&gt; precisa ser a mesma da referência relacionada</p>
+<p><code>origin</code> -&gt; referência de origem</p>
+<p><code>argumento central</code> -&gt; explicação própria do conceito</p>
+<p><code>conexões</code> -&gt; links para outras permanentes relacionadas</p>
+<p><code>referências</code> → referências utilizadas</p>
+<p><code>status</code> → pode ser rascunho, ativo ou revisado</p>
+<blockquote>
+<p>Notas permanentes são a base do conhecimento consolidado, revisável e conectado pelo MOC.</p>
+</blockquote>
+<h4 id="nota-moc">Nota MOC</h4>
+<pre tabindex="0"><code>---
+tags:
+tipo: moc
+area:
+status: ativo
+created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+---
+
+# #Title
+
+## Escopo
+
+Descreva claramente o que este Map of Content cobre.
+
+---
+
+## Conceitos Fundamentais
+
+```dataview
+table area, status
+from &#34;02 - Permanentes&#34;
+where area = this.area
+```dataview
+---
+## Subáreas
+
+- ***
+
+## Referências Base
+
+```dataview
+table fonte, autor
+from &#34;01 - Referencias&#34;
+where area = this.area
+```dataview
+---
+
+## Questões em aberto
+
+-
+</code></pre><blockquote>
+<p>Eu acabei quebrando o dataview no exemplo acima para garantir que ficasse tudo em um único codeblock, assim caso copiem diretamente basta trocar ```dataview pela sua versão sem dataview usando regex.</p>
+</blockquote>
+<p>A nota MOC funciona como um índice e oferece uma visão geral da área de estudo. Aqui também usamos <code>#Title</code> para gerar o título.</p>
+<p>O MOC usa o Dataview para reunir as notas permanentes relacionadas à mesma área e organizá-las por área, subárea, <em>cluster</em> ou tópico.</p>
+<p>Também há uma seção de questões em aberto: literalmente, uma lista do que ainda falta estudar.</p>
+<p><figure><img
+      src="/organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_d661c4751f2aa48e.webp"
+      srcset="/organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_d661c4751f2aa48e.webp 640w, /organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_6391ca0857445d30.webp 960w, /organizar-estudos-obsidian-zettelkasten/images/roadmap_sh.png 769w"
+      sizes="(max-width: 70rem) 100vw, 56rem"
+      width="769"
+      height="809"
+      loading="lazy"
+      decoding="async"
+      alt="Foto do meu roadmap.sh pessoal">
+</figure>
+</p>
+<h2 id="fluxo-de-estudo">Fluxo de estudo</h2>
+<ol>
+<li>Encontro algo novo e crio uma <code>Referência</code>.</li>
+<li>Processo a informação e a transformo em uma nota <code>Permanente</code>, com minhas palavras e a origem citada.</li>
+<li>Organizo o MOC, atualizando conceitos fundamentais, subáreas e questões em aberto.</li>
+<li>Pratico. Este é o passo mais importante: conhecimento sem prática não adianta.</li>
+<li>Reviso periodicamente, mantendo as notas permanentes e o MOC atualizados com novas conexões.</li>
+</ol>
+<p>Este é meu Obsidian de estudos, chamado carinhosamente de <em><strong>Mind Order</strong></em>. Espero que tenham gostado. Fui!</p>
+]]></content:encoded></item></channel></rss>
