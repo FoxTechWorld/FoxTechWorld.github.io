@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aprendizado | FoxTechWorld</title><link>https://foxtechworld.github.io/tags/aprendizado/</link><description>Conteúdo recente em Aprendizado no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/tags/aprendizado/" rel="self" type="application/rss+xml"/><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Estudos</category><category>Produtividade</category><category>Obsidian</category><category>Estudos</category><category>Aprendizado</category><category>Produtividade</category><category>Zettelkasten</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Aprendizado | FoxTechWorld</title><link>http://localhost:1313/tags/aprendizado/</link><description>Conteúdo recente em Aprendizado no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="http://localhost:1313/tags/aprendizado/" rel="self" type="application/rss+xml"/><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>http://localhost:1313/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">http://localhost:1313/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Estudos</category><category>Produtividade</category><category>Obsidian</category><category>Estudos</category><category>Aprendizado</category><category>Produtividade</category><category>Zettelkasten</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
 <p>Pois é: para alguém que disse que demoraria a publicar mais posts neste ano, cá estou eu de novo.</p>
 <p>Desta vez, em complemento ao post <a href="/jornada-reforco-estudos-2026/">Uma jornada de reforço nos estudos: planos para 2026</a>, no qual prometi que o ano seria mais lento, mostrarei como estou configurando o Obsidian para estudar.</p>
 <p>Antes de mais nada, estudar exige uma mistura de método e disciplina para memorizar conceitos e compreender os resultados de certas ações, fórmulas ou ocorrências.</p>
@@ -24,11 +24,11 @@
 </ul>
 <p>Esses plugins cobrem grande parte do que preciso e permitem ligar conteúdos de forma muito mais interessante.</p>
 <p>E adicionei também alguns diretórios:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>00 - Assets
-</span></span><span style="display:flex;"><span>01 - Referências
-</span></span><span style="display:flex;"><span>02 - Permanentes
-</span></span><span style="display:flex;"><span>03 - Map of Contents
-</span></span><span style="display:flex;"><span>xx - Excalidraw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">00 - Assets
+</span></span><span class="line"><span class="cl">01 - Referências
+</span></span><span class="line"><span class="cl">02 - Permanentes
+</span></span><span class="line"><span class="cl">03 - Map of Contents
+</span></span><span class="line"><span class="cl">xx - Excalidraw
 </span></span></code></pre></div><p><code>xx</code> representa um diretório sem valor numérico.</p>
 <p>Mas a parte mais importante fica em <code>Assets/_Templates</code>.</p>
 <p>Ali ficam os templates do projeto:</p>
@@ -62,35 +62,35 @@
 <p>Agora, o mais importante é o processo de revisão, sempre releia as permanentes antigas e atualize o MOC se surgirem novas conexões.</p>
 <h3 id="templates">Templates</h3>
 <h4 id="nota-de-referência">Nota de referência</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tipo</span>: <span style="color:#ae81ff">referencia</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">area</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">fonte</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">autor</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">link</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#ae81ff">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">nota-referencia</span>
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span># &lt;% tp.system.prompt() %&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Resumo bruto
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>-
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Pontos Importantes
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>-
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Ideias Provocadas
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>-
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Possíveis Permanentes
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">tipo</span><span class="p">:</span><span class="w"> </span><span class="l">referencia</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">area</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">fonte</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">autor</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">link</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">status</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">nota-referencia</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># &lt;% tp.system.prompt() %&gt;
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Resumo bruto
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Pontos Importantes
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Ideias Provocadas
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Possíveis Permanentes
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
 </span></span></code></pre></div><p>É um template simples. O uso de <code>&lt;% tp.system.prompt() %&gt;</code> permite criar um título a partir do texto informado pelo usuário. Também podemos ter diversas referências para uma única nota permanente.</p>
 <p>O template possui propriedades como:</p>
 <p><code>area</code>-&gt; Categoria do conteúdo</p>
@@ -100,30 +100,30 @@
 <p><code>ideias provocadas</code> -&gt; insights iniciais que surgem ao ler a fonte</p>
 <p><code>possíveis permanentes</code> → conceitos que poderão virar notas consolidadas</p>
 <h4 id="nota-permanente">Nota Permanente</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tipo</span>: <span style="color:#ae81ff">permanente</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">area</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>: <span style="color:#ae81ff">rascunho</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">origin</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#ae81ff">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">updated</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">conexões</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">referencias</span>:
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">nota-permanente</span>
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span># #Title
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Explique a ideia com suas palavras.
-</span></span><span style="display:flex;"><span>Seja específico
-</span></span><span style="display:flex;"><span>Evite copiar a fonte.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Argumento Central
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>---
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">tipo</span><span class="p">:</span><span class="w"> </span><span class="l">permanente</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">area</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l">rascunho</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">origin</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">updated</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">conexões</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">referencias</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">nota-permanente</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># #Title
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Explique a ideia com suas palavras.
+</span></span><span class="line"><span class="cl">Seja específico
+</span></span><span class="line"><span class="cl">Evite copiar a fonte.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Argumento Central
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
 </span></span></code></pre></div><p>Diferentemente da nota de referência, aqui usamos o título literal do arquivo, <code>#Title</code>, para gerar o título da nota permanente.</p>
 <p>Ela também possui alguns campos:</p>
 <p><code>area</code> -&gt; precisa ser a mesma da referência relacionada</p>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Osdev | FoxTechWorld</title><link>https://foxtechworld.github.io/tags/osdev/</link><description>Conteúdo recente em Osdev no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/tags/osdev/" rel="self" type="application/rss+xml"/><item><title>Programação assistida por IA com o método Ralph Wiggum</title><link>https://foxtechworld.github.io/programacao-assistida-por-ia-metodo-ralph-wiggum/</link><guid isPermaLink="true">https://foxtechworld.github.io/programacao-assistida-por-ia-metodo-ralph-wiggum/</guid><pubDate>Mon, 02 Feb 2026 02:13:05 +0000</pubDate><description>Conheça o método Ralph Wiggum para programação assistida por IA, baseado em tarefas pequenas, repetição e memória persistente.</description><category>Programação</category><category>Inteligência Artificial</category><category>Programação</category><category>Osdev</category><category>IA</category><category>LLM</category><category>Vibe Coding</category><category>Ralph Wiggum</category><content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>OSDev | FoxTechWorld</title><link>http://localhost:1313/tags/osdev/</link><description>Conteúdo recente em OSDev no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="http://localhost:1313/tags/osdev/" rel="self" type="application/rss+xml"/><item><title>Programação assistida por IA com o método Ralph Wiggum</title><link>http://localhost:1313/programacao-assistida-por-ia-metodo-ralph-wiggum/</link><guid isPermaLink="true">http://localhost:1313/programacao-assistida-por-ia-metodo-ralph-wiggum/</guid><pubDate>Mon, 02 Feb 2026 02:13:05 +0000</pubDate><description>Conheça o método Ralph Wiggum para programação assistida por IA, baseado em tarefas pequenas, repetição e memória persistente.</description><category>Programação</category><category>Inteligência Artificial</category><category>Programação</category><category>OSDev</category><category>IA</category><category>LLM</category><category>Vibe Coding</category><category>Ralph Wiggum</category><content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
 <p>No mundo moderno, não existe nada pior do que ficar defasado — e pior ainda é ficar travado por causa de <em><strong>opinião sem embasamento</strong></em>. Obviamente, eu também dou opiniões, pelo menos o suficiente para produzir posts como:</p>
 <ul>
 <li><a href="/opiniao-nao-tenha-criancas-sem-antes-pensar-nisso/">Antes de ter filhos: reflexões sobre educação e responsabilidade</a></li>
@@ -48,7 +48,7 @@
 </p>
 <p>Com tudo isso dito, espero um futuro melhor no desenvolvimento do kernel. Tarefas muito custosas podem não terminar mais rápido, mas exigem menos intervenção manual: rodou, esqueceu e deixou o agente se ajustar.</p>
 <p>Além disso, a divisão em tarefas menores facilita o monitoramento contínuo do progresso.</p>
-]]></content:encoded></item><item><title>OSDev: pervasive multithreading, SMT e escalonamento</title><link>https://foxtechworld.github.io/osdev-o-multithread-perdido-pervasive-multithread/</link><guid isPermaLink="true">https://foxtechworld.github.io/osdev-o-multithread-perdido-pervasive-multithread/</guid><pubDate>Fri, 28 Nov 2025 12:31:28 -0300</pubDate><description>Uma análise de pervasive multithreading, SMT e topologia de CPU, com uma proposta de escalonamento consciente para o FKernel.</description><category>Programação</category><category>OSDev</category><category>Programação</category><category>Sistemas Operacionais</category><category>Osdev</category><category>C++</category><category>Haiku</category><category>BeOS</category><category>SMT</category><category>Escalonamento</category><content:encoded><![CDATA[<p>Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.</p>
+]]></content:encoded></item><item><title>OSDev: pervasive multithreading, SMT e escalonamento</title><link>http://localhost:1313/osdev-o-multithread-perdido-pervasive-multithread/</link><guid isPermaLink="true">http://localhost:1313/osdev-o-multithread-perdido-pervasive-multithread/</guid><pubDate>Fri, 28 Nov 2025 12:31:28 -0300</pubDate><description>Uma análise de pervasive multithreading, SMT e topologia de CPU, com uma proposta de escalonamento consciente para o FKernel.</description><category>Programação</category><category>OSDev</category><category>Programação</category><category>Sistemas Operacionais</category><category>OSDev</category><category>C++</category><category>Haiku</category><category>BeOS</category><category>SMT</category><category>Escalonamento</category><content:encoded><![CDATA[<p>Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.</p>
 <h2 id="o-diferencial-do-beos--haiku">O diferencial do BeOS / Haiku</h2>
 <p>O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.</p>
 <p>Essa ênfase na responsividade ajuda a explicar decisões de projeto aparentemente simples — por exemplo, por que tratar a unidade de escalonamento como a thread em vez do processo — e prepara o terreno para entendermos o conceito que vem a seguir.</p>
@@ -86,7 +86,7 @@
 <p>Tratar hardware threads SMT como CPUs independentes é uma simplificação que não reflete a microarquitetura moderna: ela produz contenção interna, variabilidade de latência e desperdício de recursos. O FKernel propõe empurrar a complexidade para camadas que conhecem o perfil das cargas — MLFQ e Pervasive Layer — para mapear threads de forma consciente sobre a topologia real do processador.</p>
 <p>O ganho esperado é simples e direto: menor latência, interatividade consistente e uso mais eficiente de caches e unidades funcionais. Para cargas de throughput extremo, a flag <code>O_HPC</code> permite abrir mão dessa previsibilidade de propósito.</p>
 <p>Se você curte esse tipo de discussão ou quer acompanhar o desenvolvimento do FKernel, deixe um comentário, compartilhe como seu sistema lida com SMT ou sugira cargas de trabalho para testarmos. Medições práticas mostrarão o impacto real, e pretendo publicar os resultados em posts futuros.</p>
-]]></content:encoded></item><item><title>OSDev: até onde dá para usar C++?</title><link>https://foxtechworld.github.io/osdev-ate-onde-da-para-usar-c/</link><guid isPermaLink="true">https://foxtechworld.github.io/osdev-ate-onde-da-para-usar-c/</guid><pubDate>Mon, 22 Sep 2025 15:33:40 -0300</pubDate><description>Veja quais recursos de C++ podem ser usados no desenvolvimento de um kernel e quais partes da runtime precisam ser implementadas pelo sistema operacional.</description><category>Programação</category><category>OSDev</category><category>Osdev</category><category>C++</category><category>Cpp</category><category>Kernel</category><category>Linux</category><category>Windows</category><category>MacOS</category><content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
+]]></content:encoded></item><item><title>OSDev: até onde dá para usar C++?</title><link>http://localhost:1313/osdev-ate-onde-da-para-usar-c/</link><guid isPermaLink="true">http://localhost:1313/osdev-ate-onde-da-para-usar-c/</guid><pubDate>Mon, 22 Sep 2025 15:33:40 -0300</pubDate><description>Veja quais recursos de C++ podem ser usados no desenvolvimento de um kernel e quais partes da runtime precisam ser implementadas pelo sistema operacional.</description><category>Programação</category><category>OSDev</category><category>OSDev</category><category>C++</category><category>Cpp</category><category>Kernel</category><category>Linux</category><category>Windows</category><category>MacOS</category><content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
 <p>Para uso desktop em código x86_64.</p>
 <p>E lendo sobre algumas linguagens como <strong><em>Rust</em></strong>, <strong><em>C</em></strong>, <strong><em>C++</em></strong>, <strong><em>Zig</em></strong> &hellip;</p>
 <p>Decidi fazer uma combinação de:</p>
@@ -116,103 +116,103 @@
 <p>Ok, podemos concordar em algumas partes mas, isso não seria inevitavelmente ruim.</p>
 <p>Sim, C++ tem um monte de coisa, mas fugiria do ponto principal que é C++ dá contratos que structs sozinhas dificilmente conseguem.</p>
 <p>Pegue um exemplo do <code>SerenityOS</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> ErrorOr<span style="color:#f92672">&lt;</span>NonnullOwnPtr<span style="color:#f92672">&lt;</span>KBuffer<span style="color:#f92672">&gt;&gt;</span> try_create_with_size(StringView name,
-</span></span><span style="display:flex;"><span>size_t size,
-</span></span><span style="display:flex;"><span>Memory<span style="color:#f92672">::</span>Region<span style="color:#f92672">::</span>Access access <span style="color:#f92672">=</span> Memory<span style="color:#f92672">::</span>Region<span style="color:#f92672">::</span>Access<span style="color:#f92672">::</span>ReadWrite,
-</span></span><span style="display:flex;"><span>AllocationStrategy strategy <span style="color:#f92672">=</span> AllocationStrategy<span style="color:#f92672">::</span>Reserve){
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">auto</span> rounded_size <span style="color:#f92672">=</span> TRY(Memory<span style="color:#f92672">::</span>page_round_up(size));
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">auto</span> region <span style="color:#f92672">=</span> TRY(MM.allocate_kernel_region(rounded_size, name, access, strategy));
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">TRY</span>(adopt_nonnull_own_or_enomem(<span style="color:#66d9ef">new</span> (nothrow) KBuffer { size, move(region) }));
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">static</span> <span class="n">ErrorOr</span><span class="o">&lt;</span><span class="n">NonnullOwnPtr</span><span class="o">&lt;</span><span class="n">KBuffer</span><span class="o">&gt;&gt;</span> <span class="n">try_create_with_size</span><span class="p">(</span><span class="n">StringView</span> <span class="n">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">size_t</span> <span class="n">size</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">Memory</span><span class="o">::</span><span class="n">Region</span><span class="o">::</span><span class="n">Access</span> <span class="n">access</span> <span class="o">=</span> <span class="n">Memory</span><span class="o">::</span><span class="n">Region</span><span class="o">::</span><span class="n">Access</span><span class="o">::</span><span class="n">ReadWrite</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">AllocationStrategy</span> <span class="n">strategy</span> <span class="o">=</span> <span class="n">AllocationStrategy</span><span class="o">::</span><span class="n">Reserve</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="k">auto</span> <span class="n">rounded_size</span> <span class="o">=</span> <span class="n">TRY</span><span class="p">(</span><span class="n">Memory</span><span class="o">::</span><span class="n">page_round_up</span><span class="p">(</span><span class="n">size</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">auto</span> <span class="n">region</span> <span class="o">=</span> <span class="n">TRY</span><span class="p">(</span><span class="n">MM</span><span class="p">.</span><span class="n">allocate_kernel_region</span><span class="p">(</span><span class="n">rounded_size</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">access</span><span class="p">,</span> <span class="n">strategy</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nf">TRY</span><span class="p">(</span><span class="n">adopt_nonnull_own_or_enomem</span><span class="p">(</span><span class="k">new</span> <span class="p">(</span><span class="n">nothrow</span><span class="p">)</span> <span class="n">KBuffer</span> <span class="p">{</span> <span class="n">size</span><span class="p">,</span> <span class="n">move</span><span class="p">(</span><span class="n">region</span><span class="p">)</span> <span class="p">}));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Consegue entender o que esse código faz? Todo esse contrato engloba em poucas linhas</p>
 <blockquote>
 <p>Essa função try_create_with_size serve para criar um buffer de memória no kernel de um tamanho específico e lidar com possíveis erros de forma segura.</p>
 </blockquote>
 <p>Para termos o equivalente exato em C garantindo a mesma segurança seria necessária escrever dessa forma.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">try_create_with_size</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name,
-</span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">size_t</span> size,
-</span></span><span style="display:flex;"><span>                         MemoryAccess access,
-</span></span><span style="display:flex;"><span>                         AllocationStrategy strategy,
-</span></span><span style="display:flex;"><span>                         KBuffer<span style="color:#f92672">**</span> out_buffer) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>out_buffer) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">size_t</span> rounded_size;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> rc <span style="color:#f92672">=</span> <span style="color:#a6e22e">page_round_up</span>(size, <span style="color:#f92672">&amp;</span>rounded_size);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (rc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> rc;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    MemoryRegion<span style="color:#f92672">*</span> region;
-</span></span><span style="display:flex;"><span>    rc <span style="color:#f92672">=</span> <span style="color:#a6e22e">allocate_kernel_region</span>(rounded_size, name, access, strategy, <span style="color:#f92672">&amp;</span>region);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (rc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> rc;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    KBuffer<span style="color:#f92672">*</span> buffer <span style="color:#f92672">=</span> <span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(KBuffer));
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>buffer) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(region<span style="color:#f92672">-&gt;</span>addr);
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(region);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>ENOMEM;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    buffer<span style="color:#f92672">-&gt;</span>size <span style="color:#f92672">=</span> size;
-</span></span><span style="display:flex;"><span>    buffer<span style="color:#f92672">-&gt;</span>region <span style="color:#f92672">=</span> region;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>out_buffer <span style="color:#f92672">=</span> buffer;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// sucesso
-</span></span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">try_create_with_size</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">MemoryAccess</span> <span class="n">access</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">AllocationStrategy</span> <span class="n">strategy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">KBuffer</span><span class="o">**</span> <span class="n">out_buffer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">out_buffer</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">size_t</span> <span class="n">rounded_size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="nf">page_round_up</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rounded_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">MemoryRegion</span><span class="o">*</span> <span class="n">region</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rc</span> <span class="o">=</span> <span class="nf">allocate_kernel_region</span><span class="p">(</span><span class="n">rounded_size</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">access</span><span class="p">,</span> <span class="n">strategy</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">region</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">KBuffer</span><span class="o">*</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">KBuffer</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">buffer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">region</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">region</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">buffer</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">buffer</span><span class="o">-&gt;</span><span class="n">region</span> <span class="o">=</span> <span class="n">region</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">out_buffer</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// sucesso
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Ok, tivemos uma disparidade no tamanho, mas isso não significa nada no geral.</p>
 <p>Meu ponto defendido é que precisamos fazer muito mais código, que vai ser muito mais performático mas que vai resultar em um resultado muito menos seguro, e muito menos reusável no geral.</p>
 <p>Não ironicamente, muitos empresas incluindo a própria Apple usam o C++ em seus kernels.</p>
 <p>Mas não precisa ser o c++ inteiro e sim um subset chamado <a href="https://en.wikipedia.org/wiki/Embedded_C%2B%2B"><strong><em>embedded c++</em></strong></a>.</p>
 <h3 id="implementação-do-iokit">Implementação do IOKit</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">/*
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Copyright (c) 1998-2000 Apple Computer, Inc. All rights reserved.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * This file contains Original Code and/or Modifications of Original Code
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * as defined in and that are subject to the Apple Public Source License
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Version 2.0 (the &#39;License&#39;). You may not use this file except in
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * compliance with the License. The rights granted to you under the License
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * may not be used to create, or enable the creation or redistribution of,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * unlawful or unlicensed copies of an Apple operating system, or to
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * circumvent, violate, or enable the circumvention or violation of, any
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * terms of an Apple operating system software license agreement.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Please obtain a copy of the License at
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * http://www.opensource.apple.com/apsl/ and read it before using this file.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * The Original Code and all software distributed under the License are
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * distributed on an &#39;AS IS&#39; basis, WITHOUT WARRANTY OF ANY KIND, EITHER
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Please see the License for the specific language governing rights and
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * limitations under the License.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifndef _IOKIT_IONVRAMCONTROLLER_H
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define _IOKIT_IONVRAMCONTROLLER_H
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;IOKit/IOService.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IONVRAMController</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> IOService
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	OSDeclareAbstractStructors(IONVRAMController);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> registerService(IOOptionBits options <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) APPLE_KEXT_OVERRIDE;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sync</span>(<span style="color:#66d9ef">void</span>);
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">select</span>(<span style="color:#66d9ef">uint32_t</span> bank);
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">eraseBank</span>(<span style="color:#66d9ef">void</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">read</span>(IOByteCount offset, UInt8 <span style="color:#f92672">*</span>buffer,
-</span></span><span style="display:flex;"><span>	    IOByteCount length) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> IOReturn <span style="color:#a6e22e">write</span>(IOByteCount offset, UInt8 <span style="color:#f92672">*</span>buffer,
-</span></span><span style="display:flex;"><span>	    IOByteCount length) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif </span><span style="color:#75715e">/* !_IOKIT_IONVRAMCONTROLLER_H */</span><span style="color:#75715e">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright (c) 1998-2000 Apple Computer, Inc. All rights reserved.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * This file contains Original Code and/or Modifications of Original Code
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * as defined in and that are subject to the Apple Public Source License
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Version 2.0 (the &#39;License&#39;). You may not use this file except in
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * compliance with the License. The rights granted to you under the License
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * may not be used to create, or enable the creation or redistribution of,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * unlawful or unlicensed copies of an Apple operating system, or to
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * circumvent, violate, or enable the circumvention or violation of, any
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * terms of an Apple operating system software license agreement.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Please obtain a copy of the License at
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * http://www.opensource.apple.com/apsl/ and read it before using this file.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * The Original Code and all software distributed under the License are
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * distributed on an &#39;AS IS&#39; basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Please see the License for the specific language governing rights and
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * limitations under the License.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#ifndef _IOKIT_IONVRAMCONTROLLER_H
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define _IOKIT_IONVRAMCONTROLLER_H
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;IOKit/IOService.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">IONVRAMController</span> <span class="o">:</span> <span class="k">public</span> <span class="n">IOService</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">OSDeclareAbstractStructors</span><span class="p">(</span><span class="n">IONVRAMController</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="n">registerService</span><span class="p">(</span><span class="n">IOOptionBits</span> <span class="n">options</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="n">APPLE_KEXT_OVERRIDE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="nf">sync</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">select</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">bank</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">eraseBank</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">read</span><span class="p">(</span><span class="n">IOByteCount</span> <span class="n">offset</span><span class="p">,</span> <span class="n">UInt8</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">IOByteCount</span> <span class="n">length</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">write</span><span class="p">(</span><span class="n">IOByteCount</span> <span class="n">offset</span><span class="p">,</span> <span class="n">UInt8</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">IOByteCount</span> <span class="n">length</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#endif </span><span class="cm">/* !_IOKIT_IONVRAMCONTROLLER_H */</span><span class="cp">
 </span></span></span></code></pre></div><p>Quem diria.</p>
 <p>Se fossemos falar do C++ antes da versão 17, eu até concordaria mas após a versão 17 muita coisa mudou.</p>
 <p>E veja que o IOKit é implementado na forma Embedded C++.</p>
