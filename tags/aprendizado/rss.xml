@@ -62,18 +62,18 @@
 <p>Agora, o mais importante é o processo de revisão, sempre releia as permanentes antigas e atualize o MOC se surgirem novas conexões.</p>
 <h3 id="templates">Templates</h3>
 <h4 id="nota-de-referência">Nota de referência</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">tipo</span><span class="p">:</span><span class="w"> </span><span class="l">referencia</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">area</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">fonte</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">autor</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">link</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">status</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">tags</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">nota-referencia</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">tipo: referencia
+</span></span><span class="line"><span class="cl">area:
+</span></span><span class="line"><span class="cl">fonte:
+</span></span><span class="line"><span class="cl">autor:
+</span></span><span class="line"><span class="cl">link:
+</span></span><span class="line"><span class="cl">created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span class="line"><span class="cl">status:
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> nota-referencia
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="gh"># &lt;% tp.system.prompt() %&gt;
 </span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="gu">## Resumo bruto
@@ -100,19 +100,19 @@
 <p><code>ideias provocadas</code> -&gt; insights iniciais que surgem ao ler a fonte</p>
 <p><code>possíveis permanentes</code> → conceitos que poderão virar notas consolidadas</p>
 <h4 id="nota-permanente">Nota Permanente</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">tipo</span><span class="p">:</span><span class="w"> </span><span class="l">permanente</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">area</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l">rascunho</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">origin</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">updated</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">conexões</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">referencias</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">tags</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">nota-permanente</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">tipo: permanente
+</span></span><span class="line"><span class="cl">area:
+</span></span><span class="line"><span class="cl">status: rascunho
+</span></span><span class="line"><span class="cl">origin:
+</span></span><span class="line"><span class="cl">created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span class="line"><span class="cl">updated:
+</span></span><span class="line"><span class="cl">conexões:
+</span></span><span class="line"><span class="cl">referencias:
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> nota-permanente
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="gh"># #Title
 </span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Explique a ideia com suas palavras.

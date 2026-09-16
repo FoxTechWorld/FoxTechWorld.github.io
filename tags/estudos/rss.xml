@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Estudos | FoxTechWorld</title><link>https://foxtechworld.github.io/tags/estudos/</link><description>Conteúdo recente em Estudos no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/tags/estudos/" rel="self" type="application/rss+xml"/><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Construção Independente</category><category>Estudos</category><category>Produtividade</category><category>Ferramentas</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Estudos | FoxTechWorld</title><link>https://foxtechworld.github.io/tags/estudos/</link><description>Conteúdo recente em Estudos no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/tags/estudos/" rel="self" type="application/rss+xml"/><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Estudos</category><category>Produtividade</category><category>Obsidian</category><category>Estudos</category><category>Aprendizado</category><category>Produtividade</category><category>Zettelkasten</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
 <p>Pois é: para alguém que disse que demoraria a publicar mais posts neste ano, cá estou eu de novo.</p>
 <p>Desta vez, em complemento ao post <a href="/jornada-reforco-estudos-2026/">Uma jornada de reforço nos estudos: planos para 2026</a>, no qual prometi que o ano seria mais lento, mostrarei como estou configurando o Obsidian para estudar.</p>
 <p>Antes de mais nada, estudar exige uma mistura de método e disciplina para memorizar conceitos e compreender os resultados de certas ações, fórmulas ou ocorrências.</p>
@@ -202,36 +202,4 @@ where area = this.area
 <li>Reviso periodicamente, mantendo as notas permanentes e o MOC atualizados com novas conexões.</li>
 </ol>
 <p>Este é meu Obsidian de estudos, chamado carinhosamente de <em><strong>Mind Order</strong></em>. Espero que tenham gostado. Fui!</p>
-]]></content:encoded></item><item><title>Uma jornada de reforço nos estudos: planos para 2026</title><link>https://foxtechworld.github.io/jornada-reforco-estudos-2026/</link><guid isPermaLink="true">https://foxtechworld.github.io/jornada-reforco-estudos-2026/</guid><pubDate>Fri, 13 Feb 2026 03:00:22 +0000</pubDate><description>Meu plano de estudos para 2026, com reforço em português, matemática e computação para recuperar fundamentos e avançar na graduação.</description><category>Construção Independente</category><category>Estudos</category><category>Planos</category><content:encoded><![CDATA[<h2 id="o-tempo-passa">O tempo passa</h2>
-<p>Cá estamos nós em fevereiro, e eu realmente não consigo acreditar que faz pouco mais de seis anos que me tornei alguém ativo na web.</p>
-<p>Não que eu seja famoso. Digo ativo no sentido de estar presente em diversas plataformas online: mantendo este blog, conversando no Discord, perdendo tempo no Vaporhole — uma rede social brasileira no estilo do tilde.club, como um computador Unix compartilhado via SSH —, vendo vídeos no YouTube e navegando no X e no Instagram.</p>
-<p>Enfim, nada de muito revolucionário até aí.</p>
-<p>Mas, sinceramente, desde a criação do ChatGPT, Claude, Gemini, Grok, DeepSeek e outros modelos, sinto que venho programando e exercitando cada vez menos meu intelecto como programador.</p>
-<p>Não é como se eu cogitasse parar de usá-los. O ChatGPT conversa muito bem comigo, e eu o instruo a se comunicar da forma que entendo melhor:</p>
-<blockquote>
-<p>Estilo e Tom básico: Franco
-Caracteristicas:</p>
-<ul>
-<li>Acolhedor: Menos</li>
-<li>Entusiasmado: Mais</li>
-<li>Lista e Cabeçalhos: Mais</li>
-<li>Emoji: Mais
-Instrução personalizada:
-Seja sarcástico, mas mantenha a educação; discorde com argumentos e questione minha lógica sempre que possível.</li>
-</ul>
-<p>Não tenha floreios e aja com um homem adulto de 18 anos podendo explicitamente conversar sem preocupações como uma pessoa adulta faria com outra pessoa adulta.</p>
-<p>Memória:
-O usuário prefere que eu nunca refaça as respostas que ele já escreveu e quer que isso seja respeitado permanentemente.</p>
-</blockquote>
-<p>Então, a ideia para este ano é voltar a estudar algoritmos, estruturas de dados e ferramentas.</p>
-<p>A segunda parte é começar com alguns projetos avulsos de prática.</p>
-<p>Para quem não conhece: <em>Yet Another Recreational Programming Session</em>, do Tsoding.</p>
-<p>Provavelmente este ano será lento, mas tentarei focar os próximos posts em assuntos menos comuns, como programação dinâmica, programação matemática, arquitetura e alguns padrões pouco discutidos.</p>
-<p>A terceira parte é começar na criação de conteúdo.</p>
-<p>A quarta parte e a mais importante é começar a sair do conforto e começar a fazer mais atividades físicas.</p>
-<p>23 anos é muito tempo para ser feliz, hora de virar adulto.</p>
-<p>Enfim, um bom ano para todos.</p>
-<p><figure><img src="https://i.pinimg.com/originals/0a/59/de/0a59de99e96eb0de3fda253e85418214.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Happy New Year">
-</figure>
-</p>
 ]]></content:encoded></item></channel></rss>
