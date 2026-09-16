@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sistemas E Engenharia | FoxTechWorld</title><link>https://foxtechworld.github.io/categories/sistemas-e-engenharia/</link><description>Conteúdo recente em Sistemas E Engenharia no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/categories/sistemas-e-engenharia/" rel="self" type="application/rss+xml"/><item><title>OSDev: pervasive multithreading, SMT e escalonamento</title><link>https://foxtechworld.github.io/osdev-o-multithread-perdido-pervasive-multithread/</link><guid isPermaLink="true">https://foxtechworld.github.io/osdev-o-multithread-perdido-pervasive-multithread/</guid><pubDate>Fri, 28 Nov 2025 12:31:28 -0300</pubDate><description>Uma análise de pervasive multithreading, SMT e topologia de CPU, com uma proposta de escalonamento consciente para o FKernel.</description><category>Sistemas E Engenharia</category><category>OSDev</category><category>C++</category><category>Otimização</category><content:encoded><![CDATA[<p>Quando olhamos a história dos sistemas operacionais vemos muitas ideias promissoras nascerem, ganharem nichos e, às vezes, sumirem sem deixar rastro. Entre esses projetos, o BeOS — e seu sucessor Haiku — se destacam por uma opção arquitetural clara: priorizar interatividade e baixa latência por meio do que se chamou de Pervasive Multithread.</p>
+<h2 id="o-diferencial-do-beos--haiku">O diferencial do BeOS / Haiku</h2>
+<p>O ponto central é simples: escalonar no nível da thread, com threads muito leves e políticas que favorecem responsividade em vez de throughput máximo. Isso reduz a sobrecarga de contexto ao trocar entre threads da mesma aplicação e permite uma taxa alta de comutação sem penalizar a interatividade.</p>
+<p>Essa ênfase na responsividade ajuda a explicar decisões de projeto aparentemente simples — por exemplo, por que tratar a unidade de escalonamento como a thread em vez do processo — e prepara o terreno para entendermos o conceito que vem a seguir.</p>
+<h2 id="o-que-é-pervasive-multithread">O que é Pervasive Multithread</h2>
+<p>Pervasive Multithread é um modelo composto — kernel e runtime cooperam — em que o sistema trata a concorrência como algo onipresente: o scheduler opera por thread, há prioridades finas (tipicamente 0–120) e políticas que privilegiam latência e previsibilidade sobre o rendimento bruto.</p>
+<p>O resultado prático é que a aplicação vê threads leves com prioridades ajustáveis, e o kernel faz o mínimo necessário ao salvar/restaurar contexto, mantendo a máquina responsiva para cargas interativas.</p>
+<p>Com essa definição em mente, vale contrastar como o hardware moderno tenta aumentar paralelismo com técnicas como SMT — e por que essa camada física pode confundir as decisões de escalonamento quando não é considerada explicitamente.</p>
+<h2 id="por-que-smt-não-é-um-cpu--explicação-técnica">Por que SMT não é um “CPU” — explicação técnica</h2>
+<p>Simultaneous multithreading (SMT) cria múltiplas hardware threads dentro do mesmo núcleo físico. Essas hardware threads compartilham pipelines, unidades funcionais, níveis de cache e o mesmo domínio energético. Em particular:</p>
+<ul>
+<li>Compartilhamento de execution units: duas hardware threads podem disputar as mesmas ALUs, FPU e portas de memória.</li>
+<li>Contenção em caches: L1 e, em muitos designs, partes do L2/L3 são compartilhadas ou têm efeitos de conflito entre threads.</li>
+<li>Dependência de largura de banda e buffers internos: estruturas como reorder buffers e filas de load/store são limitadas por núcleo.</li>
+</ul>
+<p>Esses recursos compartilhados significam que duas hardware threads no mesmo núcleo não oferecem isolamento equivalente ao de dois núcleos físicos. Tratar cada hardware thread como uma CPU independente ignora dependências microarquiteturais e pode degradar throughput e previsibilidade ao induzir contenção e conflitos que o sistema não prevê.</p>
+<p>Em outras palavras: o escalonador que vê apenas &ldquo;CPUs lógicas&rdquo; perde contexto sobre contendas internas do núcleo — um fator crítico quando buscamos baixa latência e previsibilidade.</p>
+<h2 id="onde-os-schedulers-modernos-erram">Onde os schedulers modernos erram</h2>
+<p>Muitos escalonadores expõem cada hardware thread lógico como uma CPU separada (p. ex. quando <code>htop</code> mostra &ldquo;cores lógicos&rdquo;). Essa abstração facilita balanceamento de carga, mas apaga a topologia real: quando cargas pesadas são espalhadas por hardware threads de um mesmo núcleo, surgem colisões internas que reduzem performance por watt e aumentam a variabilidade de latência.</p>
+<p>O problema não é apenas teórico: medições podem mostrar degradação de <em>throughput</em> e latência em cenários que misturam cargas intensivas de CPU e sensíveis à latência, especialmente quando o escalonador não considera a afinidade por núcleo físico e a partição de recursos.</p>
+<p>Por isso é importante que camadas de software acima do escalonador compreendam a topologia do processador ou que o próprio escalonador exponha políticas que evitem colocar cargas conflitantes em hardware threads do mesmo núcleo.</p>
+<h2 id="a-proposta-do-fkernel-consciência-de-topologia">A proposta do FKernel: consciência de topologia</h2>
+<p>No FKernel, a responsabilidade de lidar com essa complexidade é deslocada para camadas que entendem o perfil da carga. A ideia central é uma pipeline decidida antes do despacho para hardware threads:</p>
+<p>Green Threads → Multilevel Feedback Queue (MLFQ) → Pervasive Layer → Hardware Threads (SMT)</p>
+<p>Detalhes práticos:</p>
+<ul>
+<li>O MLFQ organiza e amostra comportamento das green threads para estimar sua sensibilidade à latência e ao throughput.</li>
+<li>A Pervasive Layer usa esse perfil para decidir mapeamentos: algumas execuções ocupam uma hardware thread sozinho (para evitar contenda), outras são pareadas com cargas complementares para aproveitar vazios da unidade funcional.</li>
+</ul>
+<p>Isso torna o SMT um recurso gerenciado — um &ldquo;acelerador&rdquo; que é usado conscientemente e não um substituto direto de um núcleo físico.</p>
+<p>Na prática, isso permite duas estratégias opostas: isolar workloads sensíveis à latência em hardware threads próprias, ou cooperar uma workload de alta utilização com outra complementar para maximizar uso de unidades funcionais sem bloquear latência crítica.</p>
+<h3 id="flag-o_hpc--atalho-para-throughput">Flag <code>O_HPC</code> — atalho para throughput</h3>
+<p>Para workloads puramente orientados a throughput, o desenvolvedor pode usar a flag <code>O_HPC</code>. Nesse modo, o caminho é encurtado: a aplicação solicita pinagem e afinidade mais agressivas (possivelmente com garantia de partição de cache L2/L3), sacrificando previsibilidade para ganhar rendimento bruto.</p>
+<p>Em resumo, <code>O_HPC</code> é uma exceção explícita ao modelo orientado a latência — uma forma de o desenvolvedor indicar que prefere rendimento bruto em vez de previsibilidade quando as medições justificam essa escolha.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Tratar hardware threads SMT como CPUs independentes é uma simplificação que não reflete a microarquitetura moderna: ela produz contenção interna, variabilidade de latência e desperdício de recursos. O FKernel propõe empurrar a complexidade para camadas que conhecem o perfil das cargas — MLFQ e Pervasive Layer — para mapear threads de forma consciente sobre a topologia real do processador.</p>
+<p>O ganho esperado é simples e direto: menor latência, interatividade consistente e uso mais eficiente de caches e unidades funcionais. Para cargas de throughput extremo, a flag <code>O_HPC</code> permite abrir mão dessa previsibilidade de propósito.</p>
+<p>Se você curte esse tipo de discussão ou quer acompanhar o desenvolvimento do FKernel, deixe um comentário, compartilhe como seu sistema lida com SMT ou sugira cargas de trabalho para testarmos. Medições práticas mostrarão o impacto real, e pretendo publicar os resultados em posts futuros.</p>
+]]></content:encoded></item><item><title>Duff's device: desenrolamento de loops em C</title><link>https://foxtechworld.github.io/algoritmos-duff-device-for-loop-unrolling/</link><guid isPermaLink="true">https://foxtechworld.github.io/algoritmos-duff-device-for-loop-unrolling/</guid><pubDate>Sun, 26 Oct 2025 18:20:07 -0300</pubDate><description>Entenda como o Duff's device combina switch e do-while para desenrolar loops em C, por que funciona e quando essa otimização faz sentido.</description><category>Sistemas E Engenharia</category><category>Algoritmos</category><category>Otimização</category><content:encoded><![CDATA[<h2 id="como-os-compiladores-conseguem-otimizar-loops">Como os compiladores conseguem otimizar loops?</h2>
+<p>A princípio isso não parece possível. Se um loop executa uma ação N vezes, o tempo total deveria ser basicamente o custo dessa ação multiplicado por N. Só que na prática, quando compilamos com -O3, o resultado é bem diferente: o mesmo loop roda mais rápido, mesmo fazendo o mesmo trabalho.</p>
+<p>E a culpa (ou o mérito) é de um pequeno trecho de código que se tornou quase uma lenda na história da otimização em C:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">register</span> <span class="kt">int</span> <span class="o">*</span><span class="n">to</span><span class="p">,</span> <span class="o">*</span><span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">register</span> <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">0</span><span class="o">:</span> <span class="k">do</span> <span class="p">{</span> <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">7</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">6</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">5</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">4</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">3</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">2</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">1</span><span class="o">:</span>      <span class="o">*</span><span class="n">to</span> <span class="o">=</span> <span class="o">*</span><span class="n">from</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="o">--</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Este pequeno frame é o <a href="https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Duffs-Device.html"><strong><em>Duff Device</em></strong></a> criado por <a href="https://en.wikipedia.org/wiki/Tom_Duff"><strong>Tom Duff</strong></a> em 1983.</p>
+<h2 id="o-que-é-o-desenrolamento-de-loops">O que é o desenrolamento de loops?</h2>
+<p>Loop Unrolling (ou desenrolamento de loop) é uma técnica de otimização onde o compilador duplica o corpo do loop várias vezes para reduzir o custo do controle de iteração.</p>
+<p>Em vez de checar a condição e incrementar o contador a cada passo, ele faz operações por iterações, diminuindo o número total de saltos no código.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">origem</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>se transforma em algo conceitualmente similar:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">origem</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">origem</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">origem</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">origem</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Menos branches, mais instruções seguidas, mais chance de o processador aproveitar o pipeline e executar tudo de forma quase branchless, parecido com o que o <code>SIMD</code> faz.</p>
+<p>O Duff Device foi a primeira vez que alguém expressou essa ideia em C dessa forma — na verdade, o próprio Tom Duff destaca que o <em>loop unrolling</em> já existia; a novidade foi o truque de combinar <code>switch</code> e <code>do-while</code> na linguagem. Antes de os compiladores modernos fazerem isso sozinhos.</p>
+<p>É uma daquelas otimizações que parecem mágica até você perceber que o compilador só está tentando evitar o que humanos mais odeiam: repetições desnecessárias.</p>
+<h2 id="por-que-isso-funciona-em-c">Por que isso funciona em C?</h2>
+<p>A lógica do Duff Device não é muito diferente de acessar vários elementos de um array de uma vez. Se copia e origem têm o mesmo tamanho, você consegue fazer a mesma operação em uma única iteração, processando múltiplas posições do vetor ao mesmo tempo. Isso reduz o overhead de controle do loop e deixa o processador mais livre para executar instruções em sequência, aumentando a eficiência geral.</p>
+<p>O <code>do-while</code> sozinho é simples, executa a iteração uma vez e faz o teste da condição garantindo pelo menos uma execução.</p>
+<p>O <code>switch</code> é um salto condicional que usa <a href="https://en.wikipedia.org/wiki/Branch_table">jump-table</a> para ter tempo de execução O(1).</p>
+<p>No truque do <strong>Duff&rsquo;s device</strong>, os <code>breaks</code> são <strong>removidos de propósito</strong> e o <code>switch</code> é combinado com o <code>do-while</code>.</p>
+<p>Isso cria efeitos simultâneos:</p>
+<ol>
+<li>O <code>switch</code> escolhe em qual ponto do loop começar</li>
+<li>O <code>do-while</code> continua repetindo o bloco inteiro várias vezes até completar todas as iterações.</li>
+</ol>
+<p>Na prática, isso significa que você começa no case certo (alinhando as iterações que sobraram) e depois &ldquo;cai&rdquo; pelos demais cases sem saltos adicionais, repetindo tudo até terminar.</p>
+<p>Cada execução <code>do-while</code> processa vários elementos do array, e o switch inicial só garante que você comece na posição correta.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Pode ser uma técnica útil em alguns casos, mas não na maioria.</p>
+<p>É feio, parece gambiarra e compiladores modernos já conseguem realizar desenrolamento de loops automaticamente com opções como <code>-O3</code> ou <code>-funroll-loops</code>.</p>
+<p>Porém, se você estiver estudando programação, otimização de código-fonte ou algoritmos, vale a pena conhecer a técnica.</p>
+]]></content:encoded></item><item><title>Por que “design patterns” é um nome genérico demais</title><link>https://foxtechworld.github.io/opiniao-design-patterns-sao-um-pessimo-nome/</link><guid isPermaLink="true">https://foxtechworld.github.io/opiniao-design-patterns-sao-um-pessimo-nome/</guid><pubDate>Wed, 08 Oct 2025 15:08:13 -0300</pubDate><description>Uma crítica ao termo design pattern e uma proposta para distinguir padrões de ergonomia, arquitetura e implementação de software.</description><category>Sistemas E Engenharia</category><category>Opinião</category><category>Arquitetura De Software</category><category>Design Patterns</category><content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<p>Um dos meus hobbies atuais é ler posts antigos, como os do blog <em><strong>AkitaOnRails</strong></em>. Um deles é <a href="https://akitaonrails.com/2006/10/30/design-patterns-representam-defeitos-nas-linguagens/"><em><strong>Design Patterns representam defeitos nas linguagens</strong></em></a>.</p>
+<p>Primeiramente, este é um bom post, muito bem embasado de acordo com o blog post <a href="https://web.archive.org/web/20061017194620/http://newbabe.pobox.com/~mjd/blog/2006/09/11/#design-patterns"><strong><em>Universe of Discourse</em></strong></a></p>
+<p>Um dos pontos que me incomodou foi a mistura entre design de software, arquitetura de software e ergonomia da linguagem.</p>
+<p>Mas primeiramente vamos ver o que me incomodou em ambos os blog posts.</p>
+<blockquote>
+<p>Na última vez que escrevi sobre design patterns, foi para apontar que embora o movimento tenha sido inspirado pelo trabalho de “linguagem de pattern” de Christopher Alexander, não é parecido com nada que Alexander tenha sugerido, e que de fato o que Alexander sugeriu é mais interessante e provavelmente teria sido mais útil para programadores do que o movimento de design pattern escolheu seguir.</p>
+</blockquote>
+<blockquote>
+<p>Uma das coisas que eu apontei foi essencialmente o que Norvig disse: que muitos patterns não estão realmente endereçando problemas recorrentes de design em programas orientados a objetos. Eles estão, na realidade, endereçando deficiências em linguagens de programação orientadas a objetos e que em linguagens melhores, esses problemas simplemente não aparecem ou são resolvidos de maneira tão fácil e trivial que a solução não requer um pattern. Em linguagem assembly, “chamada de sub-rotina” pode ser um pattern; em C, a solução é escrever result = function(args &hellip;), que é simples demais para se qualificar como pattern. Em uma linguagem como Lisp ou Haskell ou mesmo Perl, com um bom tipo de lista e poderosas primitivas para operar em valores de listas, o pattern “Iterator” (iterador) é aliviado em um grande degrau ou tido como invisível. Henry G. Baker pegou esse ponto em seu artigo Iterators: Sinais de Fraqueza em Linguagens Orientadas a Objetos.</p>
+</blockquote>
+<blockquote>
+<p>Recebi muitas mensagens sobre isso, e curiosamente, alguns chegaram à mesma conclusão da mesma forma: eles disseram que embora eu estivesse certo sobre Iterator, era um exemplo pobre porque era um pattern muito simples, mas que era impossível imaginar um pattern mais complexo como Model-View-Controller ser absorvido e se tornar invisível dessa maneira.</p>
+</blockquote>
+<p>Obviamente, como um post antigo não vou dar muito trelo ainda mas, veja.</p>
+<p>O motivo de conseguirmos enxergar um iterator</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">mp</span> <span class="p">:</span> <span class="n">m_children</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Do anything
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="o-incômodo">O incômodo</h2>
+<p>Sendo absorvido por uma linguagem, mas nunca um MVC é simplesmente uma diferença de escopo.</p>
+<p>Uma coisa é você aprimorar a <strong>ergonomia da linguagem</strong> facilitando um método de escrita em detrimento de outro.</p>
+<p>Outra coisa é pegar o <strong>modelamento</strong> da arquitetura e fazer uma linguagem com isso.</p>
+<p>Imagine que, no léxico de uma linguagem, <code>print</code> pertença a uma <code>view</code>, os parâmetros sejam <code>models</code> e as funções sejam <code>controllers</code>.</p>
+<p>Simplesmente estúpido ao máximo.</p>
+<h3 id="e-qual-o-problema-original">E qual o problema original&hellip;</h3>
+<p>Esse é um problema do nome <code>pattern</code>: mesmo <code>design pattern</code> ainda é pouco descritivo.</p>
+<p>Eu estou falando do <code>design</code> da linguagem para aumentar a produtividade do programador?</p>
+<p>Ou estou falando do <code>design</code> na arquitetura para melhorar legibilidade e manutenção do código ao todo?</p>
+<p>O Model-View-Controller deveria se enquadrar em <code>design pattern</code> então? <strong>SIM!!!</strong></p>
+<p>E Iteradores? <strong>SIM!!!</strong></p>
+<p>E Orientação a Objetos? <strong>SIM!!!</strong></p>
+<p>Novamente, é um problema de nomeação e domínio. Se tudo é um <code>design pattern</code>, fica difícil criar uma categorização mais aprofundada.</p>
+<p>O mesmo ocorre quando comparamos <code>software monolítico</code> e <code>microsserviços</code>.</p>
+<p>Aqui temos dois padrões de arquitetura de software que de alguma forma também um padrão de design.</p>
+<p>Podemos dizer que uma linguagem pode absorver uma arquitetura de software?</p>
+<h2 id="uma-solução">Uma solução</h2>
+<p>Podemos adjetivar o <code>design pattern</code> para seu domínio.</p>
+<ul>
+<li><code>Ergonic design pattern</code> para quando falamos de um padrão de arquitetura que pode ser absorvido pela linguagem.</li>
+</ul>
+<p>Sendo um exemplo o <code>Iterator</code>, <code>Goto</code>, <code>Function</code>.</p>
+<ul>
+<li><code>Architecture design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, mas pelo software em geral.</li>
+</ul>
+<p>Sendo exemplos: <code>Model-View-Controler</code>, <code>JSP Model1</code>, <code>Model-View-Adapter</code>, <code>Model-View-Presenter</code></p>
+<ul>
+<li><code>Implementation design pattern</code> para quando falamos de um padrão de arquitetura que não pode ser absorvido pela linguagem, nem pelo software em geral mas colocado para facilitar a implementação.</li>
+</ul>
+<p>Sendo exemplos: <code>Strategy Pattern</code>, <code>Observer pattern</code>, <code>Servant pattern</code>, <code>Command pattern</code>, <code>Chain of responsibility pattern</code>.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>No geral, o termo <strong><em>Design Pattern</em></strong> é genérico demais para ser útil no debate técnico.</p>
+<p>Agrupar desde ergonomia da linguagem até arquitetura distribuída sob o mesmo nome é um desserviço.</p>
+<p>A proposta de <strong>Adjetivar os patterns conforme seu domínio</strong> deve trazer clareza e distinguir melhor o que é arquitetural e o que é uma boa prática de implementação.</p>
+<p>Talvez ao reclassificar os padrões com base não apenas naquilo <code>que elas resolvem</code> mas também no <strong>lugar onde operam</strong>.</p>
+]]></content:encoded></item><item><title>Disjoint Set (Union-Find): conceitos e aplicações</title><link>https://foxtechworld.github.io/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</link><guid isPermaLink="true">https://foxtechworld.github.io/algoritmos-em-grafos-estrutura-de-dados-disjoint-set/</guid><pubDate>Wed, 01 Oct 2025 15:40:08 -0300</pubDate><description>Aprenda como Disjoint Set, ou Union-Find, representa conjuntos disjuntos, realiza Union e Find e resolve problemas de conectividade em grafos.</description><category>Sistemas E Engenharia</category><category>Algoritmos</category><category>Estrutura De Dados</category><category>Grafos</category><content:encoded><![CDATA[<h2 id="teoria-dos-conjuntos">Teoria dos conjuntos</h2>
+<p>Dentro da matemática temos os <a href="https://www.todamateria.com.br/teoria-dos-conjuntos/"><strong>Sets</strong></a>, equivalente a conjuntos na teoria de conjuntos.</p>
+<p>Também é um tipo de Python que você pode fazer para comprimir uma lista.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Exemplo em Python</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># {1, 2, 3}</span>
+</span></span></code></pre></div><h2 id="o-que-são-disjoint-sets">O que são Disjoint-Sets</h2>
+<p>E dentro dessa teoria, temos conjuntos disjuntos quando não tem elementos em comum entre eles.</p>
+<p><figure><img src="https://tse3.mm.bing.net/th/id/OIP.1gaGGShk2pNEuYVwth-nDwHaE5?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" loading="lazy" decoding="async" alt="Example of Disjoint-Set">
+</figure>
+</p>
+<blockquote>
+<p>Em SQL, ao fazer joins entre tabelas, podemos pensar em sets: um inner join retorna elementos comuns, e se duas tabelas forem disjuntas (não têm elementos em comum) o join retorna vazio.</p>
+</blockquote>
+<p>Disjoint-Sets trabalham com a mesma ideia de verificar se conjuntos têm ou não interseção.</p>
+<p>Em realidade, este é uma das melhores estruturas de dados para otimizar algoritmos em grafos.</p>
+<p>Dentro dele suportamos duas operações:</p>
+<ul>
+<li><strong><em>Union</em></strong>: Mesclando dois conjuntos em um único conjunto.</li>
+<li><strong><em>Find</em></strong> : Encontrando um representante de um conjunto disjunto.</li>
+</ul>
+<h3 id="exemplo-de-uso-em-grafos">Exemplo de uso em grafos</h3>
+<p>Imagine a situação de uma rede social com diversas pessoas e você tem as seguintes tarefas a serem executadas:</p>
+<ul>
+<li>
+<p>Adicione uma nova <strong><em>relação</em></strong> de <strong><em>amizade</em></strong>, ou seja, uma pessoa x se torna amiga de y adicionando um novo elemento a um conjunto.</p>
+</li>
+<li>
+<p>Descobrir se <strong><em>o indivíduo x é amigo do indivíduo y</em></strong> (amigo direto ou indireto)</p>
+</li>
+</ul>
+<h4 id="exemplo">Exemplo</h4>
+<blockquote>
+<p>Exemplo tirado do <a href="https://www.geeksforgeeks.org/dsa/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/">Geeks For Geeks</a></p>
+</blockquote>
+<pre tabindex="0"><code>Recebemos 10 indivíduos, digamos, a,b,c,d,e,f,g,h,i,j
+
+A seguir estão as relações a serem adicionadas:
+
+a &lt;-&gt; b
+b &lt;-&gt; d
+c &lt;-&gt; f
+c &lt;-&gt; i
+j &lt;-&gt; e
+g &lt;-&gt; j
+
+Dadas perguntas como se a é amigo de d ou não.
+
+Basicamente, precisamos criar os seguintes 4 grupos e manter uma conexão rapidamente acessível entre os itens do grupo:
+
+G1 = {a, b, d}
+G2 = {c, f, i}
+G3 = {e, g, j}
+G4 = {h}
+</code></pre><p>Caso fomos implementar o <strong>UnionFind</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">UnionFind</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Inicializa cada elemento como seu próprio representante (pai)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@parent</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Rank ajuda a manter as árvores balanceadas</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@rank</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Aplica compressão de caminho</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@parent</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@parent</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="vi">@parent</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@parent</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unite</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">irep</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">jrep</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">if</span> <span class="n">irep</span> <span class="o">==</span> <span class="n">jrep</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># União por rank</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@rank</span><span class="o">[</span><span class="n">irep</span><span class="o">]</span> <span class="o">&lt;</span> <span class="vi">@rank</span><span class="o">[</span><span class="n">jrep</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@parent</span><span class="o">[</span><span class="n">irep</span><span class="o">]</span> <span class="o">=</span> <span class="n">jrep</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="vi">@rank</span><span class="o">[</span><span class="n">irep</span><span class="o">]</span> <span class="o">&gt;</span> <span class="vi">@rank</span><span class="o">[</span><span class="n">jrep</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@parent</span><span class="o">[</span><span class="n">jrep</span><span class="o">]</span> <span class="o">=</span> <span class="n">irep</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@parent</span><span class="o">[</span><span class="n">jrep</span><span class="o">]</span> <span class="o">=</span> <span class="n">irep</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@rank</span><span class="o">[</span><span class="n">irep</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">names</span> <span class="o">=</span> <span class="sx">%w[a b c d e f g h i j]</span>
+</span></span><span class="line"><span class="cl"><span class="n">name_to_index</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="n">each_with_index</span><span class="o">.</span><span class="n">to_h</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">uf</span> <span class="o">=</span> <span class="no">UnionFind</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">relations</span> <span class="o">=</span> <span class="o">[[</span><span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&#34;b&#34;</span><span class="p">,</span> <span class="s2">&#34;d&#34;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&#34;c&#34;</span><span class="p">,</span> <span class="s2">&#34;f&#34;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&#34;c&#34;</span><span class="p">,</span> <span class="s2">&#34;i&#34;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&#34;j&#34;</span><span class="p">,</span> <span class="s2">&#34;e&#34;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&#34;g&#34;</span><span class="p">,</span> <span class="s2">&#34;j&#34;</span><span class="o">]]</span>
+</span></span><span class="line"><span class="cl"><span class="n">relations</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="n">uf</span><span class="o">.</span><span class="n">unite</span><span class="p">(</span><span class="n">name_to_index</span><span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="p">,</span> <span class="n">name_to_index</span><span class="o">[</span><span class="n">y</span><span class="o">]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="s2">&#34;d&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">uf</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name_to_index</span><span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="p">)</span> <span class="o">==</span> <span class="n">uf</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">name_to_index</span><span class="o">[</span><span class="n">y</span><span class="o">]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">x</span><span class="si">}</span><span class="s2"> e </span><span class="si">#{</span><span class="n">y</span><span class="si">}</span><span class="s2"> são amigos (diretos ou indiretos)&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">x</span><span class="si">}</span><span class="s2"> e </span><span class="si">#{</span><span class="n">y</span><span class="si">}</span><span class="s2"> não são amigos&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><h3 id="onde-usar-o-disjoint-set">Onde usar o Disjoint-Set</h3>
+<p>Disjoint-Set é útil para a maioria dos problemas não triviais da computação muito provavelmente um problema em baixo nível pode ser resolvido com ele.</p>
+<h4 id="exemplos-de-alto-nível">Exemplos de Alto Nível</h4>
+<p>Qualquer grande E-Commerce, empresa, sistema que for mexer com grafos pode usar o Disjoint-Set para otimizar em algumas especifidades.</p>
+<h5 id="grafos">Grafos</h5>
+<ul>
+<li>
+<p>Podemos usar o Disjoint-Set no <a href="https://pt.wikipedia.org/wiki/Algoritmo_de_Kruskal"><strong><em>Algoritmo de Kruskal</em></strong></a> para encontrar uma árvore geradora mínima.</p>
+</li>
+<li>
+<p>Podemos usar o Disjoint-Set para detectar <strong><em>Cíclos em grafos não direcionados</em></strong>.</p>
+</li>
+<li>
+<p>Podemos usar o Disjoint-Set para a identificação de <strong><em>componentes conectados</em></strong>.</p>
+</li>
+</ul>
+<h3 id="simulação">Simulação</h3>
+<ul>
+<li>
+<p>Controle de <strong><em>conjuntos de objetos</em></strong> que se fundem e se dividem dinamicamente.</p>
+</li>
+<li>
+<p>Simulação de <strong><em>percolação</em></strong> ou <strong><em>clusters</em></strong>.</p>
+</li>
+</ul>
+<h4 id="exemplos-de-baixo-nível">Exemplos de Baixo Nível</h4>
+<p>Qualquer coisa mais escondida sendo dentro de linguagens de programação, sistemas operacionais, bibliotecas &hellip; etc.</p>
+<h3 id="problemas-de-equivalência">Problemas de Equivalência</h3>
+<ul>
+<li>
+<p>Manter classes de equivalência.</p>
+</li>
+<li>
+<p>Agrupamento por atributos compartilhados.</p>
+</li>
+</ul>
+<h3 id="e-no-geral">E no geral?</h3>
+<p>Se tiver muito no seu código questões do tipo &ldquo;X e Y são relacionados?&rdquo; em um conjunto dinâmico de relações, então <strong>Disjoint-Set</strong> é a escolha mais eficiente.</p>
+<h3 id="conclusão">Conclusão</h3>
+<p>A estrutura Disjoint-Set (Union-Find) resolve com eficiência problemas baseados em conectividade dinâmica.</p>
+<p>Com <strong>Union</strong> e <strong>Find</strong>, é possível gerenciar grupos, detectar relações e otimizar algoritmos em grafos com complexidade quase constante.</p>
+<p>Se o problema envolve:</p>
+<ul>
+<li>Particionar elementos</li>
+<li>Verificar conexões</li>
+<li>Unir componentes rapidamente</li>
+</ul>
+<p>Então <strong>Union-Find</strong> é a estrutura certa.</p>
+<p>Simples, rápida e usada desde sistemas reais até algoritmos clássicos.</p>
+]]></content:encoded></item><item><title>OSDev: até onde dá para usar C++?</title><link>https://foxtechworld.github.io/osdev-ate-onde-da-para-usar-c/</link><guid isPermaLink="true">https://foxtechworld.github.io/osdev-ate-onde-da-para-usar-c/</guid><pubDate>Mon, 22 Sep 2025 15:33:40 -0300</pubDate><description>Veja quais recursos de C++ podem ser usados no desenvolvimento de um kernel e quais partes da runtime precisam ser implementadas pelo sistema operacional.</description><category>Sistemas E Engenharia</category><category>OSDev</category><category>C++</category><category>Arquitetura De Software</category><content:encoded><![CDATA[<p>Estou desenvolvendo um <a href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)">kernel</a> chamado <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
+<p>Para uso desktop em código x86_64.</p>
+<p>E lendo sobre algumas linguagens como <strong><em>Rust</em></strong>, <strong><em>C</em></strong>, <strong><em>C++</em></strong>, <strong><em>Zig</em></strong> &hellip;</p>
+<p>Decidi fazer uma combinação de:</p>
+<ul>
+<li>Linguagens de Programação:
+<ul>
+<li>C</li>
+<li>C++</li>
+</ul>
+</li>
+<li>Linguagem de montagem:
+<ul>
+<li>Nasm</li>
+</ul>
+</li>
+</ul>
+<p>Obviamente alguns podem estranhar já que eu propositalmente ignorei Rust, e aquelas que são considerados &ldquo;memory-safe&rdquo;.</p>
+<h2 id="por-que-não-usar-linguagens-memory-safe">Por que não usar linguagens <em>memory-safe</em>?</h2>
+<p>Pro Tip: Não existe linguagem memory-safe em baixo nível. Para programar um kernel ou similar, você vai depender do unsafe então nem tenta.</p>
+<p>Se for para ter que lidar com sintaxes estranhas para programar um kernel, eu prefiro seguir no bom e velho C/C++.</p>
+<p>Também não quero fazer um overflow de logs de um compilador super-nanny para chegar a um subset daquilo que eu queria no meu código.</p>
+<h2 id="e-por-que-c">E por que C++?</h2>
+<p>Muito tempo atrás Linus Torvalds havia testado C++ no kernel Linux (em 1992) e acabou abandonando a ideia.</p>
+<p>A frase acima parece vir de um e-mail de 2007 sobre o git, não de uma tentativa de escrever um kernel:</p>
+<blockquote>
+<p>C++ leads to really, really bad design choices. You invariably start using the STL, boost, and other total and utter crap…</p>
+</blockquote>
+<p>Ok, podemos concordar em algumas partes mas, isso não seria inevitavelmente ruim.</p>
+<p>Sim, C++ tem um monte de coisa, mas fugiria do ponto principal que é C++ dá contratos que structs sozinhas dificilmente conseguem.</p>
+<p>Pegue um exemplo do <code>SerenityOS</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">static</span> <span class="n">ErrorOr</span><span class="o">&lt;</span><span class="n">NonnullOwnPtr</span><span class="o">&lt;</span><span class="n">KBuffer</span><span class="o">&gt;&gt;</span> <span class="n">try_create_with_size</span><span class="p">(</span><span class="n">StringView</span> <span class="n">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">size_t</span> <span class="n">size</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">Memory</span><span class="o">::</span><span class="n">Region</span><span class="o">::</span><span class="n">Access</span> <span class="n">access</span> <span class="o">=</span> <span class="n">Memory</span><span class="o">::</span><span class="n">Region</span><span class="o">::</span><span class="n">Access</span><span class="o">::</span><span class="n">ReadWrite</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">AllocationStrategy</span> <span class="n">strategy</span> <span class="o">=</span> <span class="n">AllocationStrategy</span><span class="o">::</span><span class="n">Reserve</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="k">auto</span> <span class="n">rounded_size</span> <span class="o">=</span> <span class="n">TRY</span><span class="p">(</span><span class="n">Memory</span><span class="o">::</span><span class="n">page_round_up</span><span class="p">(</span><span class="n">size</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">auto</span> <span class="n">region</span> <span class="o">=</span> <span class="n">TRY</span><span class="p">(</span><span class="n">MM</span><span class="p">.</span><span class="n">allocate_kernel_region</span><span class="p">(</span><span class="n">rounded_size</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">access</span><span class="p">,</span> <span class="n">strategy</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nf">TRY</span><span class="p">(</span><span class="n">adopt_nonnull_own_or_enomem</span><span class="p">(</span><span class="k">new</span> <span class="p">(</span><span class="n">nothrow</span><span class="p">)</span> <span class="n">KBuffer</span> <span class="p">{</span> <span class="n">size</span><span class="p">,</span> <span class="n">move</span><span class="p">(</span><span class="n">region</span><span class="p">)</span> <span class="p">}));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Consegue entender o que esse código faz? Todo esse contrato engloba em poucas linhas</p>
+<blockquote>
+<p>Essa função try_create_with_size serve para criar um buffer de memória no kernel de um tamanho específico e lidar com possíveis erros de forma segura.</p>
+</blockquote>
+<p>Para termos o equivalente exato em C garantindo a mesma segurança seria necessária escrever dessa forma.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">try_create_with_size</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">MemoryAccess</span> <span class="n">access</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">AllocationStrategy</span> <span class="n">strategy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">KBuffer</span><span class="o">**</span> <span class="n">out_buffer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">out_buffer</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">size_t</span> <span class="n">rounded_size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="nf">page_round_up</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rounded_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">MemoryRegion</span><span class="o">*</span> <span class="n">region</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rc</span> <span class="o">=</span> <span class="nf">allocate_kernel_region</span><span class="p">(</span><span class="n">rounded_size</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">access</span><span class="p">,</span> <span class="n">strategy</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">region</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">KBuffer</span><span class="o">*</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">KBuffer</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">buffer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">region</span><span class="o">-&gt;</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">region</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">buffer</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">buffer</span><span class="o">-&gt;</span><span class="n">region</span> <span class="o">=</span> <span class="n">region</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">out_buffer</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// sucesso
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Ok, tivemos uma disparidade no tamanho, mas isso não significa nada no geral.</p>
+<p>Meu ponto defendido é que precisamos fazer muito mais código, que vai ser muito mais performático mas que vai resultar em um resultado muito menos seguro, e muito menos reusável no geral.</p>
+<p>Não ironicamente, muitas empresas incluindo a própria Apple usam C++ no kernel, mais especificamente na camada de drivers do <strong>IOKit</strong> (o núcleo XNU em si é majoritariamente C/assembly).</p>
+<p>Mas não precisa ser o c++ inteiro e sim um subset chamado <a href="https://en.wikipedia.org/wiki/Embedded_C%2B%2B"><strong><em>embedded c++</em></strong></a>.</p>
+<h3 id="implementação-do-iokit">Implementação do IOKit</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright (c) 1998-2000 Apple Computer, Inc. All rights reserved.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * This file contains Original Code and/or Modifications of Original Code
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * as defined in and that are subject to the Apple Public Source License
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Version 2.0 (the &#39;License&#39;). You may not use this file except in
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * compliance with the License. The rights granted to you under the License
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * may not be used to create, or enable the creation or redistribution of,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * unlawful or unlicensed copies of an Apple operating system, or to
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * circumvent, violate, or enable the circumvention or violation of, any
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * terms of an Apple operating system software license agreement.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Please obtain a copy of the License at
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * http://www.opensource.apple.com/apsl/ and read it before using this file.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * The Original Code and all software distributed under the License are
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * distributed on an &#39;AS IS&#39; basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Please see the License for the specific language governing rights and
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * limitations under the License.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#ifndef _IOKIT_IONVRAMCONTROLLER_H
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define _IOKIT_IONVRAMCONTROLLER_H
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;IOKit/IOService.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">IONVRAMController</span> <span class="o">:</span> <span class="k">public</span> <span class="n">IOService</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">OSDeclareAbstractStructors</span><span class="p">(</span><span class="n">IONVRAMController</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="n">registerService</span><span class="p">(</span><span class="n">IOOptionBits</span> <span class="n">options</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="n">APPLE_KEXT_OVERRIDE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="kt">void</span> <span class="nf">sync</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">select</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">bank</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">eraseBank</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">read</span><span class="p">(</span><span class="n">IOByteCount</span> <span class="n">offset</span><span class="p">,</span> <span class="n">UInt8</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">IOByteCount</span> <span class="n">length</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">virtual</span> <span class="n">IOReturn</span> <span class="nf">write</span><span class="p">(</span><span class="n">IOByteCount</span> <span class="n">offset</span><span class="p">,</span> <span class="n">UInt8</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">IOByteCount</span> <span class="n">length</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#endif </span><span class="cm">/* !_IOKIT_IONVRAMCONTROLLER_H */</span><span class="cp">
+</span></span></span></code></pre></div><p>Quem diria.</p>
+<p>Se fossemos falar do C++ antes da versão 17, eu até concordaria mas após a versão 17 muita coisa mudou.</p>
+<p>E veja que o IOKit é implementado na forma Embedded C++.</p>
+<p>Mas, e como em tudo há um mas, há em real,o ponto da STL que invariavelmente você vai acabar usando ou não.</p>
+<h3 id="realmente-preciso-do-stl">Realmente preciso do STL?</h3>
+<p>No fringir dos ovos há um outro superset de C++ chamado <a href="https://terminalroot.com.br/2023/07/conheca-o-cpp-ortodoxo.html"><strong><em>c++ ortodoxo</em></strong></a> jamais o use, sério.</p>
+<p>Uma das soluções que o FKernel e o SerenityOS fazem é criar sua própria STL.</p>
+<p>O SerenityOS com sua <strong>Abstraction Kit</strong>.
+E o FKernel com seu <strong>LibFK</strong>.</p>
+<p>Usar uma STL não é de todo mal, há diversos efeitos, como otimização em cascata.</p>
+<p>Genericos e todo resto.</p>
+<h2 id="e-no-fim">E no fim?</h2>
+<p>No fim, depende de você.</p>
+<p>Se você está desenvolvendo um app para desktop.</p>
+<p>Eu sugeriria:</p>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/D_(linguagem_de_programa%C3%A7%C3%A3o)">D</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)">Go</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Zig_(linguagem_de_programa%C3%A7%C3%A3o)">Zig</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)">Rust</a></li>
+</ul>
+<p>Para baixo nível certamente eu sugeriria:</p>
+<ul>
+<li><a href="https://pt.wikipedia.org/wiki/B_(linguagem_de_programa%C3%A7%C3%A3o)">B</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)">C</a>,</li>
+<li><a href="https://pt.wikipedia.org/wiki/C%2B%2B">C++</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/D_(linguagem_de_programa%C3%A7%C3%A3o)">D</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)">Rust</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/Zig_(linguagem_de_programa%C3%A7%C3%A3o)">Zig</a></li>
+</ul>
+<p>Mas em kernel estou muito mais satisfeito com minha escolha do que usar C puro.</p>
+<p>Não que eu não use C obviamente, por baixo dos panos da LibFK eu implementei uma LibC bem simples com funções que eu teria que usar dentro do FKernel para algumas funções da LibFK.</p>
+<p>Mas enfim, se uma linguagem que você prefere usar por algum motivo de design ou simplesmente por ser a que você sabe, simplesmente use.</p>
+<p>Desde que não seja usar algo interpretado para fazer baixo nível, tá valendo tudo.</p>
+]]></content:encoded></item><item><title>Busca em largura (BFS) e busca em profundidade (DFS)</title><link>https://foxtechworld.github.io/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</link><guid isPermaLink="true">https://foxtechworld.github.io/algoritmos-em-grafos-busca-em-largura-e-busca-em-profundidade/</guid><pubDate>Mon, 15 Sep 2025 08:24:12 -0300</pubDate><description>Entenda como BFS e DFS percorrem grafos, quais estruturas de dados utilizam, suas complexidades e quando escolher cada algoritmo de busca.</description><category>Sistemas E Engenharia</category><category>Algoritmos</category><category>Estrutura De Dados</category><category>Grafos</category><content:encoded><![CDATA[<h2 id="o-que-são-grafos">O que são grafos?</h2>
+<p>Grafos são um ramo da matemática que estuda <em>relações</em> entre objetos pertencentes a um determinado conjunto.</p>
+<blockquote>
+<p>Você pode pensar, por exemplo, que $${a, b}$$ representa uma relação que leva de <em>a</em> para <em>b</em>.</p>
+</blockquote>
+<p>Historicamente, Leonhard Euler, também responsável pela identidade de Euler,</p>
+<p>$$E^{i\pi} + 1 = 0$$</p>
+<p>publicou, em 1736, um artigo sobre o problema das sete pontes de Königsberg. Esse trabalho é considerado o ponto de partida da teoria dos grafos.</p>
+<h3 id="onde-grafos-são-usados">Onde grafos são usados?</h3>
+<p>Na computação, grafos aparecem direta ou indiretamente em muitos lugares:</p>
+<ul>
+<li>redes neurais;</li>
+<li>estruturas de árvores;</li>
+<li>redes de computadores;</li>
+<li>computação gráfica;</li>
+<li>redes sociais.</li>
+</ul>
+<p>Se um problema exige representar conexões, provavelmente um grafo será útil.</p>
+<p>Isso fica ainda mais interessante em linguagens formais e autômatos, áreas fundamentais para a construção de linguagens de programação e marcação. Elas também usam grafos para representar autômatos e diagramas de transição.</p>
+<h2 id="algoritmos-de-busca-em-grafos">Algoritmos de busca em grafos</h2>
+<p>Como um grafo é formado por relações, direcionadas ou não, precisamos definir um critério para percorrê-lo.</p>
+<p>E para isso temos um problema essencial que precisa ser resolvido.</p>
+<h3 id="qual-critério">Qual critério?</h3>
+<p>Normalmente ou estamos trabalhando com grafos esparsos ou grafos densos.</p>
+<p>Grafos esparsos têm poucas arestas em relação ao número de vértices.</p>
+<p>Grafos densos, por sua vez, têm muitas arestas.</p>
+<p>Essa característica influencia diretamente a escolha da representação e do algoritmo mais eficiente.</p>
+<p>Os dois algoritmos mais clássicos para essa busca são:</p>
+<ul>
+<li>BFS (<em>Breadth-First Search</em>): busca em largura;</li>
+<li>DFS (<em>Depth-First Search</em>): busca em profundidade.</li>
+</ul>
+<h2 id="algoritmos">Algoritmos</h2>
+<h3 id="busca-em-largura-bfs">Busca em Largura (BFS)</h3>
+<p>O algoritmo de busca em largura explora nível por nível.</p>
+<p>Ou seja se pensarmos em uma árvore.</p>
+<p>Ele verificaria primeiro os vizinhos da raiz.</p>
+<p>Depois os vizinhos dos vizinhos da raiz e por assim vai.</p>
+<p>Para fazer isso a gente utiliza uma estrutura de dados fila/queue.</p>
+<h4 id="propriedades-da-busca-em-largura">Propriedades da busca em largura</h4>
+<ul>
+<li>
+<p>Se existir uma solução, este algoritmo consegue encontrar.</p>
+</li>
+<li>
+<p>Em grafos não ponderados, encontra o caminho com o menor número de arestas.</p>
+</li>
+<li>
+<p>Complexidade:</p>
+</li>
+<li>
+<p>Tempo: $$O(V + E)$$, pois percorre os vértices e as arestas alcançáveis.</p>
+</li>
+<li>
+<p>Espaço: $$O(V)$$ porque precisa armazenar a fila e o conjunto de visitados.</p>
+</li>
+</ul>
+<h4 id="lógica-passo-a-passo">Lógica passo a passo</h4>
+<ol>
+<li>Colocamos um nó na fila, e marcamos como visitado.</li>
+<li>Enquanto a fila não estiver vazia:</li>
+</ol>
+<ul>
+<li>Retiramos o primeiro elemento.</li>
+<li>Visitamos todos os vizinhos não visitados do nó.</li>
+<li>Adicionamos esses vizinhos à fila e os marcamos como visitados.</li>
+</ul>
+<h3 id="busca-em-profundidade">Busca em Profundidade</h3>
+<p>A busca em profundidade em comparação explora todo um ramo do grafo até o fim antes de voltar e explorar outros ramos.</p>
+<p>Ao contrário da busca em largura, aqui usamos pilha/stack (Last In, First Out).</p>
+<h4 id="propriedades-da-busca-em-profundidade">Propriedades da busca em profundidade</h4>
+<ul>
+<li>
+<p>Em grafos finitos, consegue percorrer todos os vértices alcançáveis, mas não garante o caminho mais curto.</p>
+</li>
+<li>
+<p>Ótimo? Não, não é adequado quando você precisa do menor número de arestas.</p>
+</li>
+<li>
+<p>Complexidade:</p>
+<ul>
+<li>Tempo: $$O(V + E)$$</li>
+<li>Espaço: $$O(V)$$</li>
+</ul>
+</li>
+<li>
+<p>Risco prático: a versão recursiva pode estourar a pilha em grafos muito profundos; nesses casos, prefira uma versão iterativa.</p>
+</li>
+</ul>
+<h4 id="lógica-passo-a-passo-1">Lógica passo a passo</h4>
+<ol>
+<li>Marque o nó inicial como visitado e entre nele.</li>
+<li>Para cada vizinho não visitado, repita o processo.</li>
+<li>Quando o nó não tem vizinhos não visitados, realize um backtrack.</li>
+<li>Continue até visitar todos os nós alcançáveis.</li>
+</ol>
+<h3 id="conclusão">Conclusão</h3>
+<p>Não existe um algoritmo universalmente “melhor”: tudo depende do objetivo.</p>
+<p>BFS (Busca em Largura):</p>
+<ul>
+<li>
+<p>Garante o menor caminho em grafos não ponderados.</p>
+</li>
+<li>
+<p>Mais indicado quando o problema exige a solução mais curta.</p>
+</li>
+</ul>
+<p>DFS (Busca em Profundidade):</p>
+<ul>
+<li>
+<p>Útil para exploração completa, detecção de ciclos, ordenação topológica e backtracking.</p>
+</li>
+<li>
+<p>Mais indicado quando queremos percorrer toda a estrutura ou analisar propriedades do grafo.</p>
+</li>
+</ul>
+<p>Ambos têm a mesma complexidade assintótica, $$O(V+E)$$, mas aplicam-se a cenários distintos.</p>
+<p>E devem ser tratados com cautela para não escolher a pior opção por puro achismo.</p>
+<p>Espero que tenham gostado do post. Valeu!</p>
+]]></content:encoded></item></channel></rss>

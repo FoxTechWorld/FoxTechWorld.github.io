@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Construção Independente | FoxTechWorld</title><link>https://foxtechworld.github.io/categories/constru%C3%A7%C3%A3o-independente/</link><description>Conteúdo recente em Construção Independente no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 05 Sep 2026 16:04:37 +0000</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/categories/constru%C3%A7%C3%A3o-independente/" rel="self" type="application/rss+xml"/><item><title>LLMs são coisas boas e ruins ao mesmo tempo</title><link>https://foxtechworld.github.io/llm-s-sao-coisas-boas-e-ruins-ao-mesmo-tempo/</link><guid isPermaLink="true">https://foxtechworld.github.io/llm-s-sao-coisas-boas-e-ruins-ao-mesmo-tempo/</guid><pubDate>Sat, 05 Sep 2026 16:04:37 +0000</pubDate><description>Uma reflexão pessoal sobre o uso de LLMs: como a inteligência artificial reduz o custo do erro, acelera o trabalho e pode enfraquecer o aprendizado.</description><category>Construção Independente</category><category>LLM</category><category>Vibe Coding</category><category>Produtividade</category><content:encoded><![CDATA[<h2 id="minha-posição-sobre-llms">Minha posição sobre LLMs</h2>
+<p>Bem, eu venho pensando bastante sobre o uso de LLMs. Não vou fazer um guia de prompts, dizer que a inteligência artificial vai acabar com a programação ou defender que todo mundo precisa usar essas ferramentas.</p>
+<p>Também não é um texto anti-IA. Eu uso LLMs e, para ser sincero, uso bastante.</p>
+<p>LLMs são coisas boas e ruins ao mesmo tempo. Eu sei que isso parece uma resposta meio covarde, de quem não quer escolher um lado, mas é literalmente o que eu penso. A mesma coisa que torna uma LLM útil também pode tornar ela perigosa.</p>
+<p>Ela diminui o atrito entre ter uma ideia e ver alguma coisa funcionando. Só que também diminui o esforço entre não saber direito o que está fazendo e produzir um resultado que parece correto.</p>
+<p>Esse é o meu ponto principal: o custo de fazer algo errado caiu, o custo de fazer algo funcional caiu, mas o esforço mental do processo também está caindo.</p>
+<h2 id="essa-discussão-não-começou-agora">Essa discussão não começou agora</h2>
+<p>Na verdade, essa discussão é bem antiga. Se não me engano, até <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html">Edsger W. Dijkstra entrou nessa pira ao falar sobre ferramentas, linguagens e o trabalho de programar</a>.</p>
+<p>Digo “se não me engano” porque é bom conferir antes de atribuir qualquer coisa a alguém que já morreu e não pode aparecer no X para me chamar de burro. O texto linkado é <em>The Humble Programmer</em>, uma palestra de 1972.</p>
+<p>Dijkstra não estava falando de LLMs e nem fazendo uma crítica específica ao BASIC. O ponto era mais amplo: computadores mais poderosos não eliminam a dificuldade da programação. Pelo contrário, eles permitem que a gente tente resolver problemas maiores e mais ambiciosos.</p>
+<p>Ele também falava sobre como ferramentas e linguagens influenciam os hábitos de pensamento de quem usa elas. É aí que a comparação fica interessante. Uma ferramenta não apenas executa uma tarefa. Ela também muda a forma como a gente pensa sobre essa tarefa.</p>
+<h2 id="o-custo-de-fazer-errado-caiu">O custo de fazer errado caiu</h2>
+<p>Antes de usar uma LLM, se eu quisesse criar uma coisa qualquer, precisava pelo menos pesquisar como começar. Isso não quer dizer que eu entendia tudo, mas existia uma fricção mínima: procurar a documentação, abrir um exemplo, descobrir o nome de uma propriedade, compilar, quebrar e tentar entender por que quebrou.</p>
+<p>Agora posso escrever:</p>
+<blockquote>
+<p>Crie um tema para o Hugo com foco em SEO e qualidade de leitura, usando tons em preto e laranja inspirados em abelhas.</p>
+</blockquote>
+<p>Em poucos segundos existe alguma coisa para abrir e olhar. Talvez seja uma porcaria. Talvez nem compile. Talvez seja uma porcaria que compila, que é uma categoria especialmente perigosa. Mas existe alguma coisa.</p>
+<p>Isso é ótimo para experimentar. Uma ideia que antes morreria porque parecia trabalhosa demais agora pode virar um protótipo. O custo de testar uma hipótese ficou bem menor.</p>
+<p>O problema é quando eu confundo um protótipo funcionando com uma solução que eu entendi.</p>
+<p>Uma LLM consegue criar um tema que renderiza, tem uma aparência razoável e até segue algumas boas práticas de SEO. Só que isso não quer dizer que eu saiba explicar o HTML, o CSS, a acessibilidade, o sistema de templates ou as decisões de responsividade daquele tema.</p>
+<p>Pode funcionar muito bem até o dia em que alguma coisa sair do caminho feliz. Aí a pergunta deixa de ser “a LLM consegue criar?” e passa a ser “eu consigo manter o que ela criou?”.</p>
+<h2 id="fazer-funcionar-e-entender-são-coisas-diferentes">Fazer funcionar e entender são coisas diferentes</h2>
+<p>E aqui vem a parte chata: é possível produzir mais usando uma LLM e aprender menos no processo.</p>
+<p>Não vejo contradição nisso. Posso terminar uma tarefa, entregar um resultado e ainda assim sair dela sem um modelo mental melhor do que eu tinha antes.</p>
+<p>Enquanto tudo funciona, qualquer implementação parece inteligente. O problema aparece quando preciso alterar alguma coisa sem pedir para a LLM refazer tudo, localizar um erro ou tomar uma decisão que não apareceu na resposta dela.</p>
+<p>Aprender costuma exigir um pouco de resistência. Ler uma documentação confusa, testar uma hipótese ruim, escrever um exemplo pequeno e descobrir que a primeira ideia estava errada fazem parte do processo. Se eu removo toda essa resistência, talvez esteja removendo também o exercício que fazia a informação ficar na minha cabeça.</p>
+<p>Não estou dizendo que toda dificuldade é boa. Repetir código burocrático por horas não me torna um programador melhor. Mas existe uma diferença entre remover trabalho repetitivo e remover a necessidade de pensar.</p>
+<h2 id="como-eu-tento-usar-llms-na-programação">Como eu tento usar LLMs na programação</h2>
+<p>Minha regra, pelo menos por enquanto, é simples:</p>
+<blockquote>
+<p>Escreva para a LLM aquilo que você já sabe, em passos bem curtos. O que você não sabe, procure na documentação e escreva com suas próprias mãos — pelo menos até entender o que está fazendo.</p>
+</blockquote>
+<p>Não é uma regra universal e provavelmente vai mudar. É só uma forma de impedir que a ferramenta pule justamente a parte que eu queria aprender.</p>
+<p>Quando já conheço o problema, uma LLM ajuda bastante. Posso pedir um esqueleto de código, uma refatoração mecânica, testes para casos que já defini, uma conversão entre formatos ou uma explicação de um trecho específico. Nesses casos, pelo menos tenho algum mapa para perceber quando a resposta está indo para o mato.</p>
+<p>O cenário muda quando não conheço o assunto. Se eu não sei como uma API funciona, qual é a garantia de uma biblioteca ou quais são as limitações de um formato, a resposta mais bonita do mundo ainda pode estar errada.</p>
+<p>Nesse caso, começo pela documentação, pelos exemplos oficiais e pelo código-fonte quando for necessário. Depois posso usar a LLM para resumir um trecho, comparar duas alternativas ou explicar palavras que não conheço. A documentação é a fonte; a LLM entra como alguém que me ajuda a ler.</p>
+<h2 id="um-exemplo-pedir-um-tema-para-o-hugo">Um exemplo: pedir um tema para o Hugo</h2>
+<p>O exemplo do tema mostra bem essa diferença. Posso fazer um pedido amplo:</p>
+<blockquote>
+<p>Crie um tema para o Hugo com foco em SEO e qualidade de leitura, usando tons em preto e laranja inspirados em abelhas.</p>
+</blockquote>
+<p>Ou posso descrever algumas restrições técnicas:</p>
+<blockquote>
+<p>Crie um tema para o Hugo. Use <em>media queries</em> para responsividade em desktops e telas pequenas, use unidades <code>rem</code> para tipografia e espaçamento, limite a largura do texto a uma medida confortável e mantenha a direção de leitura adequada para o português.</p>
+</blockquote>
+<p>O segundo pedido é melhor porque comunica mais decisões. Também corrige um problema do meu exemplo original: o recurso usado para adaptar um layout a diferentes tamanhos de tela é, em geral, uma <em>media query</em>, não simplesmente um <em>media type</em>.</p>
+<p>Parece um detalhe pequeno, mas ele mostra uma coisa importante: usar palavras técnicas não é a mesma coisa que entender a técnica.</p>
+<p>Se eu não sei a diferença, posso escrever um prompt cheio de termos corretos pela metade e receber um resultado que parece profissional. A LLM não vai necessariamente me impedir de fazer uma pergunta ruim. Ela pode simplesmente preencher as lacunas com alguma coisa plausível.</p>
+<p>Além disso, “foco em SEO” é uma instrução muito vaga. SEO não é só colocar uma palavra-chave no título. Tem estrutura semântica, títulos hierárquicos, descrição, links internos, URLs, desempenho, acessibilidade e outras decisões que dependem do contexto.</p>
+<p>Uma LLM pode ajudar a levantar esses pontos. O que ela não deveria fazer é me convencer de que eu já entendi tudo só porque produziu um arquivo grande e bonito.</p>
+<h2 id="ainda-vale-a-pena-usar">Ainda vale a pena usar</h2>
+<p>Apesar de tudo isso, eu não quero parar de usar LLMs.</p>
+<p>Quando usadas com algum critério, elas reduzem o tempo gasto com código repetitivo, ajudam a transformar uma ideia em um primeiro experimento e tornam menos assustador abrir um projeto desconhecido. Também são úteis para conversar sobre alternativas, encontrar casos de teste e perceber que eu esqueci alguma condição óbvia.</p>
+<p>Para quem trabalha sozinho, isso pesa ainda mais. Nem sempre tenho alguém para perguntar como uma biblioteca funciona ou para revisar cada decisão pequena. Uma LLM pode ser uma interlocutora inicial, mesmo sem substituir uma revisão de verdade.</p>
+<p>Às vezes o maior ganho não é terminar mais rápido, é conseguir começar. Um protótipo ruim ainda pode ensinar alguma coisa, desde que eu trate ele como protótipo e não como produto pronto.</p>
+<p>Mas a conveniência começa a dar ruim quando vira dependência.</p>
+<p>Existe uma falsa sensação de conhecimento. A resposta vem organizada, cheia de exemplos e com uma confiança irritante. É fácil aceitar uma afirmação sem conferir a documentação ou copiar um código sem entender suas consequências.</p>
+<p>Também dá para terceirizar todas as decisões. Se eu peço para a LLM escolher a arquitetura, a biblioteca, o modelo de dados e a estrutura dos diretórios, talvez receba um projeto coerente. Só que a coerência da resposta não significa que as escolhas sejam boas para o meu problema.</p>
+<p>E tem a homogeneização. Se todo mundo pede para a LLM “seguir as melhores práticas”, muita coisa começa a parecer igual. Às vezes isso é bom, já que padrões existem por algum motivo. Mas também podemos parar de perguntar se o padrão resolve o problema real ou só parece familiar.</p>
+<p>Por fim, a LLM pode simplesmente estar errada. Pode inventar uma função, misturar versões de uma biblioteca, esquecer uma restrição de segurança ou afirmar que algo é impossível quando não é. A responsabilidade pelo código continua sendo minha, mesmo quando a primeira versão veio de outra coisa.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>O que estou tentando fazer é escrever primeiro o objetivo e as restrições com minhas próprias palavras, quebrar o trabalho em partes pequenas, pedir ajuda para uma parte específica, conferir a documentação, testar e ler o <em>diff</em>.</p>
+<p>Se existe alguma mudança que eu não consigo explicar, não considero que terminei. Tenho um artefato, não necessariamente conhecimento.</p>
+<p>No geral, LLMs são boas e ruins ao mesmo tempo porque diminuem o custo de quase tudo. Isso inclui experimentar, prototipar e automatizar tarefas chatas. Também inclui pular etapas, aceitar respostas erradas e produzir algo que eu não sei manter.</p>
+<p>Não quero parar de usar LLMs. Seria uma decisão meio estúpida fingir que uma ferramenta útil deixou de existir só porque pode ser usada de maneira ruim. Também não quero entregar meu processo inteiro para um modelo e chamar isso de produtividade.</p>
+<p>Meu objetivo é usar a LLM onde eu já tenho algum mapa. Quando estou entrando em um assunto desconhecido, prefiro abrir a documentação, ler devagar e escrever uma parte na mão. Depois posso voltar para a ferramenta com perguntas melhores.</p>
+<p>Então fica a regra por enquanto: escreva para a LLM aquilo que você já sabe, em passos curtos; o que você não sabe, procure na documentação e tente entender antes de terceirizar.</p>
+<p>Fui!</p>
+]]></content:encoded></item><item><title>Mudanças na carreira: e agora?</title><link>https://foxtechworld.github.io/mudancas-carreira-e-agora/</link><guid isPermaLink="true">https://foxtechworld.github.io/mudancas-carreira-e-agora/</guid><pubDate>Sat, 16 May 2026 21:22:14 +0000</pubDate><description>Uma reflexão pessoal sobre mudanças no trabalho, retomada dos estudos e os próximos passos na carreira de desenvolvimento de software.</description><category>Construção Independente</category><category>Carreira</category><category>Opinião</category><content:encoded><![CDATA[<p>Nada como uma boa mudança de ritmo para enxergarmos o quanto mudamos no dia a dia.</p>
+<p>Em primeiro lugar, consegui meu primeiro emprego com carteira assinada. Nada muito glamouroso.</p>
+<p>Fui contratado para ser auxiliar de desossa (na área de controle de estoque) numa empresa pequena da região.</p>
+<p>É pouco até você perceber que eles lidam em torno de 700 porcos por dia em média.</p>
+<p>No geral, é um emprego digno e interessante por ser bastante manual.</p>
+<blockquote>
+<p>É uma preferência pessoal, mas gosto de serviço braçal porque ele faz minha mente pensar — ou parar de pensar — por algum tempo.</p>
+</blockquote>
+<p>Isso não significa que deixei a programação e os estudos de lado. Na verdade, meu Obsidian e meu AppFlowy — uma alternativa de código aberto ao Notion — estão mais lotados do que nunca de roteiros sobre programação e outros assuntos.</p>
+<p>Além disso, a empresa possui um banco de talentos, <strong>inclusive para a área de TI</strong>, então vale a pena permanecer nela.</p>
+<p>Voltando ao Obsidian: mudei totalmente o estilo do <em>vault</em> para algo parecido com um despejo direto do meu cérebro.</p>
+<pre tabindex="0"><code>.
+├── Assets
+│   ├── CheckList
+│   │   ├── Checklist de viagem de carro.jpg
+│   │   ├── Checklist de viagem.jpg
+│   │   └── Kit de Primeiros Socorros.jpg
+│   ├── Design
+│   │   ├── Linguagem visual Dark Mode FoxBSD.png
+│   │   └── Linguagem visual FoxBSD.png
+│   ├── Learning
+│   │   ├── Etiqueta de Roupas.jpg
+│   │   └── Pendurar ou Dobrar.jpg
+│   └── Specifications
+│       └── OpenStep Specification.pdf
+├── Learning
+│   └── Investimentos
+│       ├── Fundamentos de Investimentos.md
+│       └── Organização Financeira.md
+├── Notes
+│   └── Stack de Programação.md
+├── Projects
+│   ├── FoxBSD
+│   │   └── What IS - FoxBSD.md
+│   ├── Jarvis
+│   │   └── What IS - Jarvis.md
+│   ├── KitsuneBot
+│   │   └── What IS - KitsuneBot.md
+│   └── NeoStep
+│       └── What IS - NeoStep.md
+└── Studying
+    ├── Knowledge
+    │   ├── Checklists.md
+    │   └── Manuais.md
+    ├── Limpeza
+    │   ├── Limpeza de Roupa Branca.md
+    │   └── Limpeza de Tênis Branco.md
+    └── Receitas
+        ├── Caldos
+        │   └── Caldo de Ossos.md
+        ├── Cortes
+        │   └── Compras de Carnes.md
+        ├── Erros e Truques de Cozinha
+        │   ├── Erros e truques de Cozinha.md
+        │   └── Truque da tampa - Quando usar e Quando não usar.md
+        ├── Guia
+        │   ├── Guia Prático dos  Pimentões.md
+        │   ├── Guia Prático dos tipos de panela.md
+        │   └── Guia sobre quando adicionar alimentos à água.md
+        ├── Marinar
+        │   ├── Formas de marinar carne bovina.md
+        │   ├── Formas de marinar frango marinado.md
+        │   └── Formas de temperar manteiga.md
+        └── Molhos
+            └── Molhos Clássicos para Massas.md
+
+24 directories, 30 files
+</code></pre><p>Agora, com o tempo, dá para continuar alguns projetos e buscar formas diferentes de entretenimento.</p>
+<p>Esta é uma pequena atualização do dia a dia. Por enquanto, está bacana.</p>
+]]></content:encoded></item><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Construção Independente</category><category>Estudos</category><category>Produtividade</category><category>Ferramentas</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
+<p>Pois é: para alguém que disse que demoraria a publicar mais posts neste ano, cá estou eu de novo.</p>
+<p>Desta vez, em complemento ao post <a href="/jornada-reforco-estudos-2026/">Uma jornada de reforço nos estudos: planos para 2026</a>, no qual prometi que o ano seria mais lento, mostrarei como estou configurando o Obsidian para estudar.</p>
+<p>Antes de mais nada, estudar exige uma mistura de método e disciplina para memorizar conceitos e compreender os resultados de certas ações, fórmulas ou ocorrências.</p>
+<p>Essa é, claro, uma definição bastante crua. Então, quando seu professor criticar você por memorizar a fórmula, diga:</p>
+<blockquote>
+<p>Se eu não memorizar, como vou entender e, consequentemente, aprender?</p>
+</blockquote>
+<p>Enfim, existem diversas técnicas e formas de aprender algo.</p>
+<h2 id="meu-obsidian">Meu Obsidian</h2>
+<p>Decidi adotar o Zettelkasten, que combina muito bem com o Obsidian.</p>
+<p><figure><img src="https://i.pinimg.com/originals/f0/38/d1/f038d1a12df70cb5c87842bf4737098d.png" loading="lazy" decoding="async" alt="Obsidian   Sharpen Your Thinking with the Best Note Taking App">
+</figure>
+</p>
+<p>Mas obviamente não de forma crua como está, então eu adicionei alguns plugins como:</p>
+<ul>
+<li>Advanced Canvas</li>
+<li>Dataview</li>
+<li>Iconize</li>
+<li>Tag Wrangler</li>
+<li>Templater</li>
+<li>Escalidraw</li>
+<li>Omnisearch</li>
+</ul>
+<p>Esses plugins cobrem grande parte do que preciso e permitem ligar conteúdos de forma muito mais interessante.</p>
+<p>E adicionei também alguns diretórios:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">00 - Assets
+</span></span><span class="line"><span class="cl">01 - Referências
+</span></span><span class="line"><span class="cl">02 - Permanentes
+</span></span><span class="line"><span class="cl">03 - Map of Contents
+</span></span><span class="line"><span class="cl">xx - Excalidraw
+</span></span></code></pre></div><p><code>xx</code> representa um diretório sem valor numérico.</p>
+<p>Mas a parte mais importante fica em <code>Assets/_Templates</code>.</p>
+<p>Ali ficam os templates do projeto:</p>
+<ul>
+<li>Nota MOC → lê-se &ldquo;nota de mapa de conteúdo&rdquo;</li>
+<li>Nota Permanente</li>
+<li>Nota Referência</li>
+</ul>
+<p>Aliás, dica importante</p>
+<blockquote>
+<p>No Obsidian, abra as configurações do Templater e defina <em>Template folder location</em> como <code>00 - Assets/_Templates</code>.</p>
+<p>Isso evita que o plugin sugira outras notas como templates.</p>
+</blockquote>
+<p>Bom, a ideia é simples:</p>
+<p>Tudo o que eu ler e considerar útil virará uma <code>Referência</code>.</p>
+<blockquote>
+<p>Depois que a referência for feita, ela não pode mais ser editada, somente para alguma revisão ou em nova versão v2.</p>
+</blockquote>
+<p>Depois, lemos a referência e transformamos os <em>insights</em> em notas permanentes, que devem ter:</p>
+<ul>
+<li>Argumento central</li>
+<li>Resumo do que ocorreu</li>
+<li>Conexões com outras notas</li>
+<li>Link para as referências originais</li>
+</ul>
+<blockquote>
+<p>Você pode usar o Dataview para verificar se já existe uma nota permanente desse tipo antes de criar duplicatas.</p>
+</blockquote>
+<p>Por fim, atualizamos o MOC da área correspondente, listando ou vinculando todas as notas permanentes das respectivas áreas e subáreas.</p>
+<p>Se houver alguma dúvida, ela pode ser registrada em <strong>Questões em aberto</strong>.</p>
+<p>Agora, o mais importante é o processo de revisão, sempre releia as permanentes antigas e atualize o MOC se surgirem novas conexões.</p>
+<h3 id="templates">Templates</h3>
+<h4 id="nota-de-referência">Nota de referência</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">tipo: referencia
+</span></span><span class="line"><span class="cl">area:
+</span></span><span class="line"><span class="cl">fonte:
+</span></span><span class="line"><span class="cl">autor:
+</span></span><span class="line"><span class="cl">link:
+</span></span><span class="line"><span class="cl">created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span class="line"><span class="cl">status:
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> nota-referencia
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># &lt;% tp.system.prompt() %&gt;
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Resumo bruto
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Pontos Importantes
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Ideias Provocadas
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Possíveis Permanentes
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span></code></pre></div><p>É um template simples. O uso de <code>&lt;% tp.system.prompt() %&gt;</code> permite criar um título a partir do texto informado pelo usuário. Também podemos ter diversas referências para uma única nota permanente.</p>
+<p>O template possui propriedades como:</p>
+<p><code>area</code>-&gt; Categoria do conteúdo</p>
+<p><code>fonte/autor/link</code> -&gt; informações da fonte original</p>
+<p><code>resumo bruto</code> → síntese direta da fonte</p>
+<p><code>pontos importantes</code> -&gt; destaque de ideias que podem se tornar permanentes</p>
+<p><code>ideias provocadas</code> -&gt; insights iniciais que surgem ao ler a fonte</p>
+<p><code>possíveis permanentes</code> → conceitos que poderão virar notas consolidadas</p>
+<h4 id="nota-permanente">Nota Permanente</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">tipo: permanente
+</span></span><span class="line"><span class="cl">area:
+</span></span><span class="line"><span class="cl">status: rascunho
+</span></span><span class="line"><span class="cl">origin:
+</span></span><span class="line"><span class="cl">created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span class="line"><span class="cl">updated:
+</span></span><span class="line"><span class="cl">conexões:
+</span></span><span class="line"><span class="cl">referencias:
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> nota-permanente
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># #Title
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Explique a ideia com suas palavras.
+</span></span><span class="line"><span class="cl">Seja específico
+</span></span><span class="line"><span class="cl">Evite copiar a fonte.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Argumento Central
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>Diferentemente da nota de referência, aqui usamos o título literal do arquivo, <code>#Title</code>, para gerar o título da nota permanente.</p>
+<p>Ela também possui alguns campos:</p>
+<p><code>area</code> -&gt; precisa ser a mesma da referência relacionada</p>
+<p><code>origin</code> -&gt; referência de origem</p>
+<p><code>argumento central</code> -&gt; explicação própria do conceito</p>
+<p><code>conexões</code> -&gt; links para outras permanentes relacionadas</p>
+<p><code>referências</code> → referências utilizadas</p>
+<p><code>status</code> → pode ser rascunho, ativo ou revisado</p>
+<blockquote>
+<p>Notas permanentes são a base do conhecimento consolidado, revisável e conectado pelo MOC.</p>
+</blockquote>
+<h4 id="nota-moc">Nota MOC</h4>
+<pre tabindex="0"><code>---
+tags:
+tipo: moc
+area:
+status: ativo
+created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+---
+
+# #Title
+
+## Escopo
+
+Descreva claramente o que este Map of Content cobre.
+
+---
+
+## Conceitos Fundamentais
+
+```dataview
+table area, status
+from &#34;02 - Permanentes&#34;
+where area = this.area
+```dataview
+---
+## Subáreas
+
+- ***
+
+## Referências Base
+
+```dataview
+table fonte, autor
+from &#34;01 - Referencias&#34;
+where area = this.area
+```dataview
+---
+
+## Questões em aberto
+
+-
+</code></pre><blockquote>
+<p>Eu acabei quebrando o dataview no exemplo acima para garantir que ficasse tudo em um único codeblock, assim caso copiem diretamente basta trocar ```dataview pela sua versão sem dataview usando regex.</p>
+</blockquote>
+<p>A nota MOC funciona como um índice e oferece uma visão geral da área de estudo. Aqui também usamos <code>#Title</code> para gerar o título.</p>
+<p>O MOC usa o Dataview para reunir as notas permanentes relacionadas à mesma área e organizá-las por área, subárea, <em>cluster</em> ou tópico.</p>
+<p>Também há uma seção de questões em aberto: literalmente, uma lista do que ainda falta estudar.</p>
+<p><figure><img
+      src="/organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_d661c4751f2aa48e.webp"
+      srcset="/organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_d661c4751f2aa48e.webp 640w, /organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_6391ca0857445d30.webp 960w, /organizar-estudos-obsidian-zettelkasten/images/roadmap_sh.png 769w"
+      sizes="(max-width: 70rem) 100vw, 56rem"
+      width="769"
+      height="809"
+      loading="lazy"
+      decoding="async"
+      alt="Foto do meu roadmap.sh pessoal">
+</figure>
+</p>
+<h2 id="fluxo-de-estudo">Fluxo de estudo</h2>
+<ol>
+<li>Encontro algo novo e crio uma <code>Referência</code>.</li>
+<li>Processo a informação e a transformo em uma nota <code>Permanente</code>, com minhas palavras e a origem citada.</li>
+<li>Organizo o MOC, atualizando conceitos fundamentais, subáreas e questões em aberto.</li>
+<li>Pratico. Este é o passo mais importante: conhecimento sem prática não adianta.</li>
+<li>Reviso periodicamente, mantendo as notas permanentes e o MOC atualizados com novas conexões.</li>
+</ol>
+<p>Este é meu Obsidian de estudos, chamado carinhosamente de <em><strong>Mind Order</strong></em>. Espero que tenham gostado. Fui!</p>
+]]></content:encoded></item><item><title>Uma jornada de reforço nos estudos: planos para 2026</title><link>https://foxtechworld.github.io/jornada-reforco-estudos-2026/</link><guid isPermaLink="true">https://foxtechworld.github.io/jornada-reforco-estudos-2026/</guid><pubDate>Fri, 13 Feb 2026 03:00:22 +0000</pubDate><description>Meu plano de estudos para 2026, com reforço em português, matemática e computação para recuperar fundamentos e avançar na graduação.</description><category>Construção Independente</category><category>Estudos</category><category>Planos</category><content:encoded><![CDATA[<h2 id="o-tempo-passa">O tempo passa</h2>
+<p>Cá estamos nós em fevereiro, e eu realmente não consigo acreditar que faz pouco mais de seis anos que me tornei alguém ativo na web.</p>
+<p>Não que eu seja famoso. Digo ativo no sentido de estar presente em diversas plataformas online: mantendo este blog, conversando no Discord, perdendo tempo no Vaporhole — uma rede social brasileira no estilo do tilde.club, como um computador Unix compartilhado via SSH —, vendo vídeos no YouTube e navegando no X e no Instagram.</p>
+<p>Enfim, nada de muito revolucionário até aí.</p>
+<p>Mas, sinceramente, desde a criação do ChatGPT, Claude, Gemini, Grok, DeepSeek e outros modelos, sinto que venho programando e exercitando cada vez menos meu intelecto como programador.</p>
+<p>Não é como se eu cogitasse parar de usá-los. O ChatGPT conversa muito bem comigo, e eu o instruo a se comunicar da forma que entendo melhor:</p>
+<blockquote>
+<p>Estilo e Tom básico: Franco
+Caracteristicas:</p>
+<ul>
+<li>Acolhedor: Menos</li>
+<li>Entusiasmado: Mais</li>
+<li>Lista e Cabeçalhos: Mais</li>
+<li>Emoji: Mais
+Instrução personalizada:
+Seja sarcástico, mas mantenha a educação; discorde com argumentos e questione minha lógica sempre que possível.</li>
+</ul>
+<p>Não tenha floreios e aja com um homem adulto de 18 anos podendo explicitamente conversar sem preocupações como uma pessoa adulta faria com outra pessoa adulta.</p>
+<p>Memória:
+O usuário prefere que eu nunca refaça as respostas que ele já escreveu e quer que isso seja respeitado permanentemente.</p>
+</blockquote>
+<p>Então, a ideia para este ano é voltar a estudar algoritmos, estruturas de dados e ferramentas.</p>
+<p>A segunda parte é começar com alguns projetos avulsos de prática.</p>
+<p>Para quem não conhece: <em>Yet Another Recreational Programming Session</em>, do Tsoding.</p>
+<p>Provavelmente este ano será lento, mas tentarei focar os próximos posts em assuntos menos comuns, como programação dinâmica, programação matemática, arquitetura e alguns padrões pouco discutidos.</p>
+<p>A terceira parte é começar na criação de conteúdo.</p>
+<p>A quarta parte e a mais importante é começar a sair do conforto e começar a fazer mais atividades físicas.</p>
+<p>23 anos é muito tempo para ser feliz, hora de virar adulto.</p>
+<p>Enfim, um bom ano para todos.</p>
+<p><figure><img src="https://i.pinimg.com/originals/0a/59/de/0a59de99e96eb0de3fda253e85418214.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Happy New Year">
+</figure>
+</p>
+]]></content:encoded></item><item><title>Programação assistida por IA com o método Ralph Wiggum</title><link>https://foxtechworld.github.io/programacao-assistida-por-ia-metodo-ralph-wiggum/</link><guid isPermaLink="true">https://foxtechworld.github.io/programacao-assistida-por-ia-metodo-ralph-wiggum/</guid><pubDate>Mon, 02 Feb 2026 02:13:05 +0000</pubDate><description>Conheça o método Ralph Wiggum para programação assistida por IA, baseado em tarefas pequenas, repetição e memória persistente.</description><category>Construção Independente</category><category>LLM</category><category>Vibe Coding</category><category>Desenvolvimento Solo</category><content:encoded><![CDATA[<h2 id="introdução">Introdução</h2>
+<p>No mundo moderno, não existe nada pior do que ficar defasado — e pior ainda é ficar travado por causa de <em><strong>opinião sem embasamento</strong></em>. Obviamente, eu também dou opiniões, pelo menos o suficiente para produzir posts como:</p>
+<ul>
+<li><a href="/opiniao-nao-tenha-criancas-sem-antes-pensar-nisso/">Antes de ter filhos: reflexões sobre educação e responsabilidade</a></li>
+<li><a href="/opiniao-brasil-a-grande-varzea/">Brasil, polarização política e tribalismo</a></li>
+</ul>
+<p>E alguns outros que ainda pretendo postar.</p>
+<p>Uma coisa em que tenho pensado é o hype da IA e o novo modelo de desenvolvimento baseado no método <strong>Ralph Wiggum</strong>.</p>
+<p><figure><img src="https://static.simpsonswiki.com/images/thumb/1/14/Ralph_Wiggum.png/345px-Ralph_Wiggum.png" loading="eager" fetchpriority="high" decoding="async" alt="Ralph Wiggum   Wikisimpsons, the Simpsons Wiki">
+</figure>
+</p>
+<p>Para contextualizar: eu assistia a alguns vídeos no FreeTube — o melhor frontend para YouTube que conheço — quando reencontrei um vídeo sobre esse modelo de desenvolvimento. Como já havia instalado o Omarchy, do DHH, e testado o OpenCode, que possui ferramentas gratuitas, decidi experimentar o método no meu projeto de OSDev, o <a href="https://github.com/KitsuneBSD/FKernel">FKernel</a>.</p>
+<p>O vídeo em questão foi:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rv756w-DHhk?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h2 id="o-que-é-o-método-ralph-wiggum">O que é o método Ralph Wiggum?</h2>
+<p>Basicamente, é assumir que LLM é uma porra e combinar força bruta, memória longa e pequenas tarefas para obter um resultado melhor. As memórias são mantidas pelo agente na forma de tarefas em JSON e de um prompt.</p>
+<p>Depois, colocamos um loop que roda continuamente, lendo o prompt e atualizando as tarefas.</p>
+<p>Assim, um problema longo é dividido em tarefas curtas, muito mais suportáveis de executar e revisar.</p>
+<blockquote>
+<p>Dividir e conquistar é a meta da programação</p>
+</blockquote>
+<h2 id="e-o-que-eu-pretendo-com-isso">E o que eu pretendo com isso?</h2>
+<p>O modelo do FKernel é essencialmente lindo, mas o projeto é mantido por uma pessoa só: eu.</p>
+<p>Em geral, a programação acumula muito débito técnico quando não sabemos como chegar ao resultado. Meu processo costuma ser saber o que quero fazer em A, mas não perceber de imediato que preciso integrá-lo a B.</p>
+<p>Por isso, reescritas e refatorações tornam-se necessárias. Até uma nova funcionalidade maior que o projeto fica mais fácil de desenvolver no longo prazo quando é dividida corretamente.</p>
+<p>Mesmo recursos ou práticas avançadas do FKernel.</p>
+<h2 id="porém-é-um-projeto-bsd-3-clause">Porém é um projeto BSD-3-Clause</h2>
+<p>Sendo um projeto aberto, é normal esperar contribuições. Ainda não recebi nenhuma, mas seria bom padronizar e automatizar o processo para desenvolvedores que queiram contribuir usando modelos gratuitos.</p>
+<p>Particularmente neste kernel eu decidi fugir um pouco do mundo Unix Total e estou usando <strong>Lua</strong> como a única linguagem de script dentro do kernel.</p>
+<p>Vantagens e desvantagens à parte, os scripts de gerenciamento ficam no diretório <code>/Meta</code> e podem ser divididos em pequenas bibliotecas reutilizáveis em <code>/Meta/Lib</code>.</p>
+<p>Obviamente não dependendo de LuaRocks para gerenciar libs.</p>
+<p>Não pretendo explicar muito além de dizer que é uma prática irrecomendável, porém facilita o pipeline de qualquer pessoa que quiser contribuir.</p>
+<p>Baixar → usar o mínimo de dependências externas → gerar o binário.</p>
+<h2 id="funciona">Funciona?</h2>
+<p>Não é exatamente o Claude Code, então não consegui replicar perfeitamente o comportamento esperado. Os logs também ainda não ajudam muito.</p>
+<p>Ou seja, ainda é preciso muito trabalho para que tudo funcione da forma esperada.</p>
+<p>Acredito que o processo e o resultado serão proveitosos no dia a dia quando a ferramenta chegar a um ponto agradável de uso.</p>
+<p>Isso será especialmente útil em tarefas grandes e repetitivas de refatoração ou implementação.</p>
+<p><figure><img src="https://i.imgur.com/g0miax1.png" loading="lazy" decoding="async" alt="wiggum funcionando 2026/02/03">
+</figure>
+</p>
+<h2 id="o-futuro-é-pica">O futuro é pica</h2>
+<p><figure><img src="https://i.pinimg.com/736x/4c/ce/65/4cce6525d3c302e9bac2496991a7a321.jpg" loading="lazy" decoding="async" alt="O futuro é pica">
+</figure>
+</p>
+<p>Com tudo isso dito, espero um futuro melhor no desenvolvimento do kernel. Tarefas muito custosas podem não terminar mais rápido, mas exigem menos intervenção manual: rodou, esqueceu e deixou o agente se ajustar.</p>
+<p>Além disso, a divisão em tarefas menores facilita o monitoramento contínuo do progresso.</p>
+]]></content:encoded></item><item><title>SaaS: como escolher a ferramenta certa para cada etapa</title><link>https://foxtechworld.github.io/saas-a-ferramenta-certa-na-hora-certa/</link><guid isPermaLink="true">https://foxtechworld.github.io/saas-a-ferramenta-certa-na-hora-certa/</guid><pubDate>Tue, 23 Sep 2025 14:08:26 -0300</pubDate><description>Critérios práticos para escolher linguagens e ferramentas em um SaaS sem cair em modismos, reescritas prematuras ou dependência excessiva.</description><category>Construção Independente</category><category>Desenvolvimento Solo</category><category>SaaS</category><category>Ferramentas</category><content:encoded><![CDATA[<p>Bem a melhor ferramenta é aquela que resolve seu problema.</p>
+<p>Isso é invariável em todo o mundo da programação.</p>
+<p>No mundo do SaaS, sendo um desenvolvedor solo, você não deve confiar apenas em si mesmo.</p>
+<p>Adicione Testes, testes, mais testes, enfie testes em tudo que puder e use softwares maduros.</p>
+<p>Mas, ao mesmo tempo não deixe seu software parado no tempo.</p>
+<h2 id="as-duas-grandes-divisões">As duas grandes divisões</h2>
+<p>Dentro do mundo de software existem duas grandes divisões <a href="https://roadmap.sh/frontend"><strong><em>frontend</em></strong></a> e <a href="https://roadmap.sh/backend"><strong><em>backend</em></strong></a></p>
+<p>E uma parte menor que é <a href="https://roadmap.sh/DevOps"><strong><em>DevOps</em></strong></a>.</p>
+<p>Este post, em específico, é sobre frontend e backend.</p>
+<p>Assuma que que DevOps você pode contratar outros SaaS em vez de implementar você mesmo.</p>
+<h3 id="frontend">Frontend</h3>
+<p>Para o <strong><em>Frontend</em></strong> precisamos atingir o máximo de plataformas sozinho com uma interface moderna possa atingir:</p>
+<ul>
+<li><strong>Desktop</strong></li>
+<li><strong>Web</strong></li>
+<li><strong>Mobile</strong></li>
+</ul>
+<p>Além disso, é preferencial que seguirmos técnicas de design como:</p>
+<ul>
+<li><a href="https://www.alura.com.br/artigos/online-offline-first">Offline-First</a></li>
+<li><a href="https://conteudodigitall.com.br/glossario/o-que-e-mobile-first-entenda-a-importancia/">Mobile-First</a></li>
+</ul>
+<p>Com isso, temos uma base boa para ter um software que não fica irritante com o tempo.</p>
+<p>No geral, use <a href="https://flutter.dev/"><strong><em>Flutter</em></strong></a> para evitar ter que lidar com diversas plataformas manualmente.</p>
+<h3 id="backend">Backend</h3>
+<p>Para começar, precisamos entender do que é importante no backend de um SaaS.</p>
+<p>Nada mais importante do que usar um <a href="https://blog.somostera.com/desenvolvimento-web/o-que-eframework">framework</a> maduro.</p>
+<p>E no caso, pessoalmente falando, o melhor que temos é o <a href="https://rubyonrails.org/">Ruby On Rails</a> e veja que podemos migrar de <a href="https://www.ruby-lang.org/pt/"><strong><em>Ruby</em></strong></a> para <a href="https://www.jruby.org/"><strong><em>JRuby</em></strong></a> garantindo que a aplicação pode escalar se e somente se for necessário.</p>
+<p>Adote testes como dogma literalmente, teste tudo, se tiver erro gere um teste, se tiver um bug teste, se tiver uma vulnerabilidade teste também.</p>
+<p>Coloque:</p>
+<ul>
+<li><a href="https://github.com/rack/rack-attack"><strong><em>Rack Attack</em></strong></a></li>
+<li><a href="https://github.com/presidentbeef/brakeman"><strong><em>Brakeman</em></strong></a></li>
+<li><a href="https://github.com/teamcapybara/capybara"><strong><em>Capybara</em></strong></a></li>
+<li><a href="https://github.com/flyerhzm/bullet"><strong><em>Bullet</em></strong></a></li>
+<li><a href="https://github.com/MiniProfiler/rack-mini-profiler"><strong><em>Rack Mini Profiler</em></strong></a></li>
+</ul>
+<p>Veja que a ideia principal é que as libs do rails são maduras e testadas facilmente acopladas e no geral é muito melhor do que depender de si mesmo que só na cabeça vai querer inventar procedimentos de segurança que vai fazer pagar fortunas em indenizações.</p>
+<p>Vide <a href="https://canaltech.com.br/seguranca/sapphos-tinder-lesbico-do-brasil-tem-falha-de-seguranca-grave-e-e-tirado-do-ar/">Noticia sobre o Saphoos</a>.</p>
+<h3 id="devops">DevOps</h3>
+<p>Dentro de seu <a href="https://www.portalinsights.com.br/perguntas-frequentes/o-que-e-startup-SaaS"><strong><em>Software as Service</em></strong></a>.</p>
+<p>Você quer evitar ao máximo problemas de responsabilidade fiscal.</p>
+<p>Então a coisa mais inteligente a se fazer é se mover de <a href="https://blog.engeman.com.br/diferencas-entre-capex-e-opex">capex (investimento na própria infra) para opex (contrato de serviços externos)</a>.</p>
+<p>Use serviços como <a href="https://www.papertrail.com/solution/aws-logging/">paper-trail</a>, use a <a href="https://aws.amazon.com/pt/">amazon-web-service</a> &hellip;</p>
+<p>O software continua sendo sua responsabilidade mas, problemas internos de servidores gerenciados por provedores não recaem diretamente sobre você, reduzindo riscos e permitindo focar no desenvolvimento.</p>
+<p>Contrate <a href="https://www.malwarebytes.com/pt-br/cybersecurity/basics/what-is-ethical-hacking">Hackers Ético</a> e faça testes de segurança, corrija brechas periodicamente.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>No geral, a combinação ideal seria usar um <strong><em>backend</em></strong> em rails e um <strong><em>frontend</em></strong> em flutter.</p>
+<p>Para ter diversas plataformas e um backend sólido, caso precise de algo customizado, use um microsserviço da forma que achar melhor contanto que haja contratos fortes e testes.</p>
+<p>Jamais esqueça os testes.</p>
+]]></content:encoded></item></channel></rss>

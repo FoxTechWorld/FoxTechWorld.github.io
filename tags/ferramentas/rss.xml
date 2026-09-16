@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ferramentas | FoxTechWorld</title><link>https://foxtechworld.github.io/tags/ferramentas/</link><description>Conteúdo recente em Ferramentas no FoxTechWorld.</description><language>pt-BR</language><copyright>KitsuneSemCalda (CC BY 4.0)</copyright><lastBuildDate>Sat, 15 Aug 2026 00:00:00 -0300</lastBuildDate><generator>Hugo</generator><atom:link href="https://foxtechworld.github.io/tags/ferramentas/" rel="self" type="application/rss+xml"/><item><title>Como organizar os estudos com Obsidian e Zettelkasten</title><link>https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</link><guid isPermaLink="true">https://foxtechworld.github.io/organizar-estudos-obsidian-zettelkasten/</guid><pubDate>Sat, 14 Feb 2026 05:29:39 +0000</pubDate><description>Um fluxo prático para organizar estudos no Obsidian com notas diárias, mapas de conteúdo e princípios do método Zettelkasten.</description><category>Construção Independente</category><category>Estudos</category><category>Produtividade</category><category>Ferramentas</category><content:encoded><![CDATA[<h2 id="como-vou-estudar">Como vou estudar?</h2>
+<p>Pois é: para alguém que disse que demoraria a publicar mais posts neste ano, cá estou eu de novo.</p>
+<p>Desta vez, em complemento ao post <a href="/jornada-reforco-estudos-2026/">Uma jornada de reforço nos estudos: planos para 2026</a>, no qual prometi que o ano seria mais lento, mostrarei como estou configurando o Obsidian para estudar.</p>
+<p>Antes de mais nada, estudar exige uma mistura de método e disciplina para memorizar conceitos e compreender os resultados de certas ações, fórmulas ou ocorrências.</p>
+<p>Essa é, claro, uma definição bastante crua. Então, quando seu professor criticar você por memorizar a fórmula, diga:</p>
+<blockquote>
+<p>Se eu não memorizar, como vou entender e, consequentemente, aprender?</p>
+</blockquote>
+<p>Enfim, existem diversas técnicas e formas de aprender algo.</p>
+<h2 id="meu-obsidian">Meu Obsidian</h2>
+<p>Decidi adotar o Zettelkasten, que combina muito bem com o Obsidian.</p>
+<p><figure><img src="https://i.pinimg.com/originals/f0/38/d1/f038d1a12df70cb5c87842bf4737098d.png" loading="lazy" decoding="async" alt="Obsidian   Sharpen Your Thinking with the Best Note Taking App">
+</figure>
+</p>
+<p>Mas obviamente não de forma crua como está, então eu adicionei alguns plugins como:</p>
+<ul>
+<li>Advanced Canvas</li>
+<li>Dataview</li>
+<li>Iconize</li>
+<li>Tag Wrangler</li>
+<li>Templater</li>
+<li>Escalidraw</li>
+<li>Omnisearch</li>
+</ul>
+<p>Esses plugins cobrem grande parte do que preciso e permitem ligar conteúdos de forma muito mais interessante.</p>
+<p>E adicionei também alguns diretórios:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">00 - Assets
+</span></span><span class="line"><span class="cl">01 - Referências
+</span></span><span class="line"><span class="cl">02 - Permanentes
+</span></span><span class="line"><span class="cl">03 - Map of Contents
+</span></span><span class="line"><span class="cl">xx - Excalidraw
+</span></span></code></pre></div><p><code>xx</code> representa um diretório sem valor numérico.</p>
+<p>Mas a parte mais importante fica em <code>Assets/_Templates</code>.</p>
+<p>Ali ficam os templates do projeto:</p>
+<ul>
+<li>Nota MOC → lê-se &ldquo;nota de mapa de conteúdo&rdquo;</li>
+<li>Nota Permanente</li>
+<li>Nota Referência</li>
+</ul>
+<p>Aliás, dica importante</p>
+<blockquote>
+<p>No Obsidian, abra as configurações do Templater e defina <em>Template folder location</em> como <code>00 - Assets/_Templates</code>.</p>
+<p>Isso evita que o plugin sugira outras notas como templates.</p>
+</blockquote>
+<p>Bom, a ideia é simples:</p>
+<p>Tudo o que eu ler e considerar útil virará uma <code>Referência</code>.</p>
+<blockquote>
+<p>Depois que a referência for feita, ela não pode mais ser editada, somente para alguma revisão ou em nova versão v2.</p>
+</blockquote>
+<p>Depois, lemos a referência e transformamos os <em>insights</em> em notas permanentes, que devem ter:</p>
+<ul>
+<li>Argumento central</li>
+<li>Resumo do que ocorreu</li>
+<li>Conexões com outras notas</li>
+<li>Link para as referências originais</li>
+</ul>
+<blockquote>
+<p>Você pode usar o Dataview para verificar se já existe uma nota permanente desse tipo antes de criar duplicatas.</p>
+</blockquote>
+<p>Por fim, atualizamos o MOC da área correspondente, listando ou vinculando todas as notas permanentes das respectivas áreas e subáreas.</p>
+<p>Se houver alguma dúvida, ela pode ser registrada em <strong>Questões em aberto</strong>.</p>
+<p>Agora, o mais importante é o processo de revisão, sempre releia as permanentes antigas e atualize o MOC se surgirem novas conexões.</p>
+<h3 id="templates">Templates</h3>
+<h4 id="nota-de-referência">Nota de referência</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">tipo: referencia
+</span></span><span class="line"><span class="cl">area:
+</span></span><span class="line"><span class="cl">fonte:
+</span></span><span class="line"><span class="cl">autor:
+</span></span><span class="line"><span class="cl">link:
+</span></span><span class="line"><span class="cl">created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span class="line"><span class="cl">status:
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> nota-referencia
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># &lt;% tp.system.prompt() %&gt;
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Resumo bruto
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Pontos Importantes
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Ideias Provocadas
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Possíveis Permanentes
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-
+</span></span></code></pre></div><p>É um template simples. O uso de <code>&lt;% tp.system.prompt() %&gt;</code> permite criar um título a partir do texto informado pelo usuário. Também podemos ter diversas referências para uma única nota permanente.</p>
+<p>O template possui propriedades como:</p>
+<p><code>area</code>-&gt; Categoria do conteúdo</p>
+<p><code>fonte/autor/link</code> -&gt; informações da fonte original</p>
+<p><code>resumo bruto</code> → síntese direta da fonte</p>
+<p><code>pontos importantes</code> -&gt; destaque de ideias que podem se tornar permanentes</p>
+<p><code>ideias provocadas</code> -&gt; insights iniciais que surgem ao ler a fonte</p>
+<p><code>possíveis permanentes</code> → conceitos que poderão virar notas consolidadas</p>
+<h4 id="nota-permanente">Nota Permanente</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">tipo: permanente
+</span></span><span class="line"><span class="cl">area:
+</span></span><span class="line"><span class="cl">status: rascunho
+</span></span><span class="line"><span class="cl">origin:
+</span></span><span class="line"><span class="cl">created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+</span></span><span class="line"><span class="cl">updated:
+</span></span><span class="line"><span class="cl">conexões:
+</span></span><span class="line"><span class="cl">referencias:
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  <span class="k">-</span> nota-permanente
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># #Title
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Explique a ideia com suas palavras.
+</span></span><span class="line"><span class="cl">Seja específico
+</span></span><span class="line"><span class="cl">Evite copiar a fonte.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## Argumento Central
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>Diferentemente da nota de referência, aqui usamos o título literal do arquivo, <code>#Title</code>, para gerar o título da nota permanente.</p>
+<p>Ela também possui alguns campos:</p>
+<p><code>area</code> -&gt; precisa ser a mesma da referência relacionada</p>
+<p><code>origin</code> -&gt; referência de origem</p>
+<p><code>argumento central</code> -&gt; explicação própria do conceito</p>
+<p><code>conexões</code> -&gt; links para outras permanentes relacionadas</p>
+<p><code>referências</code> → referências utilizadas</p>
+<p><code>status</code> → pode ser rascunho, ativo ou revisado</p>
+<blockquote>
+<p>Notas permanentes são a base do conhecimento consolidado, revisável e conectado pelo MOC.</p>
+</blockquote>
+<h4 id="nota-moc">Nota MOC</h4>
+<pre tabindex="0"><code>---
+tags:
+tipo: moc
+area:
+status: ativo
+created: &lt;% tp.date.now(&#34;YYYY-MM-DD&#34;) %&gt;
+---
+
+# #Title
+
+## Escopo
+
+Descreva claramente o que este Map of Content cobre.
+
+---
+
+## Conceitos Fundamentais
+
+```dataview
+table area, status
+from &#34;02 - Permanentes&#34;
+where area = this.area
+```dataview
+---
+## Subáreas
+
+- ***
+
+## Referências Base
+
+```dataview
+table fonte, autor
+from &#34;01 - Referencias&#34;
+where area = this.area
+```dataview
+---
+
+## Questões em aberto
+
+-
+</code></pre><blockquote>
+<p>Eu acabei quebrando o dataview no exemplo acima para garantir que ficasse tudo em um único codeblock, assim caso copiem diretamente basta trocar ```dataview pela sua versão sem dataview usando regex.</p>
+</blockquote>
+<p>A nota MOC funciona como um índice e oferece uma visão geral da área de estudo. Aqui também usamos <code>#Title</code> para gerar o título.</p>
+<p>O MOC usa o Dataview para reunir as notas permanentes relacionadas à mesma área e organizá-las por área, subárea, <em>cluster</em> ou tópico.</p>
+<p>Também há uma seção de questões em aberto: literalmente, uma lista do que ainda falta estudar.</p>
+<p><figure><img
+      src="/organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_d661c4751f2aa48e.webp"
+      srcset="/organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_d661c4751f2aa48e.webp 640w, /organizar-estudos-obsidian-zettelkasten/images/roadmap_sh_hu_6391ca0857445d30.webp 960w, /organizar-estudos-obsidian-zettelkasten/images/roadmap_sh.png 769w"
+      sizes="(max-width: 70rem) 100vw, 56rem"
+      width="769"
+      height="809"
+      loading="lazy"
+      decoding="async"
+      alt="Foto do meu roadmap.sh pessoal">
+</figure>
+</p>
+<h2 id="fluxo-de-estudo">Fluxo de estudo</h2>
+<ol>
+<li>Encontro algo novo e crio uma <code>Referência</code>.</li>
+<li>Processo a informação e a transformo em uma nota <code>Permanente</code>, com minhas palavras e a origem citada.</li>
+<li>Organizo o MOC, atualizando conceitos fundamentais, subáreas e questões em aberto.</li>
+<li>Pratico. Este é o passo mais importante: conhecimento sem prática não adianta.</li>
+<li>Reviso periodicamente, mantendo as notas permanentes e o MOC atualizados com novas conexões.</li>
+</ol>
+<p>Este é meu Obsidian de estudos, chamado carinhosamente de <em><strong>Mind Order</strong></em>. Espero que tenham gostado. Fui!</p>
+]]></content:encoded></item><item><title>SaaS: como escolher a ferramenta certa para cada etapa</title><link>https://foxtechworld.github.io/saas-a-ferramenta-certa-na-hora-certa/</link><guid isPermaLink="true">https://foxtechworld.github.io/saas-a-ferramenta-certa-na-hora-certa/</guid><pubDate>Tue, 23 Sep 2025 14:08:26 -0300</pubDate><description>Critérios práticos para escolher linguagens e ferramentas em um SaaS sem cair em modismos, reescritas prematuras ou dependência excessiva.</description><category>Construção Independente</category><category>Desenvolvimento Solo</category><category>SaaS</category><category>Ferramentas</category><content:encoded><![CDATA[<p>Bem a melhor ferramenta é aquela que resolve seu problema.</p>
+<p>Isso é invariável em todo o mundo da programação.</p>
+<p>No mundo do SaaS, sendo um desenvolvedor solo, você não deve confiar apenas em si mesmo.</p>
+<p>Adicione Testes, testes, mais testes, enfie testes em tudo que puder e use softwares maduros.</p>
+<p>Mas, ao mesmo tempo não deixe seu software parado no tempo.</p>
+<h2 id="as-duas-grandes-divisões">As duas grandes divisões</h2>
+<p>Dentro do mundo de software existem duas grandes divisões <a href="https://roadmap.sh/frontend"><strong><em>frontend</em></strong></a> e <a href="https://roadmap.sh/backend"><strong><em>backend</em></strong></a></p>
+<p>E uma parte menor que é <a href="https://roadmap.sh/DevOps"><strong><em>DevOps</em></strong></a>.</p>
+<p>Este post, em específico, é sobre frontend e backend.</p>
+<p>Assuma que que DevOps você pode contratar outros SaaS em vez de implementar você mesmo.</p>
+<h3 id="frontend">Frontend</h3>
+<p>Para o <strong><em>Frontend</em></strong> precisamos atingir o máximo de plataformas sozinho com uma interface moderna possa atingir:</p>
+<ul>
+<li><strong>Desktop</strong></li>
+<li><strong>Web</strong></li>
+<li><strong>Mobile</strong></li>
+</ul>
+<p>Além disso, é preferencial que seguirmos técnicas de design como:</p>
+<ul>
+<li><a href="https://www.alura.com.br/artigos/online-offline-first">Offline-First</a></li>
+<li><a href="https://conteudodigitall.com.br/glossario/o-que-e-mobile-first-entenda-a-importancia/">Mobile-First</a></li>
+</ul>
+<p>Com isso, temos uma base boa para ter um software que não fica irritante com o tempo.</p>
+<p>No geral, use <a href="https://flutter.dev/"><strong><em>Flutter</em></strong></a> para evitar ter que lidar com diversas plataformas manualmente.</p>
+<h3 id="backend">Backend</h3>
+<p>Para começar, precisamos entender do que é importante no backend de um SaaS.</p>
+<p>Nada mais importante do que usar um <a href="https://blog.somostera.com/desenvolvimento-web/o-que-eframework">framework</a> maduro.</p>
+<p>E no caso, pessoalmente falando, o melhor que temos é o <a href="https://rubyonrails.org/">Ruby On Rails</a> e veja que podemos migrar de <a href="https://www.ruby-lang.org/pt/"><strong><em>Ruby</em></strong></a> para <a href="https://www.jruby.org/"><strong><em>JRuby</em></strong></a> garantindo que a aplicação pode escalar se e somente se for necessário.</p>
+<p>Adote testes como dogma literalmente, teste tudo, se tiver erro gere um teste, se tiver um bug teste, se tiver uma vulnerabilidade teste também.</p>
+<p>Coloque:</p>
+<ul>
+<li><a href="https://github.com/rack/rack-attack"><strong><em>Rack Attack</em></strong></a></li>
+<li><a href="https://github.com/presidentbeef/brakeman"><strong><em>Brakeman</em></strong></a></li>
+<li><a href="https://github.com/teamcapybara/capybara"><strong><em>Capybara</em></strong></a></li>
+<li><a href="https://github.com/flyerhzm/bullet"><strong><em>Bullet</em></strong></a></li>
+<li><a href="https://github.com/MiniProfiler/rack-mini-profiler"><strong><em>Rack Mini Profiler</em></strong></a></li>
+</ul>
+<p>Veja que a ideia principal é que as libs do rails são maduras e testadas facilmente acopladas e no geral é muito melhor do que depender de si mesmo que só na cabeça vai querer inventar procedimentos de segurança que vai fazer pagar fortunas em indenizações.</p>
+<p>Vide <a href="https://canaltech.com.br/seguranca/sapphos-tinder-lesbico-do-brasil-tem-falha-de-seguranca-grave-e-e-tirado-do-ar/">Noticia sobre o Saphoos</a>.</p>
+<h3 id="devops">DevOps</h3>
+<p>Dentro de seu <a href="https://www.portalinsights.com.br/perguntas-frequentes/o-que-e-startup-SaaS"><strong><em>Software as Service</em></strong></a>.</p>
+<p>Você quer evitar ao máximo problemas de responsabilidade fiscal.</p>
+<p>Então a coisa mais inteligente a se fazer é se mover de <a href="https://blog.engeman.com.br/diferencas-entre-capex-e-opex">capex (investimento na própria infra) para opex (contrato de serviços externos)</a>.</p>
+<p>Use serviços como <a href="https://www.papertrail.com/solution/aws-logging/">paper-trail</a>, use a <a href="https://aws.amazon.com/pt/">amazon-web-service</a> &hellip;</p>
+<p>O software continua sendo sua responsabilidade mas, problemas internos de servidores gerenciados por provedores não recaem diretamente sobre você, reduzindo riscos e permitindo focar no desenvolvimento.</p>
+<p>Contrate <a href="https://www.malwarebytes.com/pt-br/cybersecurity/basics/what-is-ethical-hacking">Hackers Ético</a> e faça testes de segurança, corrija brechas periodicamente.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>No geral, a combinação ideal seria usar um <strong><em>backend</em></strong> em rails e um <strong><em>frontend</em></strong> em flutter.</p>
+<p>Para ter diversas plataformas e um backend sólido, caso precise de algo customizado, use um microsserviço da forma que achar melhor contanto que haja contratos fortes e testes.</p>
+<p>Jamais esqueça os testes.</p>
+]]></content:encoded></item></channel></rss>
